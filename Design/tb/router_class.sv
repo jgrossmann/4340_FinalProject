@@ -1,3 +1,6 @@
+`include "tb/input_buffer_class.sv"
+`include "tb/mux_class.sv"
+
 class router;
 
 	logic x_pos;

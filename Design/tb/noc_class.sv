@@ -1,3 +1,4 @@
+`include "tb/router_class.sv"
 class network;
 
 	router r1;
