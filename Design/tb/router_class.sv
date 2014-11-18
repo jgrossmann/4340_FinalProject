@@ -1,5 +1,4 @@
 `include "tb/input_buffer_class.sv"
-`include "tb/mux_class.sv"
 
 class router;
 
@@ -15,10 +14,6 @@ class router;
 	int west_cc;
 	int east_cc;
 	int local_cc;
-	mux north_mux;
-	mux south_mux;
-	mux west_mux;
-	mux east_mux;
 	
 
 	function new(input logic x_cor, y_cor);
@@ -29,8 +24,6 @@ class router;
 		west_buf = new();
 		east_buf = new();
 		local_buf = new();
-		north_mux = new();
-		south_mux = new();
 		
 	
 	endfunction
