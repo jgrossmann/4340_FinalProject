@@ -1,0 +1,25 @@
+module nw_edge_router
+(
+	input [15 : 0] s_data_i,
+	input [15 : 0] e_data_i,
+	input [15 : 0] l_data_i,
+	input s_valid_i,
+	input e_valid_i,
+	input l_valid_i,
+	input s_credit_i,
+	input e_credit_i,
+	input l_credit_i,
+	output [15 : 0] s_data_o,
+	output [15 : 0] e_data_o,
+	output [15 : 0] l_data_o,
+	output s_valid_o,
+	output e_valid_o,
+	output l_valid_o,
+	output s_credit_o,
+	output e_credit_o,
+	output l_credit_o,
+	input clk,
+	input reset
+);
+
+endmodule

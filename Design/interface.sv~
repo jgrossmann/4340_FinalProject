@@ -1,6 +1,6 @@
 // cam interface
 interface ifc (input bit clk);
-	logic reset;
+	logic rst;
 	logic valid_i [3:0][3:0]; 
 	logic valid_o [3:0][3:0]; 
 	logic credit_i [3:0][3:0]; 

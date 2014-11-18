@@ -51,75 +51,75 @@ wire [15:0] data_23_33_0;
 
 // Valid Interconnection for horizontal connection 
 
-wire  valid_00_01_0;
-wire  valid_01_02_0;
-wire  valid_02_03_0;
+wire [15:0] valid_00_01_0;
+wire [15:0] valid_01_02_0;
+wire [15:0] valid_02_03_0;
 
-wire  valid_10_11_0;
-wire  valid_11_12_0;
-wire  valid_12_13_0;
+wire [15:0] valid_10_11_0;
+wire [15:0] valid_11_12_0;
+wire [15:0] valid_12_13_0;
 
-wire  valid_20_21_0;
-wire  valid_21_22_0;
-wire  valid_22_23_0;
+wire [15:0] valid_20_21_0;
+wire [15:0] valid_21_22_0;
+wire [15:0] valid_22_23_0;
 
-wire  valid_30_31_0;
-wire  valid_31_32_0;
-wire  valid_32_33_0;
+wire [15:0] valid_30_31_0;
+wire [15:0] valid_31_32_0;
+wire [15:0] valid_32_33_0;
 
 // Valid Interconnection for vertical connection 
 
-wire  valid_00_10_0;
-wire  valid_10_20_0;
-wire  valid_20_30_0;
+wire [15:0] valid_00_10_0;
+wire [15:0] valid_10_20_0;
+wire [15:0] valid_20_30_0;
 
-wire  valid_01_11_0;
-wire  valid_11_21_0;
-wire  valid_21_31_0;
+wire [15:0] valid_01_11_0;
+wire [15:0] valid_11_21_0;
+wire [15:0] valid_21_31_0;
 
-wire  valid_02_12_0;
-wire  valid_12_22_0;
-wire  valid_22_32_0;
+wire [15:0] valid_02_12_0;
+wire [15:0] valid_12_22_0;
+wire [15:0] valid_22_32_0;
 
-wire  valid_03_13_0;
-wire  valid_13_23_0;
-wire  valid_23_33_0;
+wire [15:0] valid_03_13_0;
+wire [15:0] valid_13_23_0;
+wire [15:0] valid_23_33_0;
 
 // Credit Interconnection for horizontal connection 
 
-wire  credit_00_01_0;
-wire  credit_01_02_0;
-wire  credit_02_03_0;
+wire [15:0] credit_00_01_0;
+wire [15:0] credit_01_02_0;
+wire [15:0] credit_02_03_0;
 
-wire  credit_10_11_0;
-wire  credit_11_12_0;
-wire  credit_12_13_0;
+wire [15:0] credit_10_11_0;
+wire [15:0] credit_11_12_0;
+wire [15:0] credit_12_13_0;
 
-wire  credit_20_21_0;
-wire  credit_21_22_0;
-wire  credit_22_23_0;
+wire [15:0] credit_20_21_0;
+wire [15:0] credit_21_22_0;
+wire [15:0] credit_22_23_0;
 
-wire  credit_30_31_0;
-wire  credit_31_32_0;
-wire  credit_32_33_0;
+wire [15:0] credit_30_31_0;
+wire [15:0] credit_31_32_0;
+wire [15:0] credit_32_33_0;
 
 // Credit Interconnection for vertical connection 
 
-wire  credit_00_10_0;
-wire  credit_10_20_0;
-wire  credit_20_30_0;
+wire [15:0] credit_00_10_0;
+wire [15:0] credit_10_20_0;
+wire [15:0] credit_20_30_0;
 
-wire  credit_01_11_0;
-wire  credit_11_21_0;
-wire  credit_21_31_0;
+wire [15:0] credit_01_11_0;
+wire [15:0] credit_11_21_0;
+wire [15:0] credit_21_31_0;
 
-wire  credit_02_12_0;
-wire  credit_12_22_0;
-wire  credit_22_32_0;
+wire [15:0] credit_02_12_0;
+wire [15:0] credit_12_22_0;
+wire [15:0] credit_22_32_0;
 
-wire  credit_03_13_0;
-wire  credit_13_23_0;
-wire  credit_23_33_0;
+wire [15:0] credit_03_13_0;
+wire [15:0] credit_13_23_0;
+wire [15:0] credit_23_33_0;
 
 
 
@@ -163,75 +163,75 @@ wire [15:0] data_23_33_1;
 
 // Valid Interconnection for horizontal connection 
 
-wire  valid_00_01_1;
-wire  valid_01_02_1;
-wire  valid_02_03_1;
+wire [15:0] valid_00_01_1;
+wire [15:0] valid_01_02_1;
+wire [15:0] valid_02_03_1;
 
-wire  valid_10_11_1;
-wire  valid_11_12_1;
-wire  valid_12_13_1;
+wire [15:0] valid_10_11_1;
+wire [15:0] valid_11_12_1;
+wire [15:0] valid_12_13_1;
 
-wire  valid_20_21_1;
-wire  valid_21_22_1;
-wire  valid_22_23_1;
+wire [15:0] valid_20_21_1;
+wire [15:0] valid_21_22_1;
+wire [15:0] valid_22_23_1;
 
-wire  valid_30_31_1;
-wire  valid_31_32_1;
-wire  valid_32_33_1;
+wire [15:0] valid_30_31_1;
+wire [15:0] valid_31_32_1;
+wire [15:0] valid_32_33_1;
 
 // Valid Interconnection for vertical connection 
 
-wire  valid_00_10_1;
-wire  valid_10_20_1;
-wire  valid_20_30_1;
+wire [15:0] valid_00_10_1;
+wire [15:0] valid_10_20_1;
+wire [15:0] valid_20_30_1;
 
-wire  valid_01_11_1;
-wire  valid_11_21_1;
-wire  valid_21_31_1;
+wire [15:0] valid_01_11_1;
+wire [15:0] valid_11_21_1;
+wire [15:0] valid_21_31_1;
 
-wire  valid_02_12_1;
-wire  valid_12_22_1;
-wire  valid_22_32_1;
+wire [15:0] valid_02_12_1;
+wire [15:0] valid_12_22_1;
+wire [15:0] valid_22_32_1;
 
-wire  valid_03_13_1;
-wire  valid_13_23_1;
-wire  valid_23_33_1;
+wire [15:0] valid_03_13_1;
+wire [15:0] valid_13_23_1;
+wire [15:0] valid_23_33_1;
 
 // Credit Interconnection for horizontal connection 
 
-wire  credit_00_01_1;
-wire  credit_01_02_1;
-wire  credit_02_03_1;
+wire [15:0] credit_00_01_1;
+wire [15:0] credit_01_02_1;
+wire [15:0] credit_02_03_1;
 
-wire  credit_10_11_1;
-wire  credit_11_12_1;
-wire  credit_12_13_1;
+wire [15:0] credit_10_11_1;
+wire [15:0] credit_11_12_1;
+wire [15:0] credit_12_13_1;
 
-wire  credit_20_21_1;
-wire  credit_21_22_1;
-wire  credit_22_23_1;
+wire [15:0] credit_20_21_1;
+wire [15:0] credit_21_22_1;
+wire [15:0] credit_22_23_1;
 
-wire  credit_30_31_1;
-wire  credit_31_32_1;
-wire  credit_32_33_1;
+wire [15:0] credit_30_31_1;
+wire [15:0] credit_31_32_1;
+wire [15:0] credit_32_33_1;
 
 // Credit Interconnection for vertical connection 
 
-wire  credit_00_10_1;
-wire  credit_10_20_1;
-wire  credit_20_30_1;
+wire [15:0] credit_00_10_1;
+wire [15:0] credit_10_20_1;
+wire [15:0] credit_20_30_1;
 
-wire  credit_01_11_1;
-wire  credit_11_21_1;
-wire  credit_21_31_1;
+wire [15:0] credit_01_11_1;
+wire [15:0] credit_11_21_1;
+wire [15:0] credit_21_31_1;
 
-wire  credit_02_12_1;
-wire  credit_12_22_1;
-wire  credit_22_32_1;
+wire [15:0] credit_02_12_1;
+wire [15:0] credit_12_22_1;
+wire [15:0] credit_22_32_1;
 
-wire  credit_03_13_1;
-wire  credit_13_23_1;
-wire  credit_23_33_1;
+wire [15:0] credit_03_13_1;
+wire [15:0] credit_13_23_1;
+wire [15:0] credit_23_33_1;
 
 
 
@@ -467,7 +467,7 @@ s_edge_router router_32 (
 	.n_credit_o (credit_22_32_1),
 	
 	.w_data_i (data_31_32_0),
-	.w_valid_i (valid_31_32_0),
+	.w_valid_i (valid_31_31_0),
 	.w_credit_i (credit_31_32_0),
 	.w_data_o (data_31_32_1),
 	.w_valid_o (valid_31_32_1),
@@ -780,7 +780,7 @@ inner_router router_22 (
 	.w_credit_o	(credit_21_22_1),
 	
 	.e_data_i (data_22_23_1),
-	.e_valid_i (valid_22_23_1),
+	.e_valid_i (valid_22_23_1,
 	.e_credit_i (credit_22_23_1),
 	.e_data_o (data_22_23_0),
 	.e_valid_o (valid_22_23_0),
