@@ -12,7 +12,9 @@ class environment;
 	string t_var;
 	constraint densities {
 	reset_density <= 100;
-	packet_creation_density <= 100;
+	read_density <= 100;
+	write_density <= 100;
+	search_density <= 100;
 	}	
 	function new();
 		file = $fopen("config.txt" ,"r");
@@ -28,9 +30,9 @@ class environment;
 				"RANDOM_SEED": random_seed = val;
 				"MAX_CYCLES": max_cycles = val;
 				"RESET_DENSITY": reset_density = val*100;
-				"FLIT_DATA_MASK": flit_data_mask = var;
-				"FLIT_ADDR_MASK": flit_addr_mask = var;
-				"PACKET_CREATION_DENSITY": packet_creation_density = var*100;
+				"FLIT_DATA_MASK": flit_data_mask = val;
+				"FLIT_ADDR_MASK": flit_addr_mask = val;
+				"PACKET_CREATION_DENSITY": packet_creation_density = val;
 				"AUTO_CONFIGURE": auto_config = val;
 			endcase
 		end
