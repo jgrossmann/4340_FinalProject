@@ -1,0 +1,11 @@
+
+Action Items: 
+
+n_edge
+s_edge
+w_edge
+e_edge
+nw_corner
+sw_corner
+ne_corner
+se_corner
