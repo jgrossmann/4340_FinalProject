@@ -52,6 +52,8 @@ else begin
    data_e_o_temp = 16'bzzzz_zzzz_zzzz_zzzz; 
    data_l_o_temp = 16'bzzzz_zzzz_zzzz_zzzz; 
 end 
+
+end 
    
 assign data_n_o_temp = data_n_o; 
 assign data_s_o_temp = data_s_o; 
