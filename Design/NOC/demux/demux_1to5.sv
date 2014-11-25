@@ -13,7 +13,7 @@ output [15:0] data_w_o,
 output [15:0] data_e_o,
 output [15:0] data_l_o
 
-); 
+) 
 
 logic [15:0] data_n_o_temp; 
 logic [15:0] data_s_o_temp; 
@@ -21,7 +21,7 @@ logic [15:0] data_w_o_temp;
 logic [15:0] data_e_o_temp; 
 logic [15:0] data_l_o_temp;
 
-always_comb_begin 
+always_comb begin 
 
 
 if (enable_i) begin 
