@@ -1,4 +1,6 @@
 
+`include "eff.sv"
+
 module credit_counter (
 
 input clk, 
