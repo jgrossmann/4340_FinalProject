@@ -24,26 +24,27 @@ eff #(.DATA_WIDTH(3)) ff (
 
 always_comb begin 
 
-if (reset) 
+if (reset) begin
 
 	data_i_temp = 3'b101;  
 	
 
-else if (cc_inc_i & ~cc_dec_i)
+end else if (cc_inc_i & ~cc_dec_i) begin 
 
    data_i_temp = data_o_temp + 1 ; 
 
-else if (cc_dec_i & ~cc_inc_i)
+end else if (cc_dec_i & ~cc_inc_i) begin 
    
    data_i_temp = data_o_temp -1 ;
    
-else if (cc_inc_i ~^ cc_dec_i)
+end else if (cc_inc_i ~^ cc_dec_i) begin 
 
    data_i_temp = data_o_temp ; 
   
 end 
 
 end 
+
 
 assign cc_credit_o = ~ (data_o_temp == 3'b000);  
 
