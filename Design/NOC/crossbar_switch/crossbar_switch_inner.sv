@@ -37,7 +37,7 @@ logic [15:0] w_cs_o_temp;
 logic [15:0] e_cs_o_temp; 
 logic [15:0] l_cs_o_temp; 
 
-always_comb_begin 
+always_comb begin 
 
    demux_1to5 n_demux( 
 	    
@@ -103,6 +103,8 @@ always_comb_begin
 	   .data_l_o()
 	   
   	   );
+	   
+end 
 
    
 assign n_cs_o = n_cs_o_temp ; 
