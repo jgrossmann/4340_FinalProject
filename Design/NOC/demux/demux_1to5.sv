@@ -28,11 +28,11 @@ if (enable_i) begin
    
    case (sel_i)
    
-   2'b000 : data_n_o_temp = data_i; 
-   2'b001 : data_s_o_temp = data_i; 
-   2'b010 : data_w_o_temp = data_i; 
-   2'b011 : data_e_o_temp = data_i; 
-   2'b100 : data_l_o_temp = data_i; 
+   3'b000 : data_n_o_temp = data_i; 
+   3'b001 : data_s_o_temp = data_i; 
+   3'b010 : data_w_o_temp = data_i; 
+   3'b011 : data_e_o_temp = data_i; 
+   3'b100 : data_l_o_temp = data_i; 
    
    default : begin 
                    data_n_o_temp = 16'bxxxx_xxxx_xxxx_xxxx; 
