@@ -55,11 +55,11 @@ end
 
 end 
    
-assign data_n_o_temp = data_n_o; 
-assign data_s_o_temp = data_s_o; 
-assign data_w_o_temp = data_w_o; 
-assign data_e_o_temp = data_e_o; 
-assign data_l_o_temp = data_l_o; 
+assign data_n_o = data_n_o_temp; 
+assign data_s_o = data_s_o_temp; 
+assign data_w_o = data_w_o_temp; 
+assign data_e_o = data_e_o_temp; 
+assign data_l_o = data_l_o_temp; 
 
 endmodule 
 
