@@ -1,4 +1,4 @@
-`include "./NOC/demux_1to5.sv"
+`include "./NOC/demux/demux_1to5.sv"
 
 
 module crossbar_switch_inner 
