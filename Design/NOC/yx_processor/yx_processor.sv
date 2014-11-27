@@ -9,9 +9,7 @@ output yx_addr_o
 	
 logic [2:0] yx_addr_o_temp;
 logic [7:0] yx_addr_header_i_temp = yx_addr_header_i;
-logic [7:0] yx_addr_router_i_temp = yx_addr_router_i
-
-
+logic [7:0] yx_addr_router_i_temp = yx_addr_router_i;
 
 always_comb begin 
 
