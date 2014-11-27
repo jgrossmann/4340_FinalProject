@@ -8,9 +8,9 @@ input [15:0] data_n_i,
 input [15:0] data_s_i,
 input [15:0] data_w_i,
 input [15:0] data_e_i,
-input [15:0] data_l_i
+input [15:0] data_l_i,
 
-output [15:0] data_i, 
+output [15:0] data_o
 ); 
 
 logic [15:0] data_o_temp; 
