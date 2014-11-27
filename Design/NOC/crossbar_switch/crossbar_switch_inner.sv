@@ -22,12 +22,6 @@ input [2:0] w_cs_sel_mux_i,
 input [2:0] e_cs_sel_mux_i, 
 input [2:0] l_cs_sel_mux_i,
 
-input  n_cs_enable_i, 
-input  s_cs_enable_i, 
-input  w_cs_enable_i, 
-input  e_cs_enable_i, 
-input  l_cs_enable_i,
-
 output [15:0] n_cs_o, 
 output [15:0] s_cs_o, 
 output [15:0] w_cs_o, 
