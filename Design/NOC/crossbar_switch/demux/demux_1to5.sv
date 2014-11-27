@@ -5,7 +5,6 @@ module demux_1to5
 
 input [15:0] data_i, 
 input [2:0] sel_i, 
-input enable_i, 
 
 output [15:0] data_n_o, 
 output [15:0] data_s_o,
