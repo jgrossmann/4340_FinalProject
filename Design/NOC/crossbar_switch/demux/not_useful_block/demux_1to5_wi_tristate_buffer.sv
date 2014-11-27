@@ -22,6 +22,9 @@ logic [15:0] data_e_o_temp;
 logic [15:0] data_l_o_temp;
 
 always_comb begin 
+
+
+if (enable_i) begin 
    
    case (sel_i)
    
@@ -39,6 +42,16 @@ always_comb begin
                    data_l_o_temp = 16'bxxxx_xxxx_xxxx_xxxx;               
              end
    endcase
+   
+end 
+
+else begin 
+   data_n_o_temp = 16'bzzzz_zzzz_zzzz_zzzz; 
+   data_s_o_temp = 16'bzzzz_zzzz_zzzz_zzzz;
+   data_w_o_temp = 16'bzzzz_zzzz_zzzz_zzzz; 
+   data_e_o_temp = 16'bzzzz_zzzz_zzzz_zzzz; 
+   data_l_o_temp = 16'bzzzz_zzzz_zzzz_zzzz; 
+end 
 
 end 
    
