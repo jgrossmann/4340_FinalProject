@@ -188,7 +188,4 @@ assign w_cs_o = w_cs_o_temp ;
 assign e_cs_o = e_cs_o_temp ; 
 assign l_cs_o = l_cs_o_temp; 
 
-endmodule 
-
-   
-   
+endmodule    
