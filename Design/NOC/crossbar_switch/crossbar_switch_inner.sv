@@ -60,6 +60,12 @@ logic [15:0] l_demux_s_temp;
 logic [15:0] l_demux_w_temp; 
 logic [15:0] l_demux_e_temp; 
 
+logic [15:0] n_cs_o_temp; 
+logic [15:0] s_cs_o_temp; 
+logic [15:0] w_cs_o_temp; 
+logic [15:0] e_cs_o_temp; 
+logic [15:0] l_cs_o_temp; 
+
      demux_1to5 n_demux( 
 	   .data_i(n_cs_i),
 	   .sel_i(n_cs_sel_demux_i),
@@ -119,7 +125,7 @@ logic [15:0] l_demux_e_temp;
 	   .data_w_i(w_demux_n_temp), 
 	   .data_e_i(e_demux_n_temp),
 	   .data_l_i(l_demux_n_temp), 
-  	   .data_o(l_cs_o)
+  	   .data_o(n_cs_o_temp)
  
   	   );
 	   
@@ -132,7 +138,7 @@ logic [15:0] l_demux_e_temp;
 	   .data_w_i(w_demux_n_temp), 
 	   .data_e_i(e_demux_n_temp),
 	   .data_l_i(l_demux_n_temp), 
-  	   .data_o(l_cs_o)
+  	   .data_o(s_cs_o_temp)
  
   	   );
 	   
@@ -145,7 +151,7 @@ logic [15:0] l_demux_e_temp;
 	   .data_w_i(), 
 	   .data_e_i(e_demux_n_temp),
 	   .data_l_i(l_demux_n_temp), 
-  	   .data_o(l_cs_o)
+  	   .data_o(w_cs_o_temp)
  
   	   );
 	   
@@ -158,7 +164,7 @@ logic [15:0] l_demux_e_temp;
 	   .data_w_i(w_demux_n_temp), 
 	   .data_e_i(),
 	   .data_l_i(l_demux_n_temp), 
-  	   .data_o(l_cs_o)
+  	   .data_o(e_cs_o_temp)
  
   	   );
 	   
@@ -171,7 +177,7 @@ logic [15:0] l_demux_e_temp;
 	   .data_w_i(w_demux_n_temp), 
 	   .data_e_i(e_demux_n_temp),
 	   .data_l_i(), 
-  	   .data_o(l_cs_o)
+  	   .data_o(l_cs_o_temp)
  
   	   );
 		   
