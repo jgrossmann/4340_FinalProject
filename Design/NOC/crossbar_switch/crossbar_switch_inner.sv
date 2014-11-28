@@ -1,14 +1,22 @@
 `include "./demux/demux_1to5.sv"
 `include "./mux/mux_5to1.sv"
 
+// Crossbar-switch comprises 5 demux and 5 mux. Each 16-bit input from the associated input buffer will enter the de-mux and get selected by output of associated Y-X processor. 
+
+// Output of each de-mux will drive all muxes except the one with same direction. The select sinal genrated by Round-robin proessor will select the prioritized input to be sent to the associated output direction. 
+
 module crossbar_switch_inner 
 
 (
+// Input of demux 
+
 input [15:0] n_cs_i, 
 input [15:0] s_cs_i, 
 input [15:0] w_cs_i, 
 input [15:0] e_cs_i, 
 input [15:0] l_cs_i, 
+
+// Input of demux select signals
 
 input [2:0] n_cs_sel_demux_i, 
 input [2:0] s_cs_sel_demux_i, 
@@ -16,11 +24,15 @@ input [2:0] w_cs_sel_demux_i,
 input [2:0] e_cs_sel_demux_i, 
 input [2:0] l_cs_sel_demux_i,
 
+// Input of mux select signals
+
 input [2:0] n_cs_sel_mux_i, 
 input [2:0] s_cs_sel_mux_i, 
 input [2:0] w_cs_sel_mux_i, 
 input [2:0] e_cs_sel_mux_i, 
 input [2:0] l_cs_sel_mux_i,
+
+// outpu of mux 
 
 output [15:0] n_cs_o, 
 output [15:0] s_cs_o, 
@@ -59,6 +71,8 @@ logic [15:0] s_cs_o_temp;
 logic [15:0] w_cs_o_temp; 
 logic [15:0] e_cs_o_temp; 
 logic [15:0] l_cs_o_temp; 
+
+// Instantiate five demux for north, south, west, east local input buffer respectively. 
 
      demux_1to5 n_demux( 
 	   .data_i(n_cs_i),
@@ -110,6 +124,8 @@ logic [15:0] l_cs_o_temp;
 	   .data_l_o()   
   	   );
 	   
+// Instantiate 5 mux for north, south, west, east, local output respectively. 
+   
 	   mux_5to1 n_mux( 
 		   
   	   .sel_i(n_cs_sel_mux_i),
@@ -175,7 +191,8 @@ logic [15:0] l_cs_o_temp;
  
   	   );
 		   
-	   
+// Use the temporary variables to drive the output signals 
+
 assign n_cs_o = n_cs_o_temp ; 
 assign s_cs_o = s_cs_o_temp ; 
 assign w_cs_o = w_cs_o_temp ; 
