@@ -18,8 +18,8 @@ module test_demux();
         .data_l_o
         );
 
-    initial begin
-        $vcdpluson
+	 initial begin
+        $vcdpluson;
         data_i = 16'b0101010101010101;
         sel_i = 3'b000;
         #5 $display("Data being sent is: %b\n", data_i);
@@ -44,5 +44,11 @@ module test_demux();
         #5  $display("Select is set at %b\n", sel_i);
         $display("North: %b\n, South: %b\n, West: %b\n, East: %b\n, Local: %b\n", data_n_o, data_s_o, data_w_o, data_e_o, data_l_o);
 
+		  data_i = 16'b1111111111111111;
+		  #5 $display("Data is changed to: 1111111111111111\n");
+	  	  $display("Select is set at %b\n", sel_i);
+		  $display("North: %b\n, South: %b\n, West: %b\n, East: %b\n, Local: %b\n", data_n_o, data_s_o, data_w_o, data_e_o, data_l_o);
 
+	 end
+	
 endmodule

@@ -3,18 +3,14 @@ BENCH_SRC=test_demux.sv
 BENCH_BIN=test.exe
 
 all:
-    make clean
-    make test
-    make view
+	make clean
+	make test
 
 test:
-    vcs -full64 -debug_pp -sverilog -notice +lint=all,noVCDE +define+SV +define+VPD $(DUT) $(BENCH_SRC) -o $(BENCH_BIN)
-    ./$(BENCH_BIN)
-
-view:
-    dve -full64 -vpd vcdplus.vpd &
+	vcs -full64 -debug_pp -sverilog -notice +lint=all,noVCDE +define+SV +define+VPD $(DUT) $(BENCH_SRC) -o $(BENCH_BIN)
+	./$(BENCH_BIN)
 
 clean:
-    rm -rf csrc *.exe.daidir *.exe *.log *.inf .leda_work *.key *.vpd *.vcd DVEfiles
+	rm -rf csrc *.exe.daidir *.exe *.log *.inf .leda_work *.key *.vpd *.vcd DVEfiles
 
 
