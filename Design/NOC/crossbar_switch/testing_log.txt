@@ -1,2 +1,16 @@
 
 “crossbar_switch_inner” is ready to be tested — (11/25, Jeffrey)
+
+After testing "crossbar_switch_inner" with 1 directed test, the results seem
+like the functionality is not implemented correctly. After setting the input data
+to all of the demuxes to something different for each direction, I then set all of
+the demux selectors to north (000) except for the north demux which I set to local (100).
+Then, I set the mux selectors so that south output should be the north input, and other
+random assignments. The key thing to note is that the only one which actually should
+have worked was the North input to South output because that was the only path that 
+should have been allowed through based on the selectors. However, that was the only one
+which did not work. All of the other outputs displayed correct regardless if the demux
+selectors sent the input data into the corresponding mux. Check the TestResults.txt for
+clarification. (11/30, John) 
+
+
