@@ -3,6 +3,7 @@
 `include "tb/checker.sv"
 `include "tb/noc_class.sv"
 `include "tb/environment.sv"
+`include "tb/flit.sv"
 
 // testbench program
 program tb (ifc.bench ds);
