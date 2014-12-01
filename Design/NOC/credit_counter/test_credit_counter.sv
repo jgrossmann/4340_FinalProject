@@ -21,7 +21,7 @@ module test_credit_counter();
 		);
 		
 	initial begin
-		$vcdpluson
+		$vcdpluson;
 		
 		reset = 1;
 		
@@ -76,7 +76,7 @@ module test_credit_counter();
 		
 		#5 $display("Decrementing\n");
 		$display("Credit output: %b\n", cc_credit_o);
-		
+		$finish;		
 	end
 		
 endmodule
