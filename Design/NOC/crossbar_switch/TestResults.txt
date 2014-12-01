@@ -1,0 +1,43 @@
+Incomplete Test Results (11/30 - John)
+
+
+Setting input to demux Data
+
+North: 0000000000000001
+ South: 0000000000000010
+ West: 0000000000000100
+ East: 0000000000001000
+ Local: 0000000000010000
+
+Selector value and corresponding direction:
+
+North: 000
+ South: 001
+ West: 010
+ East: 011
+ Local: 100
+
+Setting Demux selector values:
+
+North: 100
+ South: 000
+ West: 000
+ East: 000
+ Local: 000
+
+Setting Mux selector values:
+
+North: 100
+ South: 000
+ West: 001
+ East: 010
+ Local: 011
+
+Output:
+
+North: 0000000000010000
+ South: 000000000000000z
+ West: 0000000000000010
+ East: 0000000000000100
+ Local: 0000000000001000
+
