@@ -1,0 +1,42 @@
+Test Results (11/30 - John)
+
+Setting Data
+
+North: 0000000000000001
+, South: 0000000000000010
+, West: 0000000000000100
+, East: 0000000000001000
+, Local: 0000000000010000
+
+Mux outputs based on select:
+North: 000
+ South: 001
+ West: 010
+ East: 011
+ Local: 100
+
+Setting select: 000
+
+Output: 0000000000000001
+
+Setting select: 001
+
+Output: 0000000000000010
+
+Setting select: 010
+
+Output: 0000000000000100
+
+Setting select: 011
+
+Output: 0000000000001000
+
+Setting select: 100
+
+Output: 0000000000010000
+
+Setting North data as 1111111111111111
+Setting select: 000
+
+Output: 1111111111111111
+

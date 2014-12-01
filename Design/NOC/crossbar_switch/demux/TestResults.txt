@@ -1,0 +1,57 @@
+Test Output (11/30 - John)
+
+
+Data being sent is: 0101010101010101
+
+North = 000, South = 001, West = 010, East = 011, Local = 100
+
+Select is set at 000
+
+North: 0101010101010101
+, South: xxxxxxxxxxxxxxxx
+, West: xxxxxxxxxxxxxxxx
+, East: xxxxxxxxxxxxxxxx
+, Local: xxxxxxxxxxxxxxxx
+
+Select is set at 001
+
+North: 0101010101010101
+, South: 0101010101010101
+, West: xxxxxxxxxxxxxxxx
+, East: xxxxxxxxxxxxxxxx
+, Local: xxxxxxxxxxxxxxxx
+
+Select is set at 010
+
+North: 0101010101010101
+, South: 0101010101010101
+, West: 0101010101010101
+, East: xxxxxxxxxxxxxxxx
+, Local: xxxxxxxxxxxxxxxx
+
+Select is set at 011
+
+North: 0101010101010101
+, South: 0101010101010101
+, West: 0101010101010101
+, East: 0101010101010101
+, Local: xxxxxxxxxxxxxxxx
+
+Select is set at 100
+
+North: 0101010101010101
+, South: 0101010101010101
+, West: 0101010101010101
+, East: 0101010101010101
+, Local: 0101010101010101
+
+Data is changed to: 1111111111111111
+
+Select is set at 100
+
+North: 0101010101010101
+, South: 0101010101010101
+, West: 0101010101010101
+, East: 0101010101010101
+, Local: 1111111111111111
+

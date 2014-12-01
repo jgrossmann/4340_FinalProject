@@ -3,7 +3,7 @@ module mux_5to1
 
 (
 	
-input [3:0]  sel_i, 
+input [2:0]  sel_i, 
 input [15:0] data_n_i, 
 input [15:0] data_s_i,
 input [15:0] data_w_i,

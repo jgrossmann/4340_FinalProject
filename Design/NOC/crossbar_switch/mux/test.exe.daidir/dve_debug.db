@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<opml version="1.0">
+	<head>
+		<title>VCS dump file for DVE debugging</title>
+		<vcsVersion>F-2011.12_Full64</vcsVersion>
+		<dateCreated>Sun Nov 30 21:43:25 2014</dateCreated>
+	</head>
+	<body>
+		<!-- VCS compile options -->
+		<vcsCompileOptions text="/sim/synopsys64/vcs/amd64/bin/vcs1 -Mcc=gcc -Mcplusplus=g++ -Masflags= -Mcfl= -pipe -O -I/sim/synopsys64/vcs/include  -Mldflags=  -Mout=test.exe -Mamsrun= -Mvcsaceobjs= -Mobjects= /sim/synopsys64/vcs/amd64/lib/libvirsim.so /sim/synopsys64/vcs/amd64/lib/liberrorinf.so /sim/synopsys64/vcs/amd64/lib/libsnpsmalloc.so  -Msaverestoreobj=/sim/synopsys64/vcs/amd64/lib/vcs_save_restore_new.o -Mcrt0= -Mcrtn= -Mcsrc= -Msyslibs=-ldl -lm  -full64 -Xcbug=0x1 -Xnotice +lint=all,noVCDE +define+SV +define+VPD -o test.exe -pp_used +vcsd +itf+/sim/synopsys64/vcs/amd64/lib/vcsdp.tab +cli+1 -debug=1 +memcbk -sverilog +vpi -gen_obj mux_5to1.sv test_mux.sv "/>
+		<!-- File list for the whole design -->
+		<fileList>
+			<file fid="0" path="/home/jg3538/4340_FinalProject/Design/NOC/crossbar_switch/mux/mux_5to1.sv" />
+			<file fid="1" path="/home/jg3538/4340_FinalProject/Design/NOC/crossbar_switch/mux/test_mux.sv" />
+		</fileList>
+		<!-- Include file list for the whole design -->
+		<includeFileList>
+		</includeFileList>
+		<!-- Encrypted codes list for the whole design -->
+		<encryptedCodesList>
+		</encryptedCodesList>
+		<!-- Inactive codes list for the whole design -->
+		<inactiveCodesList>
+		</inactiveCodesList>
+		<!-- Compile options UUM based -->
+		<langKeywords>
+			<svFiles fid="0-1" />
+		</langKeywords>
+		<!--  Case insensitive file list -->
+		<caseInsensitiveFiles fid="" />
+		<!-- Macro definition list for the whole design --> 
+		<macroDefinitionList>
+		</macroDefinitionList>
+		<!-- Macro value list for the whole design --> 
+		<macroValueList>
+		</macroValueList>
+	</body>
+</opml>
