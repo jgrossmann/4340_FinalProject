@@ -34,12 +34,12 @@
 credit_counter.sv
 test_credit_counter.sv
 37
-sysc_uni_pwd=/home/jg3538/4340_FinalProject/Design/NOC/credit_counter
-WORKON_HOME=/home/jg3538/.virtualenvs
+sysc_uni_pwd=/home/yss2117/4340_FinalProject/Design/NOC/credit_counter
+WORKON_HOME=/home/yss2117/.virtualenvs
 VMR_MODE_FLAG=64
 VIRTUALENVWRAPPER_PROJECT_FILENAME=.project
-VIRTUALENVWRAPPER_LOG_DIR=/home/jg3538/.virtualenvs
-VIRTUALENVWRAPPER_HOOK_DIR=/home/jg3538/.virtualenvs
+VIRTUALENVWRAPPER_LOG_DIR=/home/yss2117/.virtualenvs
+VIRTUALENVWRAPPER_HOOK_DIR=/home/yss2117/.virtualenvs
 VCS_MODE_FLAG=64
 VCS_HOME=/sim/synopsys64/vcs
 VCS_DEPTH=0
@@ -50,9 +50,9 @@ TOOL_HOME=/sim/synopsys64/vcs/amd64
 SYN_DIR=/sim/synopsys64
 SYNTH_HOME=/sim/synopsys64/icc
 SYNOPSYS=/sim/synopsys64/icc
-SSH_TTY=/dev/pts/7
-SSH_CONNECTION=24.228.53.131 49850 128.59.15.59 22
-SSH_CLIENT=24.228.53.131 49850 22
+SSH_TTY=/dev/pts/1
+SSH_CONNECTION=160.39.142.219 50523 128.59.15.84 22
+SSH_CLIENT=160.39.142.219 50523 22
 SNPSLMD_LICENSE_FILE=28100@license.cs.columbia.edu:/sim/synopsys64/vcs/flexlm//license.dat
 SCRNAME=vcs
 SCRIPT_NAME=vcs
@@ -73,13 +73,13 @@ FPGA_HOME=/sim/synopsys64/fpga
 FORMALITY_HOME=/sim/synopsys64/formality
 0
 4
-1416847397 eff.sv
-1417409127 test_credit_counter.sv
-1417399436 credit_counter.sv
+1416949886 eff.sv
+1417455718 test_credit_counter.sv
+1417410154 credit_counter.sv
 1322023114 /sim/synopsys64/vcs/amd64/lib/vcsdp.tab
 4
 0 
 1322023672 /sim/synopsys64/vcs/amd64/lib/libvirsim.so
 1322023397 /sim/synopsys64/vcs/amd64/lib/liberrorinf.so
 1322023255 /sim/synopsys64/vcs/amd64/lib/libsnpsmalloc.so
-1417409231 test.exe.daidir
+1417455732 test.exe.daidir

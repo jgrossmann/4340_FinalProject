@@ -1,0 +1,1 @@
+Test works. The credit is able to be increased above five and decremented below zero, however, it doesn't seem like we have to worry about this since those signals should never be outputted (12/1) 
