@@ -2,7 +2,6 @@ class environment;
 
 	rand int random_seed;
 	rand int reset_density;
-	rand bit [3:0] flit_data_mask;
 	rand bit [2:0] flit_addr_mask;
 	rand int packet_creation_density;
 	bit auto_config;
@@ -28,7 +27,6 @@ class environment;
 				"RANDOM_SEED": random_seed = val;
 				"MAX_CYCLES": max_cycles = val;
 				"RESET_DENSITY": reset_density = val*100;
-				"FLIT_DATA_MASK": flit_data_mask = var;
 				"FLIT_ADDR_MASK": flit_addr_mask = var;
 				"PACKET_CREATION_DENSITY": packet_creation_density = var*100;
 				"AUTO_CONFIGURE": auto_config = val;
