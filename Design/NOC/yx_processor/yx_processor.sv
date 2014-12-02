@@ -10,32 +10,43 @@ output [2:0] yx_addr_o
 logic [2:0] yx_addr_o_temp;
 logic [7:0] yx_addr_header_i_temp = yx_addr_header_i;
 logic [7:0] yx_addr_router_i_temp = yx_addr_router_i;
+logic [3:0] y_addr_subtract; 
+logic [3:0] x_addr_subtract; 
 
 always_comb begin 
 
-if (yx_addr_header_i_temp [3:0] > yx_addr_router_i_temp [3:0]) begin 
+y_addr_subtract = yx_addr_header_i_temp [3:0] - yx_addr_router_i_temp [3:0]; 
+x_addr_subtract = yx_addr_header_i_temp [7:4] - yx_addr_router_i_temp [7:4]; 
 
-yx_addr_o_temp = 3'b001; 
+// If the MSB of y_addr_subtract is 0, then it should go 
 
-end else if (yx_addr_header_i_temp [3:0] < yx_addr_router_i_temp [3:0]) begin
+if (yx_addr_header_i_temp [7:0] == yx_addr_router_i_temp [7:0]) begin
+ 
+yx_addr_o_temp = 3'b100; // "local" output direction 
 
-yx_addr_o_temp = 3'b000;
+end else if (!(yx_addr_header_i_temp [3:0] == yx_addr_router_i_temp [3:0]) ) begin 
 
-end else if (yx_addr_header_i_temp [7:4] > yx_addr_router_i_temp [7:4]) begin
+if (~y_addr_subtract [3]) begin 
 
-yx_addr_o_temp = 3'b011;
+yx_addr_o_temp = 3'b001; // "south" output direction 
 
-end else if (yx_addr_header_i_temp [7:4] < yx_addr_router_i_temp [7:4]) begin
+end else if (y_addr_subtract [3]) begin
 
-yx_addr_o_temp = 3'b010;
-
-end else 
-
-yx_addr_o_temp = 3'b100;
-
-
+yx_addr_o_temp = 3'b000; // "north" output direction 
 
 end 
+
+end else if (~x_addr_subtract[3]) begin
+
+yx_addr_o_temp = 3'b011; // "east" output direction 
+
+end else if (x_addr_subtract[3]) begin
+
+yx_addr_o_temp = 3'b010; // "west" output direction 
+
+end 
+
+end  
 
 assign yx_addr_o = yx_addr_o_temp; 
 
