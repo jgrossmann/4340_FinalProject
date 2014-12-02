@@ -8,7 +8,7 @@ class transaction;
     constraint c {
         foreach(packet_tracker[i,j])
 				if(packet_tracker[i][j] > 0)
-            	valid[i][j] == 1;
+            	    valid[i][j] == 1;
     }
 
     function new(input environment e);    
@@ -23,14 +23,14 @@ class transaction;
     function void pre_randomize();
 // Sets flit type based on the packet tracker of each port
         foreach(packet_tracker[i,j]) begin
-        		if(packet_tracker[i][j] == 0) begin
-            	flits[i][j].flit_type = "header";
+        	if(packet_tracker[i][j] == 0) begin
+                flits[i][j].flit_type = "header";
                flits[i][j].address.rand_mode(1); //randomize address if new packet
        		end else if(packet_tracker[i][j] == 1) begin
                flits[i][j].flit_type = "body";        
                flits[i][j].address.rand_mode(0); //keep address same if body flit
             end
-				flits[i][j].randomize();
+		    flits[i][j].randomize();
         end
     endfunction
 
