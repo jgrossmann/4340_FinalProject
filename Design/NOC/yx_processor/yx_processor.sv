@@ -1,9 +1,9 @@
 
 module yx_processor (
 
-input yx_addr_header_i, 
-input yx_addr_router_i,
-output yx_addr_o
+input [7:0] yx_addr_header_i, 
+input [7:0] yx_addr_router_i,
+output [2:0] yx_addr_o
 
 );
 	
