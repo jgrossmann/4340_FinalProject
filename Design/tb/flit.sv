@@ -1,6 +1,6 @@
 class flit;
 
-    string type;
+    string flit_type;
     rand bit [15:0] data;
     rand bit [7:0] address;  
 
@@ -9,7 +9,7 @@ class flit;
     }
 
     function new(string t);
-        type = t;
+        flit_type = t;
     endfunction;
 
     function new();

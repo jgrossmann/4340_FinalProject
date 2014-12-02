@@ -1,9 +1,9 @@
 `timescale 1ns/1ps
-`include "tb/transaction.sv"
-`include "tb/checker.sv"
-`include "tb/noc_class.sv"
-`include "tb/environment.sv"
-`include "tb/flit.sv"
+`include "transaction.sv"
+`include "checker.sv"
+`include "noc_class.sv"
+`include "environment.sv"
+`include "flit.sv"
 
 // testbench program
 program tb (ifc.bench ds);

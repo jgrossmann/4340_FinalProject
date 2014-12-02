@@ -27,8 +27,8 @@ class environment;
 				"RANDOM_SEED": random_seed = val;
 				"MAX_CYCLES": max_cycles = val;
 				"RESET_DENSITY": reset_density = val*100;
-				"FLIT_ADDR_MASK": flit_addr_mask = var;
-				"PACKET_CREATION_DENSITY": packet_creation_density = var*100;
+				"FLIT_ADDR_MASK": flit_addr_mask = val;
+				"PACKET_CREATION_DENSITY": packet_creation_density = val*100;
 				"AUTO_CONFIGURE": auto_config = val;
 			endcase
 		end

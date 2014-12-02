@@ -1,4 +1,4 @@
-`include "tb/input_buffer_class.sv"
+`include "input_buffer_class.sv"
 
 class router;
     
