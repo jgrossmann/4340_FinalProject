@@ -1,9 +1,4 @@
 `timescale 1ns/1ps
-`include "transaction.sv"
-`include "checker.sv"
-`include "noc_class.sv"
-`include "environment.sv"
-`include "flit.sv"
 
 // testbench program
 program tb (ifc.bench ds);
@@ -13,7 +8,8 @@ program tb (ifc.bench ds);
 	network noc;
 	environment env;
 	initial begin
-		trans = new();
+		env = new();
+		trans = new(env);
 		golden_model = new();
 		noc = new();
 		repeat(10000) begin

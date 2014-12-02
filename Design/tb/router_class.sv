@@ -1,4 +1,3 @@
-`include "input_buffer_class.sv"
 
 class router;
     
@@ -11,29 +10,18 @@ class router;
 
 	logic x_pos;
 	logic y_pos;
-	input_buffer north_buf;
-	input_buffer south_buf;
-	input_buffer west_buf;
-	input_buffer east_buf;
-	input_buffer local_buf;
-    int [4:0] cc;
-    int [4:0] packet_tracker;	
+	input_buffer buffers [5];
+	int cc [5];
+   int packet_tracker [5];	
 
 	function new(input logic x_cor, y_cor);
 		x_pos = x_cor;
 		y_pos = y_cor;
-        north_buf = new();
-		south_buf = new();
-		west_buf = new();
-		east_buf = new();
-		local_buf = new();
-        foreach(cc[i]) begin
-            cc[i] = 0;
-        end
-		foreach(packet_tracker[i]) begin
-            packet_tracker[i] = 0;
-        end
-	
+      foreach(cc[i]) begin
+			buffers[i] = new();
+      	cc[i] = 0;
+			packet_tracker[i] = 0;
+      end
 	endfunction
 
 	function arbiter();

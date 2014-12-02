@@ -1,6 +1,6 @@
 
 class input_buffer;
-    flit [4:0] buffer;
+    flit buffer [5];
     int read_pointer;
     int write_pointer;
     int empty;
@@ -21,16 +21,16 @@ class input_buffer;
 
     function void write(input flit f);
         if(~full()) begin
-            buffer[write] = f;
-            write = (write + 1) % 5;
+            buffer[write_pointer] = f;
+            write_pointer = (write_pointer + 1) % 5;
         end
     endfunction
 
     function flit read();
         flit temp_buffer;
         if(~empty) begin
-            temp_buffer = buffer[read];
-            read = (read + 1) % 5;
+            temp_buffer = buffer[read_pointer];
+            read_pointer = (read_pointer + 1) % 5;
         end
         return temp_buffer;
     endfunction 
