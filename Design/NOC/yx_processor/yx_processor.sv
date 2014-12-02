@@ -15,8 +15,8 @@ logic [3:0] x_addr_subtract;
 
 always_comb begin 
 
-y_addr_subtract = yx_addr_header_i_temp [3:0] - yx_addr_router_i_temp [3:0]; 
-x_addr_subtract = yx_addr_header_i_temp [7:4] - yx_addr_router_i_temp [7:4]; 
+y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
 
 // If the MSB of y_addr_subtract is 0, then it should go 
 
@@ -24,7 +24,7 @@ if (yx_addr_header_i == yx_addr_router_i) begin
  
 yx_addr_o_temp = 3'b100; // "local" output direction 
 
-end else if (!(yx_addr_header_i_temp [3:0] == yx_addr_router_i_temp [3:0]) ) begin 
+end else if (!(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
 
 if (~y_addr_subtract [3]) begin 
 
