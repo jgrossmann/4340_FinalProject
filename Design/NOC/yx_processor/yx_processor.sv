@@ -46,6 +46,10 @@ yx_addr_o_temp = 3'b010; // "west" output direction
 
 end 
 
+else
+
+yx_addr_o_temp = 3'b111; // testing
+
 end  
 
 assign yx_addr_o = yx_addr_o_temp; 
