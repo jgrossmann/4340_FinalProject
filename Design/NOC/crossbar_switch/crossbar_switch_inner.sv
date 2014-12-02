@@ -143,11 +143,11 @@ logic [15:0] l_cs_o_temp;
 		   
   	   .sel_i(s_cs_sel_mux_i),
 	   
-	   .data_n_i(n_demux_n_temp),
+	   .data_n_i(n_demux_s_temp),
 	   .data_s_i(),
-	   .data_w_i(w_demux_n_temp), 
-	   .data_e_i(e_demux_n_temp),
-	   .data_l_i(l_demux_n_temp), 
+	   .data_w_i(w_demux_s_temp), 
+	   .data_e_i(e_demux_s_temp),
+	   .data_l_i(l_demux_s_temp), 
   	   .data_o(s_cs_o_temp)
  
   	   );
@@ -156,11 +156,11 @@ logic [15:0] l_cs_o_temp;
 		   
   	   .sel_i(w_cs_sel_mux_i),
 	   
-	   .data_n_i(n_demux_n_temp),
-	   .data_s_i(s_demux_n_temp),
+	   .data_n_i(n_demux_w_temp),
+	   .data_s_i(s_demux_w_temp),
 	   .data_w_i(), 
-	   .data_e_i(e_demux_n_temp),
-	   .data_l_i(l_demux_n_temp), 
+	   .data_e_i(e_demux_w_temp),
+	   .data_l_i(l_demux_w_temp), 
   	   .data_o(w_cs_o_temp)
  
   	   );
@@ -169,11 +169,11 @@ logic [15:0] l_cs_o_temp;
 		   
   	   .sel_i(e_cs_sel_mux_i),
 	   
-	   .data_n_i(n_demux_n_temp),
-	   .data_s_i(s_demux_n_temp),
-	   .data_w_i(w_demux_n_temp), 
+	   .data_n_i(n_demux_e_temp),
+	   .data_s_i(s_demux_e_temp),
+	   .data_w_i(w_demux_e_temp), 
 	   .data_e_i(),
-	   .data_l_i(l_demux_n_temp), 
+	   .data_l_i(l_demux_e_temp), 
   	   .data_o(e_cs_o_temp)
  
   	   );
@@ -182,10 +182,10 @@ logic [15:0] l_cs_o_temp;
 		   
   	   .sel_i(l_cs_sel_mux_i),
 	   
-	   .data_n_i(n_demux_n_temp),
-	   .data_s_i(s_demux_n_temp),
-	   .data_w_i(w_demux_n_temp), 
-	   .data_e_i(e_demux_n_temp),
+	   .data_n_i(n_demux_l_temp),
+	   .data_s_i(s_demux_l_temp),
+	   .data_w_i(w_demux_l_temp), 
+	   .data_e_i(e_demux_l_temp),
 	   .data_l_i(), 
   	   .data_o(l_cs_o_temp)
  

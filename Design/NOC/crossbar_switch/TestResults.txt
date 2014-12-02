@@ -11,7 +11,7 @@ North: 0000000000000001
 
 Selector value and corresponding direction:
 
-North: 000
+North: 000f
  South: 001
  West: 010
  East: 011
