@@ -104,6 +104,18 @@ module test_crossbar_switch_inner();
         $display("North: %b\n South: %b\n West: %b\n East: %b\n Local: %b\n", n_cs_sel_mux_i, s_cs_sel_mux_i, w_cs_sel_mux_i, e_cs_sel_mux_i, l_cs_sel_mux_i);
         $display("Output:\n");
         $display("North: %b\n South: %b\n West: %b\n East: %b\n Local: %b\n", n_cs_o, s_cs_o, w_cs_o, e_cs_o, l_cs_o);
+		
+		  n_cs_sel_demux_i = 3'b100;
+        s_cs_sel_demux_i = 3'b100;
+        w_cs_sel_demux_i = 3'b100;
+        e_cs_sel_demux_i = 3'b100;
+        l_cs_sel_demux_i = 3'b000;
+
+        n_cs_sel_mux_i = 3'b100;
+        s_cs_sel_mux_i = 3'b000;
+        w_cs_sel_mux_i = 3'b000;
+        e_cs_sel_mux_i = 3'b000;
+        l_cs_sel_mux_i = 3'b000;
     end
 
 endmodule
