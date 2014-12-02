@@ -74,7 +74,7 @@ module test_crossbar_switch_inner();
         s_cs_sel_mux_i = 3'b000;
         w_cs_sel_mux_i = 3'b001;
         e_cs_sel_mux_i = 3'b010;
-        l_cs_sel_mux_i = 3'b011;
+        l_cs_sel_mux_i = 3'b000;
 
         #5 $display("Setting input to demux Data\n");
         $display("North: %b\n South: %b\n West: %b\n East: %b\n Local: %b\n", n_cs_i, s_cs_i, w_cs_i, e_cs_i, l_cs_i);
