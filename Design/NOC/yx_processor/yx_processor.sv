@@ -20,7 +20,7 @@ x_addr_subtract = yx_addr_header_i_temp [7:4] - yx_addr_router_i_temp [7:4];
 
 // If the MSB of y_addr_subtract is 0, then it should go 
 
-if (yx_addr_header_i_temp [7:0] == yx_addr_router_i_temp [7:0]) begin
+if (yx_addr_header_i_temp == yx_addr_router_i_temp) begin
  
 yx_addr_o_temp = 3'b100; // "local" output direction 
 
