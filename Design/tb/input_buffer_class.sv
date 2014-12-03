@@ -27,12 +27,20 @@ class input_buffer;
     endfunction
 
     function flit read();
-        flit temp_buffer;
+        flit temp_buffer = null;
         if(~empty) begin
             temp_buffer = buffer[read_pointer];
             read_pointer = (read_pointer + 1) % 5;
         end
         return temp_buffer;
     endfunction 
+
+    function int getX();
+        return buffer[read_pointer].x;
+    endfunction
+
+    function int getY();
+        return buffer[read_pointer].y;
+    endfunction
             
 endclass
