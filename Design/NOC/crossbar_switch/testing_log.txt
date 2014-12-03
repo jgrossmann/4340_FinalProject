@@ -10,4 +10,11 @@ random assignments. All of the outputs displayed correct regardless if the demux
 selectors sent the input data into the corresponding mux, which should not have happened.
 Check the TestResults.txt for clarification. (11/30, John) 
 
+Bug fixed. Temporary variables were only set correctly for the north mux. The other
+muxes had the north mux variables as well. Changed the mux temporary variables to correct
+ones.  (11/2, Jeff (written by John))
 
+Retested crossbar_switch_inner and the functionality is working correctly. One thing to note,
+if a mux selects a demux that previously was outputting to that path but no longer is, the mux
+picks up that old signal. In the real simulation that may go away because there is nothing
+driving that signal but it is worth a look at. (11/3, John)
