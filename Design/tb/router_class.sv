@@ -86,7 +86,7 @@ class router;
                 return -1;
             end
             
-            priority_port = token[port];
+            priority_port = (token[port] + 1) % 5;
             for(int i=0; i<4; i++) begin
                 if(temp[priority_port]) begin
                     token[port] = priority_port;
