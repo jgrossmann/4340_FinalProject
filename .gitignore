@@ -1,0 +1,5 @@
+csrc/
+*.vpd
+*.exe
+*.key
+*.daidir

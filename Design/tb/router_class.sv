@@ -15,15 +15,17 @@ class router;
     int packet_tracker [5];
     int token [5]; //each token is for an output port, with value indicating input buffer    	
     int buffer_num; //temporary variable
+	int zeros [5];  //temporary variable	
 
 	function new(input logic x_cor, y_cor);
 		x_pos = x_cor;
 		y_pos = y_cor;
       foreach(cc[i]) begin
 			buffers[i] = new();
-      	    cc[i] = 0;
+      	cc[i] = 0;
 			packet_tracker[i] = 0;
-            token[i] = 0;
+         token[i] = 0;
+			zeros[i] = 0;
       end
 	endfunction
 
@@ -38,7 +40,7 @@ class router;
         //enter port number in which flit is being input
         
         if(valid) begin
-            buffer[port].write(f);
+            buffers[port].write(f);
             cc[port]++;
         end
     endfunction
@@ -51,7 +53,7 @@ class router;
         buffer_num = arbiter(port);
         if(buffer_num == -1) begin
             return null;
-        end else
+        end else begin
             return buffers[buffer_num].read();
         end
     endfunction
@@ -65,32 +67,32 @@ class router;
         if(packet_tracker[port] == 0) begin
             int x_addr;
             int y_addr;
-            int priority;
-            foreach(buffer[i]) begin
-                if(~buffer[i].empty) begin
-                    x_addr = buffer[i].getX();
-                    y_addr = buffer[i].getY();
+            int priority_port;
+				temp = {0,0,0,0,0};
+            foreach(buffers[i]) begin
+                if(~buffers[i].empty) begin
+                    x_addr = buffers[i].getX();
+                    y_addr = buffers[i].getY();
                     case (port)     //yx processor
-                        0 : y_addr > y_pos ? temp[i] = 1 : temp[i] = 0;
-                        1 : y_addr < y_pos ? temp[i] = 1 : temp[i] = 0;
-                        2 : (y_addr == y_pos) && (x_addr < x_pos) ? temp[i] = 1 : temp[i] = 0;
-                        3 : (y_addr == y_pos) && (x_addr > x_pos) ? temp[i] = 1 : temp[i] = 0;
-                        4 : (y_addr == y_pos) && (x_addr == x_pos) ? temp[i] = 1 : temp[i] = 0;
+                        0 : if(y_addr > y_pos) temp[i] = 1;
+                        1 : if(y_addr < y_pos) temp[i] = 1;
+                        2 : if((y_addr == y_pos) && (x_addr < x_pos)) temp[i] = 1;
+                        3 : if((y_addr == y_pos) && (x_addr > x_pos)) temp[i] = 1;
+                        4 : if((y_addr == y_pos) && (x_addr == x_pos)) temp[i] = 1;
                     endcase
                 end
             end
-            int zeros = {0,0,0,0,0};
             if(temp == zeros) begin
                 return -1;
             end
             
-            priority = token[port];
+            priority_port = token[port];
             for(int i=0; i<4; i++) begin
-                if(temp[token[port]]) begin
-                    token[port] = priority;
-                    return priority;
+                if(temp[priority_port]) begin
+                    token[port] = priority_port;
+                    return priority_port;
                 end else begin
-                    priority = (priority + 1) % 5;
+                    priority_port = (priority_port + 1) % 5;
                 end
             end
 

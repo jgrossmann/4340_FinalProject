@@ -13,7 +13,7 @@ class transaction;
 
     function new(input environment e);    
         foreach(flits[i,j]) begin
-            flits[i][j] = new("header");
+            flits[i][j] = new(0);
 				packet_tracker[i][j] = 0;
 				valid[i][j] = 1;
         end
@@ -24,11 +24,13 @@ class transaction;
 // Sets flit type based on the packet tracker of each port
         foreach(packet_tracker[i,j]) begin
         	if(packet_tracker[i][j] == 0) begin
-                flits[i][j].flit_type = "header";
-               flits[i][j].address.rand_mode(1); //randomize address if new packet
+                flits[i][j].flit_type = "0";  //header is 0
+               flits[i][j].x.rand_mode(1); //randomize address if new packet
+					flits[i][j].y.rand_mode(1);
        		end else if(packet_tracker[i][j] == 1) begin
-               flits[i][j].flit_type = "body";        
-               flits[i][j].address.rand_mode(0); //keep address same if body flit
+               flits[i][j].flit_type = "1";  //body is 1      
+               flits[i][j].x.rand_mode(0); //keep address same if body flit
+					flits[i][j].y.rand_mode(0);
             end
 		    flits[i][j].randomize();
         end

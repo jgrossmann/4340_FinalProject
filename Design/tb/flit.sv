@@ -1,6 +1,6 @@
 class flit;
 
-    string flit_type;
+    int flit_type;      //0 is header and 1 is body
     rand bit [15:0] data;
     rand int x;
     rand int y;  
@@ -12,7 +12,7 @@ class flit;
         data[7:4] == x;
     }
 
-    function new(string t);
+    function new(int t);
         flit_type = t;
     endfunction;
     
