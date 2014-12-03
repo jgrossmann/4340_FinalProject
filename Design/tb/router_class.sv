@@ -41,7 +41,6 @@ class router;
         
         if(valid) begin
             buffers[port].write(f);
-            cc[port]++;
         end
     endfunction
 
