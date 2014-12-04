@@ -36,6 +36,11 @@ class router;
         cc[port] = cc[port] + credit;
     endfunction
 
+    function int portToken(int port);
+        //Grabs the number of the input buffer which has the token for the corresponding port
+        return token[port];
+    endfunction;
+
     function void receive(flit f, bit valid, int port);
         //enter port number in which flit is being input
         
