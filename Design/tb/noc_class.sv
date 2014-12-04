@@ -2,6 +2,7 @@ class network;
 
 	router r [4][4];
 	flit fs [4][4]; //stores flits that have just arrived at their final destination. This will be used by the checker to check for correctness
+	int cc_updates [4][4][4];
 	
 	function new();
 		foreach(r[i,j]) begin
@@ -16,7 +17,7 @@ class network;
 			for(port = 0; port < 4; port++) begin
 				flit f = r[i,j].send(port);
 				if(f != null) begin
-					router next = nextRouter(i, j, port);
+					router next = oppRouter(i, j, port);
 					if(port%2 == 0) begin
 						int rec_port = port++;
 					end else begin
@@ -34,7 +35,7 @@ class network;
 
 	endfunction
 
-	function router nextRouter(int i, int j, int dir)
+	function router oppRouter(int i, int j, int dir)
 		if(dir == 0) begin
 			return r[i-1][j];
 		end

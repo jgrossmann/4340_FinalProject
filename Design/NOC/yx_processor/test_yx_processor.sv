@@ -17,7 +17,7 @@ module test_yx_processor();
 		yx_addr_router_i = 8'b00100000;
 		
 		#5
-		$display("From (2,0) to (0,0)\n");
+		$display("From (0,2) to (0,0)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 
 
@@ -25,7 +25,7 @@ module test_yx_processor();
 		yx_addr_router_i = 8'b00000000;
 		
 		#5
-		$display("From (0,0) to (2,0)\n");
+		$display("From (0,0) to (0,2)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 		
 		yx_addr_header_i = 8'b00000000;
@@ -46,14 +46,14 @@ module test_yx_processor();
 		yx_addr_router_i = 8'b00010010;
 		
 		#5
-		$display("From (1,2) to (2,1)\n");
+		$display("From (2,1) to (1,2)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 
 		yx_addr_header_i = 8'b00010010;
 		yx_addr_router_i = 8'b00100001;
 		
 		#5
-		$display("From (2,1) to (1,2)\n");
+		$display("From (1,2) to (2,1)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 		
 		yx_addr_header_i = 8'b00010001;
