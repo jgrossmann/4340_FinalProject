@@ -27,6 +27,14 @@ module test_yx_processor();
 		$display("From (0,0) to (3,3)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 		
+		yx_addr_header_i = 8'b00010001;
+		yx_addr_router_i = 8'b00010001;
+		
+		#5
+		$display("From (1,1) to (1,1)\n");
+		$display("Next hop: %b\n", yx_addr_o);
+		
+		$display("%b\n", 3'b010 - 3'b100);
 		
 	end
 	
