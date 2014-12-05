@@ -53,11 +53,13 @@ class router;
         //enter port number in which to check for flit output
         //return the flit from input buffer that would be output from router port specified
         //return null if no flit is to be sent out port
+        //update the credit count of the router that it sends to
 
         buffer_num = arbiter(port);
         if(buffer_num == -1) begin
             return null;
         end else begin
+            cc[port]--;
             return buffers[buffer_num].read();
         end
     endfunction
