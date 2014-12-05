@@ -26,9 +26,7 @@ yx_addr_o_temp = 3'b100; // "local" output direction
 
 end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
 
-//if (~y_addr_subtract [3]) begin 
-
-if (yx_addr_header_i [3:0] > yx_addr_router_i [3:0]) begin 
+if (~y_addr_subtract [3]) begin 
 
 yx_addr_o_temp = 3'b001; // "south" output direction 
 
