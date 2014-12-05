@@ -6,10 +6,28 @@ class input_buffer;
     int empty;
 
     function new();
+        empty = 1;
+    endfunction;
+
+    function void reset();
+
+        foreach(buffer[i]) begin
+            buffer[i] = null;
+        end
+
         read_pointer = 0;
         write_pointer = 0;
         empty = 1;
-    endfunction;
+
+    endfunction
+
+    function flit peek();
+        if(~empty) begin
+            return buffer[read_pointer];
+        end else begin
+            return null;
+        end
+    endfunction
 
     function int full();
         if(~empty) begin
