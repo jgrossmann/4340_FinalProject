@@ -1,4 +1,4 @@
-module buffer_interface(input bit clk);
+interface buffer_interface(input bit clk);
 
     logic reset;
     logic buf_write_i;
@@ -9,7 +9,7 @@ module buffer_interface(input bit clk);
     logic buf_valid_o;
     logic [15:0] buf_data_o;
 
-    clocking cb(@posedge clk);
+    clocking cb@(posedge clk);
         output reset;
         output buf_write_i;
         output buf_read_i;
@@ -31,4 +31,4 @@ module buffer_interface(input bit clk);
         output buf_data_o
     );
 
-endmodule
+endinterface

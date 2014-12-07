@@ -1,11 +1,12 @@
+`timescale 1ns/1ps
+`include "../../NOC/input_buffer_JG/buffer_interface.sv"
+`include "../../NOC/input_buffer_JG/input_buffer_test.sv"
 `include "../flit.sv"
 `include "buffer_stats.sv"
 `include "buffer_environment.sv"
-`include "buffer_checker.sv"
 `include "input_buffer_class.sv"
+`include "buffer_checker.sv"
 `include "buffer_transaction.sv"
-`include "buffer_testbench.sv"
-
 
 program buffer_testbench(buffer_interface.bench ifc);
 
@@ -24,7 +25,6 @@ program buffer_testbench(buffer_interface.bench ifc);
             
         t = new(env);
         trans.randomize();
-        buffer = new();
         stats = new();
         golden_model = new(stats);
 
@@ -37,8 +37,12 @@ program buffer_testbench(buffer_interface.bench ifc);
         
         repeat(env.max_cycles) begin
             t.randomize();
-            t.sendData(ifc, golden_model);
-            $display("%t\n",$realtime);
+				ifc.cb.reset <= t.reset;
+        		ifc.cb.buf_write_i <= t.write;
+        		ifc.cb.buf_read_i <= t.read;
+        		ifc.cb.buf_data_i <= t.f.data;
+				golden_model.goldenResult(t.write, t.read, t.reset, t.f);
+				$display("%t\n",$realtime);
             @(ds.cb);
                         //checks the golden model against actual buffer
             golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o);

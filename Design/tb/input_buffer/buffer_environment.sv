@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 class buffer_environment;
 
 	rand int random_seed;

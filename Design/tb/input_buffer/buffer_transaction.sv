@@ -1,7 +1,8 @@
+`timescale 1ns/1ps
 
-class transaction;
+class buffer_transaction;
 
-    environment env;
+    buffer_environment env;
     int packet_tracker;
     flit f;
     rand bit reset;
@@ -13,7 +14,7 @@ class transaction;
         read dist { 0:=(100 - env.read_density), 1:=env.read_density };
     }
 
-    function new(input environment e);    
+    function new(input buffer_environment e);    
         env = e;
         packet_tracker = 0;
         f = new(0);
@@ -40,15 +41,6 @@ class transaction;
         end else if(write) begin
             packet_tracker = (packet_tracker + 1) % 5;
         end
-    endfunction
-
-    function void sendData(buffer_interface ifc, buffer_checker gm);
-        ifc.cb.reset <= reset;
-        ifc.cb.buf_write_i <= write;
-        ifc.cb.buf_read_i <= read;
-        ifc.cb.buf_data_i <= f.data;
-
-        gm.goldenResult(write, read, reset, f);         
     endfunction
 
 

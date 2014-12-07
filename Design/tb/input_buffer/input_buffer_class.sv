@@ -1,5 +1,6 @@
+`timescale 1ns/1ps
 
-class input_buffer;
+class input_buffer_class;
     flit buffer [5];
     int read_pointer;
     int write_pointer;

@@ -1,4 +1,6 @@
-BENCH=bench.sv
+INTERFACE="../../NOC/input_buffer_JG/buffer_interface.sv"
+DUT="../../NOC/input_buffer_JG/input_buffer_test.sv"
+TOP="../../NOC/input_buffer_JG/buffer_top.sv"
 
 .PHONY: help
 
@@ -17,7 +19,7 @@ indent:
 	rm *~
 
 bench: 
-	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice buffer_testbench.sv -o testbench.exe
+	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice "buffer_testbench.sv" "../../NOC/input_buffer_JG/buffer_top.sv" -o testbench.exe
 
 clean:
 	rm -rf *.o *~ *.vpd sim* csrc DVEfiles *daidir *exe *.key

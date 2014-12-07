@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 class buffer_checker;
 
     input_buffer_class buffer;
@@ -26,7 +28,7 @@ class buffer_checker;
             stats.resets++;
         end else begin
             
-            if(write_next)
+            if(write_next) begin
                 buffer.write(write_flit);
                 write_next = 0;
                 stats.flits_written++;

@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module test_top.sv();
+module test_top();
 
     bit clk = 0;
     always #5 clk = ~clk;

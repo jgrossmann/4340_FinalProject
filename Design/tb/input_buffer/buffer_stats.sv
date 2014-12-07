@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 class buffer_stats;
 
 // This keeps track of all of the important statistics of our testbench, names are self explanatory.
