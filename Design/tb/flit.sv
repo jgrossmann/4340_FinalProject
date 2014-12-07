@@ -6,8 +6,8 @@ class flit;
     rand int y;  
 
     constraint d {
-        0 <= x <= 4;
-        0 <= y <= 4;
+        0 <= x <= 3;
+        0 <= y <= 3;
         data[3:0] == y;
         data[7:4] == x;
     }
