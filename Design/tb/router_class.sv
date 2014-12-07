@@ -60,7 +60,7 @@ class router;
             return null;
         end else begin
             cc[port]--;
-            packet_tracker[buffer_num] = (packet_tracker + 1) % 5;
+            packet_tracker[buffer_num] = (packet_tracker[buffer_num] + 1) % 5;
             return buffers[buffer_num].read();
         end
     endfunction

@@ -24,12 +24,14 @@ class arbiter;
 	logic l_read;
 	
 
-    function new();
+    function new(int x, int y);
         foreach(cc[i]) begin
 			cc[i] = 0;
 			packet_tracker[i] = 0;
 			token[i] = 0;
 			empty[i] = 0;
+			x_pos = x;
+			y_pos = y;
       end
     endfunction;
 	
@@ -71,7 +73,10 @@ class arbiter;
 		int dir;
 		for(int i = 0; i < 5; i++) begin
 			dir = arbiter_func(i, packet);
-			//READ SIGNALS AND SELECT SIGNALS
+			if(dir >= 0) begin
+				packet_tracker[dir] = (packet_tracker[dir] + 1) % 5;
+			end
+			//READ SIGNALS AND SELECT SIGNALS AND UPDATE PACKET TRACKER
 		end
 	
 	endfunction

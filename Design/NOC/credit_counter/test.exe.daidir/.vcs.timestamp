@@ -50,16 +50,16 @@ TOOL_HOME=/sim/synopsys64/vcs/amd64
 SYN_DIR=/sim/synopsys64
 SYNTH_HOME=/sim/synopsys64/icc
 SYNOPSYS=/sim/synopsys64/icc
-SSH_TTY=/dev/pts/5
-SSH_CONNECTION=160.39.143.171 64081 128.59.15.80 22
-SSH_CLIENT=160.39.143.171 64081 22
+SSH_TTY=/dev/pts/10
+SSH_CONNECTION=160.39.142.103 63054 128.59.15.73 22
+SSH_CLIENT=160.39.142.103 63054 22
 SNPSLMD_LICENSE_FILE=28100@license.cs.columbia.edu:/sim/synopsys64/vcs/flexlm//license.dat
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 SAED_PDK_32=/sim/synopsys64/saed_mc/etc/techs/SAED_PDK_32
 SAED_MC_32_28_PDK=/sim/synopsys64/saed_mc/etc/techs/SAED_PDK_32/
 PRIMETIME_HOME=/sim/synopsys64/primetime
-PERL5LIB=/sim/synopsys64/saed_mc/lib:
+PERL5LIB=/sim/synopsys64/saed_mc/lib:/sim/synopsys64/saed_mc/lib:
 OVA_UUM=0
 MFLAGS=-w
 MC_HOME=/sim/synopsys64/saed_mc
@@ -74,7 +74,7 @@ FORMALITY_HOME=/sim/synopsys64/formality
 0
 4
 1416949886 eff.sv
-1417455718 test_credit_counter.sv
+1417985079 test_credit_counter.sv
 1417410154 credit_counter.sv
 1322023114 /sim/synopsys64/vcs/amd64/lib/vcsdp.tab
 4
@@ -82,4 +82,4 @@ FORMALITY_HOME=/sim/synopsys64/formality
 1322023672 /sim/synopsys64/vcs/amd64/lib/libvirsim.so
 1322023397 /sim/synopsys64/vcs/amd64/lib/liberrorinf.so
 1322023255 /sim/synopsys64/vcs/amd64/lib/libsnpsmalloc.so
-1417554654 test.exe.daidir
+1417985082 test.exe.daidir

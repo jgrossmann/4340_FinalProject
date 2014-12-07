@@ -5,7 +5,6 @@ module test_credit_counter();
 	logic cc_dec_i;
 	logic cc_inc_i;
 	logic cc_credit_o;
-
 	always begin
                 #5 clk = 1;
                 #5 clk = 0;
@@ -22,7 +21,6 @@ module test_credit_counter();
 		
 	initial begin
 		$vcdpluson;
-		
 		reset = 1;
 		
 		#10 $display("Resetting\n");

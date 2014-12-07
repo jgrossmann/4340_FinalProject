@@ -5,13 +5,22 @@ program arbiter_testbench(arbiter_interface.bench ifc);
     arbiter_environment env;
     arbiter_stats stats;
 	arbiter_class arbiter;
+	rand int x_cor;
+	rand int y_cor;
+	
+	constraint c {
+        0 <= x <= 3;
+		0 <= y <= 3;
+    }
     
     initial begin
         env = new();
         this.srandom(env.random_seed);
-        trans = new(env);
+		x_cor.randomize();
+		y_cor.randomize();
+        trans = new(env, x_cor, y_cor);
         golden_model = new();
-        arbiter = new();
+        arbiter = new(x_cor, y_cor);
         stats = new();
         repeat(10000) begin
             @(ifc.cb)    
