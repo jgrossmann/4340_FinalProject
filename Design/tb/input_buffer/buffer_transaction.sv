@@ -35,9 +35,20 @@ class transaction;
 
     function void post_randomize();
 //Updates the packet tracker if the next flit to be sent is valid
-        if(write) begin
+        if(reset) begin
+            packet_tracker = 0;
+        end else if(write) begin
             packet_tracker = (packet_tracker + 1) % 5;
         end
+    endfunction
+
+    function void sendData(buffer_interface ifc, buffer_checker gm);
+        ifc.cb.reset <= reset;
+        ifc.cb.buf_write_i <= write;
+        ifc.cb.buf_read_i <= read;
+        ifc.cb.buf_data_i <= f.data;
+
+        gm.goldenResult(write, read, reset, f);         
     endfunction
 
 

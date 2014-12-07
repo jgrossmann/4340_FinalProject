@@ -6,26 +6,30 @@ class buffer_checker;
     bit empty_o;
     bit write_next;
     flit write_flit;
+    buffer_stats stats;
 
-    function new();
+    function new(buffer_stats s);
         buffer = new();
+        stats = s;
         write_next = 0;
     endfunction
 
     function goldenResult(bit write, bit read, bit reset, flit f);
-        //Find out if reset is synchronous or asynchronous        
-       
+        //Find out if reset is synchronous or asynchronous               
+
         if(reset) begin
             buffer.reset();
             data_o = buffer.peek();
             write_next = 0;
             valid_o = 0;
             empty_o = buffer.empty;
+            stats.resets++;
         end else begin
             
             if(write_next)
                 buffer.write(write_flit);
                 write_next = 0;
+                stats.flits_written++;
             end
 
             if(write) begin
@@ -41,6 +45,7 @@ class buffer_checker;
                 data_o = buffer.read().data;
                 valid_o = 1;
                 empty_o = buffer.empty;
+                stats.flits_read++;
             end        
         end
     endfunction
@@ -50,7 +55,9 @@ class buffer_checker;
             $display("TestFailed!\n");
             $display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
             $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n", data, valid, empty);
+            stats.total_tests_failed++;
         end
+        stats.total_tests++;
     endfunction
 
 endclass

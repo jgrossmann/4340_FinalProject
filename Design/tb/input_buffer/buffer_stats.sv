@@ -4,10 +4,9 @@ class buffer_stats;
 //The simulation time is in milliseconds.
 
 
-    int flits_input;
-    int flits_output;
+    int flits_written;
+    int flits_read;
     int resets;
-    real sim_time_start;
     real sim_time_end;
     int total_tests;
     int total_tests_failed;
@@ -26,9 +25,9 @@ class buffer_stats;
 
     function void results();
         $vcdpluson;
-        $display("The total simulation time: %f\n", sim_time);
-        $display("Flits input to the NOC: %d\n", flits_input);
-        $display("Flits output from the NOC: %d\n", flits_output);
+        $display("The total simulation time: %f\n", sim_time_end);
+        $display("Flits written to the buffer: %d\n", flits_input);
+        $display("Flits read from the buffer: %d\n", flits_output);
         $display("Total number of resets: %d\n", resets);
         $display("Total Test results: %d / %d Tests Failed\n", total_tests_failed, total_tests);
         if(total_tests_failed == 0) begin
