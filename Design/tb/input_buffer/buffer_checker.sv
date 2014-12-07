@@ -9,6 +9,7 @@ class buffer_checker;
     bit write_next;
     flit write_flit;
     buffer_stats stats;
+    bit reset_next;
 
     function new(buffer_stats s);
         buffer = new();
@@ -19,15 +20,19 @@ class buffer_checker;
     function goldenResult(bit write, bit read, bit reset, flit f);
         //Find out if reset is synchronous or asynchronous               
 
-        if(reset) begin
+        if(reset_next) begin
             buffer.reset();
             data_o = buffer.peek();
             write_next = 0;
             valid_o = 0;
             empty_o = buffer.empty;
             stats.resets++;
+            reset_next = reset;
         end else begin
-            
+            if(reset) begin
+                reset_next = 1;
+            end            
+
             if(write_next) begin
                 buffer.write(write_flit);
                 write_next = 0;
