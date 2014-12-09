@@ -42,6 +42,7 @@ class input_buffer_class;
         if(~full()) begin
             buffer[write_pointer] = f;
             write_pointer = (write_pointer + 1) % 5;
+				empty = 0;
         end
     endfunction
 
@@ -50,6 +51,9 @@ class input_buffer_class;
         if(~empty) begin
             temp_buffer = buffer[read_pointer];
             read_pointer = (read_pointer + 1) % 5;
+				if( read_pointer == write_pointer) begin
+					empty = 1;
+				end
         end
         return temp_buffer;
     endfunction 

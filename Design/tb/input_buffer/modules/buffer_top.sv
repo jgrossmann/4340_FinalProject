@@ -6,6 +6,6 @@ module test_top();
     always #5 clk = ~clk;
     
     buffer_interface ifc(clk);
-   input_buffer dut(ifc.dut);
+   input_buffer_test dut(ifc.dut);
     buffer_testbench bench(ifc.bench);
 endmodule

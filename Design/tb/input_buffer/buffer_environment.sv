@@ -4,8 +4,8 @@ class buffer_environment;
 
 	rand int random_seed;
 	rand int reset_density;
-	rand bit write_density;
-    rand bit read_density;
+	rand int write_density;
+    rand int read_density;
 	bit auto_config;
 	int max_cycles;
 	int file;
@@ -29,12 +29,14 @@ class buffer_environment;
 			case(t_var)
 				"RANDOM_SEED": random_seed = val;
 				"MAX_CYCLES": max_cycles = val;
-				"RESET_DENSITY": reset_density = val*100;
-				"WRITE_DENSITY": write_density = val*100;
-                "READ_DENSITY": read_density = val*100;
+				"RESET_DENSITY": reset_density = val*100.0;
+				"WRITE_DENSITY": write_density = val*100.0;
+            "READ_DENSITY": read_density = val*100.0;
 				"AUTO_CONFIGURE": auto_config = val;
+				default: $display("Bad case");
 			endcase
 		end
 		$fclose(file);
+
 	endfunction
 endclass

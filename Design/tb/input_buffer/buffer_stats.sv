@@ -17,10 +17,10 @@ class buffer_stats;
     
 
     function new();
-        flits_input = 0;
-        flits_output = 0;
+        flits_written = 0;
+        flits_read = 0;
         resets = 0;
-        sim_time = 0;
+        sim_time_end = 0;
         total_tests = 0;
         total_tests_failed = 0;
     endfunction
@@ -28,8 +28,8 @@ class buffer_stats;
     function void results();
         $vcdpluson;
         $display("The total simulation time: %f\n", sim_time_end);
-        $display("Flits written to the buffer: %d\n", flits_input);
-        $display("Flits read from the buffer: %d\n", flits_output);
+        $display("Flits written to the buffer: %d\n", flits_written);
+        $display("Flits read from the buffer: %d\n", flits_read);
         $display("Total number of resets: %d\n", resets);
         $display("Total Test results: %d / %d Tests Failed\n", total_tests_failed, total_tests);
         if(total_tests_failed == 0) begin

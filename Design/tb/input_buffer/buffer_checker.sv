@@ -22,7 +22,11 @@ class buffer_checker;
 
         if(reset_next) begin
             buffer.reset();
-            data_o = buffer.peek();
+				if(buffer.peek() != null) begin
+					data_o = buffer.peek().data;
+				end else begin
+					data_o = null;
+				end
             write_next = 0;
             valid_o = 0;
             empty_o = buffer.empty;
@@ -43,8 +47,12 @@ class buffer_checker;
                 write_next = 1;
                 write_flit = f;
             end
-
-            data_o = buffer.peek().data;
+				
+				if(buffer.peek() != null) begin
+					data_o = buffer.peek().data;
+				end else begin
+					data_o = null;
+				end
             valid_o = 0;
             empty_o = buffer.empty;         
    

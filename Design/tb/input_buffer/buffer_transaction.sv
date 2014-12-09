@@ -41,6 +41,7 @@ class buffer_transaction;
         end else if(write) begin
             packet_tracker = (packet_tracker + 1) % 5;
         end
+		  
     endfunction
 
 
