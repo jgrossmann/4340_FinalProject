@@ -1,0 +1,3 @@
+module arbiter();
+
+endmodule

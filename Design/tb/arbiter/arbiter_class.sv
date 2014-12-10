@@ -1,5 +1,5 @@
 
-class arbiter;
+class arbiter_class;
 
     int cc [5];
     int packet_tracker [5];
@@ -22,6 +22,19 @@ class arbiter;
 	logic e_read;
 	logic w_read;
 	logic l_read;
+	logic [2:0] n_arb_mux_sel;
+	logic [2:0] s_arb_mux_sel;
+	logic [2:0] e_arb_mux_sel;
+	logic [2:0] w_arb_mux_sel;
+	logic [2:0] l_arb_mux_sel;
+	logic [2:0] n_arb_demux_sel;
+	logic [2:0] s_arb_demux_sel;
+	logic [2:0] e_arb_demux_sel;
+	logic [2:0] w_arb_demux_sel;
+	logic [2:0] l_arb_demux_sel;
+	
+	int sending [5];
+	int dir;
 	
 
     function new(int x, int y);
@@ -30,14 +43,20 @@ class arbiter;
 			packet_tracker[i] = 0;
 			token[i] = 0;
 			empty[i] = 0;
+			sending[i] = 0;
 			x_pos = x;
 			y_pos = y;
       end
     endfunction;
 	
 	function void update_model (
-		transaction packet
+		arbiter_transaction packet
 	);
+		n_read = 0;
+		s_read = 0;
+		w_read = 0;
+		e_read = 0;
+		l_read = 0;
 		empty[0] = packet.n_arb_empty_i;
 		empty[1] = packet.s_arb_empty_i;
 		empty[2] = packet.w_arb_empty_i;
@@ -58,48 +77,89 @@ class arbiter;
 		if(packet.l_arb_credit_i) begin
 			cc[4]++;
 		end
+		if(packet_tracker[0] == 0) begin
+			n_y_addr = packet.n_arb_address_i[3:0];
+			n_x_addr = packet.n_arb_address_i[7:4];
+		end
+		if(packet_tracker[1] == 0) begin
+			s_y_addr = packet.s_arb_address_i[3:0];
+			s_x_addr = packet.s_arb_address_i[7:4];
+		end
+		if(packet_tracker[2] == 0) begin
+			w_y_addr = packet.w_arb_address_i[3:0];
+			w_x_addr = packet.w_arb_address_i[7:4];
+		end
+		if(packet_tracker[3] == 0) begin
+			e_y_addr = packet.e_arb_address_i[3:0];
+			e_x_addr = packet.e_arb_address_i[7:4];
+		end
+		if(packet_tracker[4] == 0) begin
+			l_y_addr = packet.l_arb_address_i[3:0];
+			l_x_addr = packet.l_arb_address_i[7:4];
+		end
 		
-		n_y_addr = packet.n_arb_address_i[3:0];
-		n_x_addr = packet.n_arb_address_i[7:4];
-		s_y_addr = packet.s_arb_address_i[3:0];
-		s_x_addr = packet.s_arb_address_i[7:4];
-		w_y_addr = packet.w_arb_address_i[3:0];
-		w_x_addr = packet.w_arb_address_i[7:4];
-		e_y_addr = packet.e_arb_address_i[3:0];
-		e_x_addr = packet.e_arb_address_i[7:4];
-		l_y_addr = packet.l_arb_address_i[3:0];
-		l_x_addr = packet.l_arb_address_i[7:4];
-		
-		int dir;
 		for(int i = 0; i < 5; i++) begin
+			sending[i] = 0;
 			dir = arbiter_func(i, packet);
 			if(dir >= 0) begin
 				packet_tracker[dir] = (packet_tracker[dir] + 1) % 5;
+				sending[i] = 1;
 			end
-			//READ SIGNALS AND SELECT SIGNALS AND UPDATE PACKET TRACKER
+			case(dir)
+				0 : n_read = 1;
+				1 : s_read = 1;
+				2 : w_read = 1;
+				3 : e_read = 1;
+				4 : l_read = 1;
+			//SELECT SIGNALS
+			endcase
+			case(dir)
+				0 : n_arb_demux_sel = i;
+				1 : s_arb_demux_sel = i;
+				2 : w_arb_demux_sel = i;
+				3 : e_arb_demux_sel = i;
+				4 : l_arb_demux_sel = i;
+			endcase
+			case(i)
+				0 : n_arb_mux_sel = dir;
+				1 : s_arb_mux_sel = dir;
+				2 : w_arb_mux_sel = dir;
+				3 : e_arb_mux_sel = dir;
+				4 : l_arb_mux_sel = dir;				
+			endcase
 		end
 	
 	endfunction
 
-    function int arbiter_func(int port, transaction packet);
+    function int arbiter_func(int port, arbiter_transaction packet);
         //port is output port number
         //return the input buffer number of which to read flit
         //return -1 if no flit to send out port
     
         int temp [5];
+		int zeros [5];
         if(packet_tracker[port] == 0) begin
             int x_addr;
             int y_addr;
             int priority_port;
 				temp = {0,0,0,0,0};
+				zeros = {0,0,0,0,0};
             for(int i = 0; i < 5; i++) begin
                 if(~empty[i]) begin
                     case(i)
-						0 : x_addr = n_x_addr; y_addr = n_y_addr;
-						1 : x_addr = s_x_addr; y_addr = s_y_addr;
-						2 : x_addr = w_x_addr; y_addr = w_y_addr;
-						3 : x_addr = e_x_addr; y_addr = e_y_addr;
-						4 : x_addr = l_x_addr; y_addr = l_y_addr;
+						0 : x_addr = n_x_addr;
+						1 : x_addr = s_x_addr;
+						2 : x_addr = w_x_addr;
+						3 : x_addr = e_x_addr;
+						4 : x_addr = l_x_addr;
+					endcase
+					case(i)
+						0 : y_addr = n_y_addr;
+						1 : y_addr = s_y_addr;
+						2 : y_addr = w_y_addr;
+						3 : y_addr = e_y_addr;
+						4 : y_addr = l_y_addr;
+					endcase
                     case (port)     //yx processor
                         0 : if(y_addr > y_pos) temp[i] = 1;
                         1 : if(y_addr < y_pos) temp[i] = 1;

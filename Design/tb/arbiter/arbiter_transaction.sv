@@ -1,7 +1,7 @@
 
-class transaction;
+class arbiter_transaction;
 
-    environment env;
+    arbiter_environment env;
 	int credit_count [5];
     rand bit reset;
 	int x_pos;
@@ -26,8 +26,16 @@ class transaction;
 	rand logic [7:0] l_arb_address_i;
     constraint c {
         reset dist { 0:=(100 - env.reset_density), 1:=env.reset_density };
-        empty dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
-        credit dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
+        n_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
+		s_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
+		w_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
+		e_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
+		l_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
+        n_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
+		s_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
+		w_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
+		e_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
+		l_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
 		n_arb_address_i[3:0] <= 4'b0011;
 		n_arb_address_i[7:4] <= 4'b0011;
 		n_arb_address_i[3:0] >= y_pos;
@@ -46,13 +54,13 @@ class transaction;
 		l_arb_address_i[7:4] != x_pos;
     }
 
-    function new(input environment e, int x, int y);    
+    function new(input arbiter_environment e);    
         env = e;
 		foreach(credit_count[i]) begin
 			credit_count[i] = 5;
 		end
-		x_pos = x;
-		y_pos = y;
+		x_pos = e.x_cor;
+		y_pos = e.y_cor;
     endfunction
 
     function void post_randomize();
@@ -78,6 +86,13 @@ class transaction;
 		end
     endfunction
 
+	function updateCC(int dec[5]);
+		foreach(dec[i]) begin
+			if(dec[i] == 1) begin
+				credit_count[i]--;
+			end
+		end
+	endfunction
 	
 	
 
