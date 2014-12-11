@@ -47,13 +47,6 @@ output rrp_s_priority_w_o,
 output rrp_s_priority_e_o, 
 output rrp_s_priority_l_o,
 
-output rrp_s_priority_to_cs_o,
-output rrp_s_priority_n_o,
-output rrp_s_priority_s_o, 
-output rrp_s_priority_w_o, 
-output rrp_s_priority_e_o, 
-output rrp_s_priority_l_o,
-
 output rrp_w_priority_to_cs_o,
 output rrp_w_priority_n_o,
 output rrp_w_priority_s_o, 
