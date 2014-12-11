@@ -1,13 +1,13 @@
 
 module priorityencoder(
 
-	input rr_priority_n_i, 
+	    input rr_priority_n_i, 
         input rr_priority_s_i, 
         input rr_priority_w_i, 
         input rr_priority_e_i, 
         input rr_priority_l_i,
         output rr_priority_to_cs_o,
-	output rr_priority_n_o,
+	    output rr_priority_n_o,
         output rr_priority_s_o, 
         output rr_priority_w_o, 
         output rr_priority_e_o, 

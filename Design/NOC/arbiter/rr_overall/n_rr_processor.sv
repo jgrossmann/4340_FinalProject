@@ -86,20 +86,53 @@ rr_register_1000 rrr_1000(
 
 );
 
- logic rr_priority_s_i = (s_to_n_desire == rr_register_1000_order[3]);  
- logic rr_priority_w_i = (w_to_n_desire == rr_register_0100_order[2]);  
- logic rr_priority_e_i = (e_to_n_desire == rr_register_0010_order[1]);  
- logic rr_priority_l_i = (l_to_n_desire == rr_register_0001_order[0]);  
+ logic rr_priority_1000_i [3] = (s_to_n_desire == rr_register_1000_order[3]);  
+ logic rr_priority_1000_i [2] = (w_to_n_desire == rr_register_1000_order[2]);  
+ logic rr_priority_1000_i [1]= (e_to_n_desire == rr_register_1000_order[1]);  
+ logic rr_priority_1000_i [0]= (l_to_n_desire == rr_register_1000_order[0]);  
+ logic rr_priority_1000_all = rr_priority_1000_i [3] + rr_priority_1000_i [2] + rr_priority_1000_i [1] + rr_priority_1000_i [0]; 
+ 
+ logic rr_priority_0100_i [3] = (s_to_n_desire == rr_register_0100_order[3]);  
+ logic rr_priority_0100_i [2] = (w_to_n_desire == rr_register_0100_order[2]);  
+ logic rr_priority_0100_i [1]= (e_to_n_desire == rr_register_0100_order[1]);  
+ logic rr_priority_0100_i [0]= (l_to_n_desire == rr_register_0100_order[0]);  
+ logic rr_priority_0100_all = rr_priority_0100_i [3] + rr_priority_0100_i [2] + rr_priority_0100_i [1] + rr_priority_0100_i [0];
+ 
+ logic rr_priority_0010_i [3] = (s_to_n_desire == rr_register_0010_order[3]);  
+ logic rr_priority_0010_i [2] = (w_to_n_desire == rr_register_0010_order[2]);  
+ logic rr_priority_0010_i [1]= (e_to_n_desire == rr_register_0010_order[1]);  
+ logic rr_priority_0010_i [0]= (l_to_n_desire == rr_register_0010_order[0]);  
+ logic rr_priority_0010_all = rr_priority_0010_i [3] + rr_priority_0010_i [2] + rr_priority_0010_i [1] + rr_priority_0010_i [0];
+ 
+ logic rr_priority_0001_i [3] = (s_to_n_desire == rr_register_0001_order[3]);  
+ logic rr_priority_0001_i [2] = (w_to_n_desire == rr_register_0001_order[2]);  
+ logic rr_priority_0001_i [1]= (e_to_n_desire == rr_register_0001_order[1]);  
+ logic rr_priority_0001_i [0]= (l_to_n_desire == rr_register_0001_order[0]);  
+ logic rr_priority_0001_all = rr_priority_0001_i [3] + rr_priority_0001_i [2] + rr_priority_0001_i [1] + rr_priority_0001_i [0];
+ 
+ 
+ mux_5to1 priority_mux (
+ 
+ .sel_i(), 
+ .data_n_i(4'b0000), 
+ .data_s_i(rr_register_1000_order),
+ .data_w_i(rr_register_1000_order),
+ .data_e_i(rr_register_1000_order),
+ .data_l_i(rr_register_1000_order),
+ .data_o(priority_mux_o)
+ 
+ ); 
+ 
 
 priorityencoder priority_enc(
 
-	.rr_priority_n_i (1'b0), 
-        .rr_priority_s_i (rr_priority_s_i), 
-        .rr_priority_w_i (rr_priority_w_i), 
-        .rr_priority_e_i (rr_priority_e_i), 
-        .rr_priority_l_i (rr_priority_l_i),
+	    .rr_priority_n_i (1'b0), 
+        .rr_priority_s_i (priority_mux_o[3]), 
+        .rr_priority_w_i (priority_mux_o[2]), 
+        .rr_priority_e_i (priority_mux_o[1]), 
+        .rr_priority_l_i (priority_mux_o[0]),
         .rr_priority_to_cs_o (rrp_n_priority_to_cs_o_temp),
-	.rr_priority_n_o (rrp_n_priority_n_o_temp),
+	    .rr_priority_n_o (rrp_n_priority_n_o_temp),
         .rr_priority_s_o (rrp_n_priority_s_o_temp), 
         .rr_priority_w_o (rrp_n_priority_w_o_temp), 
         .rr_priority_e_o (rrp_n_priority_e_o_temp), 
