@@ -1,9 +1,9 @@
 class arbiter_environment;
 
-	rand int random_seed;
-	rand int reset_density;
-	rand int empty_density;
-    rand int credit_density;
+	int random_seed;
+	int reset_density;
+	int empty_density;
+    int credit_density;
 	rand int x_cor;
 	rand int y_cor;
 	
@@ -13,9 +13,6 @@ class arbiter_environment;
 	real val;
 	string t_var;
 	constraint densities {
-	    reset_density <= 100;
-	    empty_density <= 100;
-        credit_density <= 100;
 		x_cor >= 0;
 		x_cor <= 3;
 		y_cor >= 0;

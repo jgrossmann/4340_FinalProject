@@ -39,7 +39,7 @@ class arbiter_class;
 
     function new(int x, int y);
         foreach(cc[i]) begin
-			cc[i] = 0;
+			cc[i] = 5;
 			packet_tracker[i] = 0;
 			token[i] = 0;
 			empty[i] = 0;
@@ -58,10 +58,15 @@ class arbiter_class;
 		e_read = 0;
 		l_read = 0;
 		empty[0] = packet.n_arb_empty_i;
+		$display("%d\n", packet.n_arb_empty_i);
 		empty[1] = packet.s_arb_empty_i;
+		$display("%d\n", packet.s_arb_empty_i);
 		empty[2] = packet.w_arb_empty_i;
+		$display("%d\n", packet.w_arb_empty_i);
 		empty[3] = packet.e_arb_empty_i;
+		$display("%d\n", packet.e_arb_empty_i);
 		empty[4] = packet.l_arb_empty_i;
+		$display("%d\n", packet.l_arb_empty_i);
 		if(packet.n_arb_credit_i) begin
 			cc[0]++;
 		end
@@ -77,23 +82,23 @@ class arbiter_class;
 		if(packet.l_arb_credit_i) begin
 			cc[4]++;
 		end
-		if(packet_tracker[0] == 0) begin
+		if(packet_tracker[0] == 0 && empty[0] == 0) begin
 			n_y_addr = packet.n_arb_address_i[3:0];
 			n_x_addr = packet.n_arb_address_i[7:4];
 		end
-		if(packet_tracker[1] == 0) begin
+		if(packet_tracker[1] == 0 && empty[1] == 0) begin
 			s_y_addr = packet.s_arb_address_i[3:0];
 			s_x_addr = packet.s_arb_address_i[7:4];
 		end
-		if(packet_tracker[2] == 0) begin
+		if(packet_tracker[2] == 0 && empty[2] == 0) begin
 			w_y_addr = packet.w_arb_address_i[3:0];
 			w_x_addr = packet.w_arb_address_i[7:4];
 		end
-		if(packet_tracker[3] == 0) begin
+		if(packet_tracker[3] == 0 && empty[3] == 0) begin
 			e_y_addr = packet.e_arb_address_i[3:0];
 			e_x_addr = packet.e_arb_address_i[7:4];
 		end
-		if(packet_tracker[4] == 0) begin
+		if(packet_tracker[4] == 0 && empty[4] == 0) begin
 			l_y_addr = packet.l_arb_address_i[3:0];
 			l_x_addr = packet.l_arb_address_i[7:4];
 		end
@@ -102,31 +107,32 @@ class arbiter_class;
 			sending[i] = 0;
 			dir = arbiter_func(i, packet);
 			if(dir >= 0) begin
-				packet_tracker[dir] = (packet_tracker[dir] + 1) % 5;
+				$display("incrementing packet tracker for %d when searching $d\n", dir, i);
+				packet_tracker[i] = (packet_tracker[i] + 1) % 5;
 				sending[i] = 1;
+				case(dir)
+					0 : n_read = 1;
+					1 : s_read = 1;
+					2 : w_read = 1;
+					3 : e_read = 1;
+					4 : l_read = 1;
+				endcase
+				case(dir)
+					0 : n_arb_demux_sel = i;
+					1 : s_arb_demux_sel = i;
+					2 : w_arb_demux_sel = i;
+					3 : e_arb_demux_sel = i;
+					4 : l_arb_demux_sel = i;
+				endcase
+				case(i)
+					0 : n_arb_mux_sel = dir;
+					1 : s_arb_mux_sel = dir;
+					2 : w_arb_mux_sel = dir;
+					3 : e_arb_mux_sel = dir;
+					4 : l_arb_mux_sel = dir;				
+				endcase
 			end
-			case(dir)
-				0 : n_read = 1;
-				1 : s_read = 1;
-				2 : w_read = 1;
-				3 : e_read = 1;
-				4 : l_read = 1;
-			//SELECT SIGNALS
-			endcase
-			case(dir)
-				0 : n_arb_demux_sel = i;
-				1 : s_arb_demux_sel = i;
-				2 : w_arb_demux_sel = i;
-				3 : e_arb_demux_sel = i;
-				4 : l_arb_demux_sel = i;
-			endcase
-			case(i)
-				0 : n_arb_mux_sel = dir;
-				1 : s_arb_mux_sel = dir;
-				2 : w_arb_mux_sel = dir;
-				3 : e_arb_mux_sel = dir;
-				4 : l_arb_mux_sel = dir;				
-			endcase
+			
 		end
 	
 	endfunction
@@ -135,17 +141,22 @@ class arbiter_class;
         //port is output port number
         //return the input buffer number of which to read flit
         //return -1 if no flit to send out port
-    
+		int counter;
         int temp [5];
 		int zeros [5];
+		if(cc[port] == 0) begin
+			return -1;
+		end
+		
         if(packet_tracker[port] == 0) begin
             int x_addr;
             int y_addr;
             int priority_port;
-				temp = {0,0,0,0,0};
-				zeros = {0,0,0,0,0};
+			temp = {0,0,0,0,0};
+			zeros = {0,0,0,0,0};
+			
             for(int i = 0; i < 5; i++) begin
-                if(~empty[i]) begin
+                if(empty[i] == 0) begin
                     case(i)
 						0 : x_addr = n_x_addr;
 						1 : x_addr = s_x_addr;
@@ -161,15 +172,21 @@ class arbiter_class;
 						4 : y_addr = l_y_addr;
 					endcase
                     case (port)     //yx processor
-                        0 : if(y_addr > y_pos) temp[i] = 1;
-                        1 : if(y_addr < y_pos) temp[i] = 1;
+                        0 : if(y_addr < y_pos) temp[i] = 1;
+                        1 : if(y_addr > y_pos) temp[i] = 1;
                         2 : if((y_addr == y_pos) && (x_addr < x_pos)) temp[i] = 1;
                         3 : if((y_addr == y_pos) && (x_addr > x_pos)) temp[i] = 1;
                         4 : if((y_addr == y_pos) && (x_addr == x_pos)) temp[i] = 1;
                     endcase
                 end
             end
-            if(temp == zeros) begin
+			counter = 0;
+			foreach(temp[i]) begin
+				if(temp[i] == zeros[i]) begin
+					counter++;
+				end
+			end
+            if(counter == 5) begin
                 return -1;
             end
             
@@ -177,6 +194,7 @@ class arbiter_class;
             for(int i=0; i<4; i++) begin
                 if(temp[priority_port]) begin
                     token[port] = priority_port;
+					$display("from = %d, to = %d\n", priority_port, port);
                     return priority_port;
                 end else begin
                     priority_port = (priority_port + 1) % 5;
@@ -184,9 +202,22 @@ class arbiter_class;
             end
 
         end else begin
-            return token[port];
+			$display("got here\n");
+			if(empty[token[port]] == 0) begin
+				return token[port];
+			end else begin
+				return -1;
+			end
         end
 
     endfunction
+	
+	function updateCC(int dec[5]);
+		foreach(dec[i]) begin
+			if(dec[i] == 1) begin
+				cc[i]--;
+			end
+		end
+	endfunction
             
 endclass
