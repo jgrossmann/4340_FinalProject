@@ -3,21 +3,34 @@ class arbiter_transaction;
 
     arbiter_environment env;
 	int credit_count [5];
-    rand bit reset;
+    bit reset;
+	rand int reset_rand;
 	int x_pos;
 	int y_pos;
 	
-    rand bit n_arb_empty_i;
-	rand bit s_arb_empty_i;
-	rand bit e_arb_empty_i;
-	rand bit w_arb_empty_i;
-	rand bit l_arb_empty_i;
+    bit n_arb_empty_i;
+	bit s_arb_empty_i;
+	bit e_arb_empty_i;
+	bit w_arb_empty_i;
+	bit l_arb_empty_i;
 	
-    rand bit n_arb_credit_i;
-	rand bit s_arb_credit_i;
-	rand bit w_arb_credit_i;
-	rand bit e_arb_credit_i;
-	rand bit l_arb_credit_i;
+    bit n_arb_credit_i;
+	bit s_arb_credit_i;
+	bit w_arb_credit_i;
+	bit e_arb_credit_i;
+	bit l_arb_credit_i;
+	
+	rand int n_arb_empty_i_rand;
+	rand int s_arb_empty_i_rand;
+	rand int e_arb_empty_i_rand;
+	rand int w_arb_empty_i_rand;
+	rand int l_arb_empty_i_rand;
+	
+    rand int n_arb_credit_i_rand;
+	rand int s_arb_credit_i_rand;
+	rand int w_arb_credit_i_rand;
+	rand int e_arb_credit_i_rand;
+	rand int l_arb_credit_i_rand;
 	
 	rand logic [7:0] n_arb_address_i;
 	rand logic [7:0] s_arb_address_i;
@@ -25,17 +38,28 @@ class arbiter_transaction;
 	rand logic [7:0] w_arb_address_i;
 	rand logic [7:0] l_arb_address_i;
     constraint c {
-        reset dist { 0:=(100 - env.reset_density), 1:=env.reset_density };
-        n_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
-		s_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
-		w_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
-		e_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
-		l_arb_empty_i dist { 0:=(100 - env.empty_density), 1:=env.empty_density };
-        n_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
-		s_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
-		w_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
-		e_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
-		l_arb_credit_i dist { 0:=(100 - env.credit_density), 1:=env.credit_density };
+        n_arb_empty_i_rand >= 0;
+		n_arb_empty_i_rand <= 100;
+		s_arb_empty_i_rand >= 0;
+		s_arb_empty_i_rand <= 100;
+		w_arb_empty_i_rand >= 0;
+		w_arb_empty_i_rand <= 100;
+		e_arb_empty_i_rand >= 0;
+		e_arb_empty_i_rand <= 100;
+		l_arb_empty_i_rand >= 0;
+		l_arb_empty_i_rand <= 100;
+		n_arb_credit_i_rand >= 0;
+		n_arb_credit_i_rand <= 100;
+		s_arb_credit_i_rand >= 0;
+		s_arb_credit_i_rand <= 100;
+		w_arb_credit_i_rand >= 0;
+		w_arb_credit_i_rand <= 100;
+		e_arb_credit_i_rand >= 0;
+		e_arb_credit_i_rand <= 100;
+		l_arb_credit_i_rand >= 0;
+		l_arb_credit_i_rand <= 100;
+		reset_rand >= 0;
+		reset_rand <= 100;
 		n_arb_address_i[3:0] <= 4'b0011;
 		n_arb_address_i[7:4] <= 4'b0011;
 		n_arb_address_i[3:0] >= y_pos;
@@ -69,6 +93,17 @@ class arbiter_transaction;
 		//w_arb_address_i = w_arb_address_i & 0x00110011;
 		//e_arb_address_i = e_arb_address_i & 0x00110011;
 		//l_arb_address_i = l_arb_address_i & 0x00110011;
+		n_arb_credit_i = n_arb_credit_i_rand < env.credit_density;
+		s_arb_credit_i = s_arb_credit_i_rand < env.credit_density;
+		w_arb_credit_i = w_arb_credit_i_rand < env.credit_density;
+		e_arb_credit_i = e_arb_credit_i_rand < env.credit_density;
+		l_arb_credit_i = l_arb_credit_i_rand < env.credit_density;
+		n_arb_empty_i = n_arb_empty_i_rand < env.empty_density;
+		s_arb_empty_i = s_arb_empty_i_rand < env.empty_density;
+		w_arb_empty_i = w_arb_empty_i_rand < env.empty_density;
+		e_arb_empty_i = e_arb_empty_i_rand < env.empty_density;
+		l_arb_empty_i = l_arb_empty_i_rand < env.empty_density;
+		reset = reset_rand < env.reset_density;
 		if(credit_count[0] == 5) begin
 			n_arb_credit_i = 0;
 		end
@@ -84,6 +119,7 @@ class arbiter_transaction;
 		if(credit_count[4] == 5) begin
 			l_arb_credit_i = 0;
 		end
+		
     endfunction
 
 	function updateCC(int dec[5]);
