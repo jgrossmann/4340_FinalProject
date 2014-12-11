@@ -1,5 +1,5 @@
 
-`include "enable_eff_nr.sv"
+`include "./nexthop_register/enable_eff_nr.sv"
 
 module nexthop_register (
 
