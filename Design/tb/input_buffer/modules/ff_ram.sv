@@ -14,7 +14,7 @@ logic [WIDTH-1:0] data_out;
 always_ff @ (posedge clk) begin
 
 if (reset) begin 
-   data <= 1'b0; 
+   data <= '0; 
 end else if (write_enable_i) begin 
    data <= data_i; 
 end 

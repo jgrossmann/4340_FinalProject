@@ -67,11 +67,15 @@ class buffer_checker;
 
     function void compareOutput(logic[15:0] data, bit valid, bit empty);
         if((data != data_o) || (valid != valid_o) || (empty != empty_o)) begin
-            $display("TestFailed!\n");
+            $display("Test Failed!\n");
             $display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
             $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n", data, valid, empty);
             stats.total_tests_failed++;
-        end
+        end else begin
+				$display("Test Passed!\n");
+				$display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
+            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n", data, valid, empty);
+			end
         stats.total_tests++;
     endfunction
 

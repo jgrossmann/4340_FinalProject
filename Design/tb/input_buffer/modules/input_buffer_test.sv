@@ -50,9 +50,9 @@ rw_pointer write_pointer (
    
 );
 
-assign buf_data_o = ram_rdata_o_temp; 
-assign buf_empty_o = (ram_raddr_temp == ram_waddr_temp); 
-assign buf_valid_o = ifc.buf_read_i;
+assign ifc.buf_data_o = ram_rdata_o_temp; 
+assign ifc.buf_empty_o = (ram_raddr_temp == ram_waddr_temp); 
+assign ifc.buf_valid_o = ifc.buf_read_i;
 
 
 endmodule
