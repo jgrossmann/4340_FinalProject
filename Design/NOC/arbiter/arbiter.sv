@@ -19,7 +19,6 @@
 `include "./rr_overall/w_rr_processor.sv" 
 `include "./rr_overall/e_rr_processor.sv" 
 `include "./rr_overall/l_rr_processor.sv" 
-`include "./rr_overall/n_rr_processor.sv" 
 
 `include "./rr_overall/nexthop_register/enable_eff_nr.sv"
 `include "./rr_overall/nexthop_register/nexthop_register.sv" 
