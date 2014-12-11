@@ -1,10 +1,10 @@
 
-`include "./rr_overall/rr_comparator/s_rr_comparator.sv" 
-`include "./rr_overall/rr_register/rr_register_0001.sv"
-`include "./rr_overall/rr_register/rr_register_0010.sv"
-`include "./rr_overall/rr_register/rr_register_0100.sv"
-`include "./rr_overall/rr_register/rr_register_1000.sv"
-`include "./rr_overall/priorityencoder.sv"
+//`include "./rr_overall/rr_comparator/s_rr_comparator.sv" 
+//`include "./rr_overall/rr_register/rr_register_0001.sv"
+//`include "./rr_overall/rr_register/rr_register_0010.sv"
+//`include "./rr_overall/rr_register/rr_register_0100.sv"
+//`include "./rr_overall/rr_register/rr_register_1000.sv"
+//`include "./rr_overall/priorityencoder.sv"
 
 module s_rr_processor (
 

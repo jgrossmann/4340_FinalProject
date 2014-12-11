@@ -1,3 +1,18 @@
+`include "./rr_overall/rr_comparator/n_rr_comparator.sv" 
+`include "./rr_overall/rr_comparator/s_rr_comparator.sv" 
+`include "./rr_overall/rr_comparator/w_rr_comparator.sv" 
+`include "./rr_overall/rr_comparator/e_rr_comparator.sv" 
+`include "./rr_overall/rr_comparator/l_rr_comparator.sv" 
+`include "./rr_overall/priorityencoder.sv" 
+
+`include "./rr_overall/rr_register/eff_rr_0001.sv" 
+`include "./rr_overall/rr_register/rr_register_0001.sv" 
+`include "./rr_overall/rr_register/eff_rr_0010.sv" 
+`include "./rr_overall/rr_register/rr_register_0010.sv" 
+`include "./rr_overall/rr_register/eff_rr_0100.sv" 
+`include "./rr_overall/rr_register/rr_register_0100.sv" 
+`include "./rr_overall/rr_register/eff_rr_1000.sv" 
+`include "./rr_overall/rr_register/rr_register_1000.sv" 
 
 `include "./rr_overall/n_rr_processor.sv" 
 `include "./rr_overall/s_rr_processor.sv" 
@@ -5,8 +20,11 @@
 `include "./rr_overall/e_rr_processor.sv" 
 `include "./rr_overall/l_rr_processor.sv" 
 `include "./rr_overall/n_rr_processor.sv" 
-`include "./nexthop_register/nexthop_register.sv" 
+
+`include "./rr_overall/nexthop_register/enable_eff_nr.sv"
+`include "./rr_overall/nexthop_register/nexthop_register.sv" 
 `include "./yx_processor/yx_processor.sv" 
+
 
 module arbiter (
 
