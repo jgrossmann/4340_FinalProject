@@ -20,8 +20,8 @@
 `include "./rr_overall/e_rr_processor.sv" 
 `include "./rr_overall/l_rr_processor.sv" 
 
-`include "./rr_overall/nexthop_register/enable_eff_nr.sv"
-`include "./rr_overall/nexthop_register/nexthop_register.sv" 
+`include "./nexthop_register/enable_eff_nr.sv"
+`include "./nexthop_register/nexthop_register.sv" 
 `include "./yx_processor/yx_processor.sv" 
 
 
