@@ -6,7 +6,7 @@ module nexthop_register (
 input clk, 
 input reset,
 input nhr_address_i,
-input nhr_write_i,  
+input [2:0] nhr_write_i,  
 input nhr_address_o
 	
 );
