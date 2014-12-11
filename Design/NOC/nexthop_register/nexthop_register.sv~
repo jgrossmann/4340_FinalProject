@@ -1,5 +1,5 @@
 
-`include "enable_eff_nr.sv"
+`include "enable_eff.sv"
 
 module nexthop_register (
 
@@ -14,7 +14,7 @@ input nhr_address_o
 logic [2:0] data_o_temp; 
 
 
-enable_eff_nr #(.DATA_WIDTH(3)) ff (
+enable_eff #(.DATA_WIDTH(3)) ff (
 	
 	.clk(clk),
 	.reset(reset),

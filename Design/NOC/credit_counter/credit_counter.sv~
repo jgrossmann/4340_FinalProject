@@ -1,5 +1,5 @@
 
-`include "eff_cc.sv"
+`include "eff.sv"
 
 module credit_counter (
 
@@ -15,7 +15,7 @@ logic [2:0] data_i_temp;
 logic [2:0] data_o_temp; 
 
 
-eff_cc #(.DATA_WIDTH(3)) ff (
+eff #(.DATA_WIDTH(3)) ff (
 	
 	.clk(clk),
 	.data_o(data_o_temp),
