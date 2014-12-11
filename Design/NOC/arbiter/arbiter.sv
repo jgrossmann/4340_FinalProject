@@ -129,7 +129,7 @@ yx_processor yx_proc_s (
 	
   .yx_addr_header_i(yx_s_addr_header_i), 
   .yx_addr_router_i(yx_addr_router_i),
-  .yx_addr_o(yx_s_addr_o_temp
+  .yx_addr_o(yx_s_addr_o_temp)
 
 );
 
