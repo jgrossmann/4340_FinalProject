@@ -10,10 +10,10 @@ module l_rr_processor (
 
 input clk, 
 input reset, 
-input [2:0] n_rrp_n_nexthop_addr_i,
-input [2:0] s_rrp_n_nexthop_addr_i,
-input [2:0] w_rrp_n_nexthop_addr_i,
-input [2:0] e_rrp_n_nexthop_addr_i,
+input [2:0] n_rrp_l_nexthop_addr_i,
+input [2:0] s_rrp_l_nexthop_addr_i,
+input [2:0] w_rrp_l_nexthop_addr_i,
+input [2:0] e_rrp_l_nexthop_addr_i,
 input rr_register_change_order_i, 
 
 output rrp_l_priority_to_cs_o,
