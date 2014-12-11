@@ -222,7 +222,7 @@ n_rr_processor nproc(
 	.rrp_n_priority_n_o (rrp_n_priority_n_o_temp),
 	.rrp_n_priority_s_o (rrp_n_priority_s_o_temp), 
 	.rrp_n_priority_w_o (rrp_n_priority_w_o_temp), 
-	.rrp_n_priority_e_o (rrp_n_priority_e_o_temp, 
+	.rrp_n_priority_e_o (rrp_n_priority_e_o_temp), 
 	.rrp_n_priority_l_o (rrp_n_priority_l_o_temp)
 
 );
@@ -242,7 +242,7 @@ s_rr_processor sproc(
 	.rrp_s_priority_n_o (rrp_s_priority_n_o_temp),
 	.rrp_s_priority_s_o (rrp_s_priority_s_o_temp), 
 	.rrp_s_priority_w_o (rrp_s_priority_w_o_temp), 
-	.rrp_s_priority_e_o (rrp_s_priority_e_o_temp, 
+	.rrp_s_priority_e_o (rrp_s_priority_e_o_temp), 
 	.rrp_s_priority_l_o (rrp_s_priority_l_o_temp)
 
 );
@@ -282,7 +282,7 @@ e_rr_processor eproc(
 	.rrp_e_priority_n_o (rrp_e_priority_n_o_temp),
 	.rrp_e_priority_s_o (rrp_e_priority_s_o_temp), 
 	.rrp_e_priority_w_o (rrp_e_priority_w_o_temp), 
-	.rrp_e_priority_e_o (rrp_e_priority_e_o_temp, 
+	.rrp_e_priority_e_o (rrp_e_priority_e_o_temp), 
 	.rrp_e_priority_l_o (rrp_e_priority_l_o_temp)
 
 );
@@ -302,7 +302,7 @@ l_rr_processor lproc(
 	.rrp_l_priority_n_o (rrp_l_priority_n_o_temp),
 	.rrp_l_priority_s_o (rrp_l_priority_s_o_temp), 
 	.rrp_l_priority_w_o (rrp_l_priority_w_o_temp), 
-	.rrp_l_priority_e_o (rrp_l_priority_e_o_temp, 
+	.rrp_l_priority_e_o (rrp_l_priority_e_o_temp), 
 	.rrp_l_priority_l_o (rrp_l_priority_l_o_temp)
 
 );
