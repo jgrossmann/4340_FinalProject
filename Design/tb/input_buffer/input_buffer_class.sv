@@ -40,7 +40,7 @@ class input_buffer_class;
 
     function void write(input flit f);
         if(~full()) begin
-            buffer[write_pointer] = f;
+            buffer[write_pointer] = new f;
             write_pointer = (write_pointer + 1) % 5;
 				empty = 0;
         end

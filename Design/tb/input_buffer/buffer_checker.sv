@@ -45,7 +45,7 @@ class buffer_checker;
 
             if(write) begin
                 write_next = 1;
-                write_flit = f;
+                write_flit = new f;
             end
 				
 				if(buffer.peek() != null) begin

@@ -50,8 +50,18 @@ rw_pointer write_pointer (
    
 );
 
+logic temp_empty;
+
+always_comb begin
+	if(ram_raddr_temp == ram_waddr_temp) begin
+		temp_empty = 1'b1;
+	end else begin
+		temp_empty = 1'b0;
+	end
+end
+
 assign ifc.buf_data_o = ram_rdata_o_temp; 
-assign ifc.buf_empty_o = (ram_raddr_temp == ram_waddr_temp); 
+assign ifc.buf_empty_o = temp_empty;//(ram_raddr_temp == ram_waddr_temp); 
 assign ifc.buf_valid_o = ifc.buf_read_i;
 
 
