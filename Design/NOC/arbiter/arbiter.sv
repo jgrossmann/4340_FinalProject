@@ -5,6 +5,7 @@
 `include "./rr_overall/rr_comparator/l_rr_comparator.sv" 
 `include "./rr_overall/priorityencoder.sv" 
 `include "./rr_overall/priorityencoder_to_mux.sv" 
+`include "./rr_overall/mux_5to1.sv" 
 
 `include "./rr_overall/rr_register/eff_rr_0001.sv" 
 `include "./rr_overall/rr_register/rr_register_0001.sv" 
@@ -24,7 +25,6 @@
 `include "./nexthop_register/enable_eff_nr.sv"
 `include "./nexthop_register/nexthop_register.sv" 
 `include "./yx_processor/yx_processor.sv" 
-
 
 module arbiter (
 
