@@ -1,9 +1,11 @@
-//`include "./rr_overall/rr_comparator/n_rr_comparator.sv" 
-//`include "./rr_overall/rr_register/rr_register_0001.sv"
-//`include "./rr_overall/rr_register/rr_register_0010.sv"
-//`include "./rr_overall/rr_register/rr_register_0100.sv"
-//`include "./rr_overall/rr_register/rr_register_1000.sv"
-//`include "./rr_overall/priorityencoder.sv"
+`include "./rr_comparator/n_rr_comparator.sv" 
+`include "./rr_register/rr_register_0001.sv"
+`include "./rr_register/rr_register_0010.sv"
+`include "./rr_register/rr_register_0100.sv"
+`include "./rr_register/rr_register_1000.sv"
+`include "./priorityencoder.sv"
+`include "./priorityencoder_to_mux.sv" 
+`include "./mux_to_1.sv" 
 
 module n_rr_processor (
 
@@ -110,10 +112,22 @@ rr_register_1000 rrr_1000(
  logic rr_priority_0001_i [0]= (l_to_n_desire == rr_register_0001_order[0]);  
  logic rr_priority_0001_all = rr_priority_0001_i [3] + rr_priority_0001_i [2] + rr_priority_0001_i [1] + rr_priority_0001_i [0];
  
+ logic [2:0] priority_mux_select; 
+ 
+ priorityencoder_to_mux priority_enc_to_mux(
+
+  	      .rr_priority_n_i (1'b0), 
+          .rr_priority_s_i (rr_priority_1000_all), 
+          .rr_priority_w_i (rr_priority_0100_all), 
+          .rr_priority_e_i (rr_priority_0100_all), 
+          .rr_priority_l_i (rr_priority_0001_all),
+          .rr_priority_to_cs_o (priority_mux_select)
+
+ );
  
  mux_5to1 priority_mux (
  
- .sel_i(), 
+ .sel_i(priority_mux_select), 
  .data_n_i(4'b0000), 
  .data_s_i(rr_register_1000_order),
  .data_w_i(rr_register_1000_order),
@@ -123,6 +137,7 @@ rr_register_1000 rrr_1000(
  
  ); 
  
+
 
 priorityencoder priority_enc(
 
