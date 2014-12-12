@@ -129,6 +129,7 @@ rr_register_1000 rrr_1000(
  end 
  
  logic [2:0] priority_mux_select; 
+ logic [3:0] priority_mux_o; 
  
  priorityencoder_to_mux priority_enc_to_mux(
 
@@ -152,8 +153,6 @@ rr_register_1000 rrr_1000(
  .data_o(priority_mux_o)
  
  ); 
- 
-
 
 priorityencoder priority_enc(
 
