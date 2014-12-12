@@ -6,7 +6,7 @@ module priorityencoder_to_mux(
         input rr_priority_w_i, 
         input rr_priority_e_i, 
         input rr_priority_l_i,
-        output rr_priority_to_cs_o,
+        output rr_priority_to_cs_o
 );
 
 logic [4:0] rr_priority_i_temp; 
