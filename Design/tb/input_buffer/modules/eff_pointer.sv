@@ -10,7 +10,7 @@ module eff_pointer #(parameter DATA_WIDTH = 32) (
     
 	if (reset) begin
 	
-	data_o <= '0;
+	data_o <= 3'b000;
 	
 	end else begin
 			
