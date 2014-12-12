@@ -5,7 +5,7 @@
 `include "./rr_register/rr_register_1000.sv"
 `include "./priorityencoder.sv"
 `include "./priorityencoder_to_mux.sv" 
-`include "./mux_to_1.sv" 
+`include "./mux_5to1.sv" 
 
 module n_rr_processor (
 
