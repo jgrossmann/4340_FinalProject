@@ -1,4 +1,4 @@
-`include "./rr_comparator/n_rr_comparator.sv" 
+`include "./rr_comparator/s_rr_comparator.sv" 
 `include "./rr_register/rr_register_0001.sv"
 `include "./rr_register/rr_register_0010.sv"
 `include "./rr_register/rr_register_0100.sv"
