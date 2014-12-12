@@ -33,6 +33,7 @@ class buffer_checker;
             stats.resets++;
             reset_next = reset;
         end else begin
+				empty_o = buffer.empty;
             if(reset) begin
                 reset_next = 1;
             end            
@@ -41,6 +42,7 @@ class buffer_checker;
                 buffer.write(write_flit);
                 write_next = 0;
                 stats.flits_written++;
+					 empty_o = buffer.empty;
             end
 
             if(write) begin
@@ -53,13 +55,11 @@ class buffer_checker;
 				end else begin
 					data_o = null;
 				end
-            valid_o = 0;
-            empty_o = buffer.empty;         
+            valid_o = 0;         
    
             if(read) begin
                 data_o = buffer.read().data;
                 valid_o = 1;
-                empty_o = buffer.empty;
                 stats.flits_read++;
             end        
         end

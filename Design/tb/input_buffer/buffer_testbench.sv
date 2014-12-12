@@ -49,7 +49,7 @@ program buffer_testbench(buffer_interface.bench ifc);
 				end else if(golden_model.buffer.full()) begin
 					t.write = 0;
 				end
-				$display("reset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
+				$display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
 				ifc.cb.reset <= t.reset;
         		ifc.cb.buf_write_i <= t.write;
         		ifc.cb.buf_read_i <= t.read;
