@@ -96,12 +96,11 @@ rr_register_1000 rrr_1000(
  logic rr_priority_0100_all; 
  logic rr_priority_0010_all; 
  logic rr_priority_0001_all; 
-
  
- rr_priority_1000_i [3] = (s_to_n_desire == rr_register_1000_order[3]);  
- rr_priority_1000_i [2] = (w_to_n_desire == rr_register_1000_order[2]);  
- rr_priority_1000_i [1]= (e_to_n_desire == rr_register_1000_order[1]);  
- rr_priority_1000_i [0]= (l_to_n_desire == rr_register_1000_order[0]);  
+ rr_priority_1000_i[3] = (s_to_n_desire == rr_register_1000_order[3]);  
+ rr_priority_1000_i[2] = (w_to_n_desire == rr_register_1000_order[2]);  
+ rr_priority_1000_i[1]= (e_to_n_desire == rr_register_1000_order[1]);  
+ rr_priority_1000_i[0]= (l_to_n_desire == rr_register_1000_order[0]);  
  rr_priority_1000_all = rr_priority_1000_i [3] + rr_priority_1000_i [2] + rr_priority_1000_i [1] + rr_priority_1000_i [0]; 
  
  rr_priority_0100_i [3] = (s_to_n_desire == rr_register_0100_order[3]);  
