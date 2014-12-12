@@ -52,6 +52,13 @@ class arbiter_class;
 	function void update_model (
 		arbiter_transaction packet
 	);
+	
+		
+		if(packet.reset == 1) begin
+			reset();
+			return;
+		end
+		
 		n_read = 0;
 		s_read = 0;
 		w_read = 0;
@@ -141,9 +148,11 @@ class arbiter_class;
         //port is output port number
         //return the input buffer number of which to read flit
         //return -1 if no flit to send out port
+		
 		int counter;
         int temp [5];
 		int zeros [5];
+		
 		if(cc[port] == 0) begin
 			return -1;
 		end
@@ -212,7 +221,17 @@ class arbiter_class;
 
     endfunction
 	
-	function updateCC(int dec[5]);
+	function void reset();
+		 foreach(cc[i]) begin
+			cc[i] = 5;
+			packet_tracker[i] = 0;
+			token[i] = 0;
+			empty[i] = 0;
+			sending[i] = 0;
+      end
+	endfunction
+	
+	function void updateCC(int dec[5]);
 		foreach(dec[i]) begin
 			if(dec[i] == 1) begin
 				cc[i]--;

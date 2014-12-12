@@ -1,18 +1,17 @@
 
-`include "enable_eff_nr.sv"
+//`include "./nexthop_register/enable_eff_nr.sv"
 
 module nexthop_register (
 
 input clk, 
 input reset,
-input nhr_address_i,
+input [2:0] nhr_address_i,
 input nhr_write_i,  
-input nhr_address_o
+input [2:0] nhr_address_o
 	
-	);
+);
 	
 logic [2:0] data_o_temp; 
-
 
 enable_eff_nr #(.DATA_WIDTH(3)) ff (
 	

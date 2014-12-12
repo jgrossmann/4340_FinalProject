@@ -81,8 +81,8 @@ class router;
                     x_addr = buffers[i].getX();
                     y_addr = buffers[i].getY();
                     case (port)     //yx processor
-                        0 : if(y_addr > y_pos) temp[i] = 1;
-                        1 : if(y_addr < y_pos) temp[i] = 1;
+                        0 : if(y_addr < y_pos) temp[i] = 1;
+                        1 : if(y_addr > y_pos) temp[i] = 1;
                         2 : if((y_addr == y_pos) && (x_addr < x_pos)) temp[i] = 1;
                         3 : if((y_addr == y_pos) && (x_addr > x_pos)) temp[i] = 1;
                         4 : if((y_addr == y_pos) && (x_addr == x_pos)) temp[i] = 1;

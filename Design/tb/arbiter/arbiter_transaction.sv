@@ -119,7 +119,11 @@ class arbiter_transaction;
 		if(credit_count[4] == 5) begin
 			l_arb_credit_i = 0;
 		end
-		
+		if(reset == 1) begin
+			foreach(credit_count[i]) begin
+				credit_count[i] = 5;
+			end
+		end
     endfunction
 
 	function updateCC(int dec[5]);
