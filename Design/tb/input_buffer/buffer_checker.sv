@@ -65,16 +65,16 @@ class buffer_checker;
         end
     endfunction
 
-    function void compareOutput(logic[15:0] data, bit valid, bit empty);
+    function void compareOutput(logic[15:0] data, bit valid, bit empty,logic[2:0] buf_ram_raddr_o, logic[2:0] buf_ram_waddr_o);
         if((data != data_o) || (valid != valid_o) || (empty != empty_o)) begin
             $display("Test Failed!\n");
             $display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
-            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n", data, valid, empty);
+            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n ram write address: %b\n ram read address: %b\n", data, valid, empty, buf_ram_waddr_o, buf_ram_waddr_o);
             stats.total_tests_failed++;
         end else begin
 				$display("Test Passed!\n");
 				$display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
-            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n", data, valid, empty);
+            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n ram write address: %b\n ram read address: %b\n", data, valid, empty, buf_ram_waddr_o, buf_ram_waddr_o);
 			end
         stats.total_tests++;
     endfunction

@@ -40,7 +40,7 @@ program buffer_testbench(buffer_interface.bench ifc);
 		  @(ifc.cb);
 		  
         golden_model.write_next = 1'b0;
-        golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o);
+        golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o);
         
         repeat(env.max_cycles) begin
             t.randomize();

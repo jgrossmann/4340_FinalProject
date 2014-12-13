@@ -17,6 +17,9 @@ interface buffer_interface(input bit clk);
         input buf_empty_o;
         input buf_valid_o;
         input buf_data_o;
+		input buf_ram_raddr_o; 
+		input buf_ram_waddr_o; 
+		
     endclocking
 
     modport bench(clocking cb);
@@ -29,6 +32,8 @@ interface buffer_interface(input bit clk);
         output buf_empty_o,
         output buf_valid_o,
         output buf_data_o
+		output buf_ram_raddr_o; 
+		output buf_ram_waddr_o; 
     );
 
 endinterface
