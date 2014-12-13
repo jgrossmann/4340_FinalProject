@@ -53,7 +53,7 @@ logic buf_empty_o_temp;
 
 always_comb begin 
 
-buf_empty_o_temp = ram_raddr_temp[2];  
+buf_empty_o_temp = ram_raddr_temp;  
 
 end 
 

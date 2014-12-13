@@ -69,12 +69,12 @@ class buffer_checker;
         if((data != data_o) || (valid != valid_o) || (empty != empty_o)) begin
             $display("Test Failed!\n");
             $display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
-            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n ram write address: %b\n ram read address: %b\n", data, valid, empty, buf_ram_waddr_o, buf_ram_waddr_o);
+            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n ram write address: %b\n ram read address: %b\n", data, valid, empty, buf_ram_waddr_o, buf_ram_raddr_o);
             stats.total_tests_failed++;
         end else begin
 				$display("Test Passed!\n");
 				$display("Golden Model output:\n Data: %b\n Valid: %b\n Empty: %b\n", data_o, valid_o, empty_o);
-            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n ram write address: %b\n ram read address: %b\n", data, valid, empty, buf_ram_waddr_o, buf_ram_waddr_o);
+            $display("Input Buffer output:\n Data: %b\n Valid: %b\n Empty: %b\n ram write address: %b\n ram read address: %b\n", data, valid, empty, buf_ram_waddr_o, buf_ram_raddr_o);
 			end
         stats.total_tests++;
     endfunction
