@@ -34,9 +34,9 @@ interface buffer_interface(input bit clk);
         input buf_data_i,
         output buf_empty_o,
         output buf_valid_o,
-        output buf_data_o
-		output buf_ram_raddr_o; 
-		output buf_ram_waddr_o; 
+        output buf_data_o,
+		output buf_ram_raddr_o,
+		output buf_ram_waddr_o
     );
 
 endinterface
