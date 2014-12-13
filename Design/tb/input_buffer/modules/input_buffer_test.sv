@@ -14,20 +14,6 @@ wire [ADDR_WIDTH-1:0] ram_waddr_temp;
 wire [ADDR_WIDTH-1:0] ram_raddr_temp;
 logic [DATA_WIDTH-1:0] ram_rdata_o_temp; 
 
-
-ram ip_ram (
-
-       .clk (ifc.clk),
-       .reset (ifc.reset),
-       .ram_waddr_i (ram_waddr_temp),
-       .ram_wdata_i (ifc.buf_data_i), 
-       .ram_raddr_i (ram_raddr_temp), 
-       .ram_wenable_i (ifc.buf_write_i), 
-       .ram_rdata_o (ram_rdata_o_temp)
-
-);
-
-
 // Instantiate "Read pointer"
 
 rw_pointer read_pointer (
@@ -48,6 +34,18 @@ rw_pointer write_pointer (
        .rwptr_inc_i (ifc.buf_write_i),
        .rwptr_addr_o (ram_waddr_temp) 
    
+);
+
+ram ip_ram (
+
+       .clk (ifc.clk),
+       .reset (ifc.reset),
+       .ram_waddr_i (ram_waddr_temp),
+       .ram_wdata_i (ifc.buf_data_i), 
+       .ram_raddr_i (ram_raddr_temp), 
+       .ram_wenable_i (ifc.buf_write_i), 
+       .ram_rdata_o (ram_rdata_o_temp)
+
 );
 
 assign ifc.buf_data_o = ram_rdata_o_temp; 
