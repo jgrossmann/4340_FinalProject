@@ -1,6 +1,4 @@
 
-`include "modules/eff_pointer.sv"
-
 module rw_pointer (
 
 input clk, 
