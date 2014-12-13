@@ -6,7 +6,7 @@ module rw_pointer (
 input clk, 
 input reset,
 input rwptr_inc_i,  
-output [2:0]3 rwptr_addr_o
+output [2:0] rwptr_addr_o
 
 );
 	
