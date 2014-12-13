@@ -45,7 +45,7 @@ buf_data_i = 16'b0000000000000000;
 
 #2      reset = 1'b0; 
 
-#4      buf_data_i = 16'b1000000000000000
+#4      buf_data_i = 16'b1000000000000000; 
         buf_write_i = 1; 
 
 #4      buf_read_i = 1; 
