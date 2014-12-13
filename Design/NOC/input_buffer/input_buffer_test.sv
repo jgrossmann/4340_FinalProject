@@ -34,7 +34,7 @@ clk = 0;
 
 buf_write_i = 0 ; 
 buf_read_i = 0 ; 
-buf_data_i = 16'b0000000000000000
+buf_data_i = 16'b0000000000000000;
 
 // There should be four test cases 
 
