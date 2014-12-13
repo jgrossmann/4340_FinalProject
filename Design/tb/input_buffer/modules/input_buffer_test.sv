@@ -48,8 +48,16 @@ ram ip_ram (
 
 );
 
+logic buf_empty_o_temp; 
+
+always_comb begin 
+
+buf_empty_o_temp = (ram_raddr_temp == ram_waddr_temp);  
+
+end 
+
 assign ifc.buf_data_o = ram_rdata_o_temp; 
-assign ifc.buf_empty_o = (ram_raddr_temp == ram_waddr_temp); 
+assign ifc.buf_empty_o = buf_empty_o_temp; 
 assign ifc.buf_valid_o = ifc.buf_read_i;
 
 assign ifc.buf_ram_raddr_o = ram_raddr_temp; 
