@@ -8,6 +8,9 @@ interface buffer_interface(input bit clk);
     logic buf_empty_o;
     logic buf_valid_o;
     logic [15:0] buf_data_o;
+	
+	logic [2:0] buf_ram_raddr_o; 
+	logic [2:0] buf_ram_waddr_o; 
 
     clocking cb@(posedge clk);
         output reset;
