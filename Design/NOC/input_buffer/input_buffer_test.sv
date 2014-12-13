@@ -12,7 +12,7 @@ logic [15:0] buf_data_o;
 logic [2:0] buf_ram_raddr_o; 
 logic [2:0] buf_ram_waddr_o; 
 
-HW1 my_CAM(
+input_buffer ib(
                 .clk(clk),
                 .reset(reset),
 		        .buf_data_i(buf_data_i),
