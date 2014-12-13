@@ -19,7 +19,7 @@ input_buffer ib(
 		        .buf_write_i(buf_write_i),
 		        .buf_read_i(buf_read_i),
 		        .buf_empty_o(buf_empty_o),
-		        .bup_valid_o(buf_valid_o),
+		        .buf_valid_o(buf_valid_o),
 		        .buf_data_o(buf_data_o),
 		        .buf_ram_raddr_o(buf_ram_raddr_o), 
 		        .buf_ram_waddr_o(buf_ramwaddr_o)
