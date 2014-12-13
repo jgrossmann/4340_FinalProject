@@ -17,7 +17,7 @@ logic [2:0] data_o_temp;
 eff_pointer #(.DATA_WIDTH(3)) ff (
 	
 	.clk(clk),
-        .reset(reset),
+    .reset(reset),
 	.data_o(data_o_temp),
 	.data_i(data_i_temp)
 	);

@@ -7,8 +7,16 @@ module eff_pointer #(parameter DATA_WIDTH = 32) (
 	output logic [DATA_WIDTH-1 : 0] data_o
 );
 	always_ff @(posedge clk) begin
-    			
+    
+	if (reset) begin
+	
+	data_o <= 3'b000;
+	
+	end else begin
+			
 			data_o <= data_i;
+	
+	end
 	
 	end
 
