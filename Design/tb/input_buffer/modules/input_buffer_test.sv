@@ -52,7 +52,9 @@ logic buf_empty_o_temp;
 
 always_comb begin 
 
-buf_empty_o_temp = (ram_raddr_temp == ram_waddr_temp);  
+// buf_empty_o_temp = (ram_raddr_temp == ram_waddr_temp);  
+
+buf_empty_o_temp = 1'b1; 
 
 end 
 
