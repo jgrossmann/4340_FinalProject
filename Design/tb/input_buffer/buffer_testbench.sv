@@ -58,7 +58,7 @@ program buffer_testbench(buffer_interface.bench ifc);
 				$display("%t\n",$realtime);
             @(ifc.cb);
                         //checks the golden model against actual buffer
-            golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o);
+            golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o);
         end
         stats.sim_time_end = $realtime;
         stats.results();
