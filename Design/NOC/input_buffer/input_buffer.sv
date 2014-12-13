@@ -11,14 +11,16 @@ input buf_write_i,
 input buf_read_i, 
 output buf_empty_o,
 output buf_valid_o, 
-output [DATA_WIDTH-1:0] buf_data_o
+output [DATA_WIDTH-1:0] buf_data_o,
+output buf_ram_raddr_o,
+output buf_ram_waddr_o
 
 );
 
 // Instantiate "RAM"
 
-wire [ADDR_WIDTH-1:0] ram_waddr_temp;
-wire [ADDR_WIDTH-1:0] ram_raddr_temp;
+logic [ADDR_WIDTH-1:0] ram_waddr_temp;
+logic [ADDR_WIDTH-1:0] ram_raddr_temp;
 logic [DATA_WIDTH-1:0] ram_rdata_o_temp; 
 
 
@@ -60,6 +62,9 @@ rw_pointer write_pointer (
 assign buf_data_o = ram_rdata_o_temp; 
 assign buf_empty_o = (ram_raddr_temp == ram_waddr_temp); 
 assign buf_valid_o = buf_read_i;
+assign buf_ram_raddr_o = ram_raddr_temp; 
+assign buf_ram_waddr_o = ram_waddr_temp; 
+
 
 
 endmodule
