@@ -22,7 +22,7 @@ input_buffer ib(
 		        .buf_valid_o(buf_valid_o),
 		        .buf_data_o(buf_data_o),
 		        .buf_ram_raddr_o(buf_ram_raddr_o), 
-		        .buf_ram_waddr_o(buf_ramwaddr_o)
+		        .buf_ram_waddr_o(buf_ram_waddr_o)
 	);
 
 initial begin

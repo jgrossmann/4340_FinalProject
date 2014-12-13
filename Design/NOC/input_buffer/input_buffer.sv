@@ -12,8 +12,8 @@ input buf_read_i,
 output buf_empty_o,
 output buf_valid_o, 
 output [DATA_WIDTH-1:0] buf_data_o,
-output buf_ram_raddr_o,
-output buf_ram_waddr_o
+output [2:0] buf_ram_raddr_o,
+output [2:0] buf_ram_waddr_o
 
 );
 
