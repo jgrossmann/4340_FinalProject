@@ -37,10 +37,10 @@
 `include "../.././input_buffer/ram.sv"
 `include "../.././input_buffer/rw_pointer.sv"
 `include "../.././input_buffer/input_buffer.sv"
-`include "../.././mux_ram.sv"
-`include "../.././decoder_ram.sv"
-`include "../.././ff_ram.sv"
-`include "../.././eff_pointer.sv"
+`include "../.././input_buffer/mux_ram.sv"
+`include "../.././input_buffer/decoder_ram.sv"
+`include "../.././input_buffer/ff_ram.sv"
+`include "../.././input_buffer/eff_pointer.sv"
 
 // Files for cross-bar switch 
 `include "../.././crossbar_switch/demux/demux_1to5.sv"
