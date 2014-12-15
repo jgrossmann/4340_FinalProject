@@ -56,11 +56,11 @@ input ib_empty_w_i,
 input ib_empty_e_i, 
 input ib_empty_l_i, 
 
-output cc_credit_n_o; 
-output cc_credit_s_o; 
-output cc_credit_w_o; 
-output cc_credit_e_o; 
-output cc_credit_l_o; 
+output cc_credit_n_o,
+output cc_credit_s_o, 
+output cc_credit_w_o, 
+output cc_credit_e_o, 
+output cc_credit_l_o, 
 
 output demux_nhr_n_addr_o, 
 output demux_nhr_s_addr_o, 
