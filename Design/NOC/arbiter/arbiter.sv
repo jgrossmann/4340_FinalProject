@@ -28,6 +28,8 @@
 `include "./yx_processor/yx_processor.sv" 
 
 `include "./packet_tracker/packet_tracker.sv" 
+`include "./packet_tracker/eff_pt.sv" 
+
 
 module arbiter (
 
