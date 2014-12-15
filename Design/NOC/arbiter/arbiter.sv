@@ -27,6 +27,8 @@
 `include "./nexthop_register/nexthop_register.sv" 
 `include "./yx_processor/yx_processor.sv" 
 
+`include "./packet_tracker/packet_tracker.sv" 
+
 module arbiter (
 
 input clk, 
