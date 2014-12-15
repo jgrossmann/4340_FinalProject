@@ -207,7 +207,7 @@ packet_tracker pt_l (
 
 yx_processor yx_proc_n (
 	
-  .yx_addr_header_i(yx_n_addr_header_i), 
+  .yx_addr_header_i(yx_n_addr_header_i[7:0]), 
   .yx_addr_router_i(yx_addr_router_i[7:0]),
   .yx_addr_o(yx_n_addr_o_temp)
 
@@ -215,7 +215,7 @@ yx_processor yx_proc_n (
 
 yx_processor yx_proc_s (
 	
-  .yx_addr_header_i(yx_s_addr_header_i), 
+  .yx_addr_header_i(yx_s_addr_header_i[7:0]), 
   .yx_addr_router_i(yx_addr_router_i[7:0]),
   .yx_addr_o(yx_s_addr_o_temp)
 
@@ -223,7 +223,7 @@ yx_processor yx_proc_s (
 
 yx_processor yx_proc_w (
 	
-  .yx_addr_header_i(yx_w_addr_header_i), 
+  .yx_addr_header_i(yx_w_addr_header_i[7:0]), 
   .yx_addr_router_i(yx_addr_router_i[7:0]),
   .yx_addr_o(yx_w_addr_o_temp)
 
@@ -231,7 +231,7 @@ yx_processor yx_proc_w (
 
 yx_processor yx_proc_e (
 	
-  .yx_addr_header_i(yx_e_addr_header_i), 
+  .yx_addr_header_i(yx_e_addr_header_i[7:0]), 
   .yx_addr_router_i(yx_addr_router_i[7:0]),
   .yx_addr_o(yx_e_addr_o_temp)
 
@@ -239,7 +239,7 @@ yx_processor yx_proc_e (
 
 yx_processor yx_proc_l (
 	
-  .yx_addr_header_i(yx_l_addr_header_i), 
+  .yx_addr_header_i(yx_l_addr_header_i[7:0]), 
   .yx_addr_router_i(yx_addr_router_i[7:0]),
   .yx_addr_o(yx_l_addr_o_temp)
 
