@@ -16,6 +16,7 @@ interface arbiter_interface(input bit clk);
 	logic e_arb_credit_i;
 	logic w_arb_credit_i;
 	logic l_arb_credit_i;
+	logic [7:0] yx_pos_i;
 	logic n_arb_dec_o;
 	logic s_arb_dec_o;
 	logic e_arb_dec_o;
@@ -54,6 +55,7 @@ interface arbiter_interface(input bit clk);
 		output e_arb_credit_i;
 		output w_arb_credit_i;
 		output l_arb_credit_i;
+		output yx_pos_i;
 		input n_arb_dec_o;
 		input s_arb_dec_o;
 		input e_arb_dec_o;
@@ -95,6 +97,7 @@ interface arbiter_interface(input bit clk);
 		input e_arb_credit_i,
 		input w_arb_credit_i,
 		input l_arb_credit_i,
+		input yx_pos_i,
 		output n_arb_dec_o,
 		output s_arb_dec_o,
 		output e_arb_dec_o,

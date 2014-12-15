@@ -5,7 +5,7 @@
 program arbiter_tb (arbiter_interface.bench ds);
 
     arbiter_transaction trans;
-    //arbiter_checker golden_model;
+    //arbiter_checker checker;
     arbiter_environment env;
     //arbiter_stats stats;
 	arbiter_class my_arbiter;
@@ -16,18 +16,18 @@ program arbiter_tb (arbiter_interface.bench ds);
         $srandom(env.random_seed);
 		env.randomize();
         trans = new(env);
-        //golden_model = new();
-        my_arbiter = new(env.x_cor, env.y_cor);
+        my_arbiter = new();
+		//checker = new(my_arbiter);
         //stats = new();
 		repeat(1) begin 
 			@(ds.cb)  
 			$display("%t\n",$realtime);
 			trans.randomize();
-			trans.post_randomize();
+			//trans.post_randomize();
 			trans.reset = 1;
 			my_arbiter.update_model(trans);
-			trans.updateCC(my_arbiter.sending);
-			my_arbiter.updateCC(my_arbiter.sending);
+			trans.updateCC(my_arbiter.dec);
+			//my_arbiter.updateCC(my_arbiter.sending);
 			$display("%d %d\n", trans.n_arb_empty_i_rand, trans.s_arb_empty_i_rand);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
@@ -68,11 +68,10 @@ program arbiter_tb (arbiter_interface.bench ds);
             @(ds.cb)  
 			$display("%t\n",$realtime);
 			trans.randomize();
-			trans.post_randomize();
-			//trans.reset = 1;
+			//trans.post_randomize();
 			my_arbiter.update_model(trans);
-			trans.updateCC(my_arbiter.sending);
-			my_arbiter.updateCC(my_arbiter.sending);
+			trans.updateCC(my_arbiter.dec);
+			//my_arbiter.updateCC(my_arbiter.sending);
 			$display("%d %d\n", trans.n_arb_empty_i_rand, trans.s_arb_empty_i_rand);
 			$display("%d %d\n", trans.n_arb_credit_i_rand, trans.s_arb_credit_i_rand);
 			$display("%d %d\n", env.empty_density, env.credit_density);
@@ -110,11 +109,11 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("west read %b\n", my_arbiter.w_read);
 			$display("east read %b\n", my_arbiter.e_read);
 			$display("local read %b\n", my_arbiter.l_read);
-			$display("north credit %d\n", my_arbiter.cc[0]);
-			$display("south credit %d\n", my_arbiter.cc[1]);
-			$display("west credit %d\n", my_arbiter.cc[2]);
-			$display("east credit %d\n", my_arbiter.cc[3]);
-			$display("local credit %d\n", my_arbiter.cc[4]);
+			$display("north credit out %d\n", my_arbiter.dec[0]);
+			$display("south credit out %d\n", my_arbiter.dec[1]);
+			$display("west credit out %d\n", my_arbiter.dec[2]);
+			$display("east credit out %d\n", my_arbiter.dec[3]);
+			$display("local credit out %d\n", my_arbiter.dec[4]);
         end
     end
 
