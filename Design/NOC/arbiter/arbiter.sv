@@ -90,35 +90,35 @@ logic rrp_n_priority_s_o_temp;
 logic rrp_n_priority_w_o_temp;
 logic rrp_n_priority_e_o_temp;
 logic rrp_n_priority_l_o_temp;
-logic rrp_n_priority_to_cs_o_temp;
+logic [2:0] rrp_n_priority_to_cs_o_temp;
 
 logic rrp_s_priority_n_o_temp;
 logic rrp_s_priority_s_o_temp;
 logic rrp_s_priority_w_o_temp;
 logic rrp_s_priority_e_o_temp;
 logic rrp_s_priority_l_o_temp;
-logic rrp_s_priority_to_cs_o_temp;
+logic [2:0] rrp_s_priority_to_cs_o_temp;
 
 logic rrp_w_priority_n_o_temp;
 logic rrp_w_priority_s_o_temp;
 logic rrp_w_priority_w_o_temp;
 logic rrp_w_priority_e_o_temp;
 logic rrp_w_priority_l_o_temp;
-logic rrp_w_priority_to_cs_o_temp;
+logic [2:0] rrp_w_priority_to_cs_o_temp;
 
 logic rrp_e_priority_n_o_temp;
 logic rrp_e_priority_s_o_temp;
 logic rrp_e_priority_w_o_temp;
 logic rrp_e_priority_e_o_temp;
 logic rrp_e_priority_l_o_temp;
-logic rrp_e_priority_to_cs_o_temp;
+logic [2:0] rrp_e_priority_to_cs_o_temp;
 
 logic rrp_l_priority_n_o_temp;
 logic rrp_l_priority_s_o_temp;
 logic rrp_l_priority_w_o_temp;
 logic rrp_l_priority_e_o_temp;
 logic rrp_l_priority_l_o_temp;
-logic rrp_l_priority_to_cs_o_temp;
+logic [2:0] rrp_l_priority_to_cs_o_temp;
 
 logic rrp_n_priority_read_o_temp; 
 logic rrp_s_priority_read_o_temp; 
