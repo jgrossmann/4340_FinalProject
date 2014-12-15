@@ -304,11 +304,11 @@ arbiter arbiter_inner (
 	  .clk(clk), 
       .reset(reset), 
 
-	  cc_credit_n_i(cc_credit_n_i_temp),
-	  cc_credit_s_i(cc_credit_s_i_temp),  
-	  cc_credit_w_i(cc_credit_w_i_temp), 
-	  cc_credit_e_i(cc_credit_e_i_temp), 
-	  cc_credit_l_i(cc_credit_l_i_temp), 
+	  .cc_credit_n_i(cc_credit_n_i_temp),
+	  .cc_credit_s_i(cc_credit_s_i_temp),  
+	  .cc_credit_w_i(cc_credit_w_i_temp), 
+	  .cc_credit_e_i(cc_credit_e_i_temp), 
+	  .cc_credit_l_i(cc_credit_l_i_temp), 
 
 	  .yx_addr_router_i,
 	  .yx_n_addr_header_i(ib_data_o_temp_n),
