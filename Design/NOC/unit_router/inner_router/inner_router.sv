@@ -60,6 +60,8 @@ module inner_router
 	input clk,
 	input reset,
 	
+	input [15:0] yx_addr_router_i,
+	
 	input [15 : 0] n_data_i,
 	input [15 : 0] e_data_i,
 	input [15 : 0] s_data_i,
@@ -323,7 +325,7 @@ arbiter arbiter_inner (
 	  .cc_credit_e_i(cc_credit_e_i_temp), 
 	  .cc_credit_l_i(cc_credit_l_i_temp), 
 
-	  .yx_addr_router_i,
+	  .yx_addr_router_i(yx_addr_router_i),
 	  .yx_n_addr_header_i(ib_data_o_temp_n),
 	  .yx_s_addr_header_i(ib_data_o_temp_s), 
 	  .yx_w_addr_header_i(ib_data_o_temp_w),
