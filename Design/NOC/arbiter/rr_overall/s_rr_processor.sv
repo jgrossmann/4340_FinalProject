@@ -21,7 +21,7 @@ input [2:0] e_rrp_s_nexthop_addr_i,
 input [2:0] l_rrp_s_nexthop_addr_i,
 input rr_register_change_order_i, 
 
-output rrp_s_priority_to_cs_o,
+output [2:0] rrp_s_priority_to_cs_o,
 output rrp_s_priority_n_o,
 output rrp_s_priority_s_o, 
 output rrp_s_priority_w_o, 
