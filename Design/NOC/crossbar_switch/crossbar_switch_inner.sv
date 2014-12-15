@@ -1,5 +1,7 @@
+/*
 `include "./demux/demux_1to5.sv"
 `include "./mux/mux_5to1.sv"
+*/
 
 // Crossbar-switch comprises 5 demux and 5 mux. Each 16-bit input from the associated input buffer will enter the de-mux and get selected by output of associated Y-X processor. 
 

@@ -1,7 +1,7 @@
-
+/*
 `include "ram.sv"
 `include "rw_pointer.sv"
-
+*/
 module input_buffer #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=3, parameter DEPTH=5, parameter SIZE=(DEPTH*DATA_WIDTH) ) (
 
 input clk, 
