@@ -71,19 +71,19 @@ output [2:0] demux_nhr_w_addr_o,
 output [2:0] demux_nhr_e_addr_o, 
 output [2:0] demux_nhr_l_addr_o, 
 
-output rrp_n_priority_to_cs_o,
+output [2:0] rrp_n_priority_to_cs_o,
 output rrp_n_priority_read_o,
 
-output rrp_s_priority_to_cs_o,
+output [2:0] rrp_s_priority_to_cs_o,
 output rrp_s_priority_read_o,
 
-output rrp_w_priority_to_cs_o,
+output [2:0] rrp_w_priority_to_cs_o,
 output rrp_w_priority_read_o,
 
-output rrp_e_priority_to_cs_o,
+output [2:0] rrp_e_priority_to_cs_o,
 output rrp_e_priority_read_o,
 
-output rrp_l_priority_to_cs_o,
+output [2:0] rrp_l_priority_to_cs_o,
 output rrp_l_priority_read_o
 
 );
