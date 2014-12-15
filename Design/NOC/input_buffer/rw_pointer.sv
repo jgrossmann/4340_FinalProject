@@ -1,5 +1,5 @@
 
-`include "eff_pointer.sv"
+//`include "eff_pointer.sv"
 
 module rw_pointer (
 
