@@ -132,7 +132,7 @@ logic rr_l_register_change_order_i;
 packet_tracker pt_n ( 
 
   .clk(clk), 
-  .reset(reset)
+  .reset(reset),
   .pt_inc_i(rrp_n_priority_read_o_temp),   
   .pt_end_o(n_pt_almost_done_o)
 	
@@ -141,7 +141,7 @@ packet_tracker pt_n (
 packet_tracker pt_s ( 
 
   .clk(clk), 
-  .reset(reset)
+  .reset(reset),
   .pt_inc_i(rrp_s_priority_read_o_temp),   
   .pt_end_o(s_pt_almost_done_o)
 	
@@ -150,7 +150,7 @@ packet_tracker pt_s (
 packet_tracker pt_w ( 
 
   .clk(clk), 
-  .reset(reset)
+  .reset(reset),
   .pt_inc_i(rrp_w_priority_read_o_temp),   
   .pt_end_o(w_pt_almost_done_o)
 	
@@ -159,7 +159,7 @@ packet_tracker pt_w (
 packet_tracker pt_e ( 
 
   .clk(clk), 
-  .reset(reset)
+  .reset(reset),
   .pt_inc_i(rrp_e_priority_read_o_temp),   
   .pt_end_o(e_pt_almost_done_o)
 	
@@ -168,7 +168,7 @@ packet_tracker pt_e (
 packet_tracker pt_l ( 
 
   .clk(clk), 
-  .reset(reset)
+  .reset(reset),
   .pt_inc_i(rrp_l_priority_read_o_temp),   
   .pt_end_o(l_pt_almost_done_o)
 	
