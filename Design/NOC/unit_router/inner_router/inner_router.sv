@@ -158,6 +158,18 @@ logic cc_credit_w_i_temp;
 logic cc_credit_e_i_temp; 
 logic cc_credit_l_i_temp; 
 
+logic ib_buf_ram_raddr_o_temp_n;
+logic ib_buf_ram_raddr_o_temp_s; 
+logic ib_buf_ram_raddr_o_temp_w; 
+logic ib_buf_ram_raddr_o_temp_e; 
+logic ib_buf_ram_raddr_o_temp_l; 
+
+logic ib_buf_ram_waddr_o_temp_n;
+logic ib_buf_ram_waddr_o_temp_s; 
+logic ib_buf_ram_waddr_o_temp_w; 
+logic ib_buf_ram_waddr_o_temp_e; 
+logic ib_buf_ram_waddr_o_temp_l; 
+ 
 // Input buffer instantiation
 input_buffer ib_n (
 
@@ -171,8 +183,8 @@ input_buffer ib_n (
       .buf_data_o(ib_data_o_temp_n),
 	  
 	  // These are for debugging purpose, not actually going to use them anywhere
-      .buf_ram_raddr_o,
-      .buf_ram_waddr_o
+      .buf_ram_raddr_o(ib_buf_ram_raddr_o_temp_n),
+      .buf_ram_waddr_o(ib_buf_ram_waddr_o_temp_n)
 
 );
 
@@ -188,8 +200,8 @@ input_buffer ib_s (
       .buf_data_o(ib_data_o_temp_s),
 	  
 	  // These are for debugging purpose, not actually going to use them anywhere
-      .buf_ram_raddr_o,
-      .buf_ram_waddr_o
+      .buf_ram_raddr_o(ib_buf_ram_raddr_o_temp_s),
+      .buf_ram_waddr_o(ib_buf_ram_waddr_o_temp_s)
 
 );
  
@@ -206,8 +218,8 @@ input_buffer ib_w (
       .buf_data_o(ib_data_o_temp_w),
 	  
 	  // These are for debugging purpose, not actually going to use them anywhere
-      .buf_ram_raddr_o,
-      .buf_ram_waddr_o
+      .buf_ram_raddr_o(ib_buf_ram_raddr_o_temp_w),
+      .buf_ram_waddr_o(ib_buf_ram_waddr_o_temp_w)
 
 );
 
@@ -223,8 +235,8 @@ input_buffer ib_e (
       .buf_data_o(ib_data_o_temp_e),
 	  
 	  // These are for debugging purpose, not actually going to use them anywhere
-      .buf_ram_raddr_o,
-      .buf_ram_waddr_o
+      .buf_ram_raddr_o(ib_buf_ram_raddr_o_temp_e),
+      .buf_ram_waddr_o(ib_buf_ram_waddr_o_temp_e)
 
 );
 
@@ -240,8 +252,8 @@ input_buffer ib_l (
       .buf_data_o(ib_data_o_temp_l),
 	  
 	  // These are for debugging purpose, not actually going to use them anywhere
-      .buf_ram_raddr_o,
-      .buf_ram_waddr_o
+      .buf_ram_raddr_o(ib_buf_ram_raddr_o_temp_l),
+      .buf_ram_waddr_o(ib_buf_ram_waddr_o_temp_l)
 
 );
 
