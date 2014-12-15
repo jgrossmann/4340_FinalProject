@@ -50,6 +50,12 @@ input ib_empty_w_i,
 input ib_empty_e_i, 
 input ib_empty_l_i, 
 
+output nhr_n_addr_o, 
+output nhr_s_addr_o, 
+output nhr_w_addr_o, 
+output nhr_e_addr_o, 
+output nhr_l_addr_o, 
+
 output rrp_n_priority_to_cs_o,
 output rrp_n_priority_read_o,
 
@@ -63,7 +69,13 @@ output rrp_e_priority_to_cs_o,
 output rrp_e_priority_read_o,
 
 output rrp_l_priority_to_cs_o,
-output rrp_l_priority_read_o
+output rrp_l_priority_read_o,
+
+output arbiter_n_credit_o, 
+output arbiter_s_credit_o, 
+output arbiter_w_credit_o, 
+output arbiter_e_credit_o, 
+output arbiter_l_credit_o
 
 );
 
@@ -449,24 +461,30 @@ rrp_l_priority_read_o_temp = rrp_n_priority_l_o_temp + rrp_s_priority_l_o_temp +
 
 end 
 
-assign rrp_n_priority_read_o = rrp_n_priority_read_o_temp; 
+assign nhr_n_addr_o = nhr_n_addr_o_temp; 
+assign nhr_s_addr_o = nhr_s_addr_o_temp; 
+assign nhr_w_addr_o = nhr_w_addr_o_temp; 
+assign nhr_e_addr_o = nhr_e_addr_o_temp; 
+assign nhr_l_addr_o = nhr_l_addr_o_temp; 
 
+assign rrp_n_priority_read_o = rrp_n_priority_read_o_temp; 
+assign arbiter_n_credit_o = rrp_n_priority_read_o_temp; 
 assign rrp_n_priority_to_cs_o = rrp_n_priority_to_cs_o_temp;  
 
 assign rrp_s_priority_read_o = rrp_s_priority_read_o_temp; 
-
+assign arbiter_s_credit_o = rrp_s_priority_read_o_temp; 
 assign rrp_s_priority_to_cs_o = rrp_s_priority_to_cs_o_temp;  
 
 assign rrp_w_priority_read_o = rrp_w_priority_read_o_temp; 
-
+assign arbiter_w_credit_o = rrp_w_priority_read_o_temp; 
 assign rrp_w_priority_to_cs_o = rrp_w_priority_to_cs_o_temp;  
 
 assign rrp_e_priority_read_o = rrp_e_priority_read_o_temp; 
- 
+assign arbiter_e_credit_o = rrp_e_priority_read_o_temp; 
 assign rrp_e_priority_to_cs_o = rrp_e_priority_to_cs_o_temp;  
 
 assign rrp_l_priority_read_o = rrp_l_priority_read_o_temp; 
-
+assign arbiter_l_credit_o = rrp_l_priority_read_o_temp; 
 assign rrp_l_priority_to_cs_o = rrp_l_priority_to_cs_o_temp;  
 
 endmodule
