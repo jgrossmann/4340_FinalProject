@@ -1,6 +1,6 @@
 /*
-`include "./demux/demux_1to5.sv"
-`include "./mux/mux_5to1.sv"
+`include "./demux/cs_demux_1to5.sv"
+`include "./mux/cs_mux_5to1.sv"
 */
 
 // Crossbar-switch comprises 5 demux and 5 mux. Each 16-bit input from the associated input buffer will enter the de-mux and get selected by output of associated Y-X processor. 
@@ -76,7 +76,7 @@ logic [15:0] l_cs_o_temp;
 
 // Instantiate five demux for north, south, west, east local input buffer respectively. 
 
-     demux_1to5 n_demux( 
+     cs_demux_1to5 n_demux( 
 	   .data_i(n_cs_i),
 	   .sel_i(n_cs_sel_demux_i),
 	   .data_n_o(),
@@ -86,7 +86,7 @@ logic [15:0] l_cs_o_temp;
 	   .data_l_o(n_demux_l_temp)
 	   );
 	   
-     demux_1to5 s_demux ( 
+     cs_demux_1to5 s_demux ( 
  	   .data_i(s_cs_i),
  	   .sel_i(s_cs_sel_demux_i),
 	   .data_n_o(s_demux_n_temp),
@@ -96,7 +96,7 @@ logic [15:0] l_cs_o_temp;
 	   .data_l_o(s_demux_l_temp)
  	   );
 	   
-     demux_1to5 w_demux (   
+     cs_demux_1to5 w_demux (   
  	   .data_i(w_cs_i),
  	   .sel_i(w_cs_sel_demux_i),
 	   .data_n_o(w_demux_n_temp),
@@ -106,7 +106,7 @@ logic [15:0] l_cs_o_temp;
 	   .data_l_o(w_demux_l_temp)
  	   );
 	 
-     demux_1to5 e_demux( 
+     cs_demux_1to5 e_demux( 
   	   .data_i(e_cs_i),
   	   .sel_i(e_cs_sel_demux_i),
 	   .data_n_o(e_demux_n_temp),
@@ -116,7 +116,7 @@ logic [15:0] l_cs_o_temp;
 	   .data_l_o(e_demux_l_temp)
   	   );
 	   
-     demux_1to5 l_demux( 
+     cs_demux_1to5 l_demux( 
   	   .data_i(l_cs_i),
   	   .sel_i(l_cs_sel_demux_i),
 	   .data_n_o(l_demux_n_temp),
@@ -128,7 +128,7 @@ logic [15:0] l_cs_o_temp;
 	   
 // Instantiate 5 mux for north, south, west, east, local output respectively. 
    
-	   mux_5to1 n_mux( 
+	   cs_mux_5to1 n_mux( 
 		   
   	   .sel_i(n_cs_sel_mux_i),
 	   
@@ -141,7 +141,7 @@ logic [15:0] l_cs_o_temp;
  
   	   );
 	   
-	   mux_5to1 s_mux( 
+	   cs_mux_5to1 s_mux( 
 		   
   	   .sel_i(s_cs_sel_mux_i),
 	   
@@ -154,7 +154,7 @@ logic [15:0] l_cs_o_temp;
  
   	   );
 	   
-	   mux_5to1 w_mux( 
+	   cs_mux_5to1 w_mux( 
 		   
   	   .sel_i(w_cs_sel_mux_i),
 	   
@@ -167,7 +167,7 @@ logic [15:0] l_cs_o_temp;
  
   	   );
 	   
-	   mux_5to1 e_mux( 
+	   cs_mux_5to1 e_mux( 
 		   
   	   .sel_i(e_cs_sel_mux_i),
 	   
@@ -180,7 +180,7 @@ logic [15:0] l_cs_o_temp;
  
   	   );
 	   
-	   mux_5to1 l_mux( 
+	   cs_mux_5to1 l_mux( 
 		   
   	   .sel_i(l_cs_sel_mux_i),
 	   

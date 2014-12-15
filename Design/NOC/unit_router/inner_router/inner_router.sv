@@ -43,8 +43,8 @@
 `include "../.././input_buffer/eff_pointer.sv"
 
 // Files for cross-bar switch 
-`include "../.././crossbar_switch/demux/demux_1to5.sv"
-`include "../.././crossbar_switch/mux/mux_5to1.sv"
+`include "../.././crossbar_switch/demux/cs_demux_1to5.sv"
+`include "../.././crossbar_switch/mux/cs_mux_5to1.sv"
 `include "../.././crossbar_switch/crossbar_switch_inner.sv"
 
 // Files for credit-counter 
