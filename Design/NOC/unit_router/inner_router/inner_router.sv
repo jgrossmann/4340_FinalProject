@@ -161,17 +161,17 @@ logic cc_credit_w_i_temp;
 logic cc_credit_e_i_temp; 
 logic cc_credit_l_i_temp; 
 
-logic ib_buf_ram_raddr_o_temp_n;
-logic ib_buf_ram_raddr_o_temp_s; 
-logic ib_buf_ram_raddr_o_temp_w; 
-logic ib_buf_ram_raddr_o_temp_e; 
-logic ib_buf_ram_raddr_o_temp_l; 
+logic [2:0] ib_buf_ram_raddr_o_temp_n;
+logic [2:0] ib_buf_ram_raddr_o_temp_s; 
+logic [2:0] ib_buf_ram_raddr_o_temp_w; 
+logic [2:0] ib_buf_ram_raddr_o_temp_e; 
+logic [2:0] ib_buf_ram_raddr_o_temp_l; 
 
-logic ib_buf_ram_waddr_o_temp_n;
-logic ib_buf_ram_waddr_o_temp_s; 
-logic ib_buf_ram_waddr_o_temp_w; 
-logic ib_buf_ram_waddr_o_temp_e; 
-logic ib_buf_ram_waddr_o_temp_l; 
+logic [2:0] ib_buf_ram_waddr_o_temp_n;
+logic [2:0] ib_buf_ram_waddr_o_temp_s; 
+logic [2:0] ib_buf_ram_waddr_o_temp_w; 
+logic [2:0] ib_buf_ram_waddr_o_temp_e; 
+logic [2:0] ib_buf_ram_waddr_o_temp_l; 
  
 // Input buffer instantiation
 input_buffer ib_n (
