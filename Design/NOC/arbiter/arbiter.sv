@@ -36,11 +36,11 @@ module arbiter (
 input clk, 
 input reset, 
 
-input cc_credit_n_i; 
-input cc_credit_s_i; 
-input cc_credit_w_i; 
-input cc_credit_e_i; 
-input cc_credit_l_i; 
+input cc_credit_n_i,
+input cc_credit_s_i, 
+input cc_credit_w_i, 
+input cc_credit_e_i, 
+input cc_credit_l_i, 
 
 input [7:0] yx_addr_router_i,
 
