@@ -159,7 +159,7 @@ logic cc_credit_e_i_temp;
 logic cc_credit_l_i_temp; 
 
 // Input buffer instantiation
-module input_buffer ib_n (
+input_buffer ib_n (
 
       .clk(clk),
 	  .reset(reset), 
@@ -176,7 +176,7 @@ module input_buffer ib_n (
 
 );
 
-module input_buffer ib_s (
+input_buffer ib_s (
 
       .clk(clk),
 	  .reset(reset), 
@@ -194,7 +194,7 @@ module input_buffer ib_s (
 );
  
 
-module input_buffer ib_w (
+input_buffer ib_w (
 
       .clk(clk),
 	  .reset(reset), 
@@ -211,7 +211,7 @@ module input_buffer ib_w (
 
 );
 
-module input_buffer ib_e (
+input_buffer ib_e (
 
       .clk(clk),
 	  .reset(reset), 
@@ -228,7 +228,7 @@ module input_buffer ib_e (
 
 );
 
-module input_buffer ib_l (
+input_buffer ib_l (
 
       .clk(clk),
 	  .reset(reset), 
@@ -247,7 +247,7 @@ module input_buffer ib_l (
 
 // credit counter instantiation 
 
-module credit_counter cc_n (
+credit_counter cc_n (
 
 	  .clk(clk), 
 	  .reset(reset),
@@ -257,7 +257,7 @@ module credit_counter cc_n (
 	
 );
 
-module credit_counter cc_s (
+credit_counter cc_s (
 
 	  .clk(clk), 
 	  .reset(reset),
@@ -267,7 +267,7 @@ module credit_counter cc_s (
 	
 );
 
-module credit_counter cc_w (
+credit_counter cc_w (
 
 	  .clk(clk), 
 	  .reset(reset),
@@ -277,7 +277,7 @@ module credit_counter cc_w (
 	
 );
 
-module credit_counter cc_e (
+credit_counter cc_e (
 
 	  .clk(clk), 
 	  .reset(reset),
@@ -287,7 +287,7 @@ module credit_counter cc_e (
 	
 );
 
-module credit_counter cc_l (
+credit_counter cc_l (
 
 	  .clk(clk), 
 	  .reset(reset),
@@ -299,7 +299,7 @@ module credit_counter cc_l (
 // arbiter instantiation 
 
 
-module arbiter arbiter_inner (
+arbiter arbiter_inner (
 
 	  .clk(clk), 
       .reset(reset), 
@@ -356,7 +356,7 @@ module arbiter arbiter_inner (
  
 // crossbar switch instantiation 
 
-module crossbar_switch_inner cs_inner (
+crossbar_switch_inner cs_inner (
 
 	  .n_cs_i(ib_data_o_temp_n), 
 	  .s_cs_i(ib_data_o_temp_s), 
