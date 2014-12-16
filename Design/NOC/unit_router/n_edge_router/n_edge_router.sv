@@ -1,3 +1,58 @@
+// Including files from sub-blocks 
+
+// Files for arbiter 
+`include "../.././arbiter/arbiter.sv"
+`include "../.././arbiter/rr_overall/rr_comparator/n_rr_comparator.sv" 
+`include "../.././arbiter/rr_overall/rr_comparator/s_rr_comparator.sv" 
+`include "../.././arbiter/rr_overall/rr_comparator/w_rr_comparator.sv" 
+`include "../.././arbiter/rr_overall/rr_comparator/e_rr_comparator.sv" 
+`include "../.././arbiter/rr_overall/rr_comparator/l_rr_comparator.sv" 
+`include "../.././arbiter/rr_overall/priorityencoder.sv" 
+`include "../.././arbiter/rr_overall/priorityencoder_to_mux.sv" 
+`include "../.././arbiter/rr_overall/mux_5to1.sv" 
+`include "../.././arbiter/rr_overall/mux_5to1_1bit.sv" 
+
+`include "../.././arbiter/rr_overall/rr_register/eff_rr_0001.sv" 
+`include "../.././arbiter/rr_overall/rr_register/rr_register_0001.sv" 
+`include "../.././arbiter/rr_overall/rr_register/eff_rr_0010.sv" 
+`include "../.././arbiter/rr_overall/rr_register/rr_register_0010.sv" 
+`include "../.././arbiter/rr_overall/rr_register/eff_rr_0100.sv" 
+`include "../.././arbiter/rr_overall/rr_register/rr_register_0100.sv" 
+`include "../.././arbiter/rr_overall/rr_register/eff_rr_1000.sv" 
+`include "../.././arbiter/rr_overall/rr_register/rr_register_1000.sv" 
+
+`include "../.././arbiter/rr_overall/n_rr_processor.sv" 
+`include "../.././arbiter/rr_overall/s_rr_processor.sv" 
+`include "../.././arbiter/rr_overall/w_rr_processor.sv" 
+`include "../.././arbiter/rr_overall/e_rr_processor.sv" 
+`include "../.././arbiter/rr_overall/l_rr_processor.sv" 
+
+`include "../.././arbiter/nexthop_register/enable_eff_nr.sv"
+`include "../.././arbiter/nexthop_register/nexthop_register.sv" 
+`include "../.././arbiter/yx_processor/yx_processor.sv" 
+
+`include "../.././arbiter/packet_tracker/packet_tracker.sv" 
+`include "../.././arbiter/packet_tracker/eff_pt.sv" 
+
+// Files for input buffer 
+`include "../.././input_buffer/ram.sv"
+`include "../.././input_buffer/rw_pointer.sv"
+`include "../.././input_buffer/input_buffer.sv"
+`include "../.././input_buffer/mux_ram.sv"
+`include "../.././input_buffer/decoder_ram.sv"
+`include "../.././input_buffer/ff_ram.sv"
+`include "../.././input_buffer/eff_pointer.sv"
+
+// Files for cross-bar switch 
+`include "../.././crossbar_switch/demux/cs_demux_1to5.sv"
+`include "../.././crossbar_switch/mux/cs_mux_5to1.sv"
+`include "../.././crossbar_switch/crossbar_switch_inner.sv"
+
+// Files for credit-counter 
+
+`include "../.././credit_counter/eff_cc.sv"
+`include "../.././credit_counter/credit_counter.sv"
+
 module n_edge_router
 (
 	input clk,
