@@ -355,7 +355,7 @@ crossbar_switch_inner cs_inner (
 
 // output of mux 
 
-	  .n_cs_o(n_data_o_temp), 
+	  .n_cs_o(16'b0000000000000000), 
 	  .s_cs_o(s_data_o_temp), 
 	  .w_cs_o(w_data_o_temp), 
 	  .e_cs_o(e_data_o_temp), 
