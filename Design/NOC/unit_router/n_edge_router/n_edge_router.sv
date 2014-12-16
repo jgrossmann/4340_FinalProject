@@ -97,7 +97,7 @@ logic w_credit_o_temp;
 logic e_credit_o_temp; 
 logic l_credit_o_temp; 
 
-logic [15:0] n_data_o_temp = 16'b0; 
+logic [15:0] n_data_o_temp; 
 logic [15:0] s_data_o_temp; 
 logic [15:0] w_data_o_temp; 
 logic [15:0] e_data_o_temp; 
