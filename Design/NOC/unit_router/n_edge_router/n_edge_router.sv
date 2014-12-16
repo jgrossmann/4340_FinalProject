@@ -97,6 +97,7 @@ logic w_credit_o_temp;
 logic e_credit_o_temp; 
 logic l_credit_o_temp; 
 
+logic [15:0] n_data_o_temp = 16'b0; 
 logic [15:0] s_data_o_temp; 
 logic [15:0] w_data_o_temp; 
 logic [15:0] e_data_o_temp; 
@@ -355,7 +356,7 @@ crossbar_switch_inner cs_inner (
 
 // output of mux 
 
-	  .n_cs_o(16'b0000000000000000), 
+	  .n_cs_o(n_data_o_temp), 
 	  .s_cs_o(s_data_o_temp), 
 	  .w_cs_o(w_data_o_temp), 
 	  .e_cs_o(e_data_o_temp), 
