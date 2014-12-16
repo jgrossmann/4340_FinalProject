@@ -29,8 +29,6 @@ program buffer_testbench(buffer_interface.bench ifc);
         golden_model = new(stats);
 			
 		  @(ifc.cb);
-		  @(ifc.cb);
-		  @(ifc.cb);
         //Reset buffer first
         t.reset = 1;
 		  t.write = 0;
@@ -40,24 +38,24 @@ program buffer_testbench(buffer_interface.bench ifc);
 		  ifc.cb.buf_read_i <= t.read;
 		  ifc.cb.buf_data_i <= t.f.data;
 		  golden_model.goldenResult(t.write, t.read, t.reset, t.f);
-		  $display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
+//		  $display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
 
 		  @(ifc.cb);
 		  
-        golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o);
+        golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o, ifc.cb.valid_flit_o);
         
         repeat(env.max_cycles) begin
             t.randomize();
-				$display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
+//				$display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
 				ifc.cb.reset <= t.reset;
         		ifc.cb.buf_write_i <= t.write;
         		ifc.cb.buf_read_i <= t.read;
         		ifc.cb.buf_data_i <= t.f.data;
 				golden_model.goldenResult(t.write, t.read, t.reset, t.f);
-				$display("%t\n",$realtime);
+//				$display("%t\n",$realtime);
             @(ifc.cb);
                         //checks the golden model against actual buffer
-            golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o);
+            golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o, ifc.cb.valid_flit_o);
         end
         stats.sim_time_end = $realtime;
         stats.results();

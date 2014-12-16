@@ -11,6 +11,8 @@ interface buffer_interface(input bit clk);
 	
 	logic [2:0] buf_ram_raddr_o; 
 	logic [2:0] buf_ram_waddr_o; 
+	logic [4:0] valid_flit_o;
+
 
     clocking cb@(posedge clk);
         output reset;
@@ -22,7 +24,8 @@ interface buffer_interface(input bit clk);
         input buf_data_o;
 		input buf_ram_raddr_o; 
 		input buf_ram_waddr_o; 
-		
+		input valid_flit_o;
+
     endclocking
 
     modport bench(clocking cb);
@@ -36,7 +39,8 @@ interface buffer_interface(input bit clk);
         output buf_valid_o,
         output buf_data_o,
 		output buf_ram_raddr_o,
-		output buf_ram_waddr_o
+		output buf_ram_waddr_o,
+		output valid_flit_o
     );
 
 endinterface
