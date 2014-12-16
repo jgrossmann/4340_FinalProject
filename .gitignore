@@ -3,3 +3,4 @@ csrc/
 *.exe
 *.key
 *.daidir
+*.vcd
