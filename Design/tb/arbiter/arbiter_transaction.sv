@@ -20,6 +20,12 @@ class arbiter_transaction;
 	bit e_arb_credit_i;
 	bit l_arb_credit_i;
 	
+	bit n_arb_credit_inc;
+	bit s_arb_credit_inc;
+	bit w_arb_credit_inc;
+	bit e_arb_credit_inc;
+	bit l_arb_credit_inc;
+	
 	rand int n_arb_empty_i_rand;
 	rand int s_arb_empty_i_rand;
 	rand int e_arb_empty_i_rand;
@@ -37,6 +43,9 @@ class arbiter_transaction;
 	rand logic [7:0] e_arb_address_i;
 	rand logic [7:0] w_arb_address_i;
 	rand logic [7:0] l_arb_address_i;
+	
+	logic [7:0] yx_pos;
+	
     constraint c {
         n_arb_empty_i_rand >= 0;
 		n_arb_empty_i_rand <= 100;
@@ -85,6 +94,8 @@ class arbiter_transaction;
 		end
 		x_pos = e.x_cor;
 		y_pos = e.y_cor;
+		yx_pos[3:0] = e.y_cor;
+		yx_pos[7:4] = e.x_cor;
     endfunction
 
     function void post_randomize();
@@ -93,31 +104,57 @@ class arbiter_transaction;
 		//w_arb_address_i = w_arb_address_i & 0x00110011;
 		//e_arb_address_i = e_arb_address_i & 0x00110011;
 		//l_arb_address_i = l_arb_address_i & 0x00110011;
-		n_arb_credit_i = n_arb_credit_i_rand < env.credit_density;
-		s_arb_credit_i = s_arb_credit_i_rand < env.credit_density;
-		w_arb_credit_i = w_arb_credit_i_rand < env.credit_density;
-		e_arb_credit_i = e_arb_credit_i_rand < env.credit_density;
-		l_arb_credit_i = l_arb_credit_i_rand < env.credit_density;
+		n_arb_credit_inc = n_arb_credit_i_rand < env.credit_density;
+		s_arb_credit_inc = s_arb_credit_i_rand < env.credit_density;
+		w_arb_credit_inc = w_arb_credit_i_rand < env.credit_density;
+		e_arb_credit_inc = e_arb_credit_i_rand < env.credit_density;
+		l_arb_credit_inc = l_arb_credit_i_rand < env.credit_density;
 		n_arb_empty_i = n_arb_empty_i_rand < env.empty_density;
 		s_arb_empty_i = s_arb_empty_i_rand < env.empty_density;
 		w_arb_empty_i = w_arb_empty_i_rand < env.empty_density;
 		e_arb_empty_i = e_arb_empty_i_rand < env.empty_density;
 		l_arb_empty_i = l_arb_empty_i_rand < env.empty_density;
 		reset = reset_rand < env.reset_density;
-		if(credit_count[0] == 5) begin
+		if(n_arb_credit_inc) begin
+			credit_count[0]++;
+		end
+		if(s_arb_credit_inc) begin
+			credit_count[1]++;
+		end
+		if(w_arb_credit_inc) begin
+			credit_count[2]++;
+		end
+		if(e_arb_credit_inc) begin
+			credit_count[3]++;
+		end
+		if(l_arb_credit_inc) begin
+			credit_count[4]++;
+		end
+		
+		if(credit_count[0] == 0) begin
 			n_arb_credit_i = 0;
+		end else begin
+			n_arb_credit_i = 1;
 		end
-		if(credit_count[1] == 5) begin
+		if(credit_count[1] == 0) begin
 			s_arb_credit_i = 0;
+		end else begin
+			s_arb_credit_i = 1;
 		end
-		if(credit_count[2] == 5) begin
+		if(credit_count[2] == 0) begin
 			w_arb_credit_i = 0;
+		end else begin
+			w_arb_credit_i = 1;
 		end
-		if(credit_count[3] == 5) begin
+		if(credit_count[3] == 0) begin
 			e_arb_credit_i = 0;
+		end else begin
+			e_arb_credit_i = 1;
 		end
-		if(credit_count[4] == 5) begin
+		if(credit_count[4] == 0) begin
 			l_arb_credit_i = 0;
+		end else begin
+			l_arb_credit_i = 1;
 		end
 		if(reset == 1) begin
 			foreach(credit_count[i]) begin

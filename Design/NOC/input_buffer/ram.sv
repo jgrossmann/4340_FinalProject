@@ -1,8 +1,8 @@
-
+/*
 `include "mux_ram.sv"
 `include "decoder_ram.sv"
 `include "ff_ram.sv"
-
+*/
 module ram #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=3, parameter DEPTH=5, parameter SIZE=(DEPTH*DATA_WIDTH) ) (
 
 input clk, 

@@ -21,7 +21,7 @@ input [2:0] e_rrp_n_nexthop_addr_i,
 input [2:0] l_rrp_n_nexthop_addr_i,
 input rr_register_change_order_i, 
 
-output rrp_n_priority_to_cs_o,
+output [2:0] rrp_n_priority_to_cs_o,
 output rrp_n_priority_n_o,
 output rrp_n_priority_s_o, 
 output rrp_n_priority_w_o, 
@@ -41,6 +41,11 @@ logic [3:0] rr_register_0001_order;
 logic [3:0] rr_register_0010_order; 
 logic [3:0] rr_register_0100_order; 
 logic [3:0] rr_register_1000_order; 
+
+logic s_to_n_desire; 
+logic w_to_n_desire; 
+logic e_to_n_desire; 
+logic l_to_n_desire; 
 
 
 n_rr_comparator ncomp(
@@ -102,6 +107,7 @@ rr_register_1000 rrr_1000(
  logic rr_priority_0001_all;
  
  always_comb begin 
+ 
  rr_priority_1000_i [3] = (s_to_n_desire == rr_register_1000_order[3]);  
  rr_priority_1000_i [2] = (w_to_n_desire == rr_register_1000_order[2]);  
  rr_priority_1000_i [1] = (e_to_n_desire == rr_register_1000_order[1]);  
@@ -169,7 +175,6 @@ priorityencoder priority_enc(
         .rr_priority_l_o (rrp_n_priority_l_o_temp)
 
 );
-
 
 assign rrp_n_priority_n_o = rrp_n_priority_n_o_temp;  
 assign rrp_n_priority_s_o = rrp_n_priority_s_o_temp;  
