@@ -365,7 +365,6 @@ crossbar_switch_inner cs_inner (
 
 always_comb begin 
 
-n_credit_o_temp = ib_read_i_temp_n;
 s_credit_o_temp = ib_read_i_temp_s;
 w_credit_o_temp = ib_read_i_temp_w;
 e_credit_o_temp = ib_read_i_temp_e;
