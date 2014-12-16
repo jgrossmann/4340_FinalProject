@@ -82,7 +82,7 @@ module n_edge_router
 	output s_credit_o,
 	output w_credit_o,
 	output e_credit_o,
-	output l_credit_o,
+	output l_credit_o
 
 );
 
