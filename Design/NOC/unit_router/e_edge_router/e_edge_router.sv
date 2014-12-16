@@ -99,6 +99,7 @@ logic l_credit_o_temp;
 logic [15:0] n_data_o_temp; 
 logic [15:0] s_data_o_temp; 
 logic [15:0] w_data_o_temp; 
+logic [15:0] e_data_o_temp; 
 logic [15:0] l_data_o_temp; 
 
 logic [2:0] demux_select_temp_n;
