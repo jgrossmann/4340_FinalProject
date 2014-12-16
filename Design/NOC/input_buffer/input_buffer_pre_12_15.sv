@@ -22,7 +22,7 @@ output [2:0] buf_ram_waddr_o
 logic [ADDR_WIDTH-1:0] ram_waddr_temp;
 logic [ADDR_WIDTH-1:0] ram_raddr_temp;
 logic [DATA_WIDTH-1:0] ram_rdata_o_temp; 
-logic [DEPTH-1:0] valid_flit_o_temp;
+
 
 ram ip_ram (
 
@@ -32,8 +32,7 @@ ram ip_ram (
        .ram_wdata_i (buf_data_i), 
        .ram_raddr_i (ram_raddr_temp), 
        .ram_wenable_i (buf_write_i), 
-       .ram_rdata_o (ram_rdata_o_temp),
-		 .valid_flit_o(valid_flit_o_temp)
+       .ram_rdata_o (ram_rdata_o_temp)
 
 );
 
@@ -61,7 +60,7 @@ rw_pointer write_pointer (
 );
 
 assign buf_data_o = ram_rdata_o_temp; 
-assign buf_empty_o = ((ram_raddr_temp == ram_waddr_temp) & (valid_flit_o_temp == 5'b00000)); 
+assign buf_empty_o = (ram_raddr_temp == ram_waddr_temp); 
 assign buf_valid_o = buf_read_i;
 assign buf_ram_raddr_o = ram_raddr_temp; 
 assign buf_ram_waddr_o = ram_waddr_temp; 

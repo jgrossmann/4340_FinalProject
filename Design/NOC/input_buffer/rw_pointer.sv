@@ -8,7 +8,7 @@ output [2:0] rwptr_addr_o
 
 );
 	 
-logic [2:0] data 
+logic [2:0] data; 
 
 always_ff @(posedge clk) begin
     

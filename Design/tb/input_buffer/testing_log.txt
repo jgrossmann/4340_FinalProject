@@ -1,3 +1,22 @@
+BUG:
 Ran preliminary random testing on input buffer and found 1 error. The buffer empty signal takes too long to update.
 It updates 1 clock cycle after the read and write pointers update which means it takes 2 clock cycles to 
 update. It should update immediately after the read and write pointers are equal to each other, so after 1 clock cycle. -(12/11 - John)
+
+FIX:
+Fixed buffer empty signal delay by reducing the delay between reading and writing to the buffer and updating the read/write pointers since
+the buffer empty signal is the equality between the addresses of the read and write pointers. - (12/15 -John).
+
+BUG:
+Found a new bug after applying random testing of 10000 cycles to the input buffer. Apparently when the buffer gets full, the write pointer
+wraps around and overlaps the read pointer. However, since the overlap of addresses is the test to determine if the buffer is empty, when
+the buffer gets full, it is signalling that it is empty; this is not good. 
+
+FIX:
+Added a single bit flip flop to every row in the input buffer. This flip flop holds the valid bit of the corresponding row in the buffer.
+When this valid bit is high, there should be a flit that has not been read yet in that row. When the valid bit is low, there may or
+may not be a flit in that row, but even if there is, it has already been read and had no more use. Now the test for empty buffer is
+as follows: ((read_pointer == write_pointer) & (valid_bits == 00000)). - (12/15 - John).
+
+
+Input buffer is completely tested and working correctly. (12/15 - John).

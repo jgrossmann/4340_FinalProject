@@ -7,17 +7,23 @@ input reset;
 input write_enable_i;
 input read_enable_i;
 output [WIDTH-1:0] data_o;
+output valid_o;
 
 logic [WIDTH-1:0] data;
 logic [WIDTH-1:0] data_out;
+logic valid;
 
 always_ff @ (posedge clk) begin
 
-if (reset) begin 
-   data <= 1'b0; 
-end else if (write_enable_i) begin 
-   data <= data_i; 
-end 
+	if (reset) begin
+   	data <= '0;
+    	valid <= '0;
+	end else if (write_enable_i) begin
+   	data <= data_i;
+    	valid <= '1;
+	end else if (read_enable_i) begin
+    	valid <= '0;
+	end
 
 end
 
@@ -27,6 +33,7 @@ data_out = read_enable_i?data:'0;
 
 end
 
+assign valid_o = valid;
 assign data_o = data_out;
 
 endmodule 
