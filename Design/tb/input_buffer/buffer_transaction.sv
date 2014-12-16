@@ -5,6 +5,9 @@ class buffer_transaction;
     buffer_environment env;
     int packet_tracker;
     flit f;
+	 int buf_credit;
+	 bit write_next;
+	 bit reset_next;
     rand bit reset;
     rand bit read;
     rand bit write;
@@ -18,6 +21,9 @@ class buffer_transaction;
         env = e;
         packet_tracker = 0;
         f = new(0);
+		  buf_credit = 5;
+		  reset_next = 0;
+		  write_next = 0;
     endfunction
 
     function void pre_randomize();
@@ -36,11 +42,40 @@ class buffer_transaction;
 
     function void post_randomize();
 //Updates the packet tracker if the next flit to be sent is valid
-        if(reset) begin
+		  if(reset_next) begin
             packet_tracker = 0;
-        end else if(write) begin
-            packet_tracker = (packet_tracker + 1) % 5;
+				reset_next = 0;
+				buf_credit = 5;
+				write_next = 0;
+		  end
+
+		  if(reset) begin
+				reset_next = 1;
+			end
+			
+		   if(write_next) begin
+            buf_credit--;
+            write_next = 0;
+         end
+
+	
+        if(write) begin
+				if(buf_credit == 0) begin
+					write = 0;
+				end else begin
+            	packet_tracker = (packet_tracker + 1) % 5;
+					write_next = 1;
+				end
         end
+
+			if(read) begin
+				//$display("credit: %b\n", buf_credit);
+				if(buf_credit == 5) begin
+					read = 0;
+				end else begin
+					buf_credit++;
+				end
+			end
 		  
     endfunction
 

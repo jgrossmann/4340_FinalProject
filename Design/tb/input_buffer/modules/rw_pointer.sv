@@ -16,27 +16,28 @@ eff_pointer #(.DATA_WIDTH(3)) ff (
 	
 	.clk(clk),
     .reset(reset),
+	.update(rwptr_inc_i),
 	.data_o(data_o_temp),
 	.data_i(data_i_temp)
 	);
 
-always_comb begin 
+//always_comb begin 
 
-if (reset) begin
+//if (reset) begin
 
-	data_i_temp = 3'b000;  
+//	data_i_temp = 3'b000;  
 	
-end else if (rwptr_inc_i & data_o_temp == 3'b100) begin 
+//end else if (rwptr_inc_i & data_o_temp == 3'b100) begin 
 
-   data_i_temp = 3'b000 ;
+ //  data_i_temp = 3'b000 ;
    
-end else if (rwptr_inc_i) begin 
+//end else if (rwptr_inc_i) begin 
 
-   data_i_temp = data_o_temp + 1 ;
+//   data_i_temp = data_o_temp + 1 ;
    
-end 
+//end 
 
-end 
+//end 
 
 assign rwptr_addr_o = data_o_temp;  
 

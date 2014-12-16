@@ -32,7 +32,8 @@ class buffer_checker;
             empty_o = buffer.empty;
             stats.resets++;
             reset_next = reset;
-        end else begin
+        end
+		 
 				empty_o = buffer.empty;
             if(reset) begin
                 reset_next = 1;
@@ -62,7 +63,7 @@ class buffer_checker;
                 valid_o = 1;
                 stats.flits_read++;
             end        
-        end
+        
     endfunction
 
     function void compareOutput(logic[15:0] data, bit valid, bit empty,logic[2:0] buf_ram_raddr_o, logic[2:0] buf_ram_waddr_o);

@@ -2,7 +2,7 @@
 
 module test_top();
 
-    bit clk = 0;
+    bit clk=0;
     always #5 clk = ~clk;
     
     buffer_interface ifc(clk);

@@ -7,7 +7,7 @@ class input_buffer_class;
     int empty;
 
     function new();
-        empty = 1;
+        
     endfunction;
 
     function void reset();

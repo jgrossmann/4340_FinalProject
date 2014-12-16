@@ -27,7 +27,10 @@ program buffer_testbench(buffer_interface.bench ifc);
         t.randomize();
         stats = new();
         golden_model = new(stats);
-
+			
+		  @(ifc.cb);
+		  @(ifc.cb);
+		  @(ifc.cb);
         //Reset buffer first
         t.reset = 1;
 		  t.write = 0;
@@ -37,18 +40,14 @@ program buffer_testbench(buffer_interface.bench ifc);
 		  ifc.cb.buf_read_i <= t.read;
 		  ifc.cb.buf_data_i <= t.f.data;
 		  golden_model.goldenResult(t.write, t.read, t.reset, t.f);
+		  $display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
+
 		  @(ifc.cb);
 		  
-        golden_model.write_next = 1'b0;
         golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o);
         
         repeat(env.max_cycles) begin
             t.randomize();
-				if(golden_model.empty_o) begin
-					t.read = 0;
-				end else if(golden_model.buffer.full()) begin
-					t.write = 0;
-				end
 				$display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
 				ifc.cb.reset <= t.reset;
         		ifc.cb.buf_write_i <= t.write;

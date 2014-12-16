@@ -1,0 +1,318 @@
+$timescale
+ 1ps
+$end
+
+$scope module _vcs_unit__1525358320 $end
+$comment Unit is _vcs_unit__1525358320 $end
+$upscope $end
+
+$scope module test_top $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var reg        1 "    clk $end
+
+$scope module ifc $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var reg        1 "    clk $end
+$var reg        1 #    reset $end
+$var reg        1 $    buf_write_i $end
+$var reg        1 %    buf_read_i $end
+$var reg       16 &    buf_data_i [15:0] $end
+$var reg        1 '    buf_empty_o $end
+$var reg        1 (    buf_valid_o $end
+$var reg       16 )    buf_data_o [15:0] $end
+
+$scope begin cb $end
+$var reg        1 *    reset $end
+$var reg        1 +    buf_write_i $end
+$var reg        1 ,    buf_read_i $end
+$var reg       16 -    buf_data_i [15:0] $end
+$var reg        1 .    buf_empty_o $end
+$var reg        1 /    buf_valid_o $end
+$var reg       16 0    buf_data_o [15:0] $end
+$upscope $end
+
+$scope fork bench $end
+$upscope $end
+
+$scope fork dut $end
+$var reg        1 "    clk $end
+$var reg        1 #    reset $end
+$var reg        1 $    buf_write_i $end
+$var reg        1 %    buf_read_i $end
+$var reg       16 &    buf_data_i [15:0] $end
+$var reg        1 '    buf_empty_o $end
+$var reg        1 (    buf_valid_o $end
+$var reg       16 )    buf_data_o [15:0] $end
+$upscope $end
+$upscope $end
+
+$scope module dut $end
+$comment Unit is _vcs_unit__1525358320 $end
+$comment Port ifc refers to test_top.ifc.dut $end
+$var wire       3 1    ram_waddr_temp [2:0] $end
+$var wire       3 2    ram_raddr_temp [2:0] $end
+$var reg       16 3    ram_rdata_o_temp [15:0] $end
+$var parameter  32 4    DATA_WIDTH [31:0] $end
+$var parameter  32 5    ADDR_WIDTH [31:0] $end
+$var parameter  32 6    DEPTH [31:0] $end
+$var parameter  32 7    SIZE [31:0] $end
+
+$scope module ip_ram $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire       1 8    clk $end
+$var wire       1 9    reset $end
+$var wire       3 1    ram_waddr_i [2:0] $end
+$var wire       1 :    ram_wenable_i $end
+$var wire      16 ;    ram_wdata_i [15:0] $end
+$var wire       3 2    ram_raddr_i [2:0] $end
+$var wire      16 <    ram_rdata_o [15:0] $end
+$var wire      80 =    all_data [79:0] $end
+$var wire       5 >    read_enable [4:0] $end
+$var wire       5 ?    write_enable [4:0] $end
+$var parameter  32 @    DATA_WIDTH [31:0] $end
+$var parameter  32 A    ADDR_WIDTH [31:0] $end
+$var parameter  32 B    DEPTH [31:0] $end
+$var parameter  32 C    SIZE [31:0] $end
+
+$scope module mux $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire      80 =    data_i [79:0] $end
+$var reg       16 D    data_o [15:0] $end
+$var parameter  32 E    DATA_WIDTH [31:0] $end
+$var parameter  32 F    ADDR_WIDTH [31:0] $end
+$var parameter  32 G    DEPTH [31:0] $end
+$var parameter  32 H    SIZE [31:0] $end
+
+$scope begin unnamed$$_1 $end
+
+$scope begin unnamed$$_3 $end
+$upscope $end
+$upscope $end
+$upscope $end
+
+$scope module decoder $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire       1 :    write_enable_i $end
+$var wire       3 1    write_address_i [2:0] $end
+$var wire       3 2    read_address_i [2:0] $end
+$var reg        5 I    write_enable_o [4:0] $end
+$var reg        5 J    read_enable_o [4:0] $end
+$var reg        5 K    enable [4:0] $end
+$var parameter  32 L    DATA_WIDTH [31:0] $end
+$var parameter  32 M    ADDR_WIDTH [31:0] $end
+$var parameter  32 N    DEPTH [31:0] $end
+$var parameter  32 O    SIZE [31:0] $end
+
+$scope begin unnamed$$_1 $end
+$upscope $end
+
+$scope begin unnamed$$_3 $end
+$upscope $end
+$upscope $end
+
+$scope module genblk1[0].memory_word $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire      16 ;    data_i [15:0] $end
+$var wire       1 8    clk $end
+$var wire       1 9    reset $end
+$var wire       1 P    write_enable_i $end
+$var wire       1 Q    read_enable_i $end
+$var wire      16 R    data_o [15:0] $end
+$var reg       16 S    data [15:0] $end
+$var reg       16 T    data_out [15:0] $end
+$var parameter  32 U    WIDTH [31:0] $end
+$upscope $end
+
+$scope module genblk1[1].memory_word $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire      16 ;    data_i [15:0] $end
+$var wire       1 8    clk $end
+$var wire       1 9    reset $end
+$var wire       1 V    write_enable_i $end
+$var wire       1 W    read_enable_i $end
+$var wire      16 X    data_o [15:0] $end
+$var reg       16 Y    data [15:0] $end
+$var reg       16 Z    data_out [15:0] $end
+$var parameter  32 [    WIDTH [31:0] $end
+$upscope $end
+
+$scope module genblk1[2].memory_word $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire      16 ;    data_i [15:0] $end
+$var wire       1 8    clk $end
+$var wire       1 9    reset $end
+$var wire       1 \    write_enable_i $end
+$var wire       1 ]    read_enable_i $end
+$var wire      16 ^    data_o [15:0] $end
+$var reg       16 _    data [15:0] $end
+$var reg       16 `    data_out [15:0] $end
+$var parameter  32 a    WIDTH [31:0] $end
+$upscope $end
+
+$scope module genblk1[3].memory_word $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire      16 ;    data_i [15:0] $end
+$var wire       1 8    clk $end
+$var wire       1 9    reset $end
+$var wire       1 b    write_enable_i $end
+$var wire       1 c    read_enable_i $end
+$var wire      16 d    data_o [15:0] $end
+$var reg       16 e    data [15:0] $end
+$var reg       16 f    data_out [15:0] $end
+$var parameter  32 g    WIDTH [31:0] $end
+$upscope $end
+
+$scope module genblk1[4].memory_word $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire      16 ;    data_i [15:0] $end
+$var wire       1 8    clk $end
+$var wire       1 9    reset $end
+$var wire       1 h    write_enable_i $end
+$var wire       1 i    read_enable_i $end
+$var wire      16 j    data_o [15:0] $end
+$var reg       16 k    data [15:0] $end
+$var reg       16 l    data_out [15:0] $end
+$var parameter  32 m    WIDTH [31:0] $end
+$upscope $end
+$upscope $end
+
+$scope module read_pointer $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire       1 n    clk $end
+$var wire       1 o    reset $end
+$var wire       1 p    rwptr_inc_i $end
+$var wire       3 2    rwptr_addr_o [2:0] $end
+$var reg        3 q    data_i_temp [2:0] $end
+$var reg        3 r    data_o_temp [2:0] $end
+
+$scope module ff $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire       1 n    clk $end
+$var wire       1 o    reset $end
+$var wire       3 q    data_i [2:0] $end
+$var reg        3 r    data_o [2:0] $end
+$var parameter  32 s    DATA_WIDTH [31:0] $end
+$upscope $end
+$upscope $end
+
+$scope module write_pointer $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire       1 n    clk $end
+$var wire       1 o    reset $end
+$var wire       1 t    rwptr_inc_i $end
+$var wire       3 1    rwptr_addr_o [2:0] $end
+$var reg        3 u    data_i_temp [2:0] $end
+$var reg        3 v    data_o_temp [2:0] $end
+
+$scope module ff $end
+$comment Unit is _vcs_unit__1525358320 $end
+$var wire       1 n    clk $end
+$var wire       1 o    reset $end
+$var wire       3 u    data_i [2:0] $end
+$var reg        3 v    data_o [2:0] $end
+$var parameter  32 w    DATA_WIDTH [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+
+$scope module bench $end
+$comment Unit is _vcs_unit__1525358320 $end
+$comment Port ifc refers to test_top.ifc.bench $end
+
+$scope begin unnamed$$_8 $end
+
+$scope begin unnamed$$_7 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#110000
+$dumpvars
+0b
+0W
+b00000000000000000000000000010000 L
+b00000000000000000000000000000011 A
+b00000000000000000000000000000101 6
+1+
+b00000000000000000000000000010000 m
+1n
+1c
+b0000000000000000 X
+b00000000000000000000000000000011 M
+b00000000000000000000000000000101 B
+b00000000000000000000000001010000 7
+1,
+b0000101011010001 -
+0o
+1"
+b0000000000000000 d
+b0000000000000000 Y
+b00000000000000000000000000000101 N
+b00000000000000000000000001010000 C
+18
+0.
+1p
+0#
+b0000000000000000 e
+b0000000000000000 Z
+b00000000000000000000000001010000 O
+b0000000000000000 D
+09
+1:
+1/
+b100 q
+1$
+b0000000000000000 f
+b00000000000000000000000000010000 [
+0P
+b00000000000000000000000000010000 E
+b0000101011010001 ;
+b1111101001101001 0
+b011 r
+1%
+b00000000000000000000000000010000 g
+0\
+0Q
+b00000000000000000000000000000011 F
+b00000000000000000000000000000101 G
+b0000000000000000 <
+b001 1
+b00000000000000000000000000000011 s
+b0000101011010001 &
+0h
+0]
+b0000000000000000 R
+b00000000000000000000000001010000 H
+b00000000000000000000000000000000000000000000000000000000000000000000000000000000 =
+b011 2
+1t
+0'
+0i
+b0000000000000000 ^
+b0000101011010001 S
+b0000000000000000 T
+b00010 I
+b01000 >
+b0000000000000000 3
+b010 u
+1(
+b0000000000000000 j
+b1111101001101001 _
+b00000000000000000000000000010000 U
+b01000 J
+b00010 ?
+b00000000000000000000000000010000 4
+b001 v
+b0000000000000000 )
+b0110010001101001 k
+b0000000000000000 `
+b00000000000000000000000000010000 a
+1V
+b01000 K
+b00000000000000000000000000010000 @
+b00000000000000000000000000000011 5
+b00000000000000000000000000000011 w
+0*
+b0000000000000000 l
+$end

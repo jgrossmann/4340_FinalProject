@@ -48,16 +48,16 @@ buf_data_i = 16'b0000000000000000;
 #4      buf_data_i = 16'b1000000000000000; 
         buf_write_i = 1; 
 
-#4      buf_read_i = 1; 
+#2      buf_read_i = 1; 
         buf_write_i = 0;
 		
-#4      buf_read_i = 0; 
+#2      buf_read_i = 0; 
         buf_write_i = 1;
 
-#4      buf_read_i = 1; 
+#2      buf_read_i = 1; 
         buf_write_i = 0;
 		
-#4      buf_read_i = 0; 
+#2      buf_read_i = 0; 
         buf_write_i = 0;
  
 end

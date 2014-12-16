@@ -21,5 +21,11 @@ indent:
 bench: 
 	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice "buffer_testbench.sv" "modules/buffer_top.sv" -o testbench.exe
 
+view:	
+	./testbench.exe
+	vpd2vcd vcdplus.vpd vcdplus.vcd &
+	gtkwave vcdplus.vcd &
+
+
 clean:
 	rm -rf *.o *~ *.vpd sim* csrc DVEfiles *daidir *exe *.key
