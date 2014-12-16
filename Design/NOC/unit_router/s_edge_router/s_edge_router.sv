@@ -282,7 +282,7 @@ arbiter arbiter_inner (
 
 	  .yx_addr_router_i(yx_addr_router_i),
 	  .yx_n_addr_header_i(ib_data_o_temp_n),
-	  .yx_s_addr_header_i(16'b0), 
+	  .yx_s_addr_header_i(16'b0000000000000000), 
 	  .yx_w_addr_header_i(ib_data_o_temp_w),
 	  .yx_e_addr_header_i(ib_data_o_temp_e), 
 	  .yx_l_addr_header_i(ib_data_o_temp_l), 
