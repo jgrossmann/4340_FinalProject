@@ -30,10 +30,12 @@ interface ifc (input bit clk);
 	logic [15:0] w_data_o;
 	logic [15:0] e_data_o;
 	logic [15:0] l_data_o;
+	logic [15:0] yx_addr_router_i;
 
 	clocking cb @(posedge clk);
 	
 	output reset;
+	output yx_addr_router_i;
 	output n_data_i;
 	output s_data_i;
 	output w_data_i;
@@ -70,6 +72,7 @@ interface ifc (input bit clk);
 	modport bench (clocking cb);
 
 	modport dut (
+		input yx_addr_router_i,
 		input clk,
 		input reset,
 		input n_data_i,
