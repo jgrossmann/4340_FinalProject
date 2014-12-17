@@ -55,6 +55,12 @@ arbiter_interface.dut ifc
 
 );
 
+logic n_pt_almost_done_o; 
+logic s_pt_almost_done_o; 
+logic w_pt_almost_done_o; 
+logic e_pt_almost_done_o; 
+logic l_pt_almost_done_o; 
+
 logic [2:0] yx_n_addr_o_temp; 
 logic [2:0] yx_s_addr_o_temp; 
 logic [2:0] yx_w_addr_o_temp; 
