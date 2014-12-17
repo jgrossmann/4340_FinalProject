@@ -1,5 +1,5 @@
 
-class router;
+class router_test;
 
     // Constants to make port identification easier
     // NORTH = 0;

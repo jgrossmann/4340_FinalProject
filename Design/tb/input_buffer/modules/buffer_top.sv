@@ -2,8 +2,11 @@
 
 module test_top();
 
-    bit clk=0;
-    always #5 clk = ~clk;
+    bit clk=1;
+    always begin
+	  	#5 clk = 0;
+		#5 clk = 1;
+	end
     
     buffer_interface ifc(clk);
    input_buffer_test dut(ifc.dut);
