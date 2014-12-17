@@ -79,15 +79,15 @@ class arbiter_class;
 		e_read = 0;
 		l_read = 0;
 		empty[0] = packet.n_arb_empty_i;
-		$display("%d\n", packet.n_arb_empty_i);
+		//$display("%d\n", packet.n_arb_empty_i);
 		empty[1] = packet.s_arb_empty_i;
-		$display("%d\n", packet.s_arb_empty_i);
+		//$display("%d\n", packet.s_arb_empty_i);
 		empty[2] = packet.w_arb_empty_i;
-		$display("%d\n", packet.w_arb_empty_i);
+		//$display("%d\n", packet.w_arb_empty_i);
 		empty[3] = packet.e_arb_empty_i;
-		$display("%d\n", packet.e_arb_empty_i);
+		//$display("%d\n", packet.e_arb_empty_i);
 		empty[4] = packet.l_arb_empty_i;
-		$display("%d\n", packet.l_arb_empty_i);
+		//$display("%d\n", packet.l_arb_empty_i);
 		/*if(packet.n_arb_credit_i) begin
 			cc[0]++;
 		end
@@ -144,7 +144,7 @@ class arbiter_class;
 			//sending[i] = 0;
 			dir = arbiter_func(i, packet);
 			if(dir >= 0) begin
-				$display("incrementing packet tracker for %d when searching $d\n", dir, i);
+				//$display("incrementing packet tracker for %d when searching $d\n", dir, i);
 				packet_tracker[i] = (packet_tracker[i] + 1) % 5;
 				//sending[i] = 1;
 				case(dir)
@@ -245,7 +245,7 @@ class arbiter_class;
             for(int i=0; i<4; i++) begin
                 if(temp[priority_port]) begin
                     token[port] = priority_port;
-					$display("from = %d, to = %d\n", priority_port, port);
+					//$display("from = %d, to = %d\n", priority_port, port);
                     return priority_port;
                 end else begin
                     priority_port = (priority_port + 1) % 5;
@@ -253,7 +253,7 @@ class arbiter_class;
             end
 
         end else begin
-			$display("got here\n");
+			//$display("got here\n");
 			if(empty[token[port]] == 0) begin
 				return token[port];
 			end else begin

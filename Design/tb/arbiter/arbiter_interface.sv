@@ -1,11 +1,11 @@
 interface arbiter_interface(input bit clk);
 
     logic reset;
-    logic [7:0] n_arb_address_i;
-	logic [7:0] s_arb_address_i;
-	logic [7:0] e_arb_address_i;
-	logic [7:0] w_arb_address_i;
-	logic [7:0] l_arb_address_i;
+    logic [15:0] n_arb_address_i;
+	logic [15:0] s_arb_address_i;
+	logic [15:0] e_arb_address_i;
+	logic [15:0] w_arb_address_i;
+	logic [15:0] l_arb_address_i;
 	logic n_arb_empty_i;
 	logic s_arb_empty_i;
 	logic e_arb_empty_i;
@@ -16,7 +16,7 @@ interface arbiter_interface(input bit clk);
 	logic e_arb_credit_i;
 	logic w_arb_credit_i;
 	logic l_arb_credit_i;
-	logic [7:0] yx_pos_i;
+	logic [15:0] yx_pos_i;
 	logic n_arb_dec_o;
 	logic s_arb_dec_o;
 	logic e_arb_dec_o;

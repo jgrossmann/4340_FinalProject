@@ -23,14 +23,16 @@ interface ifc (input bit clk);
 	modport bench (clocking cb);
 
 	modport dut (
-		input clk,
-		input reset,
-		input data_i,
-		input valid_i,
-		input credit_i,
-		output data_o,
-		output valid_o,
-		output credit_o
+		
+	input clk,
+	input reset,
+	input data_i,
+	input valid_i,
+	input credit_i,
+	output data_o,
+	output valid_o,
+	output credit_o
+	
 	);
 
 endinterface
