@@ -434,7 +434,7 @@ mux_5to1_1bit mux_change_order_l (
 
 always_comb begin 
 
-if (ifc.reset)
+if (ifc.reset) begin
 
 cc_credit_n_o_temp = 1'b0; 
 cc_credit_s_o_temp = 1'b0; 
