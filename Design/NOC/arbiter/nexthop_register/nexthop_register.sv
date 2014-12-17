@@ -7,7 +7,7 @@ input clk,
 input reset,
 input [2:0] nhr_address_i,
 input nhr_write_i,  
-input [2:0] nhr_address_o
+output [2:0] nhr_address_o
 	
 );
 	
