@@ -51,6 +51,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
 			$display("Inputs:\n");
+			$display("reset %b\n", trans.reset);
 			$display("north empty %b\n", trans.n_arb_empty_i);
 			$display("south empty %b\n", trans.s_arb_empty_i);
 			$display("west empty %b\n", trans.w_arb_empty_i);
@@ -117,6 +118,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
 			$display("Inputs:\n");
+			$display("reset %b\n", trans.reset);
 			$display("north empty %b\n", trans.n_arb_empty_i);
 			$display("south empty %b\n", trans.s_arb_empty_i);
 			$display("west empty %b\n", trans.w_arb_empty_i);
@@ -158,7 +160,7 @@ program arbiter_tb (arbiter_interface.bench ds);
     end
 	
 	task checkResults();
-		$display("testing!!!!!\n");
+		$display("Results\n");
 		/*$display("%d\n", my_arbiter.dec[0]);
 		$display("%d\n", ds.cb.n_arb_dec_o);
 		$display("%d\n", ds.cb.s_arb_dec_o);
@@ -219,53 +221,53 @@ program arbiter_tb (arbiter_interface.bench ds);
 		
 		//if(my_arbiter.dec[0] == 1) begin
 			//if(ds.cb.n_arb_mux_sel_o != my_arbiter.n_arb_mux_sel) begin
-				$display("mux out north: dut = %d bench = %d\n", ds.cb.n_arb_mux_sel_o, my_arbiter.n_arb_mux_sel);
+				$display("mux out north: dut = %b bench = %b\n", ds.cb.n_arb_mux_sel_o, my_arbiter.n_arb_mux_sel);
 			//end
 		//end
 		//if(my_arbiter.dec[1] == 1) begin
 			//if(ds.cb.s_arb_mux_sel_o != my_arbiter.s_arb_mux_sel) begin
-				$display("mux out south: dut = %d bench = %d\n", ds.cb.s_arb_mux_sel_o, my_arbiter.s_arb_mux_sel);
+				$display("mux out south: dut = %b bench = %b\n", ds.cb.s_arb_mux_sel_o, my_arbiter.s_arb_mux_sel);
 			//end
 		//end
 		//if(my_arbiter.dec[2] == 1) begin
 			//if(ds.cb.w_arb_mux_sel_o != my_arbiter.w_arb_mux_sel) begin
-				$display("mux out west: dut = %d bench = %d\n", ds.cb.w_arb_mux_sel_o, my_arbiter.w_arb_mux_sel);
+				$display("mux out west: dut = %b bench = %b\n", ds.cb.w_arb_mux_sel_o, my_arbiter.w_arb_mux_sel);
 			//end
 		//end
 		//if(my_arbiter.dec[3] == 1) begin
 			//if(ds.cb.e_arb_mux_sel_o != my_arbiter.e_arb_mux_sel) begin
-				$display("mux out east: dut = %d bench = %d\n", ds.cb.e_arb_mux_sel_o, my_arbiter.e_arb_mux_sel);
+				$display("mux out east: dut = %b bench = %b\n", ds.cb.e_arb_mux_sel_o, my_arbiter.e_arb_mux_sel);
 			//end
 		//end
 		//if(my_arbiter.dec[4] == 1) begin
 			//if(ds.cb.l_arb_mux_sel_o != my_arbiter.l_arb_mux_sel) begin
-				$display("mux out local: dut = %d bench = %d\n", ds.cb.l_arb_mux_sel_o, my_arbiter.l_arb_mux_sel);
+				$display("mux out local: dut = %b bench = %b\n", ds.cb.l_arb_mux_sel_o, my_arbiter.l_arb_mux_sel);
 			//end
 		//end
 		
 		//if(my_arbiter.n_read == 1) begin
 			//if(ds.cb.n_arb_demux_sel_o != my_arbiter.n_arb_demux_sel) begin
-				$display("demux out north: dut = %d bench = %d\n", ds.cb.n_arb_demux_sel_o, my_arbiter.n_arb_demux_sel);
+				$display("demux out north: dut = %b bench = %b\n", ds.cb.n_arb_demux_sel_o, my_arbiter.n_arb_demux_sel);
 			//end
 		//end
 		//if(my_arbiter.s_read == 1) begin
 			//if(ds.cb.s_arb_demux_sel_o != my_arbiter.s_arb_demux_sel) begin
-				$display("demux out south: dut = %d bench = %d\n", ds.cb.s_arb_demux_sel_o, my_arbiter.s_arb_demux_sel);
+				$display("demux out south: dut = %b bench = %b\n", ds.cb.s_arb_demux_sel_o, my_arbiter.s_arb_demux_sel);
 			//end
 		//end
 		//if(my_arbiter.w_read == 1) begin
 			//if(ds.cb.w_arb_demux_sel_o != my_arbiter.w_arb_demux_sel) begin
-				$display("demux out west: dut = %d bench = %d\n", ds.cb.w_arb_demux_sel_o, my_arbiter.w_arb_demux_sel);
+				$display("demux out west: dut = %b bench = %b\n", ds.cb.w_arb_demux_sel_o, my_arbiter.w_arb_demux_sel);
 			//end
 		//end
 		//if(my_arbiter.e_read == 1) begin
 			//if(ds.cb.e_arb_demux_sel_o != my_arbiter.e_arb_demux_sel) begin
-				$display("demux out east: dut = %d bench = %d\n", ds.cb.e_arb_demux_sel_o, my_arbiter.e_arb_demux_sel);
+				$display("demux out east: dut = %b bench = %b\n", ds.cb.e_arb_demux_sel_o, my_arbiter.e_arb_demux_sel);
 			//end
 		//end
 		//if(my_arbiter.l_read == 1) begin
 			//if(ds.cb.l_arb_demux_sel_o != my_arbiter.l_arb_demux_sel) begin
-				$display("demux out local: dut = %d bench = %d\n", ds.cb.l_arb_demux_sel_o, my_arbiter.l_arb_demux_sel);
+				$display("demux out local: dut = %b bench = %b\n", ds.cb.l_arb_demux_sel_o, my_arbiter.l_arb_demux_sel);
 			//end
 		//end
 		

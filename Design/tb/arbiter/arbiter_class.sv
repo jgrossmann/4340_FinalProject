@@ -66,18 +66,20 @@ class arbiter_class;
 	function void update_model (
 		arbiter_transaction packet
 	);
-	
-		
-		if(packet.reset == 1) begin
-			reset();
-			return;
-		end
+
 		
 		n_read = 0;
 		s_read = 0;
 		w_read = 0;
 		e_read = 0;
 		l_read = 0;
+		foreach(dec[i]) begin
+			dec[i] = 0;
+		end
+		if(packet.reset == 1) begin
+			reset();
+			return;
+		end
 		empty[0] = packet.n_arb_empty_i;
 		//$display("%d\n", packet.n_arb_empty_i);
 		empty[1] = packet.s_arb_empty_i;
@@ -135,9 +137,7 @@ class arbiter_class;
 		l_x_addr = l_x_addr_temp;
 		l_y_addr = l_y_addr_temp;
 		
-		foreach(dec[i]) begin
-			dec[i] = 0;
-		end
+		
 			
 		
 		for(int i = 0; i < 5; i++) begin
