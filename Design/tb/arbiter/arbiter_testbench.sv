@@ -20,7 +20,18 @@ program arbiter_tb (arbiter_interface.bench ds);
 		//checker = new(my_arbiter);
         //stats = new();
 		repeat(1) begin 
-			
+			$display("Inputs:\n");
+			$display("Tokens before inputs");
+			$display("north token:");
+			printNextHop((my_arbiter.token[0]+1)%5);
+			$display("south token:");
+			printNextHop((my_arbiter.token[1]+1)%5);
+			$display("west token:");
+			printNextHop((my_arbiter.token[2]+1)%5);
+			$display("east token:");
+			printNextHop((my_arbiter.token[3]+1)%5);
+			$display("local token:");
+			printNextHop((my_arbiter.token[4]+1)%5);
 			trans.randomize();
 			//trans.post_randomize();
 			trans.reset = 1;
@@ -51,18 +62,17 @@ program arbiter_tb (arbiter_interface.bench ds);
 			//$display("%d %d\n", trans.n_arb_empty_i_rand, trans.s_arb_empty_i_rand);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
-			$display("Inputs:\n");
 			$display("reset %b\n", trans.reset);
-			$display("north empty %b\n", trans.n_arb_empty_i);
-			$display("south empty %b\n", trans.s_arb_empty_i);
-			$display("west empty %b\n", trans.w_arb_empty_i);
-			$display("east empty %b\n", trans.e_arb_empty_i);
-			$display("local empty %b\n", trans.l_arb_empty_i);
-			$display("north credit %b\n", trans.n_arb_credit_i);
-			$display("south credit %b\n", trans.s_arb_credit_i);
-			$display("west credit %b\n", trans.w_arb_credit_i);
-			$display("east credit %b\n", trans.e_arb_credit_i);
-			$display("local credit %b\n", trans.l_arb_credit_i);
+			$display("north input empty %b\n", trans.n_arb_empty_i);
+			$display("south input empty %b\n", trans.s_arb_empty_i);
+			$display("west input empty %b\n", trans.w_arb_empty_i);
+			$display("east input empty %b\n", trans.e_arb_empty_i);
+			$display("local input empty %b\n", trans.l_arb_empty_i);
+			$display("north output credit %b\n", trans.n_arb_credit_i);
+			$display("south output credit %b\n", trans.s_arb_credit_i);
+			$display("west output credit %b\n", trans.w_arb_credit_i);
+			$display("east output credit %b\n", trans.e_arb_credit_i);
+			$display("local output credit %b\n", trans.l_arb_credit_i);
 			if(~trans.n_arb_empty_i && (my_arbiter.pti[0] - my_arbiter.n_read) == 0 && trans.reset == 0) begin
 				$display("north address %b", trans.n_arb_address_i);
 				$display("north next hop: ");
@@ -93,6 +103,17 @@ program arbiter_tb (arbiter_interface.bench ds);
 				printNextHop(my_arbiter.nexthop[4]);
 				$display("\n");
 			end
+			$display("Token after inputs");
+			$display("north token:");
+			printNextHop(my_arbiter.token[0]);
+			$display("south token:");
+			printNextHop(my_arbiter.token[1]);
+			$display("west token:");
+			printNextHop(my_arbiter.token[2]);
+			$display("east token:");
+			printNextHop(my_arbiter.token[3]);
+			$display("local token:");
+			printNextHop(my_arbiter.token[4]);
 			/*$display("Results:\n");
 			$display("north mux %b\n", my_arbiter.n_arb_mux_sel);
 			$display("south mux %b\n", my_arbiter.s_arb_mux_sel);
@@ -115,16 +136,18 @@ program arbiter_tb (arbiter_interface.bench ds);
             trans.randomize();
 			//trans.post_randomize();
 			//trans.reset = 1;
+			$display("Inputs:\n");
+			$display("Token's before inputs:");
 			$display("north token:");
-			printNextHop(my_arbiter.token[0]);
+			printNextHop((my_arbiter.token[0]+1)%5);
 			$display("south token:");
-			printNextHop(my_arbiter.token[1]);
+			printNextHop((my_arbiter.token[1]+1)%5);
 			$display("west token:");
-			printNextHop(my_arbiter.token[2]);
+			printNextHop((my_arbiter.token[2]+1)%5);
 			$display("east token:");
-			printNextHop(my_arbiter.token[3]);
+			printNextHop((my_arbiter.token[3]+1)%5);
 			$display("local token:");
-			printNextHop(my_arbiter.token[4]);
+			printNextHop((my_arbiter.token[4]+1)%5);
 			my_arbiter.update_model(trans);
 			ds.cb.reset <= trans.reset;
 			ds.cb.n_arb_address_i[7:0] <= trans.n_arb_address_i;
@@ -153,18 +176,18 @@ program arbiter_tb (arbiter_interface.bench ds);
 			//$display("%d %d\n", env.empty_density, env.credit_density);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
-			$display("Inputs:\n");
+			
 			$display("reset %b\n", trans.reset);
-			$display("north empty %b\n", trans.n_arb_empty_i);
-			$display("south empty %b\n", trans.s_arb_empty_i);
-			$display("west empty %b\n", trans.w_arb_empty_i);
-			$display("east empty %b\n", trans.e_arb_empty_i);
-			$display("local empty %b\n", trans.l_arb_empty_i);
-			$display("north credit %b\n", trans.n_arb_credit_i);
-			$display("south credit %b\n", trans.s_arb_credit_i);
-			$display("west credit %b\n", trans.w_arb_credit_i);
-			$display("east credit %b\n", trans.e_arb_credit_i);
-			$display("local credit %b\n", trans.l_arb_credit_i);
+			$display("north input empty %b\n", trans.n_arb_empty_i);
+			$display("south input empty %b\n", trans.s_arb_empty_i);
+			$display("west input empty %b\n", trans.w_arb_empty_i);
+			$display("east input empty %b\n", trans.e_arb_empty_i);
+			$display("local input empty %b\n", trans.l_arb_empty_i);
+			$display("north output credit %b\n", trans.n_arb_credit_i);
+			$display("south output credit %b\n", trans.s_arb_credit_i);
+			$display("west output credit %b\n", trans.w_arb_credit_i);
+			$display("east output credit %b\n", trans.e_arb_credit_i);
+			$display("local output credit %b\n", trans.l_arb_credit_i);
 			if(~trans.n_arb_empty_i && (my_arbiter.pti[0] - my_arbiter.n_read) == 0 && trans.reset == 0) begin
 				$display("north address %b", trans.n_arb_address_i);
 				$display("north next hop: ");
@@ -195,6 +218,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 				printNextHop(my_arbiter.nexthop[4]);
 				$display("\n");
 			end
+			$display("Token after inputs");
 			$display("north token:");
 			printNextHop(my_arbiter.token[0]);
 			$display("south token:");
@@ -294,10 +318,6 @@ program arbiter_tb (arbiter_interface.bench ds);
 		//end
 		//if(ds.cb.l_arb_read_o != my_arbiter.l_read) begin
 			$display("read out local: dut = %d bench = %d\n", ds.cb.l_arb_read_o, my_arbiter.l_read);
-		//end
-		
-		//if(ds.cb.n_arb_read_o != my_arbiter.n_read) begin
-			$display("read out north: dut = %d bench = %d\n", ds.cb.n_arb_read_o, my_arbiter.n_read);
 		//end
 		
 		//if(my_arbiter.dec[0] == 1) begin
