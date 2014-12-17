@@ -434,27 +434,11 @@ mux_5to1_1bit mux_change_order_l (
 
 always_comb begin 
 
-if (ifc.reset) begin
-
-cc_credit_n_o_temp = 1'b0; 
-cc_credit_s_o_temp = 1'b0; 
-cc_credit_w_o_temp = 1'b0; 
-cc_credit_e_o_temp = 1'b0; 
-cc_credit_l_o_temp = 1'b0; 
-
-rrp_n_priority_read_o_temp = 1'b0; 
-rrp_s_priority_read_o_temp = 1'b0; 
-rrp_w_priority_read_o_temp = 1'b0; 
-rrp_e_priority_read_o_temp = 1'b0; 
-rrp_l_priority_read_o_temp = 1'b0; 
-
-end else begin 
-
-rrp_n_priority_read_o_temp = (~ifc.n_arb_credit_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
-rrp_s_priority_read_o_temp = (~ifc.s_arb_credit_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
-rrp_w_priority_read_o_temp = (~ifc.w_arb_credit_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
-rrp_e_priority_read_o_temp = (~ifc.e_arb_credit_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
-rrp_l_priority_read_o_temp = (~ifc.l_arb_credit_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
+rrp_n_priority_read_o_temp = (ifc.n_arb_credit_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
+rrp_s_priority_read_o_temp = (ifc.s_arb_credit_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
+rrp_w_priority_read_o_temp = (ifc.w_arb_credit_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
+rrp_e_priority_read_o_temp = (ifc.e_arb_credit_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
+rrp_l_priority_read_o_temp = (ifc.l_arb_credit_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
 
 cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_l_o_temp;
 cc_credit_s_o_temp = rrp_s_priority_n_o_temp | rrp_s_priority_w_o_temp | rrp_s_priority_e_o_temp | rrp_s_priority_l_o_temp;
@@ -462,13 +446,11 @@ cc_credit_w_o_temp = rrp_w_priority_n_o_temp | rrp_w_priority_s_o_temp | rrp_w_p
 cc_credit_e_o_temp = rrp_e_priority_n_o_temp | rrp_e_priority_s_o_temp | rrp_e_priority_w_o_temp | rrp_e_priority_l_o_temp;
 cc_credit_l_o_temp = rrp_l_priority_n_o_temp | rrp_l_priority_s_o_temp | rrp_l_priority_w_o_temp | rrp_l_priority_e_o_temp;
 
-end
-
 end 
 
 assign ifc.n_arb_demux_sel_o = nhr_n_addr_o_temp; 
 assign ifc.s_arb_demux_sel_o = nhr_s_addr_o_temp; 
-assign ifc.w_arb_demux_sel_o = nhr_w_addr_o_temp; 
+assign ifc.w_arb_demux_sel_o = nhr_w_addr_o_temp;
 assign ifc.e_arb_demux_sel_o = nhr_e_addr_o_temp; 
 assign ifc.l_arb_demux_sel_o = nhr_l_addr_o_temp; 
 
