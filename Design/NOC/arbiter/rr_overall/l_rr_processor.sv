@@ -180,6 +180,6 @@ assign rrp_l_priority_s_o = rrp_l_priority_s_o_temp;
 assign rrp_l_priority_w_o = rrp_l_priority_w_o_temp;  
 assign rrp_l_priority_e_o = rrp_l_priority_e_o_temp;  
 assign rrp_l_priority_l_o = rrp_l_priority_l_o_temp;  
-assign rrp_l_priority_to_cs_o = rrp_n_priority_to_cs_o_temp;  
+assign rrp_l_priority_to_cs_o = rrp_l_priority_to_cs_o_temp;  
 
 endmodule
