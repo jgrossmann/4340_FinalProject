@@ -59,7 +59,7 @@ class arbiter_class;
         foreach(packet_tracker[i]) begin
 			//cc[i] = 5;
 			packet_tracker[i] = 0;
-			token[i] = 0;
+			token[i] = 4;
 			empty[i] = 0;
 			pti[i] = 0;
 			//sending[i] = 0;
@@ -280,7 +280,7 @@ class arbiter_class;
 			//cc[i] = 5;
 			packet_tracker[i] = 0;
 			pti[i] = 0;
-			token[i] = 0;
+			token[i] = 4;
 			empty[i] = 0;
 			//sending[i] = 0;
       end
