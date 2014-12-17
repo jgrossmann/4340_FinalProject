@@ -47,12 +47,6 @@ logic [3:0] rr_register_0010_order;
 logic [3:0] rr_register_0100_order; 
 logic [3:0] rr_register_1000_order; 
 
-logic s_to_n_desire; 
-logic w_to_n_desire; 
-logic e_to_n_desire; 
-logic l_to_n_desire; 
-
-
 n_rr_comparator ncomp(
 
        .s_nexthop_addr_i (s_rrp_n_nexthop_addr_i),
