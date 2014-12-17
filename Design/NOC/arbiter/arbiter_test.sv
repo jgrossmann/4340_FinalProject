@@ -1,4 +1,30 @@
+/* This is the module for arbiter, it contains several sub-modules in it: 
 
+(1) packet tracker x 5 (associated with each input buffer) 
+    
+	input: 
+    output: 
+
+(2) yx processor x 5 (associated with each input buffer)
+
+    input: 
+    output: 
+
+(3) next-hop register x 5 (associated with each input buffer)
+
+    input: 
+    output: 
+
+(4) rr (round-robin) processor x 5 (asscociated with each output direction)
+
+    input: 
+    output: 
+
+(5) 5-to-1 mux for changing round-robin ordering x 5 (associated with each rr-processor)
+
+    input: 
+    output: 
+*/
 module arbiter_test (
 
 arbiter_interface.dut ifc
@@ -61,6 +87,12 @@ logic w_pt_almost_done_o;
 logic e_pt_almost_done_o; 
 logic l_pt_almost_done_o; 
 
+logic n_pt_empty_o; 
+logic s_pt_empty_o; 
+logic w_pt_empty_o; 
+logic e_pt_empty_o; 
+logic l_pt_empty_o; 
+
 logic [2:0] yx_n_addr_o_temp; 
 logic [2:0] yx_s_addr_o_temp; 
 logic [2:0] yx_w_addr_o_temp; 
@@ -114,6 +146,7 @@ logic rrp_l_priority_e_o_temp;
 logic rrp_l_priority_l_o_temp;
 logic [2:0] rrp_l_priority_to_cs_o_temp;
 
+// Temp variable for output read signal, the direction is input-referred. 
 logic rrp_n_priority_read_o_temp; 
 logic rrp_s_priority_read_o_temp; 
 logic rrp_w_priority_read_o_temp;  
@@ -136,8 +169,9 @@ packet_tracker pt_n (
 
   .clk(ifc.clk), 
   .reset(ifc.reset),
-  .pt_inc_i(rrp_n_priority_read_o_temp),   
-  .pt_end_o(n_pt_almost_done_o)
+  .pt_inc_i(rrp_n_priority_read_o_temp),   // Temp variable for output read signal, the direction is input-referred. 
+  .pt_end_o(n_pt_almost_done_o), 
+  .pt_empty_o (n_pt_empty_o)
 	
 );
 
@@ -145,8 +179,9 @@ packet_tracker pt_s (
 
   .clk(ifc.clk), 
   .reset(ifc.reset),
-  .pt_inc_i(rrp_s_priority_read_o_temp),   
-  .pt_end_o(s_pt_almost_done_o)
+  .pt_inc_i(rrp_s_priority_read_o_temp),   // Temp variable for output read signal, the direction is input-referred. 
+  .pt_end_o(s_pt_almost_done_o),
+  .pt_empty_o (s_pt_empty_o)
 	
 );
 
@@ -154,8 +189,9 @@ packet_tracker pt_w (
 
   .clk(ifc.clk), 
   .reset(ifc.reset),
-  .pt_inc_i(rrp_w_priority_read_o_temp),   
-  .pt_end_o(w_pt_almost_done_o)
+  .pt_inc_i(rrp_w_priority_read_o_temp),   // Temp variable for output read signal, the direction is input-referred. 
+  .pt_end_o(w_pt_almost_done_o),
+  .pt_empty_o (w_pt_empty_o)
 	
 );
 
@@ -163,8 +199,9 @@ packet_tracker pt_e (
 
   .clk(ifc.clk), 
   .reset(ifc.reset),
-  .pt_inc_i(rrp_e_priority_read_o_temp),   
-  .pt_end_o(e_pt_almost_done_o)
+  .pt_inc_i(rrp_e_priority_read_o_temp),   // Temp variable for output read signal, the direction is input-referred. 
+  .pt_end_o(e_pt_almost_done_o),
+  .pt_empty_o (e_pt_empty_o)
 	
 );
 
@@ -172,8 +209,9 @@ packet_tracker pt_l (
 
   .clk(ifc.clk), 
   .reset(ifc.reset),
-  .pt_inc_i(rrp_l_priority_read_o_temp),   
-  .pt_end_o(l_pt_almost_done_o)
+  .pt_inc_i(rrp_l_priority_read_o_temp),   // Temp variable for output read signal, the direction is input-referred. 
+  .pt_end_o(l_pt_almost_done_o),
+  .pt_empty_o (l_pt_empty_o)
 	
 );
 
@@ -182,7 +220,7 @@ yx_processor yx_proc_n (
 	
   .yx_addr_header_i(ifc.n_arb_address_i[7:0]), 
   .yx_addr_router_i(ifc.yx_pos_i[7:0]),
-  .yx_addr_o(yx_n_addr_o_temp)
+  .yx_addr_o(yx_n_addr_o_temp) // 3-bit signal 
 
 );
 
@@ -190,7 +228,7 @@ yx_processor yx_proc_s (
 	
   .yx_addr_header_i(ifc.s_arb_address_i[7:0]), 
   .yx_addr_router_i(ifc.yx_pos_i[7:0]),
-  .yx_addr_o(yx_s_addr_o_temp)
+  .yx_addr_o(yx_s_addr_o_temp) // 3-bit signal 
 
 );
 
@@ -198,7 +236,7 @@ yx_processor yx_proc_w (
 	
   .yx_addr_header_i(ifc.w_arb_address_i[7:0]), 
   .yx_addr_router_i(ifc.yx_pos_i[7:0]),
-  .yx_addr_o(yx_w_addr_o_temp)
+  .yx_addr_o(yx_w_addr_o_temp) // 3-bit signal 
 
 );
 
@@ -206,7 +244,7 @@ yx_processor yx_proc_e (
 	
   .yx_addr_header_i(ifc.e_arb_address_i[7:0]), 
   .yx_addr_router_i(ifc.yx_pos_i[7:0]),
-  .yx_addr_o(yx_e_addr_o_temp)
+  .yx_addr_o(yx_e_addr_o_temp) // 3-bit signal 
 
 );
 
@@ -214,17 +252,17 @@ yx_processor yx_proc_l (
 	
   .yx_addr_header_i(ifc.l_arb_address_i[7:0]), 
   .yx_addr_router_i(ifc.yx_pos_i[7:0]),
-  .yx_addr_o(yx_l_addr_o_temp)
+  .yx_addr_o(yx_l_addr_o_temp) // 3-bit signal 
 
 );
 
 always_comb begin 
 
-nhr_n_write_i_temp = (ifc.n_arb_empty_i & n_pt_almost_done_o);
-nhr_s_write_i_temp = (ifc.s_arb_empty_i & s_pt_almost_done_o);  
-nhr_w_write_i_temp = (ifc.w_arb_empty_i & w_pt_almost_done_o);  
-nhr_e_write_i_temp = (ifc.e_arb_empty_i & e_pt_almost_done_o);  
-nhr_l_write_i_temp = (ifc.l_arb_empty_i & l_pt_almost_done_o);  
+nhr_n_write_i_temp = (~ifc.n_arb_empty_i & n_pt_empty_o);
+nhr_s_write_i_temp = (~ifc.s_arb_empty_i & s_pt_empty_o);  
+nhr_w_write_i_temp = (~ifc.w_arb_empty_i & w_pt_empty_o);  
+nhr_e_write_i_temp = (~ifc.e_arb_empty_i & e_pt_empty_o);  
+nhr_l_write_i_temp = (~ifc.l_arb_empty_i & l_pt_empty_o);  
 
 end 
 
