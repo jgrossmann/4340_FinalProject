@@ -171,6 +171,75 @@ class arbiter_transaction;
 		end
 	endfunction
 	
+	function void directTesting1();
+		reset = 0;
+		n_arb_empty_i = 0;
+		s_arb_empty_i = 0;
+		e_arb_empty_i = 1;
+		w_arb_empty_i = 1;
+		l_arb_empty_i = 1;
+		
+		n_arb_credit_i = 1;
+		s_arb_credit_i = 1;
+		w_arb_credit_i = 1;
+		e_arb_credit_i = 1;
+		l_arb_credit_i = 1;
+	
+		n_arb_address_i = 8'b00110011;
+		s_arb_address_i = 8'b00000000;
+		e_arb_address_i = 8'b00000000;
+		w_arb_address_i = 8'b00000000;
+		l_arb_address_i = 8'b00000000;
+	
+	
+	endfunction
+	
+	function void directTesting2();
+		reset = 0;
+		n_arb_empty_i = 0;
+		s_arb_empty_i = 0;
+		e_arb_empty_i = 1;
+		w_arb_empty_i = 0;
+		l_arb_empty_i = 1;
+		
+		n_arb_credit_i = 1;
+		s_arb_credit_i = 1;
+		w_arb_credit_i = 1;
+		e_arb_credit_i = 1;
+		l_arb_credit_i = 1;
+	
+		n_arb_address_i = 8'b00110011;
+		s_arb_address_i = 8'b00000000;
+		e_arb_address_i = 8'b00000000;
+		w_arb_address_i = 8'b00000001;
+		l_arb_address_i = 8'b00000000;
+	
+	
+	endfunction
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 endclass

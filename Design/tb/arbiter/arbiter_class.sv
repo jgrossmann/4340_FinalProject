@@ -179,11 +179,11 @@ class arbiter_class;
 		
 		pack = packet;
 		
-		nexthop[0] = getDirection(n_x_addr, n_y_addr);
-		nexthop[1] = getDirection(s_x_addr, s_y_addr);
-		nexthop[2] = getDirection(w_x_addr, w_y_addr);
-		nexthop[3] = getDirection(e_x_addr, e_y_addr);
-		nexthop[4] = getDirection(l_x_addr, l_y_addr);		
+		nexthop[0] = getDirection(n_x_addr_temp, n_y_addr_temp);
+		nexthop[1] = getDirection(s_x_addr_temp, s_y_addr_temp);
+		nexthop[2] = getDirection(w_x_addr_temp, w_y_addr_temp);
+		nexthop[3] = getDirection(e_x_addr_temp, e_y_addr_temp);
+		nexthop[4] = getDirection(l_x_addr_temp, l_y_addr_temp);		
 			
 		
 		for(int i = 0; i < 5; i++) begin
