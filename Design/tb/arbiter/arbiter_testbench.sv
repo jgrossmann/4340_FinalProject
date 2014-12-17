@@ -63,11 +63,36 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("west credit %b\n", trans.w_arb_credit_i);
 			$display("east credit %b\n", trans.e_arb_credit_i);
 			$display("local credit %b\n", trans.l_arb_credit_i);
-			$display("north address %b\n", trans.n_arb_address_i);
-			$display("south address %b\n", trans.s_arb_address_i);
-			$display("west address %b\n", trans.w_arb_address_i);
-			$display("east address %b\n", trans.e_arb_address_i);
-			$display("local address %b\n", trans.l_arb_address_i);
+			if(~trans.n_arb_empty_i && (my_arbiter.pti[0] - my_arbiter.n_read) == 0 && trans.reset == 0) begin
+				$display("north address %b", trans.n_arb_address_i);
+				$display("north next hop: ");
+				printNextHop(my_arbiter.nexthop[0]);
+				$display("\n");
+			end
+			if(~trans.s_arb_empty_i && (my_arbiter.pti[1] - my_arbiter.s_read) == 0 && trans.reset == 0) begin
+				$display("south address %b", trans.s_arb_address_i);
+				$display("south next hop: ");
+				printNextHop(my_arbiter.nexthop[1]);
+				$display("\n");
+			end
+			if(~trans.w_arb_empty_i && (my_arbiter.pti[2] - my_arbiter.w_read) == 0 && trans.reset == 0) begin
+				$display("west address %b", trans.w_arb_address_i);
+				$display("west next hop: ");
+				printNextHop(my_arbiter.nexthop[2]);
+				$display("\n");
+			end
+			if(~trans.e_arb_empty_i && (my_arbiter.pti[3] - my_arbiter.e_read) == 0 && trans.reset == 0) begin
+				$display("east address %b", trans.e_arb_address_i);
+				$display("east next hop: ");
+				printNextHop(my_arbiter.nexthop[3]);
+				$display("\n");
+			end
+			if(~trans.l_arb_empty_i && (my_arbiter.pti[4] - my_arbiter.l_read) == 0 && trans.reset == 0) begin
+				$display("local address %b", trans.l_arb_address_i);
+				$display("local next hop: ");
+				printNextHop(my_arbiter.nexthop[4]);
+				$display("\n");
+			end
 			/*$display("Results:\n");
 			$display("north mux %b\n", my_arbiter.n_arb_mux_sel);
 			$display("south mux %b\n", my_arbiter.s_arb_mux_sel);
@@ -130,11 +155,36 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("west credit %b\n", trans.w_arb_credit_i);
 			$display("east credit %b\n", trans.e_arb_credit_i);
 			$display("local credit %b\n", trans.l_arb_credit_i);
-			$display("north address %b\n", trans.n_arb_address_i);
-			$display("south address %b\n", trans.s_arb_address_i);
-			$display("west address %b\n", trans.w_arb_address_i);
-			$display("east address %b\n", trans.e_arb_address_i);
-			$display("local address %b\n", trans.l_arb_address_i);
+			if(~trans.n_arb_empty_i && (my_arbiter.pti[0] - my_arbiter.n_read) == 0 && trans.reset == 0) begin
+				$display("north address %b", trans.n_arb_address_i);
+				$display("north next hop: ");
+				printNextHop(my_arbiter.nexthop[0]);
+				$display("\n");
+			end
+			if(~trans.s_arb_empty_i && (my_arbiter.pti[1] - my_arbiter.s_read) == 0 && trans.reset == 0) begin
+				$display("south address %b", trans.s_arb_address_i);
+				$display("south next hop: ");
+				printNextHop(my_arbiter.nexthop[1]);
+				$display("\n");
+			end
+			if(~trans.w_arb_empty_i && (my_arbiter.pti[2] - my_arbiter.w_read) == 0 && trans.reset == 0) begin
+				$display("west address %b", trans.w_arb_address_i);
+				$display("west next hop: ");
+				printNextHop(my_arbiter.nexthop[2]);
+				$display("\n");
+			end
+			if(~trans.e_arb_empty_i && (my_arbiter.pti[3] - my_arbiter.e_read) == 0 && trans.reset == 0) begin
+				$display("east address %b", trans.e_arb_address_i);
+				$display("east next hop: ");
+				printNextHop(my_arbiter.nexthop[3]);
+				$display("\n");
+			end
+			if(~trans.l_arb_empty_i && (my_arbiter.pti[4] - my_arbiter.l_read) == 0 && trans.reset == 0) begin
+				$display("local address %b", trans.l_arb_address_i);
+				$display("local next hop: ");
+				printNextHop(my_arbiter.nexthop[4]);
+				$display("\n");
+			end
 			/*$display("Results:\n");
 			$display("north mux %b\n", my_arbiter.n_arb_mux_sel);
 			$display("south mux %b\n", my_arbiter.s_arb_mux_sel);
@@ -159,6 +209,16 @@ program arbiter_tb (arbiter_interface.bench ds);
 			checkResults();
         end
     end
+	
+	function void printNextHop(int dir);
+		case (dir)
+			0 : $display("north");
+			1 : $display("south");
+			2 : $display("west");
+			3 : $display("east");
+			4 : $display("local");
+		endcase
+	endfunction
 	
 	task checkResults();
 		$display("Results\n");

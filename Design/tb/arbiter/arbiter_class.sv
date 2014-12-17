@@ -3,6 +3,7 @@ class arbiter_class;
 
     //int cc [5];
     int packet_tracker [5];
+	int pti [5];
     int token [5];
 	int n_x_addr;
 	int n_y_addr;
@@ -45,6 +46,9 @@ class arbiter_class;
 	
 	int dec [5];
 
+	int nexthop [5];
+	
+	arbiter_transaction pack;
 	
 	
 	//int sending [5];
@@ -57,6 +61,7 @@ class arbiter_class;
 			packet_tracker[i] = 0;
 			token[i] = 0;
 			empty[i] = 0;
+			pti[i] = 0;
 			//sending[i] = 0;
 			//x_pos = x;
 			//y_pos = y;
@@ -105,23 +110,23 @@ class arbiter_class;
 		if(packet.l_arb_credit_i) begin
 			cc[4]++;
 		end*/
-		if(packet_tracker[0] == 0 && empty[0] == 0) begin
+		if(pti[0] == 0 && empty[0] == 0) begin
 			n_y_addr_temp = packet.n_arb_address_i[3:0];
 			n_x_addr_temp = packet.n_arb_address_i[7:4];
 		end
-		if(packet_tracker[1] == 0 && empty[1] == 0) begin
+		if(pti[1] == 0 && empty[1] == 0) begin
 			s_y_addr_temp = packet.s_arb_address_i[3:0];
 			s_x_addr_temp = packet.s_arb_address_i[7:4];
 		end
-		if(packet_tracker[2] == 0 && empty[2] == 0) begin
+		if(pti[2] == 0 && empty[2] == 0) begin
 			w_y_addr_temp = packet.w_arb_address_i[3:0];
 			w_x_addr_temp = packet.w_arb_address_i[7:4];
 		end
-		if(packet_tracker[3] == 0 && empty[3] == 0) begin
+		if(pti[3] == 0 && empty[3] == 0) begin
 			e_y_addr_temp = packet.e_arb_address_i[3:0];
 			e_x_addr_temp = packet.e_arb_address_i[7:4];
 		end
-		if(packet_tracker[4] == 0 && empty[4] == 0) begin
+		if(pti[4] == 0 && empty[4] == 0) begin
 			l_y_addr_temp = packet.l_arb_address_i[3:0];
 			l_x_addr_temp = packet.l_arb_address_i[7:4];
 		end
@@ -137,7 +142,13 @@ class arbiter_class;
 		l_x_addr = l_x_addr_temp;
 		l_y_addr = l_y_addr_temp;
 		
+		pack = packet;
 		
+		nexthop[0] = getDirection(n_x_addr, n_y_addr);
+		nexthop[1] = getDirection(s_x_addr, s_y_addr);
+		nexthop[2] = getDirection(w_x_addr, w_y_addr);
+		nexthop[3] = getDirection(e_x_addr, e_y_addr);
+		nexthop[4] = getDirection(l_x_addr, l_y_addr);		
 			
 		
 		for(int i = 0; i < 5; i++) begin
@@ -146,6 +157,7 @@ class arbiter_class;
 			if(dir >= 0) begin
 				//$display("incrementing packet tracker for %d when searching $d\n", dir, i);
 				packet_tracker[i] = (packet_tracker[i] + 1) % 5;
+				pti[dir] = (pti[dir] + 1) % 5;
 				//sending[i] = 1;
 				case(dir)
 					0 : n_read = 1;
@@ -267,10 +279,27 @@ class arbiter_class;
 		 foreach(packet_tracker[i]) begin
 			//cc[i] = 5;
 			packet_tracker[i] = 0;
+			pti[i] = 0;
 			token[i] = 0;
 			empty[i] = 0;
 			//sending[i] = 0;
       end
+	endfunction
+	
+	function int getDirection(int x, int y);
+		if(y > pack.yx_pos[3:0]) begin
+			return 1;
+		end
+		if(y < pack.yx_pos[3:0]) begin
+			return 0;
+		end
+		if(x > pack.yx_pos[7:4]) begin
+			return 3;
+		end
+		if(x < pack.yx_pos[7:4]) begin
+			return 2;
+		end
+		return 4;
 	endfunction
 	
 	/*function void updateCC(int dec[5]);
