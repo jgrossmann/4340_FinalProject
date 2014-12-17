@@ -1,40 +1,5 @@
-/*
-`include "./rr_overall/rr_comparator/n_rr_comparator.sv" 
-`include "./rr_overall/rr_comparator/s_rr_comparator.sv" 
-`include "./rr_overall/rr_comparator/w_rr_comparator.sv" 
-`include "./rr_overall/rr_comparator/e_rr_comparator.sv" 
-`include "./rr_overall/rr_comparator/l_rr_comparator.sv" 
-`include "./rr_overall/priorityencoder.sv" 
-`include "./rr_overall/priorityencoder_to_mux.sv" 
-`include "./rr_overall/mux_5to1.sv" 
-`include "./rr_overall/mux_5to1_1bit.sv" 
 
-`include "./rr_overall/rr_register/eff_rr_0001.sv" 
-`include "./rr_overall/rr_register/rr_register_0001.sv" 
-`include "./rr_overall/rr_register/eff_rr_0010.sv" 
-`include "./rr_overall/rr_register/rr_register_0010.sv" 
-`include "./rr_overall/rr_register/eff_rr_0100.sv" 
-`include "./rr_overall/rr_register/rr_register_0100.sv" 
-`include "./rr_overall/rr_register/eff_rr_1000.sv" 
-`include "./rr_overall/rr_register/rr_register_1000.sv" 
-
-`include "./rr_overall/n_rr_processor.sv" 
-`include "./rr_overall/s_rr_processor.sv" 
-`include "./rr_overall/w_rr_processor.sv" 
-`include "./rr_overall/e_rr_processor.sv" 
-`include "./rr_overall/l_rr_processor.sv" 
-
-`include "./nexthop_register/enable_eff_nr.sv"
-`include "./nexthop_register/nexthop_register.sv" 
-`include "./yx_processor/yx_processor.sv" 
-
-`include "./packet_tracker/packet_tracker.sv" 
-`include "./packet_tracker/eff_pt.sv" 
-
-*/
-
-
-module arbiter (
+module arbiter_test (
 
 arbiter_interface.dut ifc
 /*	input clk, 
@@ -249,11 +214,11 @@ yx_processor yx_proc_l (
 
 always_comb begin 
 
-nhr_n_write_i_temp = (ifc.n_arb_empty_i * n_pt_almost_done_o);
-nhr_s_write_i_temp = (ifc.s_arb_empty_i * s_pt_almost_done_o);  
-nhr_w_write_i_temp = (ifc.w_arb_empty_i * w_pt_almost_done_o);  
-nhr_e_write_i_temp = (ifc.e_arb_empty_i * e_pt_almost_done_o);  
-nhr_l_write_i_temp = (ifc.l_arb_empty_i * l_pt_almost_done_o);  
+nhr_n_write_i_temp = (ifc.n_arb_empty_i & n_pt_almost_done_o);
+nhr_s_write_i_temp = (ifc.s_arb_empty_i & s_pt_almost_done_o);  
+nhr_w_write_i_temp = (ifc.w_arb_empty_i & w_pt_almost_done_o);  
+nhr_e_write_i_temp = (ifc.e_arb_empty_i & e_pt_almost_done_o);  
+nhr_l_write_i_temp = (ifc.l_arb_empty_i & l_pt_almost_done_o);  
 
 end 
 
@@ -469,17 +434,17 @@ mux_5to1_1bit mux_change_order_l (
 
 always_comb begin 
 
-rrp_n_priority_read_o_temp = (~ifc.n_arb_credit_i)*(rrp_s_priority_n_o_temp + rrp_w_priority_n_o_temp + rrp_e_priority_n_o_temp + rrp_l_priority_n_o_temp) ;  
-rrp_s_priority_read_o_temp = (~ifc.s_arb_credit_i)*(rrp_n_priority_s_o_temp + rrp_w_priority_s_o_temp + rrp_e_priority_s_o_temp + rrp_l_priority_s_o_temp) ; 
-rrp_w_priority_read_o_temp = (~ifc.w_arb_credit_i)*(rrp_n_priority_w_o_temp + rrp_s_priority_w_o_temp + rrp_e_priority_w_o_temp + rrp_l_priority_w_o_temp) ;   
-rrp_e_priority_read_o_temp = (~ifc.e_arb_credit_i)*(rrp_n_priority_e_o_temp + rrp_s_priority_e_o_temp + rrp_w_priority_e_o_temp + rrp_l_priority_e_o_temp) ;  
-rrp_l_priority_read_o_temp = (~ifc.l_arb_credit_i)*(rrp_n_priority_l_o_temp + rrp_s_priority_l_o_temp + rrp_w_priority_l_o_temp + rrp_e_priority_l_o_temp) ;  
+rrp_n_priority_read_o_temp = (~ifc.n_arb_credit_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
+rrp_s_priority_read_o_temp = (~ifc.s_arb_credit_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
+rrp_w_priority_read_o_temp = (~ifc.w_arb_credit_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
+rrp_e_priority_read_o_temp = (~ifc.e_arb_credit_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
+rrp_l_priority_read_o_temp = (~ifc.l_arb_credit_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
 
-cc_credit_n_o_temp = rrp_n_priority_s_o_temp + rrp_n_priority_w_o_temp + rrp_n_priority_w_o_temp + rrp_n_priority_l_o_temp;
-cc_credit_s_o_temp = rrp_s_priority_n_o_temp + rrp_s_priority_w_o_temp + rrp_s_priority_e_o_temp + rrp_s_priority_l_o_temp;
-cc_credit_w_o_temp = rrp_w_priority_n_o_temp + rrp_w_priority_s_o_temp + rrp_w_priority_e_o_temp + rrp_w_priority_l_o_temp;
-cc_credit_e_o_temp = rrp_e_priority_n_o_temp + rrp_e_priority_s_o_temp + rrp_e_priority_w_o_temp + rrp_e_priority_l_o_temp;
-cc_credit_l_o_temp = rrp_l_priority_n_o_temp + rrp_l_priority_s_o_temp + rrp_l_priority_w_o_temp + rrp_l_priority_e_o_temp;
+cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_l_o_temp;
+cc_credit_s_o_temp = rrp_s_priority_n_o_temp | rrp_s_priority_w_o_temp | rrp_s_priority_e_o_temp | rrp_s_priority_l_o_temp;
+cc_credit_w_o_temp = rrp_w_priority_n_o_temp | rrp_w_priority_s_o_temp | rrp_w_priority_e_o_temp | rrp_w_priority_l_o_temp;
+cc_credit_e_o_temp = rrp_e_priority_n_o_temp | rrp_e_priority_s_o_temp | rrp_e_priority_w_o_temp | rrp_e_priority_l_o_temp;
+cc_credit_l_o_temp = rrp_l_priority_n_o_temp | rrp_l_priority_s_o_temp | rrp_l_priority_w_o_temp | rrp_l_priority_e_o_temp;
 
 end 
 
