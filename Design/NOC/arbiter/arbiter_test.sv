@@ -9,7 +9,7 @@
     order should be shifted by one direction. 
 
     // empty output means that the count is currently 0. This signal will be used in conjunction with the empty signal from the associated input bufer to check whether 
-    current flit is a "header" flit. If input_buffer_empty is not 0 and pt_empty is 0, it means current flit "is" a header flit. 
+    current flit is a "header" flit. If input_buffer_empty is 0 and pt_empty is 0, it means current flit "is" a header flit. 
     
 	// The write signal of next-hop register will be high only if current flit is a header flit.  
 	
@@ -315,16 +315,6 @@ yx_processor yx_proc_l (
 
 );
 
-always_comb begin 
-
-nhr_n_write_i_temp = (~ifc.n_arb_empty_i & n_pt_empty_o);
-nhr_s_write_i_temp = (~ifc.s_arb_empty_i & s_pt_empty_o);  
-nhr_w_write_i_temp = (~ifc.w_arb_empty_i & w_pt_empty_o);  
-nhr_e_write_i_temp = (~ifc.e_arb_empty_i & e_pt_empty_o);  
-nhr_l_write_i_temp = (~ifc.l_arb_empty_i & l_pt_empty_o);  
-
-end 
-
 nexthop_register nexthop_n (
 
        .clk(ifc.clk), 
@@ -427,11 +417,11 @@ w_rr_processor wproc(
 	.rr_register_change_order_i(rr_w_register_change_order_i), 
 
 	.rrp_w_priority_to_cs_o (rrp_w_priority_to_cs_o_temp),
-	.rrp_w_priority_n_o (rrp_w_priority_n_o_temp),
-	.rrp_w_priority_s_o (rrp_w_priority_s_o_temp), 
-	.rrp_w_priority_w_o (rrp_w_priority_w_o_temp), 
-	.rrp_w_priority_e_o (rrp_w_priority_e_o_temp), 
-	.rrp_w_priority_l_o (rrp_w_priority_l_o_temp)
+	.rrp_w_priority_n_o (rrp_w_priority_n_o_temp), // w_n output_input 
+	.rrp_w_priority_s_o (rrp_w_priority_s_o_temp), // w_s output_input 
+	.rrp_w_priority_w_o (rrp_w_priority_w_o_temp), // w_w output_input 
+	.rrp_w_priority_e_o (rrp_w_priority_e_o_temp), // w_e output_input 
+	.rrp_w_priority_l_o (rrp_w_priority_l_o_temp)  // w_l output_input 
 
 );
 
@@ -553,13 +543,19 @@ cc_credit_l_o_temp = 1'b0;
 
 end else begin 
 
+nhr_n_write_i_temp = (~ifc.n_arb_empty_i & n_pt_empty_o);
+nhr_s_write_i_temp = (~ifc.s_arb_empty_i & s_pt_empty_o);  
+nhr_w_write_i_temp = (~ifc.w_arb_empty_i & w_pt_empty_o);  
+nhr_e_write_i_temp = (~ifc.e_arb_empty_i & e_pt_empty_o);  
+nhr_l_write_i_temp = (~ifc.l_arb_empty_i & l_pt_empty_o);  
+
 rrp_n_priority_read_o_temp = (ifc.n_arb_credit_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
 rrp_s_priority_read_o_temp = (ifc.s_arb_credit_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
 rrp_w_priority_read_o_temp = (ifc.w_arb_credit_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
 rrp_e_priority_read_o_temp = (ifc.e_arb_credit_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
 rrp_l_priority_read_o_temp = (ifc.l_arb_credit_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
 
-cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_l_o_temp;
+cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_e_o_temp | rrp_n_priority_l_o_temp;
 cc_credit_s_o_temp = rrp_s_priority_n_o_temp | rrp_s_priority_w_o_temp | rrp_s_priority_e_o_temp | rrp_s_priority_l_o_temp;
 cc_credit_w_o_temp = rrp_w_priority_n_o_temp | rrp_w_priority_s_o_temp | rrp_w_priority_e_o_temp | rrp_w_priority_l_o_temp;
 cc_credit_e_o_temp = rrp_e_priority_n_o_temp | rrp_e_priority_s_o_temp | rrp_e_priority_w_o_temp | rrp_e_priority_l_o_temp;
