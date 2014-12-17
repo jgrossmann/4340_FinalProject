@@ -69,7 +69,6 @@ class buffer_transaction;
         end
 
 			if(read) begin
-//				$display("credit: %b\n", buf_credit);
 				if(buf_credit >= 5) begin
 					read = 0;
 				end else begin

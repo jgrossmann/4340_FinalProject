@@ -5,13 +5,12 @@
 `include "buffer_stats.sv"
 `include "buffer_environment.sv"
 `include "input_buffer_class.sv"
-`include "buffer_checker.sv"
 `include "buffer_transaction.sv"
 
 program buffer_testbench(buffer_interface.bench ifc);
 
     buffer_transaction t;
-    buffer_checker golden_model;
+    input_buffer_class golden_model;
     buffer_environment env;
     buffer_stats stats;
     
@@ -25,10 +24,10 @@ program buffer_testbench(buffer_interface.bench ifc);
             
         t = new(env);
         t.randomize();
+		  t.write_next = 0;
         stats = new();
         golden_model = new(stats);
-			
-		  @(ifc.cb);
+		  @(ifc.cb);			
         //Reset buffer first
         t.reset = 1;
 		  t.write = 0;
@@ -37,11 +36,14 @@ program buffer_testbench(buffer_interface.bench ifc);
 		  ifc.cb.buf_write_i <= t.write;
 		  ifc.cb.buf_read_i <= t.read;
 		  ifc.cb.buf_data_i <= t.f.data;
-		  golden_model.goldenResult(t.write, t.read, t.reset, t.f);
+		  golden_model.update(t.write, t.read, t.reset, t.f);
 //		  $display("New Test Data:\nreset: %b\nwrite: %b\nread: %b\ndata: %b\n", t.reset, t.write, t.read, t.f.data);
 
 		  @(ifc.cb);
-		  
+		  t.reset = 0;
+		  ifc.cb.reset <= t.reset;
+		  golden_model.update(t.write, t.read, t.reset, t.f);
+		  @(ifc.cb);		  
         golden_model.compareOutput(ifc.cb.buf_data_o, ifc.cb.buf_valid_o, ifc.cb.buf_empty_o, ifc.cb.buf_ram_raddr_o, ifc.cb.buf_ram_waddr_o, ifc.cb.valid_flit_o);
         
         repeat(env.max_cycles) begin
@@ -51,7 +53,7 @@ program buffer_testbench(buffer_interface.bench ifc);
         		ifc.cb.buf_write_i <= t.write;
         		ifc.cb.buf_read_i <= t.read;
         		ifc.cb.buf_data_i <= t.f.data;
-				golden_model.goldenResult(t.write, t.read, t.reset, t.f);
+				golden_model.update(t.write, t.read, t.reset, t.f);
 //				$display("%t\n",$realtime);
             @(ifc.cb);
                         //checks the golden model against actual buffer
