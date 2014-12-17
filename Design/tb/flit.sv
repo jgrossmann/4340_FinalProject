@@ -14,10 +14,10 @@ class flit;
 
     function new(int t);
         flit_type = t;
-    endfunction;
+    endfunction
 
 	function changeType(int t);
 		flit_type = t;
-	end
+	endfunction
     
 endclass

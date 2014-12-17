@@ -2,19 +2,23 @@
 `include "router_environment.sv"
 `include "router_transaction.sv"
 `include "router_class.sv"
+`include "router_stats.sv"
+
 program router_tb (router_interface.bench ds);
 
     router_transaction trans;
-    router_checker checker;
     router_environment env;
-    //router_stats stats;
+   router_stats stats;
 	router_class my_router;
 	
     
     initial begin
         env = new();
         $srandom(env.random_seed);
-		env.randomize();
+			if(env.auto_config) begin
+				env.randomize();
+				env.max_cycles = 10000;
+			end
         trans = new(env);
         my_router = new(env.x_cor, env.y_cor);
 		checker = new(my_router);
