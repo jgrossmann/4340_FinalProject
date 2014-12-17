@@ -448,11 +448,11 @@ rrp_w_priority_read_o_temp = 1'b0;
 rrp_e_priority_read_o_temp = 1'b0; 
 rrp_l_priority_read_o_temp = 1'b0; 
 
-cc_credit_n_o_temp; 
-cc_credit_s_o_temp;
-cc_credit_w_o_temp;
-cc_credit_e_o_temp;
-cc_credit_l_o_temp;
+cc_credit_n_o_temp = 1'b0; 
+cc_credit_s_o_temp = 1'b0;
+cc_credit_w_o_temp = 1'b0;
+cc_credit_e_o_temp = 1'b0;
+cc_credit_l_o_temp = 1'b0;
 
 end else begin 
 
