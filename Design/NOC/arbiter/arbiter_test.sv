@@ -2,28 +2,87 @@
 
 (1) packet tracker x 5 (associated with each input buffer) 
     
-	input: 
-    output: 
+    // When read signal for the associated input buffer is high, it means one flit has been consumed. The count of packet tracker would increment by 1. As the count
+    reaches 4, it would automatically wrap itself back to 0 at the next clock edge.
+
+    // almost done output means that the count is currently 4. This signal will be used to change to round-robin order register. Once this signal is high, round-robin
+    order should be shifted by one direction. 
+
+    // empty output means that the count is currently 0. This signal will be used in conjunction with the empty signal from the associated input bufer to check whether 
+    current flit is a "header" flit. If input_buffer_empty is not 0 and pt_empty is 0, it means current flit "is" a header flit. 
+    
+	// The write signal of next-hop register will be high only if current flit is a header flit.  
+	
+	.pt_inc_i(rrp_s_priority_read_o_temp)
+    .pt_end_o(s_pt_almost_done_o),
+    .pt_empty_o (s_pt_empty_o)
 
 (2) yx processor x 5 (associated with each input buffer)
+    
+  	// y-x processor will take the input from the associated input buffer "at all time". It would then subsequently compares this informtaion with router's current 
+    address. 
 
-    input: 
-    output: 
+    // The output of yx processor will be a 3-bit signal which indicates the "output" direction that this header is desired to go. This output will be connected to 
+    input of the next-hop register. 
+
+    // Whether this output information "will" be written into the next-hop register is determined by the write signal of n-h register. 
+
+    .yx_addr_header_i(ifc.l_arb_address_i[7:0]), 
+    .yx_addr_router_i(ifc.yx_pos_i[7:0]),
+    .yx_addr_o(yx_l_addr_o_temp) // 3-bit signal
 
 (3) next-hop register x 5 (associated with each input buffer)
+    
+	// nhr will take the data input from output of the yx processor. 
+    // Whether the input will be "actually" written into the register is determined by the write signal. 
+    // nhr will output the desired output direction for the associated input buffer. It will be sent into the rr processor.
+    // nhr's output will also be used as the select signal for crossbar switch's "demux". 
 
-    input: 
-    output: 
+    .nhr_address_i(yx_n_addr_o_temp),
+    .nhr_write_i(nhr_n_write_i_temp),  
+    .nhr_address_o(nhr_n_addr_o_temp)
 
 (4) rr (round-robin) processor x 5 (asscociated with each output direction)
 
-    input: 
-    output: 
+    // round-robin processor should take its input from the next-hop register. 
+    // input change order signal is from packet tracker. When the count of packet tracker goes to 4, it means that all the flits associated with the current header 
+    "should" have been sent. It should start a new order by shifting the token by one position (direction). 
+    // Output of the rr processor contains one 3-bit (priority_to_cs) signal and 5 one-bit signal (priority_n (x)). 
+
+    // -- The 3-bit signal will serve as the select signal for crossbar switch's mux.
+    // -- The 1-bit signal indicates that that input buffer has been selected by the rr processor to be sent through current output direction. Since for each input 
+          buffer, there can be up to four possible output rr processor that wants to "read" its signal, the one-bit signal coming from different output rr processor 
+          for the same input buffer will be "OR" together to generate the "actual" read signal for each input buffer. 
+
+	.n_rrp_e_nexthop_addr_i(nhr_n_addr_o_temp),
+	.s_rrp_e_nexthop_addr_i(nhr_s_addr_o_temp),
+	.w_rrp_e_nexthop_addr_i(nhr_w_addr_o_temp),
+	.l_rrp_e_nexthop_addr_i(nhr_l_addr_o_temp),
+	.rr_register_change_order_i(rr_e_register_change_order_i), 
+
+	.rrp_e_priority_to_cs_o (rrp_e_priority_to_cs_o_temp), // 3-bit 
+	.rrp_e_priority_n_o (rrp_e_priority_n_o_temp), // 1-bit 
+	.rrp_e_priority_s_o (rrp_e_priority_s_o_temp), // 1-bit 
+	.rrp_e_priority_w_o (rrp_e_priority_w_o_temp), // 1-bit 
+	.rrp_e_priority_e_o (rrp_e_priority_e_o_temp), // 1-bit 
+	.rrp_e_priority_l_o (rrp_e_priority_l_o_temp)  // 1-bit 
 
 (5) 5-to-1 mux for changing round-robin ordering x 5 (associated with each rr-processor)
+    
+	// Just like the read signal for the input buffer, for each output processor, there can be four possible input packet tracker that it should keep track of. If any
+       of them is currently sending data through this output direction, once its done, the round-robin order of the rr processor should shifted. 
+    // Therefore, all the "almost_done" signal from various input packet tracker will be sent to this mux, the selected packet tracker is the one who is currently 
+       sending data to this output direction. 
+   //  We use the same select signal (priority_to_cs) for this mux as the one used in crossbar switch's mux. This select signal is indicating which input buffer was 
+       chosen to send data through this output direction. 
 
-    input: 
-    output: 
+    .sel_i(rrp_n_priority_to_cs_o_temp), 
+    .data_n_i(n_pt_almost_done_o), 
+    .data_s_i(s_pt_almost_done_o),
+    .data_w_i(w_pt_almost_done_o),
+    .data_e_i(e_pt_almost_done_o),
+    .data_l_i(1'b0),
+    .data_o(rr_l_register_change_order_i)
 */
 module arbiter_test (
 
