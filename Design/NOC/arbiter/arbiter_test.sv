@@ -442,7 +442,7 @@ cc_credit_w_o_temp = 1'b0;
 cc_credit_e_o_temp = 1'b0; 
 cc_credit_l_o_temp = 1'b0; 
 
-end else
+end else begin 
 
 rrp_n_priority_read_o_temp = (~ifc.n_arb_credit_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
 rrp_s_priority_read_o_temp = (~ifc.s_arb_credit_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
