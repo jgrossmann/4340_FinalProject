@@ -30,6 +30,11 @@ output rrp_e_priority_l_o
 
 );
 
+logic n_to_e_desire; 
+logic s_to_e_desire; 
+logic w_to_e_desire; 
+logic l_to_e_desire;
+
 logic rrp_e_priority_n_o_temp;
 logic rrp_e_priority_s_o_temp;
 logic rrp_e_priority_w_o_temp;
@@ -162,11 +167,11 @@ rr_register_1000 rrr_1000(
          .rr_priority_e_i (1'b0), 
          .rr_priority_l_i (priority_mux_o[0]),
          .rr_priority_to_cs_o (rrp_n_priority_to_cs_o_temp),
- 	    .rr_priority_n_o (rrp_n_priority_n_o_temp),
-         .rr_priority_s_o (rrp_n_priority_s_o_temp), 
-         .rr_priority_w_o (rrp_n_priority_w_o_temp), 
-         .rr_priority_e_o (rrp_n_priority_e_o_temp), 
-         .rr_priority_l_o (rrp_n_priority_l_o_temp)
+ 	    .rr_priority_n_o (rrp_e_priority_n_o_temp),
+         .rr_priority_s_o (rrp_e_priority_s_o_temp), 
+         .rr_priority_w_o (rrp_e_priority_w_o_temp), 
+         .rr_priority_e_o (rrp_e_priority_e_o_temp), 
+         .rr_priority_l_o (rrp_e_priority_l_o_temp)
 
  );
 

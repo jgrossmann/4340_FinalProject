@@ -30,6 +30,11 @@ output rrp_n_priority_l_o
 
 );
 
+logic s_to_n_desire; 
+logic w_to_n_desire; 
+logic e_to_n_desire; 
+logic l_to_n_desire;
+
 logic rrp_n_priority_n_o_temp;
 logic rrp_n_priority_s_o_temp;
 logic rrp_n_priority_w_o_temp;

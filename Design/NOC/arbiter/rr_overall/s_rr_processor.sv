@@ -166,7 +166,7 @@ priorityencoder priority_enc(
         .rr_priority_w_i (priority_mux_o[2]), 
         .rr_priority_e_i (priority_mux_o[1]), 
         .rr_priority_l_i (priority_mux_o[0]),
-        .rr_priority_to_cs_o (rrp_n_priority_to_cs_o_temp),
+        .rr_priority_to_cs_o (rrp_s_priority_to_cs_o_temp),
 	    .rr_priority_n_o (rrp_s_priority_n_o_temp),
         .rr_priority_s_o (rrp_s_priority_s_o_temp), 
         .rr_priority_w_o (rrp_s_priority_w_o_temp), 
