@@ -326,7 +326,8 @@ n_rr_processor nproc(
 	.e_rrp_n_nexthop_addr_i(nhr_e_addr_o_temp),
 	.l_rrp_n_nexthop_addr_i(nhr_l_addr_o_temp),
 	.rr_register_change_order_i(rr_n_register_change_order_i), 
-
+    .rr_downstream_credit_i (ifc.n_arb_credit_i),
+	
 	.rrp_n_priority_to_cs_o (rrp_n_priority_to_cs_o_temp),
 	.rrp_n_priority_n_o (rrp_n_priority_n_o_temp),
 	.rrp_n_priority_s_o (rrp_n_priority_s_o_temp), 
@@ -346,6 +347,7 @@ s_rr_processor sproc(
 	.e_rrp_s_nexthop_addr_i(nhr_e_addr_o_temp),
 	.l_rrp_s_nexthop_addr_i(nhr_l_addr_o_temp),
 	.rr_register_change_order_i(rr_s_register_change_order_i), 
+    .rr_downstream_credit_i (ifc.s_arb_credit_i),
 
 	.rrp_s_priority_to_cs_o (rrp_s_priority_to_cs_o_temp),
 	.rrp_s_priority_n_o (rrp_s_priority_n_o_temp),
@@ -366,7 +368,8 @@ w_rr_processor wproc(
 	.e_rrp_w_nexthop_addr_i(nhr_e_addr_o_temp),
 	.l_rrp_w_nexthop_addr_i(nhr_l_addr_o_temp),
 	.rr_register_change_order_i(rr_w_register_change_order_i), 
-
+    .rr_downstream_credit_i (ifc.w_arb_credit_i),
+    
 	.rrp_w_priority_to_cs_o (rrp_w_priority_to_cs_o_temp),
 	.rrp_w_priority_n_o (rrp_w_priority_n_o_temp),
 	.rrp_w_priority_s_o (rrp_w_priority_s_o_temp), 
@@ -386,7 +389,8 @@ e_rr_processor eproc(
 	.w_rrp_e_nexthop_addr_i(nhr_w_addr_o_temp),
 	.l_rrp_e_nexthop_addr_i(nhr_l_addr_o_temp),
 	.rr_register_change_order_i(rr_e_register_change_order_i), 
-
+    .rr_downstream_credit_i (ifc.e_arb_credit_i),
+    
 	.rrp_e_priority_to_cs_o (rrp_e_priority_to_cs_o_temp),
 	.rrp_e_priority_n_o (rrp_e_priority_n_o_temp),
 	.rrp_e_priority_s_o (rrp_e_priority_s_o_temp), 
@@ -406,7 +410,8 @@ l_rr_processor lproc(
 	.w_rrp_l_nexthop_addr_i(nhr_w_addr_o_temp),
 	.e_rrp_l_nexthop_addr_i(nhr_e_addr_o_temp),
 	.rr_register_change_order_i(rr_l_register_change_order_i), 
-
+    .rr_downstream_credit_i (ifc.l_arb_credit_i),
+    
 	.rrp_l_priority_to_cs_o (rrp_l_priority_to_cs_o_temp),
 	.rrp_l_priority_n_o (rrp_l_priority_n_o_temp),
 	.rrp_l_priority_s_o (rrp_l_priority_s_o_temp), 
@@ -492,13 +497,15 @@ cc_credit_w_o_temp = 1'b0;
 cc_credit_e_o_temp = 1'b0;
 cc_credit_l_o_temp = 1'b0;
 
+
+
 end else begin 
 
-rrp_n_priority_read_o_temp = (~ifc.n_arb_empty_i)&(ifc.n_arb_credit_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
-rrp_s_priority_read_o_temp = (~ifc.s_arb_empty_i)&(ifc.s_arb_credit_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
-rrp_w_priority_read_o_temp = (~ifc.w_arb_empty_i)&(ifc.w_arb_credit_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
-rrp_e_priority_read_o_temp = (~ifc.e_arb_empty_i)&(ifc.e_arb_credit_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
-rrp_l_priority_read_o_temp = (~ifc.l_arb_empty_i)&(ifc.l_arb_credit_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
+rrp_n_priority_read_o_temp = (~ifc.n_arb_empty_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
+rrp_s_priority_read_o_temp = (~ifc.s_arb_empty_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
+rrp_w_priority_read_o_temp = (~ifc.w_arb_empty_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
+rrp_e_priority_read_o_temp = (~ifc.e_arb_empty_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
+rrp_l_priority_read_o_temp = (~ifc.l_arb_empty_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
 
 cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_l_o_temp;
 cc_credit_s_o_temp = rrp_s_priority_n_o_temp | rrp_s_priority_w_o_temp | rrp_s_priority_e_o_temp | rrp_s_priority_l_o_temp;

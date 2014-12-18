@@ -20,6 +20,7 @@ input [2:0] s_rrp_l_nexthop_addr_i,
 input [2:0] w_rrp_l_nexthop_addr_i,
 input [2:0] e_rrp_l_nexthop_addr_i,
 input rr_register_change_order_i, 
+input rr_downstream_credit_i, 
 
 output [2:0] rrp_l_priority_to_cs_o,
 output rrp_l_priority_n_o,
@@ -175,10 +176,10 @@ rr_register_1000 rrr_1000(
 
  );
 
-assign rrp_l_priority_n_o = (rrp_l_priority_n_o_temp & n_to_l_desire);  
-assign rrp_l_priority_s_o = (rrp_l_priority_s_o_temp & s_to_l_desire);  
-assign rrp_l_priority_w_o = (rrp_l_priority_w_o_temp & w_to_l_desire);  
-assign rrp_l_priority_e_o = (rrp_l_priority_e_o_temp & e_to_l_desire);  
+assign rrp_l_priority_n_o = (rrp_l_priority_n_o_temp & n_to_l_desire & rr_downstream_credit_i);  
+assign rrp_l_priority_s_o = (rrp_l_priority_s_o_temp & s_to_l_desire & rr_downstream_credit_i);  
+assign rrp_l_priority_w_o = (rrp_l_priority_w_o_temp & w_to_l_desire & rr_downstream_credit_i);  
+assign rrp_l_priority_e_o = (rrp_l_priority_e_o_temp & e_to_l_desire & rr_downstream_credit_i);  
 assign rrp_l_priority_l_o = (rrp_l_priority_l_o_temp & 1'b0);  
 assign rrp_l_priority_to_cs_o = rrp_l_priority_to_cs_o_temp;  
 
