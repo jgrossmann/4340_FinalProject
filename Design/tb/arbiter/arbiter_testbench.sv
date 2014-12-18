@@ -12,6 +12,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 	
     
     initial begin
+		$vcdpluson;
         env = new();
         $srandom(env.random_seed);
 		env.randomize();
@@ -35,6 +36,11 @@ program arbiter_tb (arbiter_interface.bench ds);
 			trans.randomize();
 			//trans.post_randomize();
 			trans.reset = 1;
+			trans.n_arb_empty_i = 1;
+			trans.s_arb_empty_i = 1;
+			trans.w_arb_empty_i = 1;
+			trans.e_arb_empty_i = 1;
+			trans.l_arb_empty_i = 1;
 			my_arbiter.update_model(trans);
 			ds.cb.reset <= trans.reset;
 			ds.cb.n_arb_address_i <= trans.n_arb_address_i;
@@ -55,6 +61,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			ds.cb.yx_pos_i <= trans.yx_pos;
 			trans.updateCC(my_arbiter.dec);
 			@(ds.cb)  
+			reset = 0;
 			@(ds.cb)  
 			$display("%t\n",$realtime);
 			

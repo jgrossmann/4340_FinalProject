@@ -1,2 +1,3 @@
 bug - reads and credit outs are x's. Fixed by adding reset functionality (12/16)
 bug - credit out is always high
+bug - read signal was sent even when buffer was empty. fixed (12/17)
