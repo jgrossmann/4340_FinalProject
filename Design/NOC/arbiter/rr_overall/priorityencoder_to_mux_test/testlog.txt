@@ -1,0 +1,1 @@
+one bug found. Did not check for all zero's case. Fixed. (12/17)
