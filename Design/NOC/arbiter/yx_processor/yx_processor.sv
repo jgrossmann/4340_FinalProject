@@ -38,8 +38,8 @@ always_comb begin
 
 	end else if (x_addr_subtract[3]) begin
 
-		yx_addr_o_temp = 3'b011; // "east" output direction 
-
+		//yx_addr_o_temp = 3'b011; // "east" output direction 
+		yx_addr_o_temp = x_addr_subtract;
 	end else if (~x_addr_subtract[3]) begin
 
 		yx_addr_o_temp = 3'b010; // "west" output direction 

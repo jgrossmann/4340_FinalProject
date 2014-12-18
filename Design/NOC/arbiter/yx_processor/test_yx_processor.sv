@@ -13,9 +13,9 @@ module test_yx_processor();
 
 	initial begin
 		$vcdpluson;
-		for(yx_addr_router_i = 8'b00000000; yx_addr_router_i < 8'b00000100; yx_addr_router_i++) begin
+		//for(yx_addr_router_i = 8'b00000000; yx_addr_router_i < 8'b00000100; yx_addr_router_i++) begin
 		//	$display("%b\n", yx_addr_router_i);
-		end
+		//end
 		yx_addr_header_i = 8'b00000000;
 		yx_addr_router_i = 8'b00100000;
 		
