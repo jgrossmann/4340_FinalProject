@@ -30,7 +30,7 @@ logic [4:0] rr_priority_i_temp;
 				rr_priority_to_cs_o_temp = 3'b001; 
 			end
 
-                        5'b001xx:  begin 
+            5'b001xx:  begin 
 				rr_priority_to_cs_o_temp = 3'b010; 
 			end
 
@@ -40,6 +40,10 @@ logic [4:0] rr_priority_i_temp;
 
 			5'b00001:  begin 
 				rr_priority_to_cs_o_temp = 3'b100; 
+			end
+			
+			5'b00000:  begin 
+				rr_priority_to_cs_o_temp = 3'bxxx; 
 			end
 
 		endcase
