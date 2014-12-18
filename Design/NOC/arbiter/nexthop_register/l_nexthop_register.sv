@@ -6,6 +6,7 @@ module l_nexthop_register (
 input clk, 
 input reset,
 input ib_empty_i, 
+input pt_almost_done_i, 
 input [2:0] nhr_address_i,
 input nhr_write_i,  
 output [2:0] nhr_address_o
@@ -25,7 +26,7 @@ enable_eff_nr #(.DATA_WIDTH(3)) ff (
 	);
 
 always_comb begin
-	if(ib_empty_i | reset) begin
+	if(pt_almost_done_i | ib_empty_i | reset) begin
 		nhr_address_i_temp = 3'b100; 
 	end
 	
