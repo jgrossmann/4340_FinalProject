@@ -12,6 +12,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 	
     
     initial begin
+			$vcdpluson;
         env = new();
         $srandom(env.random_seed);
 		env.randomize();

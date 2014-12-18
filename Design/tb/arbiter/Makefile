@@ -1,7 +1,6 @@
-TOP=arbiter_top.sv
-INTERFACE=arbiter_interface.sv
-BENCH=arbiter_testbench.sv
-DUT=arbiter.sv
+INTERFACE="modules/buffer_interface.sv"
+DUT="modules/input_buffer_test.sv"
+TOP="modules/buffer_top.sv"
 
 .PHONY: help
 
@@ -19,20 +18,14 @@ indent:
 	indent -linux *.c *.h
 	rm *~
 
-dut:  
-	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice $(DUT) $(INTERFACE)
-
 bench: 
-	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice arbiter_top.sv -o testbench.exe
-	./testbench.exe 
+	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice "arbiter_top.sv" -o testbench.exe
 
-view:
-	vcs -vpd2vcd vcdplus.vpd waveform.vcd
-	gtkwave waveform.vcd &
-all: 
-	make clean
-	make bench
-	make view
+view:	
+	./testbench.exe
+	vpd2vcd vcdplus.vpd vcdplus.vcd &
+	gtkwave vcdplus.vcd &
+
 
 clean:
 	rm -rf *.o *~ *.vpd sim* csrc DVEfiles *daidir *exe *.key
