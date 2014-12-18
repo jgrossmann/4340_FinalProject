@@ -13,4 +13,8 @@ test:
 clean:
 	rm -rf csrc *.exe.daidir *.exe *.log *.inf .leda_work *.key *.vpd *.vcd DVEfiles
 
+view:
+	./test.exe
+	vpd2vcd vcdplus.vpd vcdplus.vcd &
+	gtkwave vcdplus.vcd &
 

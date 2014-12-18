@@ -66,7 +66,7 @@ module test_n_rr_processor();
 		s_rrp_n_nexthop_addr_i = 3'b010;
 		w_rrp_n_nexthop_addr_i = 3'b011;
 		e_rrp_n_nexthop_addr_i = 3'b100;
-		l_rrp_n_nexthop_addr_i = 3'b000;
+		l_rrp_n_nexthop_addr_i = 3'b001;
 		rr_register_change_order_i = 0;
 		
 		#20 $display("\n");

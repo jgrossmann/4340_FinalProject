@@ -12,7 +12,6 @@ program arbiter_tb (arbiter_interface.bench ds);
 	
     
     initial begin
-	$vcdpluson;
         env = new();
         $srandom(env.random_seed);
 		env.randomize();
@@ -246,7 +245,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("local read %b\n", my_arbiter.l_read);*/
 			checkResults();
 		end
-		repeat(6) begin 
+		repeat(5) begin 
 			$display("Inputs:\n");
 			$display("Tokens before inputs");
 			$display("north token:");

@@ -14,17 +14,17 @@ module test_yx_processor();
 	initial begin
 		$vcdpluson;
 		for(yx_addr_router_i = 8'b00000000; yx_addr_router_i < 8'b00000100; yx_addr_router_i++) begin
-			$display("%b\n", yx_addr_router_i);
+		//	$display("%b\n", yx_addr_router_i);
 		end
 		yx_addr_header_i = 8'b00000000;
-		yx_addr_router_i = 8'b01000000;
+		yx_addr_router_i = 8'b00100000;
 		
 		#5
-		$display("From (2,0) to (0,0)\n");
+		$display("From (0,2) to (0,0)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 		
 		yx_addr_header_i = 8'b00000000;
-		yx_addr_router_i = 8'b10001000;
+		yx_addr_router_i = 8'b00110011;
 		
 		#5
 		$display("From (0,0) to (3,3)\n");
