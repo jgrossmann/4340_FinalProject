@@ -1,0 +1,518 @@
+Chronologic VCS simulator copyright 1991-2011
+Contains Synopsys proprietary information.
+Compiler version F-2011.12_Full64; Runtime version F-2011.12_Full64;  Dec 16 21:22 2014
+scan: RANDOM_SEED 5.000000
+scan: MAX_CYCLES 10000.000000
+scan: RESET_DENSITY 0.050000
+scan: EMPTY_DENSITY 0.300000
+scan: CREDIT_DENSITY 0.500000
+scan: AUTO_CONFIGURE 0.000000
+                5000
+
+x location =           0
+
+y location =           2
+
+Inputs:
+
+reset 1
+
+north empty 0
+
+south empty 0
+
+west empty 1
+
+east empty 0
+
+local empty 0
+
+north credit 1
+
+south credit 1
+
+west credit 1
+
+east credit 1
+
+local credit 1
+
+north address 00010011
+
+south address 00100000
+
+west address 00100001
+
+east address 00000010
+
+local address 00100011
+
+Results
+
+credit out north: dut = 1 bench =           0
+
+credit out south: dut = x bench =           0
+
+credit out west: dut = x bench =           0
+
+credit out east: dut = x bench =           0
+
+credit out local: dut = 1 bench =           0
+
+read out north: dut = x bench = 0
+
+read out south: dut = x bench = 0
+
+read out west: dut = x bench = 0
+
+read out east: dut = x bench = 0
+
+read out local: dut = x bench = 0
+
+read out north: dut = x bench = 0
+
+mux out north: dut = 001 bench = xxx
+
+mux out south: dut = 00x bench = xxx
+
+mux out west: dut = 00x bench = xxx
+
+mux out east: dut = 00x bench = xxx
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = xxx bench = xxx
+
+demux out south: dut = xxx bench = xxx
+
+demux out west: dut = xxx bench = xxx
+
+demux out east: dut = xxx bench = xxx
+
+demux out local: dut = xxx bench = xxx
+
+               15000
+
+x location =           0
+
+y location =           2
+
+Inputs:
+
+reset 0
+
+north empty 0
+
+south empty 0
+
+west empty 1
+
+east empty 0
+
+local empty 1
+
+north credit 1
+
+south credit 1
+
+west credit 1
+
+east credit 1
+
+local credit 1
+
+north address 00110011
+
+south address 00100001
+
+west address 00110011
+
+east address 00000011
+
+local address 00110011
+
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = x bench =           1
+
+credit out west: dut = x bench =           0
+
+credit out east: dut = x bench =           0
+
+credit out local: dut = 1 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 1
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 1
+
+read out local: dut = 0 bench = 0
+
+read out north: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 00x bench = 011
+
+mux out west: dut = 00x bench = xxx
+
+mux out east: dut = 00x bench = xxx
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = xxx bench = xxx
+
+demux out south: dut = xxx bench = 000
+
+demux out west: dut = xxx bench = xxx
+
+demux out east: dut = xxx bench = 001
+
+demux out local: dut = xxx bench = xxx
+
+               25000
+
+x location =           0
+
+y location =           2
+
+Inputs:
+
+reset 0
+
+north empty 0
+
+south empty 0
+
+west empty 0
+
+east empty 1
+
+local empty 0
+
+north credit 1
+
+south credit 1
+
+west credit 1
+
+east credit 1
+
+local credit 1
+
+north address 00010011
+
+south address 00000000
+
+west address 00000010
+
+east address 00000010
+
+local address 00100011
+
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = x bench =           0
+
+credit out west: dut = x bench =           0
+
+credit out east: dut = x bench =           0
+
+credit out local: dut = 1 bench =           1
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 1
+
+read out west: dut = 0 bench = 1
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+read out north: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 00x bench = 011
+
+mux out west: dut = 00x bench = xxx
+
+mux out east: dut = 00x bench = xxx
+
+mux out local: dut = 000 bench = 010
+
+demux out north: dut = xxx bench = xxx
+
+demux out south: dut = xxx bench = 000
+
+demux out west: dut = xxx bench = 100
+
+demux out east: dut = xxx bench = 001
+
+demux out local: dut = xxx bench = xxx
+
+               35000
+
+x location =           0
+
+y location =           2
+
+Inputs:
+
+reset 0
+
+north empty 0
+
+south empty 0
+
+west empty 1
+
+east empty 0
+
+local empty 0
+
+north credit 1
+
+south credit 1
+
+west credit 1
+
+east credit 1
+
+local credit 1
+
+north address 00110011
+
+south address 00100010
+
+west address 00000010
+
+east address 00000000
+
+local address 00110001
+
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = x bench =           1
+
+credit out west: dut = x bench =           0
+
+credit out east: dut = x bench =           0
+
+credit out local: dut = 1 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 1
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 1
+
+read out local: dut = 0 bench = 0
+
+read out north: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 00x bench = 011
+
+mux out west: dut = 00x bench = xxx
+
+mux out east: dut = 00x bench = xxx
+
+mux out local: dut = 000 bench = 010
+
+demux out north: dut = xxx bench = xxx
+
+demux out south: dut = xxx bench = 000
+
+demux out west: dut = xxx bench = 100
+
+demux out east: dut = xxx bench = 001
+
+demux out local: dut = xxx bench = xxx
+
+               45000
+
+x location =           0
+
+y location =           2
+
+Inputs:
+
+reset 0
+
+north empty 1
+
+south empty 0
+
+west empty 1
+
+east empty 0
+
+local empty 1
+
+north credit 1
+
+south credit 1
+
+west credit 1
+
+east credit 1
+
+local credit 1
+
+north address 00000011
+
+south address 00000000
+
+west address 00000001
+
+east address 00000001
+
+local address 00110000
+
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = x bench =           1
+
+credit out west: dut = x bench =           0
+
+credit out east: dut = x bench =           0
+
+credit out local: dut = 1 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 1
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 1
+
+read out local: dut = 0 bench = 0
+
+read out north: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 00x bench = 011
+
+mux out west: dut = 00x bench = xxx
+
+mux out east: dut = 00x bench = xxx
+
+mux out local: dut = 000 bench = 010
+
+demux out north: dut = xxx bench = xxx
+
+demux out south: dut = xxx bench = 000
+
+demux out west: dut = xxx bench = 100
+
+demux out east: dut = xxx bench = 001
+
+demux out local: dut = xxx bench = xxx
+
+               55000
+
+x location =           0
+
+y location =           2
+
+Inputs:
+
+reset 1
+
+north empty 0
+
+south empty 0
+
+west empty 0
+
+east empty 0
+
+local empty 1
+
+north credit 1
+
+south credit 1
+
+west credit 1
+
+east credit 1
+
+local credit 1
+
+north address 00100010
+
+south address 00110001
+
+west address 00100001
+
+east address 00000010
+
+local address 00100000
+
+Results
+
+credit out north: dut = 1 bench =           0
+
+credit out south: dut = x bench =           0
+
+credit out west: dut = x bench =           0
+
+credit out east: dut = x bench =           0
+
+credit out local: dut = 1 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 0
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+read out north: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 00x bench = 011
+
+mux out west: dut = 00x bench = xxx
+
+mux out east: dut = 00x bench = xxx
+
+mux out local: dut = 000 bench = 010
+
+demux out north: dut = xxx bench = xxx
+
+demux out south: dut = xxx bench = 000
+
+demux out west: dut = xxx bench = 100
+
+demux out east: dut = xxx bench = 001
+
+demux out local: dut = xxx bench = xxx
+
+$finish at simulation time                55000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 55000 ps
+CPU Time:      0.260 seconds;       Data structure size:   0.1Mb
+Tue Dec 16 21:22:37 2014
