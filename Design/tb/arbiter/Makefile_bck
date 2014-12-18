@@ -23,8 +23,7 @@ dut:
 	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice $(DUT) $(INTERFACE)
 
 bench: 
-	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice arbiter_top.sv -o testbench.exe
-	./testbench.exe 
+	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice arbiter_top.sv -o testbench.exe 
 
 view:
 	vcs -vpd2vcd vcdplus.vpd waveform.vcd
