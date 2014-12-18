@@ -20,102 +20,211 @@ program router_testbench (router_interface.bench ds);
         my_router = new(env.x_cor, env.y_cor);
 		//checker = new(my_router);
         //stats = new();
-		repeat(1) begin 
-			@(ds.cb)  
+		repeat(1) begin   
 			$display("%t\n",$realtime);
 			trans.randomize();
-			trans.post_randomize();
 			trans.reset = 1;
-			my_router.update_model(trans);
+			trans.reset_func();
+			@(ds.cb)
+			my_router.updateRouter(trans);
 			trans.updateCC(my_router.credit_o ,my_router.valid);
-			my_router.updateCC(my_router.sending);
-			$display("%d %d\n", trans.n_arb_empty_i_rand, trans.s_arb_empty_i_rand);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
 			$display("Inputs:\n");
-			$display("north empty %b\n", trans.n_arb_empty_i);
-			$display("south empty %b\n", trans.s_arb_empty_i);
-			$display("west empty %b\n", trans.w_arb_empty_i);
-			$display("east empty %b\n", trans.e_arb_empty_i);
-			$display("local empty %b\n", trans.l_arb_empty_i);
-			$display("north credit %b\n", trans.n_arb_credit_i);
-			$display("south credit %b\n", trans.s_arb_credit_i);
-			$display("west credit %b\n", trans.w_arb_credit_i);
-			$display("east credit %b\n", trans.e_arb_credit_i);
-			$display("local credit %b\n", trans.l_arb_credit_i);
-			$display("north address %b\n", trans.n_arb_address_i);
-			$display("south address %b\n", trans.s_arb_address_i);
-			$display("west address %b\n", trans.w_arb_address_i);
-			$display("east address %b\n", trans.e_arb_address_i);
-			$display("local address %b\n", trans.l_arb_address_i);
+			$display("north valid %b\n", trans.n_valid_i);
+			$display("south valid %b\n", trans.s_valid_i);
+			$display("west valid %b\n", trans.w_valid_i);
+			$display("east valid %b\n", trans.e_valid_i);
+			$display("local valid %b\n", trans.l_valid_i);
+			$display("north credit %b\n", trans.n_credit_i);
+			$display("south credit %b\n", trans.s_credit_i);
+			$display("west credit %b\n", trans.w_credit_i);
+			$display("east credit %b\n", trans.e_credit_i);
+			$display("local credit %b\n", trans.l_credit_i);
+			if(trans.n_valid_i == 1) begin
+				if(trans.n_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to north buffer\n", trans.n_f_i.x, trans.n_f_i.y);
+				end else begin
+					$display("Body flit with data %b to north buffer\n", trans.n_f_i.data);
+				end
+			end
+			if(trans.s_valid_i == 1) begin
+				if(trans.s_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to south buffer\n", trans.s_f_i.x, trans.s_f_i.y);
+				end else begin
+					$display("Body flit with data %b to south buffer\n", trans.s_f_i.data);
+				end
+			end
+			if(trans.w_valid_i == 1) begin
+				if(trans.w_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to west buffer\n", trans.w_f_i.x, trans.w_f_i.y);
+				end else begin
+					$display("Body flit with data %b to west buffer\n", trans.w_f_i.data);
+				end
+			end
+			if(trans.e_valid_i == 1) begin
+				if(trans.e_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to east buffer\n", trans.e_f_i.x, trans.e_f_i.y);
+				end else begin
+					$display("Body flit with data %b to east buffer\n", trans.e_f_i.data);
+				end
+			end
+			if(trans.l_valid_i == 1) begin
+				if(trans.l_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to local buffer\n", trans.l_f_i.x, trans.l_f_i.y);
+				end else begin
+					$display("Body flit with data %b to local buffer\n", trans.l_f_i.data);
+				end
+			end
 			$display("Results:\n");
-			$display("north mux %b\n", my_router.n_arb_mux_sel);
-			$display("south mux %b\n", my_router.s_arb_mux_sel);
-			$display("west mux %b\n", my_router.w_arb_mux_sel);
-			$display("east mux %b\n", my_router.e_arb_mux_sel);
-			$display("local mux %b\n", my_router.l_arb_mux_sel);
-			$display("north demux %b\n", my_router.n_arb_demux_sel);
-			$display("south demux %b\n", my_router.s_arb_demux_sel);
-			$display("west demux %b\n", my_router.w_arb_demux_sel);
-			$display("east demux %b\n", my_router.e_arb_demux_sel);
-			$display("local demux %b\n", my_router.l_arb_demux_sel);
-			$display("north read %b\n", my_router.n_read);
-			$display("south read %b\n", my_router.s_read);
-			$display("west read %b\n", my_router.w_read);
-			$display("east read %b\n", my_router.e_read);
-			$display("local read %b\n", my_router.l_read);
+			$display("north valid %d\n", my_router.valid[0]);
+			$display("south valid %d\n", my_router.valid[1]);
+			$display("west valid %d\n", my_router.valid[2]);
+			$display("east valid %d\n", my_router.valid[3]);
+			$display("local valid %d\n", my_router.valid[4]);
+			$display("north credit out %d\n", my_router.credit_o[0]);
+			$display("south credit out %d\n", my_router.credit_o[1]);
+			$display("west credit out %d\n", my_router.credit_o[2]);
+			$display("east credit out %d\n", my_router.credit_o[3]);
+			$display("local credit out %d\n", my_router.credit_o[4]);
+			if(my_router.valid[0] == 1) begin
+				if(my_router.outputs[0].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to north output\n", my_router.outputs[0].x, my_router.outputs[0].y);
+				end else begin
+					$display("Body flit with data %b to north output\n", my_router.outputs[0].data);
+				end
+			end
+			if(my_router.valid[1] == 1) begin
+				if(my_router.outputs[1].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to south output\n", my_router.outputs[1].x, my_router.outputs[1].y);
+				end else begin
+					$display("Body flit with data %b to south output\n", my_router.outputs[1].data);
+				end
+			end
+			if(my_router.valid[2] == 1) begin
+				if(my_router.outputs[2].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to west output\n", my_router.outputs[2].x, my_router.outputs[2].y);
+				end else begin
+					$display("Body flit with data %b to west output\n", my_router.outputs[2].data);
+				end
+			end
+			if(my_router.valid[3] == 1) begin
+				if(my_router.outputs[3].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to east output\n", my_router.outputs[3].x, my_router.outputs[3].y);
+				end else begin
+					$display("Body flit with data %b to east output\n", my_router.outputs[3].data);
+				end
+			end
+			if(my_router.valid[4] == 1) begin
+				if(my_router.outputs[4].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to local output\n", my_router.outputs[4].x, my_router.outputs[4].y);
+				end else begin
+					$display("Body flit with data %b to local output\n", my_router.outputs[4].data);
+				end
+			end
 		end
         repeat(5) begin
-            @(ds.cb)  
 			$display("%t\n",$realtime);
 			trans.randomize();
-			trans.post_randomize();
 			//trans.reset = 1;
-			my_router.update_model(trans);
-			trans.updateCC(my_router.sending);
-			my_router.updateCC(my_router.sending);
-			$display("%d %d\n", trans.n_arb_empty_i_rand, trans.s_arb_empty_i_rand);
-			$display("%d %d\n", trans.n_arb_credit_i_rand, trans.s_arb_credit_i_rand);
-			$display("%d %d\n", env.empty_density, env.credit_density);
+			@(ds.cb)  
+			my_router.updateRouter(trans);
+			trans.updateCC(my_router.credit_o ,my_router.valid);
+			$display("%d %d\n", trans.n_valid_i_rand, trans.s_valid_i_rand);
 			$display("x location = %d\n", env.x_cor);
 			$display("y location = %d\n", env.y_cor);
 			$display("Inputs:\n");
-			$display("north empty %b\n", trans.n_arb_empty_i);
-			$display("south empty %b\n", trans.s_arb_empty_i);
-			$display("west empty %b\n", trans.w_arb_empty_i);
-			$display("east empty %b\n", trans.e_arb_empty_i);
-			$display("local empty %b\n", trans.l_arb_empty_i);
-			$display("north credit %b\n", trans.n_arb_credit_i);
-			$display("south credit %b\n", trans.s_arb_credit_i);
-			$display("west credit %b\n", trans.w_arb_credit_i);
-			$display("east credit %b\n", trans.e_arb_credit_i);
-			$display("local credit %b\n", trans.l_arb_credit_i);
-			$display("north address %b\n", trans.n_arb_address_i);
-			$display("south address %b\n", trans.s_arb_address_i);
-			$display("west address %b\n", trans.w_arb_address_i);
-			$display("east address %b\n", trans.e_arb_address_i);
-			$display("local address %b\n", trans.l_arb_address_i);
+			$display("north valid %b\n", trans.n_valid_i);
+			$display("south valid %b\n", trans.s_valid_i);
+			$display("west valid %b\n", trans.w_valid_i);
+			$display("east valid %b\n", trans.e_valid_i);
+			$display("local valid %b\n", trans.l_valid_i);
+			$display("north credit %b\n", trans.n_credit_i);
+			$display("south credit %b\n", trans.s_credit_i);
+			$display("west credit %b\n", trans.w_credit_i);
+			$display("east credit %b\n", trans.e_credit_i);
+			$display("local credit %b\n", trans.l_credit_i);
+			if(trans.n_valid_i == 1) begin
+				if(trans.n_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to north buffer\n", trans.n_f_i.x, trans.n_f_i.y);
+				end else begin
+					$display("Body flit with data %b to north buffer\n", trans.n_f_i.data);
+				end
+			end
+			if(trans.s_valid_i == 1) begin
+				if(trans.s_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to south buffer\n", trans.s_f_i.x, trans.s_f_i.y);
+				end else begin
+					$display("Body flit with data %b to south buffer\n", trans.s_f_i.data);
+				end
+			end
+			if(trans.w_valid_i == 1) begin
+				if(trans.w_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to west buffer\n", trans.w_f_i.x, trans.w_f_i.y);
+				end else begin
+					$display("Body flit with data %b to west buffer\n", trans.w_f_i.data);
+				end
+			end
+			if(trans.e_valid_i == 1) begin
+				if(trans.e_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to east buffer\n", trans.e_f_i.x, trans.e_f_i.y);
+				end else begin
+					$display("Body flit with data %b to east buffer\n", trans.e_f_i.data);
+				end
+			end
+			if(trans.l_valid_i == 1) begin
+				if(trans.l_f_i.flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to local buffer\n", trans.l_f_i.x, trans.l_f_i.y);
+				end else begin
+					$display("Body flit with data %b to local buffer\n", trans.l_f_i.data);
+				end
+			end
 			$display("Results:\n");
-			$display("north mux %b\n", my_router.n_arb_mux_sel);
-			$display("south mux %b\n", my_router.s_arb_mux_sel);
-			$display("west mux %b\n", my_router.w_arb_mux_sel);
-			$display("east mux %b\n", my_router.e_arb_mux_sel);
-			$display("local mux %b\n", my_router.l_arb_mux_sel);
-			$display("north demux %b\n", my_router.n_arb_demux_sel);
-			$display("south demux %b\n", my_router.s_arb_demux_sel);
-			$display("west demux %b\n", my_router.w_arb_demux_sel);
-			$display("east demux %b\n", my_router.e_arb_demux_sel);
-			$display("local demux %b\n", my_router.l_arb_demux_sel);
-			$display("north read %b\n", my_router.n_read);
-			$display("south read %b\n", my_router.s_read);
-			$display("west read %b\n", my_router.w_read);
-			$display("east read %b\n", my_router.e_read);
-			$display("local read %b\n", my_router.l_read);
-			$display("north credit %d\n", my_router.cc[0]);
-			$display("south credit %d\n", my_router.cc[1]);
-			$display("west credit %d\n", my_router.cc[2]);
-			$display("east credit %d\n", my_router.cc[3]);
-			$display("local credit %d\n", my_router.cc[4]);
+			$display("north valid %d\n", my_router.valid[0]);
+			$display("south valid %d\n", my_router.valid[1]);
+			$display("west valid %d\n", my_router.valid[2]);
+			$display("east valid %d\n", my_router.valid[3]);
+			$display("local valid %d\n", my_router.valid[4]);
+			$display("north credit out %d\n", my_router.credit_o[0]);
+			$display("south credit out %d\n", my_router.credit_o[1]);
+			$display("west credit out %d\n", my_router.credit_o[2]);
+			$display("east credit out %d\n", my_router.credit_o[3]);
+			$display("local credit out %d\n", my_router.credit_o[4]);
+			if(my_router.valid[0] == 1) begin
+				if(my_router.outputs[0].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to north output\n", my_router.outputs[0].x, my_router.outputs[0].y);
+				end else begin
+					$display("Body flit with data %b to north output\n", my_router.outputs[0].data);
+				end
+			end
+			if(my_router.valid[1] == 1) begin
+				if(my_router.outputs[1].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to south output\n", my_router.outputs[1].x, my_router.outputs[1].y);
+				end else begin
+					$display("Body flit with data %b to south output\n", my_router.outputs[1].data);
+				end
+			end
+			if(my_router.valid[2] == 1) begin
+				if(my_router.outputs[2].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to west output\n", my_router.outputs[2].x, my_router.outputs[2].y);
+				end else begin
+					$display("Body flit with data %b to west output\n", my_router.outputs[2].data);
+				end
+			end
+			if(my_router.valid[3] == 1) begin
+				if(my_router.outputs[3].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to east output\n", my_router.outputs[3].x, my_router.outputs[3].y);
+				end else begin
+					$display("Body flit with data %b to east output\n", my_router.outputs[3].data);
+				end
+			end
+			if(my_router.valid[4] == 1) begin
+				if(my_router.outputs[4].flit_type == 0) begin
+					$display("Header flit with address x = %d, y = %d to local output\n", my_router.outputs[4].x, my_router.outputs[4].y);
+				end else begin
+					$display("Body flit with data %b to local output\n", my_router.outputs[4].data);
+				end
+			end
         end
     end
 

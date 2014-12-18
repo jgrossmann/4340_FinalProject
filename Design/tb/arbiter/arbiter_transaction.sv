@@ -7,6 +7,8 @@ class arbiter_transaction;
 	rand int reset_rand;
 	int x_pos;
 	int y_pos;
+	int packet_tracker [5];
+	int valid [5];
 	
     bit n_arb_empty_i;
 	bit s_arb_empty_i;
@@ -91,6 +93,8 @@ class arbiter_transaction;
         env = e;
 		foreach(credit_count[i]) begin
 			credit_count[i] = 5;
+			packet_tracker[i] = 0;
+			valid[i] = 0;
 		end
 		x_pos = e.x_cor;
 		y_pos = e.y_cor;
@@ -115,6 +119,36 @@ class arbiter_transaction;
 		w_arb_empty_i = w_arb_empty_i_rand < env.empty_density;
 		e_arb_empty_i = e_arb_empty_i_rand < env.empty_density;
 		l_arb_empty_i = l_arb_empty_i_rand < env.empty_density;
+		if(valid[0] == 1) begin
+			n_arb_empty_i = 0;
+		end
+		if(valid[1] == 1) begin
+			s_arb_empty_i = 0;
+		end
+		if(valid[2] == 1) begin
+			w_arb_empty_i = 0;
+		end
+		if(valid[3] == 1) begin
+			e_arb_empty_i = 0;
+		end
+		if(valid[4] == 1) begin
+			l_arb_empty_i = 0;
+		end
+		if(valid[0] == 0 && n_arb_empty_i == 0) begin
+			valid[0] = 1;
+		end
+		if(valid[1] == 0 && s_arb_empty_i == 0) begin
+			valid[1] = 1;
+		end
+		if(valid[2] == 0 && w_arb_empty_i == 0) begin
+			valid[2] = 1;
+		end
+		if(valid[3] == 0 && e_arb_empty_i == 0) begin
+			valid[3] = 1;
+		end
+		if(valid[4] == 0 && l_arb_empty_i == 0) begin
+			valid[4] = 1;
+		end
 		reset = reset_rand < env.reset_density;
 		if(n_arb_credit_inc) begin
 			credit_count[0]++;
@@ -160,6 +194,8 @@ class arbiter_transaction;
 		if(reset == 1) begin
 			foreach(credit_count[i]) begin
 				credit_count[i] = 5;
+				packet_tracker[i] = 0;
+				valid[i] = 0;
 			end
 		end
     endfunction
@@ -191,6 +227,22 @@ class arbiter_transaction;
 		e_arb_address_i = 16'b0000000000000000;
 		w_arb_address_i = 16'b0000000000000000;
 		l_arb_address_i = 16'b0000000000000000;
+		
+		if(valid[0] == 0 && n_arb_empty_i == 0) begin
+			valid[0] = 1;
+		end
+		if(valid[1] == 0 && s_arb_empty_i == 0) begin
+			valid[1] = 1;
+		end
+		if(valid[2] == 0 && w_arb_empty_i == 0) begin
+			valid[2] = 1;
+		end
+		if(valid[3] == 0 && e_arb_empty_i == 0) begin
+			valid[3] = 1;
+		end
+		if(valid[4] == 0 && l_arb_empty_i == 0) begin
+			valid[4] = 1;
+		end
 	
 	
 	endfunction
@@ -214,6 +266,22 @@ class arbiter_transaction;
 		e_arb_address_i = 16'b0000000000000000;
 		w_arb_address_i = 16'b0000000000110001;
 		l_arb_address_i = 16'b0000000000000000;
+		
+		if(valid[0] == 0 && n_arb_empty_i == 0) begin
+			valid[0] = 1;
+		end
+		if(valid[1] == 0 && s_arb_empty_i == 0) begin
+			valid[1] = 1;
+		end
+		if(valid[2] == 0 && w_arb_empty_i == 0) begin
+			valid[2] = 1;
+		end
+		if(valid[3] == 0 && e_arb_empty_i == 0) begin
+			valid[3] = 1;
+		end
+		if(valid[4] == 0 && l_arb_empty_i == 0) begin
+			valid[4] = 1;
+		end
 	
 	
 	endfunction
@@ -237,8 +305,58 @@ class arbiter_transaction;
 		e_arb_address_i = 16'b0000000000000000;
 		w_arb_address_i = 16'b0000000000110001;
 		l_arb_address_i = 16'b0000000000000000;
+		
+		if(valid[0] == 0 && n_arb_empty_i == 0) begin
+			valid[0] = 1;
+		end
+		if(valid[1] == 0 && s_arb_empty_i == 0) begin
+			valid[1] = 1;
+		end
+		if(valid[2] == 0 && w_arb_empty_i == 0) begin
+			valid[2] = 1;
+		end
+		if(valid[3] == 0 && e_arb_empty_i == 0) begin
+			valid[3] = 1;
+		end
+		if(valid[4] == 0 && l_arb_empty_i == 0) begin
+			valid[4] = 1;
+		end
 	
 	
+	endfunction
+	
+	function updatePT(int n, int s, int w, int e, int l);
+		if(n == 1) begin
+			packet_tracker[0] = (packet_tracker[0]+1)%5;
+			if(packet_tracker[0] == 0) begin
+				valid[0] = 0;
+			end
+		end
+		if(s == 1) begin
+			packet_tracker[1] = (packet_tracker[1]+1)%5;
+			if(packet_tracker[1] == 0) begin
+				valid[1] = 0;
+			end
+		end
+		if(w == 1) begin
+			packet_tracker[2] = (packet_tracker[2]+1)%5;
+			if(packet_tracker[2] == 0) begin
+				valid[2] = 0;
+			end
+		end
+		if(e == 1) begin
+			packet_tracker[3] = (packet_tracker[3]+1)%5;
+			if(packet_tracker[3] == 0) begin
+				valid[3] = 0;
+			end
+		end
+		if(l == 1) begin
+			packet_tracker[4] = (packet_tracker[4]+1)%5;
+			if(packet_tracker[4] == 0) begin
+				valid[4] = 0;
+			end
+		end
+
 	endfunction
 	
 	

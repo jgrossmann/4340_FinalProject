@@ -99,6 +99,9 @@ class router_transaction;
 		e_valid_i = e_valid_i_rand < env.e_valid_density;
 		l_valid_i = l_valid_i_rand < env.l_valid_density;
 		reset = reset_rand < env.reset_density;
+		if(reset == 1) begin
+			return;
+		end
 		if(credit_count_e[0] == 5) begin
 			n_credit_i = 0;
 		end
@@ -158,9 +161,11 @@ class router_transaction;
 		if(w_valid_i) begin
 			w_f_i.randomize();
 			if(packet_tracker[2] == 0) begin
+				$display("making a header flit");
 				w_f_i.changeType(0);
 			end else begin
 				w_f_i.changeType(1);
+				$display("making a body flit");
 			end
 			packet_tracker[2] = (packet_tracker[2] + 1) % 5;
 			credit_count_i[2]--;
@@ -219,6 +224,14 @@ class router_transaction;
 			if(inc_i[i] == 1) begin
 				credit_count_i[i]++;
 			end
+		end
+	endfunction
+	
+	function void reset_func();
+		foreach(credit_count_i[i]) begin
+			credit_count_i[i] = 5;
+			credit_count_e[i] = 5;
+			packet_tracker[i] = 0;
 		end
 	endfunction
 	

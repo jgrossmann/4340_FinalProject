@@ -113,66 +113,61 @@ class arbiter_class;
 			cc[4]++;
 		end*/
 		
-		n_x_addr = n_x_addr_temp;
-		n_y_addr = n_y_addr_temp;
 		if(valid[0] == 0) begin
+			n_x_addr = n_x_addr_temp;
+			n_y_addr = n_y_addr_temp;
 			valid[0] = 1;
 		end
-		s_x_addr = s_x_addr_temp;
-		s_y_addr = s_y_addr_temp;
 		if(valid[1] == 0) begin
+			s_x_addr = s_x_addr_temp;
+			s_y_addr = s_y_addr_temp;
 			valid[1] = 1;
 		end
-		w_x_addr = w_x_addr_temp;
-		w_y_addr = w_y_addr_temp;
 		if(valid[2] == 0) begin
+			w_x_addr = w_x_addr_temp;
+			w_y_addr = w_y_addr_temp;
 			valid[2] = 1;
 		end
-		e_x_addr = e_x_addr_temp;
-		e_y_addr = e_y_addr_temp;
 		if(valid[3] == 0) begin
+			e_x_addr = e_x_addr_temp;
+			e_y_addr = e_y_addr_temp;
 			valid[3] = 1;
 		end
-		l_x_addr = l_x_addr_temp;
-		l_y_addr = l_y_addr_temp;
 		if(valid[4] == 0) begin
+			l_x_addr = l_x_addr_temp;
+			l_y_addr = l_y_addr_temp;
 			valid[4] = 1;
 		end
 		
-		if(pti[0] == 0 && empty[0] == 0) begin
+		if(pti[0] == 0 && empty[0] == 0 && valid[0] == -1) begin
 			n_y_addr_temp = packet.n_arb_address_i[3:0];
 			n_x_addr_temp = packet.n_arb_address_i[7:4];
-			if(valid[0] == -1) begin
-				valid[0] = 0;
-			end
+			
+			valid[0] = 0;
+			
 		end
-		if(pti[1] == 0 && empty[1] == 0) begin
+		if(pti[1] == 0 && empty[1] == 0 && valid[1] == -1) begin
 			s_y_addr_temp = packet.s_arb_address_i[3:0];
 			s_x_addr_temp = packet.s_arb_address_i[7:4];
-			if(valid[1] == -1) begin
-				valid[1] = 0;
-			end
+			valid[1] = 0;
 		end
-		if(pti[2] == 0 && empty[2] == 0) begin
+		if(pti[2] == 0 && empty[2] == 0 && valid[2] == -1) begin
 			w_y_addr_temp = packet.w_arb_address_i[3:0];
 			w_x_addr_temp = packet.w_arb_address_i[7:4];
-			if(valid[2] == -1) begin
-				valid[2] = 0;
-			end
+			valid[2] = 0;
+			
 		end
-		if(pti[3] == 0 && empty[3] == 0) begin
+		if(pti[3] == 0 && empty[3] == 0 && valid[3] == -1) begin
 			e_y_addr_temp = packet.e_arb_address_i[3:0];
 			e_x_addr_temp = packet.e_arb_address_i[7:4];
-			if(valid[3] == -1) begin
-				valid[3] = 0;
-			end
+			valid[3] = 0;
+			
 		end
-		if(pti[4] == 0 && empty[4] == 0) begin
+		if(pti[4] == 0 && empty[4] == 0 && valid[4] == -1) begin
 			l_y_addr_temp = packet.l_arb_address_i[3:0];
 			l_x_addr_temp = packet.l_arb_address_i[7:4];
-			if(valid[4] == -1) begin
-				valid[4] = 0;
-			end
+			valid[4] = 0;
+		
 		end
 		
 		
@@ -220,6 +215,7 @@ class arbiter_class;
 					4 : l_arb_mux_sel = dir;				
 				endcase
 				dec[i] = 1;
+				
 			end
 			
 		end
@@ -293,7 +289,7 @@ class arbiter_class;
             end
             
             priority_port = (token[port] + 1) % 5;
-            for(int i=0; i<4; i++) begin
+            for(int i=0; i<5; i++) begin
                 if(temp[priority_port]) begin
                     token[port] = priority_port;
 					//$display("from = %d, to = %d\n", priority_port, port);
@@ -321,6 +317,7 @@ class arbiter_class;
 			pti[i] = 0;
 			token[i] = 4;
 			empty[i] = 0;
+			valid[i] = -1;
 			//sending[i] = 0;
       end
 	endfunction

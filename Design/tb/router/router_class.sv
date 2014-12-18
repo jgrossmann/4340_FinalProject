@@ -192,10 +192,10 @@ class router_class;
 		arb_pack.reset = 1;
 		arbiter.update_model(arb_pack);
 		foreach(buffers[i]) begin
-			buffers[i].update(0,0,1,null);
+			buffers[i].reset();
 			cc[i] = 5;
 		end
-	end
+	endfunction
 	
 	
 	
