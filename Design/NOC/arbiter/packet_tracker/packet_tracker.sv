@@ -34,14 +34,17 @@ if (reset) begin
 end else if (data_o_temp == 3'b100) begin 
 
    data_i_temp = 3'b000 ;
-   
+  
 end else if (pt_inc_i) begin 
 
    data_i_temp = data_o_temp + 1 ;
    
-end 
+end else if(data_o_temp == 3'b000) begin
+
+	data_i_temp = 3'b000;
 
 end 
+end
 
 assign pt_end_o = (data_o_temp == 3'b100);  
 assign pt_empty_o = (data_o_temp == 3'b000); 
