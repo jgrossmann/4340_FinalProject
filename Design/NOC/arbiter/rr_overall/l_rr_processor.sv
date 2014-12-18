@@ -40,7 +40,7 @@ logic rrp_l_priority_s_o_temp;
 logic rrp_l_priority_w_o_temp;
 logic rrp_l_priority_e_o_temp;
 logic rrp_l_priority_l_o_temp;
-logic rrp_l_priority_to_cs_o_temp;
+logic [2:0] rrp_l_priority_to_cs_o_temp;
 
 logic [3:0] rr_register_0001_order; 
 logic [3:0] rr_register_0010_order; 

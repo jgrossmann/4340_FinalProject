@@ -25,7 +25,7 @@ dut:
 bench: 
 	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice arbiter_top.sv -o testbench.exe
 
-wave:
+view:
 	vcs -vpd2vcd vcdplus.vpd waveform.vcd
 	gtkwave waveform.vcd &
 
