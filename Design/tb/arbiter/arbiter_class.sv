@@ -63,7 +63,7 @@ class arbiter_class;
 			token[i] = 4;
 			empty[i] = 0;
 			pti[i] = 0;
-			valid[i] = 0;
+			valid[i] = -1;
 			//sending[i] = 0;
 			//x_pos = x;
 			//y_pos = y;
@@ -115,63 +115,63 @@ class arbiter_class;
 		
 		n_x_addr = n_x_addr_temp;
 		n_y_addr = n_y_addr_temp;
-		if(valid[0] == 1) begin
-			valid[0] = 2;
+		if(valid[0] == 0) begin
+			valid[0] = 1;
 		end
 		s_x_addr = s_x_addr_temp;
 		s_y_addr = s_y_addr_temp;
-		if(valid[1] == 1) begin
-			valid[1] = 2;
+		if(valid[1] == 0) begin
+			valid[1] = 1;
 		end
 		w_x_addr = w_x_addr_temp;
 		w_y_addr = w_y_addr_temp;
-		if(valid[2] == 1) begin
-			valid[2] = 2;
+		if(valid[2] == 0) begin
+			valid[2] = 1;
 		end
 		e_x_addr = e_x_addr_temp;
 		e_y_addr = e_y_addr_temp;
-		if(valid[3] == 1) begin
-			valid[3] = 2;
+		if(valid[3] == 0) begin
+			valid[3] = 1;
 		end
 		l_x_addr = l_x_addr_temp;
 		l_y_addr = l_y_addr_temp;
-		if(valid[4] == 1) begin
-			valid[4] = 2;
+		if(valid[4] == 0) begin
+			valid[4] = 1;
 		end
 		
 		if(pti[0] == 0 && empty[0] == 0) begin
 			n_y_addr_temp = packet.n_arb_address_i[3:0];
 			n_x_addr_temp = packet.n_arb_address_i[7:4];
-			if(valid[0] == 0) begin
-				valid[0] = 1;
+			if(valid[0] == -1) begin
+				valid[0] = 0;
 			end
 		end
 		if(pti[1] == 0 && empty[1] == 0) begin
 			s_y_addr_temp = packet.s_arb_address_i[3:0];
 			s_x_addr_temp = packet.s_arb_address_i[7:4];
-			if(valid[1] == 0) begin
-				valid[1] = 1;
+			if(valid[1] == -1) begin
+				valid[1] = 0;
 			end
 		end
 		if(pti[2] == 0 && empty[2] == 0) begin
 			w_y_addr_temp = packet.w_arb_address_i[3:0];
 			w_x_addr_temp = packet.w_arb_address_i[7:4];
-			if(valid[2] == 0) begin
-				valid[2] = 1;
+			if(valid[2] == -1) begin
+				valid[2] = 0;
 			end
 		end
 		if(pti[3] == 0 && empty[3] == 0) begin
 			e_y_addr_temp = packet.e_arb_address_i[3:0];
 			e_x_addr_temp = packet.e_arb_address_i[7:4];
-			if(valid[3] == 0) begin
-				valid[3] = 1;
+			if(valid[3] == -1) begin
+				valid[3] = 0;
 			end
 		end
 		if(pti[4] == 0 && empty[4] == 0) begin
 			l_y_addr_temp = packet.l_arb_address_i[3:0];
 			l_x_addr_temp = packet.l_arb_address_i[7:4];
-			if(valid[4] == 0) begin
-				valid[4] = 1;
+			if(valid[4] == -1) begin
+				valid[4] = 0;
 			end
 		end
 		
@@ -193,6 +193,10 @@ class arbiter_class;
 				//$display("incrementing packet tracker for %d when searching $d\n", dir, i);
 				packet_tracker[i] = (packet_tracker[i] + 1) % 5;
 				pti[dir] = (pti[dir] + 1) % 5;
+				valid[dir]++;
+				if(valid[dir]==6) begin
+					valid[dir] = -1;
+				end
 				//sending[i] = 1;
 				case(dir)
 					0 : n_read = 1;
@@ -254,7 +258,7 @@ class arbiter_class;
 			zeros = {0,0,0,0,0};
 			
             for(int i = 0; i < 5; i++) begin
-                if(empty[i] == 0 && valid[i] == 2) begin
+                if(empty[i] == 0 && valid[i] > 0) begin
                     case(i)
 						0 : x_addr = n_x_addr;
 						1 : x_addr = s_x_addr;
