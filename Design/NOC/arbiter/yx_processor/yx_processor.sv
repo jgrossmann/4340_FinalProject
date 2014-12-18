@@ -26,21 +26,21 @@ always_comb begin
 
 	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
 
-		if (y_addr_subtract [3]) begin 
+		if (~y_addr_subtract [3]) begin 
 
 			yx_addr_o_temp = 3'b001; // "south" output direction 
 
-		end else if (~y_addr_subtract [3]) begin
+		end else if (y_addr_subtract [3]) begin
 
 			yx_addr_o_temp = 3'b000; // "north" output direction 
 
 		end 
 
-	end else if (x_addr_subtract[3]) begin
+	end else if (~x_addr_subtract[3]) begin
 
 		yx_addr_o_temp = 3'b011; // "east" output direction 
 
-	end else if (~x_addr_subtract[3]) begin
+	end else if (x_addr_subtract[3]) begin
 
 		yx_addr_o_temp = 3'b010; // "west" output direction 
 

@@ -22,12 +22,20 @@ module test_yx_processor();
 		#5
 		$display("From (0,2) to (0,0)\n");
 		$display("Next hop: %b\n", yx_addr_o);
-		
+	
+		yx_addr_header_i = 8'b00110001;
+                yx_addr_router_i = 8'b00010001;
+
+                #5
+                $display("From (1,1) to (1,3)\n");
+                $display("Next hop: %b\n", yx_addr_o);
+
+	
 		yx_addr_header_i = 8'b00000000;
 		yx_addr_router_i = 8'b00110011;
 		
 		#5
-		$display("From (0,0) to (3,3)\n");
+		$display("From (3,3) to (0,0)\n");
 		$display("Next hop: %b\n", yx_addr_o);
 		
 		yx_addr_header_i = 8'b00010001;
