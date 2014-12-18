@@ -211,7 +211,7 @@ class arbiter_transaction;
 		n_arb_address_i = 8'b00110011;
 		s_arb_address_i = 8'b00000000;
 		e_arb_address_i = 8'b00000000;
-		w_arb_address_i = 8'b00000001;
+		w_arb_address_i = 8'b00110001;
 		l_arb_address_i = 8'b00000000;
 	
 	

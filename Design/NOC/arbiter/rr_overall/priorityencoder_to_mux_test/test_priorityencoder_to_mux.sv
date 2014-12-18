@@ -64,6 +64,16 @@ module test_priorityencoder_to_mux();
 		
 		#1 $display("00001\n");
 		$display("output: %b\n", rr_priority_to_cs_o);
+		
+		rr_priority_n_i = 0;
+		rr_priority_s_i = 0;
+		rr_priority_w_i = 0;
+		rr_priority_e_i = 0;
+		rr_priority_l_i = 0;
+		
+		#1 $display("00000\n");
+		$display("output: %b\n", rr_priority_to_cs_o);
+
 	
 		
 	end

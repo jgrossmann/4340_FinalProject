@@ -40,7 +40,7 @@ logic rrp_n_priority_s_o_temp;
 logic rrp_n_priority_w_o_temp;
 logic rrp_n_priority_e_o_temp;
 logic rrp_n_priority_l_o_temp;
-logic rrp_n_priority_to_cs_o_temp;
+logic [2:0] rrp_n_priority_to_cs_o_temp;
 
 logic [3:0] rr_register_0001_order; 
 logic [3:0] rr_register_0010_order; 
@@ -107,29 +107,29 @@ rr_register_1000 rrr_1000(
  
  always_comb begin 
  
- rr_priority_1000_i [3] = (s_to_n_desire == rr_register_1000_order[3]);  
- rr_priority_1000_i [2] = (w_to_n_desire == rr_register_1000_order[2]);  
- rr_priority_1000_i [1] = (e_to_n_desire == rr_register_1000_order[1]);  
- rr_priority_1000_i [0] = (l_to_n_desire == rr_register_1000_order[0]);  
- rr_priority_1000_all = rr_priority_1000_i[3] + rr_priority_1000_i[2] + rr_priority_1000_i[1] + rr_priority_1000_i[0]; 
+ rr_priority_1000_i [3] = (s_to_n_desire & rr_register_1000_order[3]);  
+ rr_priority_1000_i [2] = (w_to_n_desire & rr_register_1000_order[2]);  
+ rr_priority_1000_i [1] = (e_to_n_desire & rr_register_1000_order[1]);  
+ rr_priority_1000_i [0] = (l_to_n_desire & rr_register_1000_order[0]);  
+ rr_priority_1000_all = rr_priority_1000_i[3] | rr_priority_1000_i[2] | rr_priority_1000_i[1] | rr_priority_1000_i[0]; 
  
- rr_priority_0100_i [3] = (s_to_n_desire == rr_register_0100_order[3]);  
- rr_priority_0100_i [2] = (w_to_n_desire == rr_register_0100_order[2]);  
- rr_priority_0100_i [1] = (e_to_n_desire == rr_register_0100_order[1]);  
- rr_priority_0100_i [0] = (l_to_n_desire == rr_register_0100_order[0]);  
- rr_priority_0100_all = rr_priority_0100_i [3] + rr_priority_0100_i [2] + rr_priority_0100_i [1] + rr_priority_0100_i [0];
+ rr_priority_0100_i [3] = (s_to_n_desire & rr_register_0100_order[3]);  
+ rr_priority_0100_i [2] = (w_to_n_desire & rr_register_0100_order[2]);  
+ rr_priority_0100_i [1] = (e_to_n_desire & rr_register_0100_order[1]);  
+ rr_priority_0100_i [0] = (l_to_n_desire & rr_register_0100_order[0]);  
+ rr_priority_0100_all = rr_priority_0100_i [3] | rr_priority_0100_i [2] | rr_priority_0100_i [1] | rr_priority_0100_i [0];
  
- rr_priority_0010_i [3] = (s_to_n_desire == rr_register_0010_order[3]);  
- rr_priority_0010_i [2] = (w_to_n_desire == rr_register_0010_order[2]);  
- rr_priority_0010_i [1] = (e_to_n_desire == rr_register_0010_order[1]);  
- rr_priority_0010_i [0] = (l_to_n_desire == rr_register_0010_order[0]);  
- rr_priority_0010_all = rr_priority_0010_i [3] + rr_priority_0010_i [2] + rr_priority_0010_i [1] + rr_priority_0010_i [0];
+ rr_priority_0010_i [3] = (s_to_n_desire & rr_register_0010_order[3]);  
+ rr_priority_0010_i [2] = (w_to_n_desire & rr_register_0010_order[2]);  
+ rr_priority_0010_i [1] = (e_to_n_desire & rr_register_0010_order[1]);  
+ rr_priority_0010_i [0] = (l_to_n_desire & rr_register_0010_order[0]);  
+ rr_priority_0010_all = rr_priority_0010_i [3] | rr_priority_0010_i [2] | rr_priority_0010_i [1] | rr_priority_0010_i [0];
  
- rr_priority_0001_i [3] = (s_to_n_desire == rr_register_0001_order[3]);  
- rr_priority_0001_i [2] = (w_to_n_desire == rr_register_0001_order[2]);  
- rr_priority_0001_i [1] = (e_to_n_desire == rr_register_0001_order[1]);  
- rr_priority_0001_i [0] = (l_to_n_desire == rr_register_0001_order[0]);  
- rr_priority_0001_all = rr_priority_0001_i [3] + rr_priority_0001_i [2] + rr_priority_0001_i [1] + rr_priority_0001_i [0];
+ rr_priority_0001_i [3] = (s_to_n_desire & rr_register_0001_order[3]);  
+ rr_priority_0001_i [2] = (w_to_n_desire & rr_register_0001_order[2]);  
+ rr_priority_0001_i [1] = (e_to_n_desire & rr_register_0001_order[1]);  
+ rr_priority_0001_i [0] = (l_to_n_desire & rr_register_0001_order[0]);  
+ rr_priority_0001_all = rr_priority_0001_i [3] | rr_priority_0001_i [2] | rr_priority_0001_i [1] | rr_priority_0001_i [0];
  
  end 
  

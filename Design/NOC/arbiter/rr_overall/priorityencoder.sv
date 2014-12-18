@@ -6,7 +6,7 @@ module priorityencoder(
         input rr_priority_w_i, 
         input rr_priority_e_i, 
         input rr_priority_l_i,
-        output rr_priority_to_cs_o,
+        output [2:0] rr_priority_to_cs_o,
 	    output rr_priority_n_o,
         output rr_priority_s_o, 
         output rr_priority_w_o, 
@@ -17,7 +17,7 @@ module priorityencoder(
 logic [4:0] rr_priority_i_temp; 
  
 logic [4:0] rr_priority_o_temp ; 
-logic rr_priority_to_cs_o_temp; 
+logic [2:0] rr_priority_to_cs_o_temp; 
 
 	always_comb begin
 
