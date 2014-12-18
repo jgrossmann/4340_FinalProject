@@ -176,11 +176,11 @@ rr_register_1000 rrr_1000(
  );
 
 
-assign rrp_w_priority_n_o = rrp_w_priority_n_o_temp;  
-assign rrp_w_priority_s_o = rrp_w_priority_s_o_temp;  
-assign rrp_w_priority_w_o = rrp_w_priority_w_o_temp;  
-assign rrp_w_priority_e_o = rrp_w_priority_e_o_temp;  
-assign rrp_w_priority_l_o = rrp_w_priority_l_o_temp;  
+assign rrp_w_priority_n_o = (rrp_w_priority_n_o_temp & n_to_w_desire);  
+assign rrp_w_priority_s_o = (rrp_w_priority_s_o_temp & s_to_w_desire);  
+assign rrp_w_priority_w_o = (rrp_w_priority_w_o_temp & 1'b0);  
+assign rrp_w_priority_e_o = (rrp_w_priority_e_o_temp & e_to_w_desire);  
+assign rrp_w_priority_l_o = (rrp_w_priority_l_o_temp & l_to_w_desire);  
 assign rrp_w_priority_to_cs_o = rrp_w_priority_to_cs_o_temp;  
 
 endmodule
