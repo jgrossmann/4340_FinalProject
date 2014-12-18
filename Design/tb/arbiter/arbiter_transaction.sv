@@ -96,6 +96,7 @@ class arbiter_transaction;
 		y_pos = e.y_cor;
 		yx_pos[3:0] = e.y_cor;
 		yx_pos[7:4] = e.x_cor;
+		yx_pos[15:8] = 8'b00000000;
     endfunction
 
     function void post_randomize();
