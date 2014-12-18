@@ -38,13 +38,13 @@ class arbiter_transaction;
 	rand int e_arb_credit_i_rand;
 	rand int l_arb_credit_i_rand;
 	
-	rand logic [7:0] n_arb_address_i;
-	rand logic [7:0] s_arb_address_i;
-	rand logic [7:0] e_arb_address_i;
-	rand logic [7:0] w_arb_address_i;
-	rand logic [7:0] l_arb_address_i;
+	rand logic [15:0] n_arb_address_i;
+	rand logic [15:0] s_arb_address_i;
+	rand logic [15:0] e_arb_address_i;
+	rand logic [15:0] w_arb_address_i;
+	rand logic [15:0] l_arb_address_i;
 	
-	logic [7:0] yx_pos;
+	logic [15:0] yx_pos;
 	
     constraint c {
         n_arb_empty_i_rand >= 0;
@@ -185,11 +185,11 @@ class arbiter_transaction;
 		e_arb_credit_i = 1;
 		l_arb_credit_i = 1;
 	
-		n_arb_address_i = 8'b00110011;
-		s_arb_address_i = 8'b00000000;
-		e_arb_address_i = 8'b00000000;
-		w_arb_address_i = 8'b00000000;
-		l_arb_address_i = 8'b00000000;
+		n_arb_address_i = 16'b0000000000110011;
+		s_arb_address_i = 16'b0000000000000000;
+		e_arb_address_i = 16'b0000000000000000;
+		w_arb_address_i = 16'b0000000000000000;
+		l_arb_address_i = 16'b0000000000000000;
 	
 	
 	endfunction
@@ -208,11 +208,11 @@ class arbiter_transaction;
 		e_arb_credit_i = 1;
 		l_arb_credit_i = 1;
 	
-		n_arb_address_i = 8'b00110011;
-		s_arb_address_i = 8'b00000000;
-		e_arb_address_i = 8'b00000000;
-		w_arb_address_i = 8'b00110001;
-		l_arb_address_i = 8'b00000000;
+		n_arb_address_i = 16'b0000000000110011;
+		s_arb_address_i = 16'b0000000000000000;
+		e_arb_address_i = 16'b0000000000000000;
+		w_arb_address_i = 16'b0000000000110001;
+		l_arb_address_i = 16'b0000000000000000;
 	
 	
 	endfunction
@@ -231,11 +231,11 @@ class arbiter_transaction;
 		e_arb_credit_i = 1;
 		l_arb_credit_i = 1;
 	
-		n_arb_address_i = 8'b00000001;
-		s_arb_address_i = 8'b00010001;
-		e_arb_address_i = 8'b00000000;
-		w_arb_address_i = 8'b00110001;
-		l_arb_address_i = 8'b00000000;
+		n_arb_address_i = 16'b0000000000000001;
+		s_arb_address_i = 16'b0000000000010001;
+		e_arb_address_i = 16'b0000000000000000;
+		w_arb_address_i = 16'b0000000000110001;
+		l_arb_address_i = 16'b0000000000000000;
 	
 	
 	endfunction
