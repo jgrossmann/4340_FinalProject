@@ -1,7 +1,7 @@
 
 //`include "./nexthop_register/enable_eff_nr.sv"
 
-module e_nexthop_register (
+module l_nexthop_register (
 
 input clk, 
 input reset,
