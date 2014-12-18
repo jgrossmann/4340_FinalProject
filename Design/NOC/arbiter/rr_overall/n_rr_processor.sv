@@ -162,11 +162,11 @@ priorityencoder priority_enc(
 
 );
 
-assign rrp_n_priority_n_o = rrp_n_priority_n_o_temp;  
-assign rrp_n_priority_s_o = rrp_n_priority_s_o_temp;  
-assign rrp_n_priority_w_o = rrp_n_priority_w_o_temp;  
-assign rrp_n_priority_e_o = rrp_n_priority_e_o_temp;  
-assign rrp_n_priority_l_o = rrp_n_priority_l_o_temp;  
+assign rrp_n_priority_n_o = (rrp_n_priority_n_o_temp & 1'b0);  
+assign rrp_n_priority_s_o = (rrp_n_priority_s_o_temp & s_to_n_desire);  
+assign rrp_n_priority_w_o = (rrp_n_priority_w_o_temp & w_to_n_desire);  
+assign rrp_n_priority_e_o = (rrp_n_priority_e_o_temp & e_to_n_desire);  
+assign rrp_n_priority_l_o = (rrp_n_priority_l_o_temp & l_to_n_desire);  
 assign rrp_n_priority_to_cs_o = rrp_n_priority_to_cs_o_temp;  
 
 endmodule
