@@ -151,10 +151,10 @@ rr_register_1000 rrr_1000(
  
   .sel_i(priority_mux_select), 
   .data_n_i(rr_register_1000_order), 
-  .data_s_i(rr_register_1000_order),
+  .data_s_i(rr_register_0100_order),
   .data_w_i(4'b0000),
-  .data_e_i(rr_register_1000_order),
-  .data_l_i(rr_register_1000_order),
+  .data_e_i(rr_register_0010_order),
+  .data_l_i(rr_register_0001_order),
   .data_o(priority_mux_o)
  
   ); 
