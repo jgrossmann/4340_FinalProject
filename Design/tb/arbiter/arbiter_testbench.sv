@@ -50,7 +50,9 @@ program arbiter_tb (arbiter_interface.bench ds);
 			ds.cb.l_arb_credit_i <= trans.l_arb_credit_i;
 			ds.cb.yx_pos_i <= trans.yx_pos;
 			trans.updateCC(my_arbiter.dec);
-			@(ds.cb)  
+			@(ds.cb)
+			@(ds.cb) 
+			@(ds.cb) 
 			trans.reset = 0;
 			ds.cb.reset <= trans.reset;
 			@(ds.cb)  

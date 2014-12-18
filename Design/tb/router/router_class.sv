@@ -1,5 +1,5 @@
 
-class router_test;
+class router_class;
 
     // Constants to make port identification easier
     // NORTH = 0;
@@ -8,34 +8,38 @@ class router_test;
     // EAST = 3;
     // LOCAL = 4;
 	input_buffer_class buffers [5];
-	logic x_pos;
-	logic y_pos;
+	int x_pos;
+	int y_pos;
 	int cc [5];
     int buffer_num; //temporary variable
 	arbiter_transaction arb_pack;
 	arbiter_class arbiter;
 	arbiter_environment arb_env;
 	flit outputs [5];
-	logic n_credit_o;
+	int credit_o [5];
+	/*logic n_credit_o;
 	logic s_credit_o;
 	logic w_credit_o;
 	logic e_credit_o;
-	logic l_credit_o;
+	logic l_credit_o;*/
 	int valid [5];
+	buffer_stats stats [5];
+	
 
-	function new();
+	function new(int x, int y);
 		arb_env = new();
-		x_pos = arb_env.x_cor;
-		y_pos = arb_env.y_cor;
+		arb_env.x_cor = x;
+		arb_env.y_cor = y;
 		arb_pack = new(arb_env);
 		arbiter = new();
 		foreach(cc[i]) begin
-			cc[i] = 0;
-			buffers[i] = new();
+			cc[i] = 5;
+			stats[i] = new();
+			buffers[i] = new(stats[i]);
 		end
 	endfunction
 
-    function void updateCC(int port, int credit);
+    /*function void updateCC(int port, int credit);
         //port is direction of buffer which credit is updating
         //credit is value to add to credit counter (1 or -1)
 
@@ -66,10 +70,12 @@ class router_test;
             return buffers[buffer_num].read();
         end
     endfunction
-
+	*/
 	
 	
 	function void updateRouter(router_transaction pack);
+		flit f;
+	
 		if(pack.reset == 1) begin
 			reset();
 			return;
@@ -90,6 +96,7 @@ class router_test;
 			buffers[4].updateWrite(1, pack.l_f_i);
 		end
 		arb_pack.randomize();
+		arb_pack.reset = pack.reset;
 		arb_pack.n_arb_empty_i = buffers[0].check_empty();
 		arb_pack.s_arb_empty_i = buffers[1].check_empty();
 		arb_pack.w_arb_empty_i = buffers[2].check_empty();
@@ -119,49 +126,45 @@ class router_test;
 		foreach(outputs[i]) begin
 			outputs[i] = null;
 			valid[i] = 0;
+			credit_o[i] = 0;
 		end
-		n_credit_o = 0;
-		s_credit_o = 0;
-		w_credit_o = 0;
-		e_credit_o = 0;
-		l_credit_o = 0;
 		if(arbiter.n_read == 1) begin
 			buffers[0].updateRead(1);
-			flit f = buffers[0].peek();
+			f = buffers[0].peek();
 			outputs[arbiter.n_arb_demux_sel] = f;
-			n_credit_o = 1;
+			credit_o[0] = 1;
 			cc[arbiter.n_arb_demux_sel]--;
 			valid[arbiter.n_arb_demux_sel] = 1;
 		end
 		if(arbiter.s_read == 1) begin
 			buffers[1].updateRead(1);
-			flit f = buffers[1].peek();
+			f = buffers[1].peek();
 			outputs[arbiter.s_arb_demux_sel] = f;
-			s_credit_o = 1;
+			credit_o[1] = 1;
 			cc[arbiter.s_arb_demux_sel]--;
 			valid[arbiter.s_arb_demux_sel] = 1;
 		end
 		if(arbiter.w_read == 1) begin
 			buffers[2].updateRead(1);
-			flit f = buffers[2].peek();
+			f = buffers[2].peek();
 			outputs[arbiter.w_arb_demux_sel] = f;
-			w_credit_o = 1;
+			credit_o[2] = 1;
 			cc[arbiter.w_arb_demux_sel]--;
 			valid[arbiter.w_arb_demux_sel] = 1;
 		end
 		if(arbiter.e_read == 1) begin
 			buffers[3].updateRead(1);
-			flit f = buffers[3].peek();
+			f = buffers[3].peek();
 			outputs[arbiter.e_arb_demux_sel] = f;
-			e_credit_o = 1;
+			credit_o[3] = 1;
 			cc[arbiter.e_arb_demux_sel]--;
 			valid[arbiter.e_arb_demux_sel] = 1;
 		end
 		if(arbiter.l_read == 1) begin
 			buffers[4].updateRead(1);
-			flit f = buffers[4].peek();
+			f = buffers[4].peek();
 			outputs[arbiter.l_arb_demux_sel] = f;
-			l_credit_o = 1;
+			credit_o[4] = 1;
 			cc[arbiter.l_arb_demux_sel]--;
 			valid[arbiter.l_arb_demux_sel] = 1;
 		end
@@ -184,6 +187,15 @@ class router_test;
 		
 	
 	endfunction
+	
+	function void reset();
+		arb_pack.reset = 1;
+		arbiter.update_model(arb_pack);
+		foreach(buffers[i]) begin
+			buffers[i].update(0,0,1,null);
+			cc[i] = 5;
+		end
+	end
 	
 	
 	

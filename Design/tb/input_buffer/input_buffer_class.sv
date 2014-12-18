@@ -84,6 +84,31 @@ class input_buffer_class;
 		return ((read_pointer == write_pointer) & (valid_flits == 0));
 	endfunction
    
+	function updateWrite(bit write, flit f);
+		if(write_next) begin
+            this.write(write_flit);
+            write_next = 0;
+            stats.flits_written++;
+        end
+		if(write) begin
+            write_next = 1;
+            write_flit = new f;
+        end
+	endfunction
+	
+	function updateRead(bit read);
+		if(read_prev) begin
+            read_prev = 0;
+            read_pointer = (read_pointer + 1) % 5;
+        end
+		valid_o = 0;
+        if(read) begin
+            data_o = this.read().data;
+            valid_o = 1;
+            stats.flits_read++;
+        end      
+	endfunction
+   
     function update(bit write, bit read, bit reset, flit f);
         //Find out if reset is synchronous or asynchronous               
 
@@ -96,42 +121,42 @@ class input_buffer_class;
             reset_next = reset;
         end
 
-				if(read_prev) begin
-               read_prev = 0;
-               read_pointer = (read_pointer + 1) % 5;
-            end
+		if(read_prev) begin
+            read_prev = 0;
+            read_pointer = (read_pointer + 1) % 5;
+        end
 
-				if(write_next) begin
-                this.write(write_flit);
-                write_next = 0;
-                stats.flits_written++;
-            end
+		if(write_next) begin
+            this.write(write_flit);
+            write_next = 0;
+            stats.flits_written++;
+        end
 
-				empty_o = this.check_empty();
+		empty_o = this.check_empty();
 			
-			if(reset) begin
-                reset_next = 1;
-            end            
+		if(reset) begin
+            reset_next = 1;
+        end            
 
 
-            if(write) begin
-                write_next = 1;
-                write_flit = new f;
-            end
-				if(this.peek() != null) begin
-					data_o = this.peek().data;
-				end else
-					data_o = null;
+        if(write) begin
+            write_next = 1;
+            write_flit = new f;
+        end
+		if(this.peek() != null) begin
+			data_o = this.peek().data;
+		end else
+				data_o = null;
             
-				valid_o = 0;         
+		valid_o = 0;         
    
-            if(read) begin
-                data_o = this.read().data;
-                valid_o = 1;
-                stats.flits_read++;
-            end        
+        if(read) begin
+            data_o = this.read().data;
+            valid_o = 1;
+            stats.flits_read++;
+        end        
         
-    endfunction
+	endfunction
          
  function void compareOutput(logic[15:0] data, bit valid, bit empty,logic[2:0] buf_ram_raddr_o, logic[2:0] buf_ram_waddr_o, logic[4:0] valid_flit_o);
         if((data != data_o) || (valid != valid_o) || (empty != empty_o)) begin

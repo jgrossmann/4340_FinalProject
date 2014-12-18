@@ -1,4 +1,4 @@
-interface ifc (input bit clk);
+interface router_interface (input bit clk);
 	logic reset;
 	logic n_valid_i;
 	logic s_valid_i;

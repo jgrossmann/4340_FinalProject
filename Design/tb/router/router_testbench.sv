@@ -1,14 +1,11 @@
 `timescale 1ns/1ps
-`include "router_environment.sv"
-`include "router_transaction.sv"
-`include "router_class.sv"
-`include "router_stats.sv"
 
-program router_tb (router_interface.bench ds);
+
+program router_testbench (router_interface.bench ds);
 
     router_transaction trans;
     router_environment env;
-   router_stats stats;
+	//router_stats stats;
 	router_class my_router;
 	
     
@@ -21,7 +18,7 @@ program router_tb (router_interface.bench ds);
 			end
         trans = new(env);
         my_router = new(env.x_cor, env.y_cor);
-		checker = new(my_router);
+		//checker = new(my_router);
         //stats = new();
 		repeat(1) begin 
 			@(ds.cb)  
@@ -30,7 +27,7 @@ program router_tb (router_interface.bench ds);
 			trans.post_randomize();
 			trans.reset = 1;
 			my_router.update_model(trans);
-			trans.updateCC(my_router.sending);
+			trans.updateCC(my_router.credit_o ,my_router.valid);
 			my_router.updateCC(my_router.sending);
 			$display("%d %d\n", trans.n_arb_empty_i_rand, trans.s_arb_empty_i_rand);
 			$display("x location = %d\n", env.x_cor);

@@ -1,7 +1,7 @@
 
-class arbiter_transaction;
+class router_transaction;
 
-    arbiter_environment env;
+    router_environment env;
 	int credit_count_i [5];
 	int credit_count_e [5];
 	int packet_tracker [5];
@@ -40,11 +40,11 @@ class arbiter_transaction;
 	flit e_f_i;
 	flit l_f_i;
 	
-	flit n_f_o;
+	/*flit n_f_o;
 	flit s_f_o;
 	flit w_f_o;
 	flit e_f_o;
-	flit l_f_o;
+	flit l_f_o;*/
 	
     constraint c {
         n_valid_i_rand >= 0;
@@ -71,9 +71,9 @@ class arbiter_transaction;
 		reset_rand <= 100;
     }
 
-    function new(input arbiter_environment e);    
+    function new(input router_environment e);    
         env = e;
-		foreach(credit_count[i]) begin
+		foreach(credit_count_i[i]) begin
 			credit_count_i[i] = 5;
 			credit_count_e[i] = 5;
 			packet_tracker[i] = 0;
@@ -130,8 +130,9 @@ class arbiter_transaction;
 			l_valid_i = 0;
 		end
 		if(reset == 1) begin
-			foreach(credit_count[i]) begin
-				credit_count[i] = 5;
+			foreach(credit_count_i[i]) begin
+				credit_count_i[i] = 5;
+				credit_count_e[i] = 5;
 			end
 		end
 		if(n_valid_i) begin
@@ -142,7 +143,7 @@ class arbiter_transaction;
 				n_f_i.changeType(1);
 			end
 			packet_tracker[0] = (packet_tracker[0] + 1) % 5;
-			credit_counter_i[0]--;
+			credit_count_i[0]--;
 		end
 		if(s_valid_i) begin
 			s_f_i.randomize();
@@ -203,8 +204,16 @@ class arbiter_transaction;
     endfunction
 
 	function updateCC(int inc_i[5], int dec_e[5]);
-		foreach(dec_o[i]) begin
-			if(dec_o[i] == 1) begin
+		if(reset == 1) begin
+			foreach(credit_count_i[i]) begin
+				credit_count_i[i] = 5;
+				credit_count_e[i] = 5;
+			end
+			return;
+		end
+	
+		foreach(dec_e[i]) begin
+			if(dec_e[i] == 1) begin
 				credit_count_e[i]--;
 			end
 			if(inc_i[i] == 1) begin
