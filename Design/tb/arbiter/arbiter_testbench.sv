@@ -61,7 +61,8 @@ program arbiter_tb (arbiter_interface.bench ds);
 			ds.cb.yx_pos_i <= trans.yx_pos;
 			trans.updateCC(my_arbiter.dec);
 			@(ds.cb)  
-			reset = 0;
+			trans.reset = 0;
+			ds.cb.reset <= trans.reset;
 			@(ds.cb)  
 			$display("%t\n",$realtime);
 			
