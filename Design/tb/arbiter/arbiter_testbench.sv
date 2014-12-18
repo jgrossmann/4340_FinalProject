@@ -168,7 +168,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			ds.cb.yx_pos_i[7:0] <= trans.yx_pos;
 			trans.updateCC(my_arbiter.dec);
 			@(ds.cb)  
-			@(ds.cb)  
+			 
 			$display("%t\n",$realtime);
 			
 			//my_arbiter.updateCC(my_arbiter.sending);
@@ -281,7 +281,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			ds.cb.yx_pos_i[7:0] <= trans.yx_pos;
 			trans.updateCC(my_arbiter.dec);
 			@(ds.cb)  
-			@(ds.cb)  
+		
 			$display("%t\n",$realtime);
 			
 			//my_arbiter.updateCC(my_arbiter.sending);
