@@ -1,3 +1,5 @@
 bug - reads and credit outs are x's. Fixed by adding reset functionality (12/16)
 bug - credit out is always high
 bug - read signal was sent even when buffer was empty. fixed (12/17)
+bug - packet tracker was starting too early in betweeen new packets being sent. Fixed by stalling
+the packet tracker by 1 clock cycle after it finishes. (12/18, John).
