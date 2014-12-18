@@ -19,5 +19,9 @@ indent:
 bench: 
 	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice flit.sv environment.sv stats.sv transaction.sv input_buffer_class.sv checker.sv router_class.sv noc_class.sv -o testbench.exe
 
+view:
+	vpd2vcd vcdplus.vpd vcdplus.vcd &
+	gtkwave vcdplus.vcd &
+
 clean:
 	rm -rf *.o *~ *.vpd sim* csrc DVEfiles *daidir *exe *.key
