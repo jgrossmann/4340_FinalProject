@@ -1,0 +1,1 @@
+bug found - output was not specified to be 3 bits so only the first bit was being outputted. Fixed (12/17)
