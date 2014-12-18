@@ -23,7 +23,7 @@ enable_eff_nr #(.DATA_WIDTH(3)) ff (
 	.data_i(nhr_address_i)
 	);
 
-always comb begin
+always_comb begin
 	if(ib_empty_i | reset) begin
 		nhr_address_i = 3'b000; 
 	end

@@ -129,7 +129,7 @@ rr_register_1000 rrr_1000(
   	      .rr_priority_n_i (1'b0), 
           .rr_priority_s_i (rr_priority_1000_all), 
           .rr_priority_w_i (rr_priority_0100_all), 
-          .rr_priority_e_i (rr_priority_0100_all), 
+          .rr_priority_e_i (rr_priority_0010_all), 
           .rr_priority_l_i (rr_priority_0001_all),
           .rr_priority_to_cs_o (priority_mux_select)
 

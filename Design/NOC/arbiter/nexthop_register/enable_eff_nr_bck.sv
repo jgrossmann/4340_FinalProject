@@ -8,9 +8,9 @@ module enable_eff_nr #(parameter DATA_WIDTH = 32) (
 );
 
 	always_ff @(posedge clk) begin
-         if (reset) begin
-		 	data_o <= data_i;
-		 end if (write_enable_i) begin
+		if(reset) begin
+			data_o <= '0;
+		end else if (write_enable_i) begin
 			data_o <= data_i;
 		end
 	end

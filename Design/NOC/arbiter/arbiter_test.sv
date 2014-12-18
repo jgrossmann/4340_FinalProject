@@ -266,50 +266,55 @@ nhr_l_write_i_temp = (~ifc.l_arb_empty_i & l_pt_empty_o);
 
 end 
 
-nexthop_register nexthop_n (
+n_nexthop_register nexthop_n (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
+	   .ib_empty_i(ib_empty_n_i),
        .nhr_address_i(yx_n_addr_o_temp),
        .nhr_write_i(nhr_n_write_i_temp),  
        .nhr_address_o(nhr_n_addr_o_temp)
 
 ); 
 
-nexthop_register nexthop_s (
+s_nexthop_register nexthop_s (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
+	   .ib_empty_i(ib_empty_s_i),
        .nhr_address_i(yx_s_addr_o_temp),
        .nhr_write_i(nhr_s_write_i_temp),  
        .nhr_address_o(nhr_s_addr_o_temp)
 
 ); 
 
-nexthop_register nexthop_w (
+w_nexthop_register nexthop_w (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
+	   .ib_empty_i(ib_empty_w_i),
        .nhr_address_i(yx_w_addr_o_temp),
        .nhr_write_i(nhr_w_write_i_temp),  
        .nhr_address_o(nhr_w_addr_o_temp)
 
 ); 
 
-nexthop_register nexthop_e (
+e_nexthop_register nexthop_e (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
+	   .ib_empty_i(ib_empty_e_i),
        .nhr_address_i(yx_e_addr_o_temp),
        .nhr_write_i(nhr_e_write_i_temp),  
        .nhr_address_o(nhr_e_addr_o_temp)
 
 ); 
 
-nexthop_register nexthop_l (
+l_nexthop_register nexthop_l (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
+	   .ib_empty_i(ib_empty_l_i),
        .nhr_address_i(yx_l_addr_o_temp),
        .nhr_write_i(nhr_l_write_i_temp),  
        .nhr_address_o(nhr_l_addr_o_temp)

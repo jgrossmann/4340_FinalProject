@@ -28,7 +28,11 @@
 `include "../../NOC/arbiter/rr_overall/l_rr_processor.sv" 
 
 `include "../../NOC/arbiter/nexthop_register/enable_eff_nr.sv"
-`include "../../NOC/arbiter/nexthop_register/nexthop_register.sv" 
+`include "../../NOC/arbiter/nexthop_register/n_nexthop_register.sv" 
+`include "../../NOC/arbiter/nexthop_register/s_nexthop_register.sv" 
+`include "../../NOC/arbiter/nexthop_register/w_nexthop_register.sv" 
+`include "../../NOC/arbiter/nexthop_register/e_nexthop_register.sv" 
+`include "../../NOC/arbiter/nexthop_register/l_nexthop_register.sv" 
 `include "../../NOC/arbiter/yx_processor/yx_processor.sv" 
 
 `include "../../NOC/arbiter/packet_tracker/packet_tracker.sv" 
