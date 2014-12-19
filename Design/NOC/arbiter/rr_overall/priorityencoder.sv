@@ -1,6 +1,7 @@
 
 module priorityencoder(
-
+        
+		input rr_default_i, // 3-bit
 	    input rr_priority_n_i, 
         input rr_priority_s_i, 
         input rr_priority_w_i, 
@@ -18,6 +19,7 @@ logic [4:0] rr_priority_i_temp;
  
 logic [4:0] rr_priority_o_temp ; 
 logic [2:0] rr_priority_to_cs_o_temp; 
+
 
 	always_comb begin
 
@@ -55,7 +57,7 @@ logic [2:0] rr_priority_to_cs_o_temp;
 			
 			5'b00000:  begin 
 				rr_priority_o_temp =5'b00000;
-				rr_priority_to_cs_o_temp = 3'bxxx; 
+				rr_priority_to_cs_o_temp = rr_default_i ; 
 			end
 
 		endcase

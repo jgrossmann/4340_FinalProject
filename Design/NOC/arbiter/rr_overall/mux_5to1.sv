@@ -27,7 +27,7 @@ always_comb begin
    3'b100 : data_o_temp = data_l_i ;
    
    default : begin 
-                   data_o_temp = 4'bxxxx;            
+                   data_o_temp = 4'b0000;            
              end
    endcase
 

@@ -161,14 +161,15 @@ rr_register_1000 rrr_1000(
   ); 
 
  priorityencoder priority_enc(
-
- 	    .rr_priority_n_i (priority_mux_o[3]), 
+ 
+ 		 .rr_default_i (3'b010)
+ 	     .rr_priority_n_i (priority_mux_o[3]), 
          .rr_priority_s_i (priority_mux_o[2]), 
          .rr_priority_w_i (1'b0), 
          .rr_priority_e_i (priority_mux_o[1]), 
          .rr_priority_l_i (priority_mux_o[0]),
          .rr_priority_to_cs_o (rrp_w_priority_to_cs_o_temp),
- 	    .rr_priority_n_o (rrp_w_priority_n_o_temp),
+ 	     .rr_priority_n_o (rrp_w_priority_n_o_temp),
          .rr_priority_s_o (rrp_w_priority_s_o_temp), 
          .rr_priority_w_o (rrp_w_priority_w_o_temp), 
          .rr_priority_e_o (rrp_w_priority_e_o_temp), 
