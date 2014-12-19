@@ -216,7 +216,7 @@ program arbiter_tb (arbiter_interface.bench ds);
 			$display("local read %b\n", my_arbiter.l_read);*/
 			checkResults();
 		end
-        repeat(5) begin
+        repeat(10) begin
             
 			//trans.post_randomize();
 			//trans.reset = 1;
