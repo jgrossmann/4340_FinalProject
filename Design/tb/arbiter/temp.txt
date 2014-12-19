@@ -1,6 +1,6 @@
 Chronologic VCS simulator copyright 1991-2011
 Contains Synopsys proprietary information.
-Compiler version F-2011.12_Full64; Runtime version F-2011.12_Full64;  Dec 18 19:45 2014
+Compiler version F-2011.12_Full64; Runtime version F-2011.12_Full64;  Dec 18 20:09 2014
 VCD+ Writer F-2011.12_Full64 Copyright (c) 1991-2011 by Synopsys Inc.
 scan: RANDOM_SEED 7.000000
 scan: MAX_CYCLES 10000.000000
@@ -1140,7 +1140,7 @@ local token:
 south
 Results
 
-credit out north: dut = 0 bench =           1
+credit out north: dut = 1 bench =           1
 
 credit out south: dut = 1 bench =           1
 
@@ -1150,7 +1150,7 @@ credit out east: dut = 1 bench =           1
 
 credit out local: dut = 0 bench =           0
 
-read out north: dut = 0 bench = 0
+read out north: dut = 1 bench = 0
 
 read out south: dut = 1 bench = 1
 
@@ -1160,9 +1160,9 @@ read out east: dut = 0 bench = 1
 
 read out local: dut = 1 bench = 1
 
-mux out north: dut = 001 bench = 100
+mux out north: dut = 100 bench = 100
 
-mux out south: dut = 100 bench = 011
+mux out south: dut = 000 bench = 011
 
 mux out west: dut = 000 bench = 000
 
@@ -1178,7 +1178,7 @@ demux out west: dut = 010 bench = 011
 
 demux out east: dut = 001 bench = 001
 
-demux out local: dut = 001 bench = 000
+demux out local: dut = 000 bench = 000
 
 Inputs:
 
@@ -1267,25 +1267,25 @@ read out east: dut = 0 bench = 1
 
 read out local: dut = 1 bench = 1
 
-mux out north: dut = 001 bench = 100
+mux out north: dut = 100 bench = 100
 
-mux out south: dut = 100 bench = 011
+mux out south: dut = 000 bench = 011
 
 mux out west: dut = 000 bench = 000
 
-mux out east: dut = 000 bench = 001
+mux out east: dut = 001 bench = 001
 
 mux out local: dut = 000 bench = 001
 
-demux out north: dut = 011 bench = 010
+demux out north: dut = 001 bench = 010
 
-demux out south: dut = 000 bench = 011
+demux out south: dut = 011 bench = 011
 
 demux out west: dut = 001 bench = 011
 
 demux out east: dut = 001 bench = 001
 
-demux out local: dut = 001 bench = 000
+demux out local: dut = 000 bench = 000
 
 Inputs:
 
@@ -1360,9 +1360,9 @@ credit out south: dut = 1 bench =           1
 
 credit out west: dut = 0 bench =           0
 
-credit out east: dut = 0 bench =           1
+credit out east: dut = 1 bench =           1
 
-credit out local: dut = 1 bench =           0
+credit out local: dut = 0 bench =           0
 
 read out north: dut = 1 bench = 0
 
@@ -1374,25 +1374,25 @@ read out east: dut = 0 bench = 1
 
 read out local: dut = 1 bench = 1
 
-mux out north: dut = 001 bench = 100
+mux out north: dut = 100 bench = 100
 
-mux out south: dut = 100 bench = 011
+mux out south: dut = 000 bench = 011
 
 mux out west: dut = 000 bench = 000
 
-mux out east: dut = 000 bench = 001
+mux out east: dut = 001 bench = 001
 
 mux out local: dut = 000 bench = 001
 
-demux out north: dut = 100 bench = 010
+demux out north: dut = 001 bench = 010
 
-demux out south: dut = 000 bench = 011
+demux out south: dut = 011 bench = 011
 
 demux out west: dut = 000 bench = 011
 
 demux out east: dut = 001 bench = 001
 
-demux out local: dut = 001 bench = 000
+demux out local: dut = 000 bench = 000
 
 Inputs:
 
@@ -1467,11 +1467,11 @@ credit out south: dut = 1 bench =           1
 
 credit out west: dut = 0 bench =           0
 
-credit out east: dut = 0 bench =           1
+credit out east: dut = 1 bench =           1
 
 credit out local: dut = 1 bench =           0
 
-read out north: dut = 0 bench = 0
+read out north: dut = 1 bench = 0
 
 read out south: dut = 1 bench = 1
 
@@ -1481,28 +1481,28 @@ read out east: dut = 1 bench = 1
 
 read out local: dut = 1 bench = 1
 
-mux out north: dut = 001 bench = 100
+mux out north: dut = 100 bench = 100
 
-mux out south: dut = 100 bench = 011
+mux out south: dut = 000 bench = 011
 
 mux out west: dut = 000 bench = 000
 
-mux out east: dut = 000 bench = 001
+mux out east: dut = 001 bench = 001
 
 mux out local: dut = 011 bench = 001
 
-demux out north: dut = 100 bench = 010
+demux out north: dut = 001 bench = 010
 
-demux out south: dut = 000 bench = 011
+demux out south: dut = 011 bench = 011
 
 demux out west: dut = 001 bench = 011
 
 demux out east: dut = 100 bench = 001
 
-demux out local: dut = 001 bench = 000
+demux out local: dut = 000 bench = 000
 
 $finish at simulation time               205000
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 205000 ps
 CPU Time:      0.390 seconds;       Data structure size:   0.1Mb
-Thu Dec 18 19:45:38 2014
+Thu Dec 18 20:09:01 2014

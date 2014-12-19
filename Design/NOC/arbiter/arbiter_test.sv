@@ -258,11 +258,11 @@ yx_processor yx_proc_l (
 
 always_comb begin 
 
-nhr_n_write_i_temp = (~ifc.n_arb_empty_i & n_pt_empty_o);
-nhr_s_write_i_temp = (~ifc.s_arb_empty_i & s_pt_empty_o);  
-nhr_w_write_i_temp = (~ifc.w_arb_empty_i & w_pt_empty_o);  
-nhr_e_write_i_temp = (~ifc.e_arb_empty_i & e_pt_empty_o);  
-nhr_l_write_i_temp = (~ifc.l_arb_empty_i & l_pt_empty_o);  
+nhr_n_write_i_temp = (~ifc.n_arb_empty_i & n_pt_empty_o & ~rrp_n_priority_read_o_temp);
+nhr_s_write_i_temp = (~ifc.s_arb_empty_i & s_pt_empty_o & ~rrp_s_priority_read_o_temp);  
+nhr_w_write_i_temp = (~ifc.w_arb_empty_i & w_pt_empty_o & ~rrp_w_priority_read_o_temp);  
+nhr_e_write_i_temp = (~ifc.e_arb_empty_i & e_pt_empty_o & ~rrp_e_priority_read_o_temp);  
+nhr_l_write_i_temp = (~ifc.l_arb_empty_i & l_pt_empty_o & ~rrp_l_priority_read_o_temp);  
 
 end 
 
