@@ -20,6 +20,7 @@
 `include "../../NOC/arbiter/rr_overall/rr_register/rr_register_0100.sv" 
 `include "../../NOC/arbiter/rr_overall/rr_register/eff_rr_1000.sv" 
 `include "../../NOC/arbiter/rr_overall/rr_register/rr_register_1000.sv" 
+`include "../../NOC/arbiter/rr_overall/eff_p_to_mux.sv" 
 
 `include "../../NOC/arbiter/rr_overall/n_rr_processor.sv" 
 `include "../../NOC/arbiter/rr_overall/s_rr_processor.sv" 
