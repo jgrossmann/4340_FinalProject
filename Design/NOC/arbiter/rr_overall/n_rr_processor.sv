@@ -125,8 +125,7 @@ rr_register_1000 rrr_1000(
  logic [3:0] priority_mux_o; 
  
  priorityencoder_to_mux priority_enc_to_mux(
-			.clk,
-          .rr_change_order_i(rr_register_change_order_i),
+
   	      .rr_priority_n_i (1'b0), 
           .rr_priority_s_i (rr_priority_1000_all), 
           .rr_priority_w_i (rr_priority_0100_all), 
@@ -149,8 +148,7 @@ rr_register_1000 rrr_1000(
  ); 
 
 priorityencoder priority_enc(
-		
-		.rr_default_i (3'b000),
+		.rr_default_i(3'b001),
 	    .rr_priority_n_i (1'b0), 
         .rr_priority_s_i (priority_mux_o[3]), 
         .rr_priority_w_i (priority_mux_o[2]), 

@@ -116,6 +116,11 @@ logic rrp_n_priority_s_o_temp;
 logic rrp_n_priority_w_o_temp;
 logic rrp_n_priority_e_o_temp;
 logic rrp_n_priority_l_o_temp;
+logic rrp_n_priority_n_o_temp_test;
+logic rrp_n_priority_s_o_temp_test;
+logic rrp_n_priority_w_o_temp_test;
+logic rrp_n_priority_e_o_temp_test;
+logic rrp_n_priority_l_o_temp_test;
 logic [2:0] rrp_n_priority_to_cs_o_temp;
 
 logic rrp_s_priority_n_o_temp;
@@ -123,6 +128,11 @@ logic rrp_s_priority_s_o_temp;
 logic rrp_s_priority_w_o_temp;
 logic rrp_s_priority_e_o_temp;
 logic rrp_s_priority_l_o_temp;
+logic rrp_s_priority_n_o_temp_test;
+logic rrp_s_priority_s_o_temp_test;
+logic rrp_s_priority_w_o_temp_test;
+logic rrp_s_priority_e_o_temp_test;
+logic rrp_s_priority_l_o_temp_test;
 logic [2:0] rrp_s_priority_to_cs_o_temp;
 
 logic rrp_w_priority_n_o_temp;
@@ -130,6 +140,11 @@ logic rrp_w_priority_s_o_temp;
 logic rrp_w_priority_w_o_temp;
 logic rrp_w_priority_e_o_temp;
 logic rrp_w_priority_l_o_temp;
+logic rrp_w_priority_n_o_temp_test;
+logic rrp_w_priority_s_o_temp_test;
+logic rrp_w_priority_w_o_temp_test;
+logic rrp_w_priority_e_o_temp_test;
+logic rrp_w_priority_l_o_temp_test;
 logic [2:0] rrp_w_priority_to_cs_o_temp;
 
 logic rrp_e_priority_n_o_temp;
@@ -137,6 +152,11 @@ logic rrp_e_priority_s_o_temp;
 logic rrp_e_priority_w_o_temp;
 logic rrp_e_priority_e_o_temp;
 logic rrp_e_priority_l_o_temp;
+logic rrp_e_priority_n_o_temp_test;
+logic rrp_e_priority_s_o_temp_test;
+logic rrp_e_priority_w_o_temp_test;
+logic rrp_e_priority_e_o_temp_test;
+logic rrp_e_priority_l_o_temp_test;
 logic [2:0] rrp_e_priority_to_cs_o_temp;
 
 logic rrp_l_priority_n_o_temp;
@@ -144,6 +164,11 @@ logic rrp_l_priority_s_o_temp;
 logic rrp_l_priority_w_o_temp;
 logic rrp_l_priority_e_o_temp;
 logic rrp_l_priority_l_o_temp;
+logic rrp_l_priority_n_o_temp_test;
+logic rrp_l_priority_s_o_temp_test;
+logic rrp_l_priority_w_o_temp_test;
+logic rrp_l_priority_e_o_temp_test;
+logic rrp_l_priority_l_o_temp_test;
 logic [2:0] rrp_l_priority_to_cs_o_temp;
 
 // Temp variable for output read signal, the direction is input-referred. 
@@ -511,17 +536,43 @@ cc_credit_l_o_temp = 1'b0;
 
 end else begin 
 
-rrp_n_priority_read_o_temp = (~ifc.n_arb_empty_i)&(rrp_s_priority_n_o_temp | rrp_w_priority_n_o_temp | rrp_e_priority_n_o_temp | rrp_l_priority_n_o_temp) ;  
-rrp_s_priority_read_o_temp = (~ifc.s_arb_empty_i)&(rrp_n_priority_s_o_temp | rrp_w_priority_s_o_temp | rrp_e_priority_s_o_temp | rrp_l_priority_s_o_temp) ; 
-rrp_w_priority_read_o_temp = (~ifc.w_arb_empty_i)&(rrp_n_priority_w_o_temp | rrp_s_priority_w_o_temp | rrp_e_priority_w_o_temp | rrp_l_priority_w_o_temp) ;   
-rrp_e_priority_read_o_temp = (~ifc.e_arb_empty_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
-rrp_l_priority_read_o_temp = (~ifc.l_arb_empty_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
+rrp_s_priority_n_o_temp_test = rrp_s_priority_n_o_temp & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_n_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_n_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_n_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_n_addr_o_temp))); 
+rrp_w_priority_n_o_temp_test = rrp_w_priority_n_o_temp & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_n_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_n_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_n_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_n_addr_o_temp))); 
+rrp_e_priority_n_o_temp_test = rrp_e_priority_n_o_temp & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_n_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_n_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_n_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_n_addr_o_temp))); 
+rrp_l_priority_n_o_temp_test = rrp_l_priority_n_o_temp & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_n_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_n_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_n_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_n_addr_o_temp))); 
 
-cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_e_o_temp | rrp_n_priority_l_o_temp;
-cc_credit_s_o_temp = rrp_s_priority_n_o_temp | rrp_s_priority_w_o_temp | rrp_s_priority_e_o_temp | rrp_s_priority_l_o_temp;
-cc_credit_w_o_temp = rrp_w_priority_n_o_temp | rrp_w_priority_s_o_temp | rrp_w_priority_e_o_temp | rrp_w_priority_l_o_temp;
-cc_credit_e_o_temp = rrp_e_priority_n_o_temp | rrp_e_priority_s_o_temp | rrp_e_priority_w_o_temp | rrp_e_priority_l_o_temp;
-cc_credit_l_o_temp = rrp_l_priority_n_o_temp | rrp_l_priority_s_o_temp | rrp_l_priority_w_o_temp | rrp_l_priority_e_o_temp;
+rrp_n_priority_s_o_temp_test = rrp_n_priority_s_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_s_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_s_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_s_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_s_addr_o_temp))); 
+rrp_w_priority_s_o_temp_test = rrp_w_priority_s_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_s_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_s_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_s_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_s_addr_o_temp))); 
+rrp_e_priority_s_o_temp_test = rrp_e_priority_s_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_s_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_s_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_s_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_s_addr_o_temp))); 
+rrp_l_priority_s_o_temp_test = rrp_l_priority_s_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_s_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_s_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_s_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_s_addr_o_temp))); 
+
+rrp_n_priority_w_o_temp_test = rrp_n_priority_w_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_w_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_w_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_w_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_w_addr_o_temp))); 
+rrp_s_priority_w_o_temp_test = rrp_s_priority_w_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_w_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_w_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_w_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_w_addr_o_temp))); 
+rrp_e_priority_w_o_temp_test = rrp_e_priority_w_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_w_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_w_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_w_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_w_addr_o_temp))); 
+rrp_l_priority_w_o_temp_test = rrp_l_priority_w_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_w_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_w_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_w_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_w_addr_o_temp))); 
+
+rrp_n_priority_e_o_temp_test = rrp_n_priority_e_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_e_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_e_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_e_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_e_addr_o_temp))); 
+rrp_s_priority_e_o_temp_test = rrp_s_priority_e_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_e_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_e_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_e_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_e_addr_o_temp))); 
+rrp_w_priority_e_o_temp_test = rrp_w_priority_e_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_e_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_e_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_e_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_e_addr_o_temp))); 
+rrp_l_priority_e_o_temp_test = rrp_l_priority_e_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_e_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_e_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_e_addr_o_temp))) & ((l_pt_empty_o)|(~(nhr_l_addr_o_temp==nhr_e_addr_o_temp))); 
+
+rrp_n_priority_l_o_temp_test = rrp_n_priority_l_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_l_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_l_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_l_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_l_addr_o_temp))); 
+rrp_s_priority_l_o_temp_test = rrp_s_priority_l_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_l_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_l_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_l_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_l_addr_o_temp))); 
+rrp_w_priority_l_o_temp_test = rrp_w_priority_l_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_l_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_l_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_l_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_l_addr_o_temp))); 
+rrp_e_priority_l_o_temp_test = rrp_e_priority_l_o_temp & ((n_pt_empty_o)|(~(nhr_n_addr_o_temp==nhr_l_addr_o_temp))) & ((w_pt_empty_o)|(~(nhr_w_addr_o_temp==nhr_l_addr_o_temp))) & ((e_pt_empty_o)|(~(nhr_e_addr_o_temp==nhr_l_addr_o_temp))) & ((s_pt_empty_o)|(~(nhr_s_addr_o_temp==nhr_l_addr_o_temp))); 
+
+
+rrp_n_priority_read_o_temp = (~n_pt_empty_o)|((~ifc.n_arb_empty_i)&(rrp_s_priority_n_o_temp_test | rrp_w_priority_n_o_temp_test | rrp_e_priority_n_o_temp_test | rrp_l_priority_n_o_temp_test));
+rrp_s_priority_read_o_temp = (~s_pt_empty_o)|((~ifc.s_arb_empty_i)&(rrp_n_priority_s_o_temp_test | rrp_w_priority_s_o_temp_test | rrp_e_priority_s_o_temp_test | rrp_l_priority_s_o_temp_test));
+rrp_w_priority_read_o_temp = (~w_pt_empty_o)|((~ifc.w_arb_empty_i)&(rrp_n_priority_w_o_temp_test | rrp_s_priority_w_o_temp_test | rrp_e_priority_w_o_temp_test | rrp_l_priority_w_o_temp_test));
+rrp_e_priority_read_o_temp = (~e_pt_empty_o)|((~ifc.e_arb_empty_i)&(rrp_n_priority_e_o_temp_test | rrp_s_priority_e_o_temp_test | rrp_w_priority_e_o_temp_test | rrp_l_priority_e_o_temp_test));
+rrp_l_priority_read_o_temp = (~l_pt_empty_o)|((~ifc.l_arb_empty_i)&(rrp_n_priority_l_o_temp_test | rrp_s_priority_l_o_temp_test | rrp_w_priority_l_o_temp_test | rrp_e_priority_l_o_temp_test));
+
+cc_credit_n_o_temp = rrp_n_priority_s_o_temp_test | rrp_n_priority_w_o_temp_test | rrp_n_priority_e_o_temp_test | rrp_n_priority_l_o_temp_test;
+cc_credit_s_o_temp = rrp_s_priority_n_o_temp_test | rrp_s_priority_w_o_temp_test | rrp_s_priority_e_o_temp_test | rrp_s_priority_l_o_temp_test;
+cc_credit_w_o_temp = rrp_w_priority_n_o_temp_test | rrp_w_priority_s_o_temp_test | rrp_w_priority_e_o_temp_test | rrp_w_priority_l_o_temp_test;
+cc_credit_e_o_temp = rrp_e_priority_n_o_temp_test | rrp_e_priority_s_o_temp_test | rrp_e_priority_w_o_temp_test | rrp_e_priority_l_o_temp_test;
+cc_credit_l_o_temp = rrp_l_priority_n_o_temp_test | rrp_l_priority_s_o_temp_test | rrp_l_priority_w_o_temp_test | rrp_l_priority_e_o_temp_test;
 
 end
 

@@ -68,7 +68,7 @@ logic [4:0] data_o_temp;
 			end
 			
 			5'b00000:  begin 
-				rr_priority_to_cs_o_temp = 3'bxxx;
+				rr_priority_to_cs_o_temp = 3'b111;
 				data_i_temp = 5'b11111; 
 			end
 

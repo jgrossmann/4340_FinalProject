@@ -1,6 +1,6 @@
 class network;
 
-	router r [4][4];
+	router_class r [4][4];
 	flit fs [4][4]; //stores flits that have just arrived at their final destination. This will be used by the checker to check for correctness
 	int cc_updates [4][4][4];
 	int local_counter[4][4];
