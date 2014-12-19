@@ -1,8 +1,8 @@
-/*
-`include "mux_ram.sv"
-`include "decoder_ram.sv"
-`include "ff_ram.sv"
-*/
+
+//`include "modules/mux_ram.sv"
+//`include "modules/decoder_ram.sv"
+//`include "modulesff_ram.sv"
+
 module ram #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=3, parameter DEPTH=5, parameter SIZE=(DEPTH*DATA_WIDTH) ) (
 
 input clk, 
@@ -11,7 +11,7 @@ input [ADDR_WIDTH-1:0] ram_waddr_i,
 input ram_wenable_i,
 input [DATA_WIDTH-1:0] ram_wdata_i,
 input [ADDR_WIDTH-1:0] ram_raddr_i, 
-output [DATA_WIDTH-1:0] ram_rdata_o,  
+output [DATA_WIDTH-1:0] ram_rdata_o,
 output [DEPTH-1:0] valid_flit_o
 );
 

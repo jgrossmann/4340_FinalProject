@@ -1,6 +1,7 @@
 // Including files from sub-blocks 
 
 // Files for arbiter 
+/*
 `include "../.././arbiter/arbiter.sv"
 `include "../.././arbiter/rr_overall/rr_comparator/n_rr_comparator.sv" 
 `include "../.././arbiter/rr_overall/rr_comparator/s_rr_comparator.sv" 
@@ -52,7 +53,7 @@
 
 `include "../.././credit_counter/eff_cc.sv"
 `include "../.././credit_counter/credit_counter.sv"
-
+*/
 // This is the unit-router module for inner router 
 
 module ne_corner_router

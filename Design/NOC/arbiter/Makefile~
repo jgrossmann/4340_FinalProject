@@ -11,9 +11,7 @@ all:
 test:
 	vcs -full64 -sverilog -PP +define+VPD $(DUV).sv $(TEST).sv -o $(BENCH)
 	./$(BENCH)
-
-dut:    
-	vcs -full64 -sverilog -PP +define+VPD "arbiter.sv"
+	
 view:
 	vpd2vcd vcdplus.vpd vcdplus.vcd &
 	gtkwave vcdplus.vcd &
