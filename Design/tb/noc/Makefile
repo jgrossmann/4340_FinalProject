@@ -19,8 +19,7 @@ indent:
 	rm *~
 
 bench: 
-	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice "noc_top.sv" -o testbench.exe
-
+	vcs -full64 -cm line+tgl+cond+fsm+branch+assert -debug_pp -sverilog -notice +lint=all,noVCDE +define+SV +define+VPD noc_top.sv -o testbench.exe
 view:	
 	vpd2vcd vcdplus.vpd vcdplus.vcd &
 	gtkwave vcdplus.vcd &

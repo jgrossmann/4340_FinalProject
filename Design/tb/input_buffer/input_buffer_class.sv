@@ -13,6 +13,7 @@ class input_buffer_class;
     bit reset_next;
 	int valid_flits;
 	bit read_prev;
+	flit temp;
 
     function new(buffer_stats s);
         stats = s;
@@ -103,9 +104,14 @@ class input_buffer_class;
         end
 		valid_o = 0;
         if(read) begin
-            data_o = this.read().data;
-            valid_o = 1;
-            stats.flits_read++;
+				temp = this.read();
+				if(temp != null) begin
+					data_o = this.read().data;
+				end else begin
+					data_o = 0;
+				end
+				valid_o = 1;
+				stats.flits_read++;
         end      
 	endfunction
    
