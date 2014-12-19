@@ -1,0 +1,4919 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: l_nexthop_register</title>
+<link type="text/css" rel="stylesheet" href=".urg.css">
+<script type="text/javascript" src=".sortable.js"></script></head>
+<body><center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="modlist.html#tag_l_nexthop_register" >l_nexthop_register</a></span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="file:///home/jg3538/4340_FinalProject/Design/tb/noc/../../NOC/arbiter/nexthop_register/l_nexthop_register.sv" >/home/jg3538/4340_FinalProject/Design/tb/noc/../../NOC/arbiter/nexthop_register/l_nexthop_register.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_98_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_98_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_98_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_98" >noc_top.dut.router_00.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_99_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_99_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_99_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_99" >noc_top.dut.router_30.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_100_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_100_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_100_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_100" >noc_top.dut.router_03.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_101_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_101_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_101_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_101" >noc_top.dut.router_33.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_102_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_102_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_102_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_102" >noc_top.dut.router_01.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_103_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_103_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_103_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_103" >noc_top.dut.router_02.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_104_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_104_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_104_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_104" >noc_top.dut.router_31.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_105_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_105_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_105_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_105" >noc_top.dut.router_32.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_106_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_106_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_106_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_106" >noc_top.dut.router_10.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_107_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_107_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_107_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_107" >noc_top.dut.router_20.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_108_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_108_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_108_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_108" >noc_top.dut.router_13.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_109_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_109_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_109_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_109" >noc_top.dut.router_23.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_110_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_110_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_110_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_110" >noc_top.dut.router_11.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_111_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_111_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_111_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_111" >noc_top.dut.router_12.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_112_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_112_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_112_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_112" >noc_top.dut.router_21.arbiter_inner.nexthop_l</a></td>
+</tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_113_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_113_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_113_Branch" > 50.00</a></td>
+<td><a href="mod4.html#inst_tag_113" >noc_top.dut.router_22.arbiter_inner.nexthop_l</a></td>
+</tr></table></div>
+<br clear=all>
+<hr>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod4.html" >l_nexthop_register</a><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+Go to <a href="mod4.html" >top</a>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod4.html" >l_nexthop_register</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod4.html" >top</a>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod4.html" >l_nexthop_register</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod4.html" >top</a>
+<hr>
+<a name="inst_tag_98"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy1.html#tag_urg_inst_98" >noc_top.dut.router_00.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_98_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_98_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_98_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1229" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1426" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_98_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_98" >noc_top.dut.router_00.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_98" >Go to Instance</a><hr>
+<a name="inst_tag_98_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_98" >noc_top.dut.router_00.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_98" >Go to Instance</a><hr>
+<a name="inst_tag_98_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_98" >noc_top.dut.router_00.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_98" >Go to Instance</a><hr>
+<a name="inst_tag_99"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy16.html#tag_urg_inst_99" >noc_top.dut.router_30.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_99_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_99_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_99_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1230" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1431" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_99_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_99" >noc_top.dut.router_30.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_99" >Go to Instance</a><hr>
+<a name="inst_tag_99_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_99" >noc_top.dut.router_30.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_99" >Go to Instance</a><hr>
+<a name="inst_tag_99_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_99" >noc_top.dut.router_30.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_99" >Go to Instance</a><hr>
+<a name="inst_tag_100"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy11.html#tag_urg_inst_100" >noc_top.dut.router_03.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_100_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_100_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_100_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1231" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1436" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_100_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_100" >noc_top.dut.router_03.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_100" >Go to Instance</a><hr>
+<a name="inst_tag_100_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_100" >noc_top.dut.router_03.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_100" >Go to Instance</a><hr>
+<a name="inst_tag_100_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_100" >noc_top.dut.router_03.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_100" >Go to Instance</a><hr>
+<a name="inst_tag_101"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy8.html#tag_urg_inst_101" >noc_top.dut.router_33.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_101_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_101_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_101_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1232" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1441" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_101_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_101" >noc_top.dut.router_33.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_101" >Go to Instance</a><hr>
+<a name="inst_tag_101_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_101" >noc_top.dut.router_33.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_101" >Go to Instance</a><hr>
+<a name="inst_tag_101_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_101" >noc_top.dut.router_33.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_101" >Go to Instance</a><hr>
+<a name="inst_tag_102"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy12.html#tag_urg_inst_102" >noc_top.dut.router_01.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_102_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_102_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_102_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1233" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1446" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_102_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_102" >noc_top.dut.router_01.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_102" >Go to Instance</a><hr>
+<a name="inst_tag_102_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_102" >noc_top.dut.router_01.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_102" >Go to Instance</a><hr>
+<a name="inst_tag_102_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_102" >noc_top.dut.router_01.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_102" >Go to Instance</a><hr>
+<a name="inst_tag_103"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy13.html#tag_urg_inst_103" >noc_top.dut.router_02.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_103_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_103_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_103_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1234" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1451" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_103_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_103" >noc_top.dut.router_02.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_103" >Go to Instance</a><hr>
+<a name="inst_tag_103_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_103" >noc_top.dut.router_02.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_103" >Go to Instance</a><hr>
+<a name="inst_tag_103_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_103" >noc_top.dut.router_02.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_103" >Go to Instance</a><hr>
+<a name="inst_tag_104"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy9.html#tag_urg_inst_104" >noc_top.dut.router_31.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_104_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_104_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_104_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1235" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1456" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_104_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_104" >noc_top.dut.router_31.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_104" >Go to Instance</a><hr>
+<a name="inst_tag_104_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_104" >noc_top.dut.router_31.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_104" >Go to Instance</a><hr>
+<a name="inst_tag_104_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_104" >noc_top.dut.router_31.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_104" >Go to Instance</a><hr>
+<a name="inst_tag_105"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy10.html#tag_urg_inst_105" >noc_top.dut.router_32.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_105_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_105_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_105_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1236" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1461" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_105_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_105" >noc_top.dut.router_32.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_105" >Go to Instance</a><hr>
+<a name="inst_tag_105_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_105" >noc_top.dut.router_32.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_105" >Go to Instance</a><hr>
+<a name="inst_tag_105_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_105" >noc_top.dut.router_32.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_105" >Go to Instance</a><hr>
+<a name="inst_tag_106"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy14.html#tag_urg_inst_106" >noc_top.dut.router_10.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_106_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_106_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_106_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1237" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1466" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_106_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_106" >noc_top.dut.router_10.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_106" >Go to Instance</a><hr>
+<a name="inst_tag_106_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_106" >noc_top.dut.router_10.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_106" >Go to Instance</a><hr>
+<a name="inst_tag_106_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_106" >noc_top.dut.router_10.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_106" >Go to Instance</a><hr>
+<a name="inst_tag_107"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy15.html#tag_urg_inst_107" >noc_top.dut.router_20.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_107_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_107_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_107_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1238" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1471" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_107_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_107" >noc_top.dut.router_20.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_107" >Go to Instance</a><hr>
+<a name="inst_tag_107_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_107" >noc_top.dut.router_20.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_107" >Go to Instance</a><hr>
+<a name="inst_tag_107_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_107" >noc_top.dut.router_20.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_107" >Go to Instance</a><hr>
+<a name="inst_tag_108"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy2.html#tag_urg_inst_108" >noc_top.dut.router_13.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_108_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_108_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_108_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1239" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1476" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_108_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_108" >noc_top.dut.router_13.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_108" >Go to Instance</a><hr>
+<a name="inst_tag_108_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_108" >noc_top.dut.router_13.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_108" >Go to Instance</a><hr>
+<a name="inst_tag_108_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_108" >noc_top.dut.router_13.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_108" >Go to Instance</a><hr>
+<a name="inst_tag_109"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy3.html#tag_urg_inst_109" >noc_top.dut.router_23.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_109_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_109_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_109_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1240" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1481" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_109_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_109" >noc_top.dut.router_23.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_109" >Go to Instance</a><hr>
+<a name="inst_tag_109_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_109" >noc_top.dut.router_23.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_109" >Go to Instance</a><hr>
+<a name="inst_tag_109_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_109" >noc_top.dut.router_23.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_109" >Go to Instance</a><hr>
+<a name="inst_tag_110"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy4.html#tag_urg_inst_110" >noc_top.dut.router_11.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_110_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_110_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_110_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1241" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1486" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_110_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_110" >noc_top.dut.router_11.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_110" >Go to Instance</a><hr>
+<a name="inst_tag_110_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_110" >noc_top.dut.router_11.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_110" >Go to Instance</a><hr>
+<a name="inst_tag_110_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_110" >noc_top.dut.router_11.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_110" >Go to Instance</a><hr>
+<a name="inst_tag_111"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy5.html#tag_urg_inst_111" >noc_top.dut.router_12.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_111_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_111_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_111_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1242" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1491" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_111_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_111" >noc_top.dut.router_12.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_111" >Go to Instance</a><hr>
+<a name="inst_tag_111_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_111" >noc_top.dut.router_12.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_111" >Go to Instance</a><hr>
+<a name="inst_tag_111_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_111" >noc_top.dut.router_12.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_111" >Go to Instance</a><hr>
+<a name="inst_tag_112"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy6.html#tag_urg_inst_112" >noc_top.dut.router_21.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_112_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_112_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_112_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1243" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1496" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_112_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_112" >noc_top.dut.router_21.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_112" >Go to Instance</a><hr>
+<a name="inst_tag_112_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_112" >noc_top.dut.router_21.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_112" >Go to Instance</a><hr>
+<a name="inst_tag_112_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_112" >noc_top.dut.router_21.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_112" >Go to Instance</a><hr>
+<a name="inst_tag_113"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy7.html#tag_urg_inst_113" >noc_top.dut.router_22.arbiter_inner.nexthop_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"><a href="mod4.html#inst_tag_113_Line" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt"><a href="mod4.html#inst_tag_113_Toggle" >  5.56</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod4.html#inst_tag_113_Branch" > 50.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s3 cl rt"> 37.65</td>
+<td class="s5 cl rt"> 55.56</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  7.41</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 38.52</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  5.56</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod4.html" >l_nexthop_register</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s4 cl rt"> 42.87</td>
+<td class="s7 cl rt"> 78.26</td>
+<td class="wht cl rt"></td>
+<td class="s0 cl rt">  0.36</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod29.html#inst_tag_1244" >arbiter_inner</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s3 cl rt"> 37.04</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 11.11</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td><a href="mod34_0.html#inst_tag_1501" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_113_Line"></a>
+<b>Line Coverage for Instance : <a href="mod4.html#inst_tag_113" >noc_top.dut.router_22.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s6"><td class="lf">TOTAL<td><td>5<td>3<td>60.00
+<tr class="s6"><td class="lf">ALWAYS<td>31<td>5<td>3<td>60.00
+</table>
+<pre class="code"><br clear=all>
+30                      always_comb begin
+31         1/1          	if(pt_almost_done_i | ib_empty_i | reset) begin
+<font color = "red">32         0/1     ==>  		nhr_address_i_temp = 3'b100; </font>
+<font color = "red">33         0/1     ==>  		nhr_write_i_temp = 1'b1; </font>
+34                      		
+35                      	end
+36                      	
+37                      	else begin
+38                      	
+39         1/1          	nhr_address_i_temp = nhr_address_i; 
+40         1/1          	nhr_write_i_temp = nhr_write_i; 
+</pre>
+<br clear=all>
+<a href="mod4.html#inst_tag_113" >Go to Instance</a><hr>
+<a name="inst_tag_113_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod4.html#inst_tag_113" >noc_top.dut.router_22.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s1">
+<td>Totals</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+<td class="rt">10.00 </td>
+</tr><tr class="s0">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">2</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr><tr class="s0">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+<td class="rt">5.56  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s1">
+<td>Ports</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+<td class="rt">14.29 </td>
+</tr><tr class="s0">
+<td>Port Bits</td>
+<td class="rt">22</td>
+<td class="rt">2</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr><tr class="s0">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+<td class="rt">9.09  </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td>Signal Bits</td>
+<td class="rt">14</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s0">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">7</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ib_empty_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>pt_almost_done_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_i[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_write_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>nhr_address_o[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>data_o_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_address_i_temp[2:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nhr_write_i_temp</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_113" >Go to Instance</a><hr>
+<a name="inst_tag_113_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod4.html#inst_tag_113" >noc_top.dut.router_22.arbiter_inner.nexthop_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">31</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+31         	if(pt_almost_done_i | ib_empty_i | reset) begin
+           	<font color = "red">-1-</font>  
+32         		nhr_address_i_temp = 3'b100; 
+           <font color = "red">		==></font>
+33         		nhr_write_i_temp = 1'b1; 
+34         		
+35         	end
+36         	
+37         	else begin
+38         	
+39         	nhr_address_i_temp = nhr_address_i; 
+           <font color = "green">	==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod4.html#inst_tag_113" >Go to Instance</a><br clear=all>
+<hr>
+<center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<br clear=all>
+<br clear=all>
+<table align=center><tr><td class="s0 cl">0%
+<td class="s1 cl">10%
+<td class="s2 cl">20%
+<td class="s3 cl">30%
+<td class="s4 cl">40%
+<td class="s5 cl">50%
+<td class="s6 cl">60%
+<td class="s7 cl">70%
+<td class="s8 cl">80%
+<td class="s9 cl">90%
+<td class="s10 cl">100%</table></body>
+</html>

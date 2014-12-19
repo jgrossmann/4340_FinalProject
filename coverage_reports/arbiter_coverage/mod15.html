@@ -1,0 +1,2511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: priorityencoder_to_mux</title>
+<link type="text/css" rel="stylesheet" href=".urg.css">
+<script type="text/javascript" src=".sortable.js"></script></head>
+<body><center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="modlist.html#tag_priorityencoder_to_mux" >priorityencoder_to_mux</a></span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 96.30</td>
+<td class="s10 cl rt"><a href="mod15.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod15.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod15.html#Branch" > 88.89</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="file:///home/yss2117/4340_FinalProject/Design/tb/arbiter/../../NOC/arbiter/rr_overall/priorityencoder_to_mux.sv" >/home/yss2117/4340_FinalProject/Design/tb/arbiter/../../NOC/arbiter/rr_overall/priorityencoder_to_mux.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s7 cl rt"> 71.85</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_35_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod15.html#inst_tag_35_Toggle" > 45.45</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_35_Branch" > 77.78</a></td>
+<td><a href="mod15.html#inst_tag_35" >arbiter_top.dut.nproc.priority_enc_to_mux</a></td>
+</tr><tr>
+<td class="s7 cl rt"> 71.85</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_36_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod15.html#inst_tag_36_Toggle" > 45.45</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_36_Branch" > 77.78</a></td>
+<td><a href="mod15.html#inst_tag_36" >arbiter_top.dut.sproc.priority_enc_to_mux</a></td>
+</tr><tr>
+<td class="s8 cl rt"> 88.01</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_37_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_37_Toggle" > 93.94</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_37_Branch" > 77.78</a></td>
+<td><a href="mod15.html#inst_tag_37" >arbiter_top.dut.wproc.priority_enc_to_mux</a></td>
+</tr><tr>
+<td class="s8 cl rt"> 88.01</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_38_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_38_Toggle" > 93.94</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_38_Branch" > 77.78</a></td>
+<td><a href="mod15.html#inst_tag_38" >arbiter_top.dut.eproc.priority_enc_to_mux</a></td>
+</tr><tr>
+<td class="s8 cl rt"> 88.01</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_39_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_39_Toggle" > 93.94</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_39_Branch" > 77.78</a></td>
+<td><a href="mod15.html#inst_tag_39" >arbiter_top.dut.lproc.priority_enc_to_mux</a></td>
+</tr></table></div>
+<br clear=all>
+<hr>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod15.html" >priorityencoder_to_mux</a><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>26<td>26<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>30<td>26<td>26<td>100.00
+</table>
+<pre class="code"><br clear=all>
+29                      
+30         1/1           rr_priority_i_temp [4] = rr_priority_n_i;
+31         1/1           rr_priority_i_temp [3] = rr_priority_s_i; 
+32         1/1           rr_priority_i_temp [2] = rr_priority_w_i; 
+33         1/1           rr_priority_i_temp [1] = rr_priority_e_i;
+34         1/1           rr_priority_i_temp [0] = rr_priority_l_i;  
+35                       
+36         1/1          	temp[4] = rr_change_order_i;
+37         1/1          temp[3] = rr_change_order_i;
+38         1/1          temp[2] = rr_change_order_i;
+39         1/1          temp[1] = rr_change_order_i;
+40         1/1          temp[0] = rr_change_order_i;
+41                      
+42                      
+43         1/1           if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+44         1/1           	data_i_temp = 5'b11111;
+45                      // end else begin
+46                      //	data_i_temp = data_o_temp;
+47                       end
+                        MISSING_ELSE
+48         1/1           		rr_priority_i_temp = (rr_priority_i_temp &amp; data_o_temp);
+49         1/1          		casex (rr_priority_i_temp)
+50                      			5'b1xxxx:  begin 
+51         1/1          				rr_priority_to_cs_o_temp = 3'b000; 
+52         1/1          				data_i_temp = 5'b10000;
+53                      			end 
+54                      
+55                      			5'b01xxx:  begin 
+56         1/1          				rr_priority_to_cs_o_temp = 3'b001;
+57         1/1          				data_i_temp = 5'b01000; 
+58                      			end
+59                      
+60                                  5'b001xx:  begin 
+61         1/1          				rr_priority_to_cs_o_temp = 3'b010;
+62         1/1          				data_i_temp = 5'b00100; 
+63                      			end
+64                      
+65                       			5'b0001x:  begin 
+66         1/1          				rr_priority_to_cs_o_temp = 3'b011;
+67         1/1          				data_i_temp = 5'b00010; 
+68                      			end
+69                      
+70                      			5'b00001:  begin 
+71         1/1          				rr_priority_to_cs_o_temp = 3'b100;
+72         1/1          				data_i_temp = 5'b00001;
+73                      			end
+74                      			
+75                      			5'b00000:  begin 
+76         1/1          				rr_priority_to_cs_o_temp = 3'b111;
+77         1/1          				data_i_temp = 5'b11111; 
+78                      			end
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+</pre>
+<br clear=all>
+Go to <a href="mod15.html" >top</a>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod15.html" >priorityencoder_to_mux</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">13</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">66</td>
+<td class="rt">66</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">33</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">33</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">20</td>
+<td class="rt">20</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">46</td>
+<td class="rt">46</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">23</td>
+<td class="rt">23</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">23</td>
+<td class="rt">23</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_n_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_s_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_w_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_e_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_l_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_change_order_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_to_cs_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>rr_priority_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rr_priority_to_cs_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_o_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod15.html" >top</a>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod15.html" >priorityencoder_to_mux</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Branches</td>
+<td></td>
+<td class="rt">9</td>
+<td class="rt">8</td>
+<td class="rt">88.89 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">43</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s8">
+<td>CASE</td>
+<td class="rt">49</td>
+<td class="rt">7</td>
+<td class="rt">6</td>
+<td class="rt">85.71 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+43          if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+            <font color = "green">-1-</font>  
+44          	data_i_temp = 5'b11111;
+           <font color = "green"> 	==></font>
+45         // end else begin
+46         //	data_i_temp = data_o_temp;
+47          end
+            MISSING_ELSE
+           <font color = "green"> ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+49         		casex (rr_priority_i_temp)
+           		<font color = "red">-1-</font>  
+50         			5'b1xxxx:  begin 
+51         				rr_priority_to_cs_o_temp = 3'b000; 
+           <font color = "green">				==></font>
+52         				data_i_temp = 5'b10000;
+53         			end 
+54         
+55         			5'b01xxx:  begin 
+56         				rr_priority_to_cs_o_temp = 3'b001;
+           <font color = "green">				==></font>
+57         				data_i_temp = 5'b01000; 
+58         			end
+59         
+60                     5'b001xx:  begin 
+61         				rr_priority_to_cs_o_temp = 3'b010;
+           <font color = "green">				==></font>
+62         				data_i_temp = 5'b00100; 
+63         			end
+64         
+65          			5'b0001x:  begin 
+66         				rr_priority_to_cs_o_temp = 3'b011;
+           <font color = "green">				==></font>
+67         				data_i_temp = 5'b00010; 
+68         			end
+69         
+70         			5'b00001:  begin 
+71         				rr_priority_to_cs_o_temp = 3'b100;
+           <font color = "green">				==></font>
+72         				data_i_temp = 5'b00001;
+73         			end
+74         			
+75         			5'b00000:  begin 
+76         				rr_priority_to_cs_o_temp = 3'b111;
+           <font color = "green">				==></font>
+77         				data_i_temp = 5'b11111; 
+78         			end
+           			MISSING_DEFAULT
+           <font color = "red">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>5'b1xxxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b01xxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b001xx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b0001x </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00001 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>MISSING_DEFAULT</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod15.html" >top</a>
+<hr>
+<a name="inst_tag_35"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_35" >arbiter_top.dut.nproc.priority_enc_to_mux</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 71.85</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_35_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod15.html#inst_tag_35_Toggle" > 45.45</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_35_Branch" > 77.78</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 70.71</td>
+<td class="s8 cl rt"> 88.89</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"> 45.45</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 77.78</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.30</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 88.89</td>
+<td><a href="mod15.html" >priorityencoder_to_mux</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.15</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 94.30</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod35.html#inst_tag_103" >nproc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s2 cl rt"> 22.73</td>
+<td class="s0 cl rt">  0.00</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"> 45.45</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod14.html#inst_tag_30" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_35_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_35" >arbiter_top.dut.nproc.priority_enc_to_mux</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>26<td>24<td>92.31
+<tr class="s9"><td class="lf">ALWAYS<td>30<td>26<td>24<td>92.31
+</table>
+<pre class="code"><br clear=all>
+29                      
+30         1/1           rr_priority_i_temp [4] = rr_priority_n_i;
+31         1/1           rr_priority_i_temp [3] = rr_priority_s_i; 
+32         1/1           rr_priority_i_temp [2] = rr_priority_w_i; 
+33         1/1           rr_priority_i_temp [1] = rr_priority_e_i;
+34         1/1           rr_priority_i_temp [0] = rr_priority_l_i;  
+35                       
+36         1/1          	temp[4] = rr_change_order_i;
+37         1/1          temp[3] = rr_change_order_i;
+38         1/1          temp[2] = rr_change_order_i;
+39         1/1          temp[1] = rr_change_order_i;
+40         1/1          temp[0] = rr_change_order_i;
+41                      
+42                      
+43         1/1           if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+44         1/1           	data_i_temp = 5'b11111;
+45                      // end else begin
+46                      //	data_i_temp = data_o_temp;
+47                       end
+                        MISSING_ELSE
+48         1/1           		rr_priority_i_temp = (rr_priority_i_temp &amp; data_o_temp);
+49         1/1          		casex (rr_priority_i_temp)
+50                      			5'b1xxxx:  begin 
+<font color = "red">51         0/1     ==>  				rr_priority_to_cs_o_temp = 3'b000; </font>
+<font color = "red">52         0/1     ==>  				data_i_temp = 5'b10000;</font>
+53                      			end 
+54                      
+55                      			5'b01xxx:  begin 
+56         1/1          				rr_priority_to_cs_o_temp = 3'b001;
+57         1/1          				data_i_temp = 5'b01000; 
+58                      			end
+59                      
+60                                  5'b001xx:  begin 
+61         1/1          				rr_priority_to_cs_o_temp = 3'b010;
+62         1/1          				data_i_temp = 5'b00100; 
+63                      			end
+64                      
+65                       			5'b0001x:  begin 
+66         1/1          				rr_priority_to_cs_o_temp = 3'b011;
+67         1/1          				data_i_temp = 5'b00010; 
+68                      			end
+69                      
+70                      			5'b00001:  begin 
+71         1/1          				rr_priority_to_cs_o_temp = 3'b100;
+72         1/1          				data_i_temp = 5'b00001;
+73                      			end
+74                      			
+75                      			5'b00000:  begin 
+76         1/1          				rr_priority_to_cs_o_temp = 3'b111;
+77         1/1          				data_i_temp = 5'b11111; 
+78                      			end
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+</pre>
+<br clear=all>
+<a href="mod15.html#inst_tag_35" >Go to Instance</a><hr>
+<a name="inst_tag_35_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_35" >arbiter_top.dut.nproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">13</td>
+<td class="rt">7</td>
+<td class="rt">53.85 </td>
+</tr><tr class="s4">
+<td>Total Bits</td>
+<td class="rt">66</td>
+<td class="rt">30</td>
+<td class="rt">45.45 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">15</td>
+<td class="rt">45.45 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">15</td>
+<td class="rt">45.45 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">5</td>
+<td class="rt">62.50 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">20</td>
+<td class="rt">14</td>
+<td class="rt">70.00 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">7</td>
+<td class="rt">70.00 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">7</td>
+<td class="rt">70.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s4">
+<td>Signals</td>
+<td class="rt">5</td>
+<td class="rt">2</td>
+<td class="rt">40.00 </td>
+</tr><tr class="s3">
+<td>Signal Bits</td>
+<td class="rt">46</td>
+<td class="rt">16</td>
+<td class="rt">34.78 </td>
+</tr><tr class="s3">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">23</td>
+<td class="rt">8</td>
+<td class="rt">34.78 </td>
+</tr><tr class="s3">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">23</td>
+<td class="rt">8</td>
+<td class="rt">34.78 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_n_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_s_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_w_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_e_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_l_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_change_order_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_to_cs_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>rr_priority_i_temp[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rr_priority_to_cs_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>temp[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>data_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_o_temp[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_35" >Go to Instance</a><hr>
+<a name="inst_tag_35_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod15.html#inst_tag_35" >arbiter_top.dut.nproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">9</td>
+<td class="rt">7</td>
+<td class="rt">77.78 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">43</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s7">
+<td>CASE</td>
+<td class="rt">49</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+43          if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+            <font color = "green">-1-</font>  
+44          	data_i_temp = 5'b11111;
+           <font color = "green"> 	==></font>
+45         // end else begin
+46         //	data_i_temp = data_o_temp;
+47          end
+            MISSING_ELSE
+           <font color = "green"> ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+49         		casex (rr_priority_i_temp)
+           		<font color = "red">-1-</font>  
+50         			5'b1xxxx:  begin 
+51         				rr_priority_to_cs_o_temp = 3'b000; 
+           <font color = "red">				==></font>
+52         				data_i_temp = 5'b10000;
+53         			end 
+54         
+55         			5'b01xxx:  begin 
+56         				rr_priority_to_cs_o_temp = 3'b001;
+           <font color = "green">				==></font>
+57         				data_i_temp = 5'b01000; 
+58         			end
+59         
+60                     5'b001xx:  begin 
+61         				rr_priority_to_cs_o_temp = 3'b010;
+           <font color = "green">				==></font>
+62         				data_i_temp = 5'b00100; 
+63         			end
+64         
+65          			5'b0001x:  begin 
+66         				rr_priority_to_cs_o_temp = 3'b011;
+           <font color = "green">				==></font>
+67         				data_i_temp = 5'b00010; 
+68         			end
+69         
+70         			5'b00001:  begin 
+71         				rr_priority_to_cs_o_temp = 3'b100;
+           <font color = "green">				==></font>
+72         				data_i_temp = 5'b00001;
+73         			end
+74         			
+75         			5'b00000:  begin 
+76         				rr_priority_to_cs_o_temp = 3'b111;
+           <font color = "green">				==></font>
+77         				data_i_temp = 5'b11111; 
+78         			end
+           			MISSING_DEFAULT
+           <font color = "red">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>5'b1xxxx </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b01xxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b001xx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b0001x </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00001 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>MISSING_DEFAULT</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_35" >Go to Instance</a><hr>
+<a name="inst_tag_36"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_36" >arbiter_top.dut.sproc.priority_enc_to_mux</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 71.85</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_36_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod15.html#inst_tag_36_Toggle" > 45.45</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_36_Branch" > 77.78</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 70.71</td>
+<td class="s8 cl rt"> 88.89</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"> 45.45</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 77.78</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.30</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 88.89</td>
+<td><a href="mod15.html" >priorityencoder_to_mux</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.15</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 94.30</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod27.html#inst_tag_71" >sproc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s2 cl rt"> 22.73</td>
+<td class="s0 cl rt">  0.00</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"> 45.45</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod14.html#inst_tag_31" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_36_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_36" >arbiter_top.dut.sproc.priority_enc_to_mux</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>26<td>24<td>92.31
+<tr class="s9"><td class="lf">ALWAYS<td>30<td>26<td>24<td>92.31
+</table>
+<pre class="code"><br clear=all>
+29                      
+30         1/1           rr_priority_i_temp [4] = rr_priority_n_i;
+31         1/1           rr_priority_i_temp [3] = rr_priority_s_i; 
+32         1/1           rr_priority_i_temp [2] = rr_priority_w_i; 
+33         1/1           rr_priority_i_temp [1] = rr_priority_e_i;
+34         1/1           rr_priority_i_temp [0] = rr_priority_l_i;  
+35                       
+36         1/1          	temp[4] = rr_change_order_i;
+37         1/1          temp[3] = rr_change_order_i;
+38         1/1          temp[2] = rr_change_order_i;
+39         1/1          temp[1] = rr_change_order_i;
+40         1/1          temp[0] = rr_change_order_i;
+41                      
+42                      
+43         1/1           if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+44         1/1           	data_i_temp = 5'b11111;
+45                      // end else begin
+46                      //	data_i_temp = data_o_temp;
+47                       end
+                        MISSING_ELSE
+48         1/1           		rr_priority_i_temp = (rr_priority_i_temp &amp; data_o_temp);
+49         1/1          		casex (rr_priority_i_temp)
+50                      			5'b1xxxx:  begin 
+51         1/1          				rr_priority_to_cs_o_temp = 3'b000; 
+52         1/1          				data_i_temp = 5'b10000;
+53                      			end 
+54                      
+55                      			5'b01xxx:  begin 
+<font color = "red">56         0/1     ==>  				rr_priority_to_cs_o_temp = 3'b001;</font>
+<font color = "red">57         0/1     ==>  				data_i_temp = 5'b01000; </font>
+58                      			end
+59                      
+60                                  5'b001xx:  begin 
+61         1/1          				rr_priority_to_cs_o_temp = 3'b010;
+62         1/1          				data_i_temp = 5'b00100; 
+63                      			end
+64                      
+65                       			5'b0001x:  begin 
+66         1/1          				rr_priority_to_cs_o_temp = 3'b011;
+67         1/1          				data_i_temp = 5'b00010; 
+68                      			end
+69                      
+70                      			5'b00001:  begin 
+71         1/1          				rr_priority_to_cs_o_temp = 3'b100;
+72         1/1          				data_i_temp = 5'b00001;
+73                      			end
+74                      			
+75                      			5'b00000:  begin 
+76         1/1          				rr_priority_to_cs_o_temp = 3'b111;
+77         1/1          				data_i_temp = 5'b11111; 
+78                      			end
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+</pre>
+<br clear=all>
+<a href="mod15.html#inst_tag_36" >Go to Instance</a><hr>
+<a name="inst_tag_36_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_36" >arbiter_top.dut.sproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">13</td>
+<td class="rt">7</td>
+<td class="rt">53.85 </td>
+</tr><tr class="s4">
+<td>Total Bits</td>
+<td class="rt">66</td>
+<td class="rt">30</td>
+<td class="rt">45.45 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">15</td>
+<td class="rt">45.45 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">15</td>
+<td class="rt">45.45 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">5</td>
+<td class="rt">62.50 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">20</td>
+<td class="rt">14</td>
+<td class="rt">70.00 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">7</td>
+<td class="rt">70.00 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">7</td>
+<td class="rt">70.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s4">
+<td>Signals</td>
+<td class="rt">5</td>
+<td class="rt">2</td>
+<td class="rt">40.00 </td>
+</tr><tr class="s3">
+<td>Signal Bits</td>
+<td class="rt">46</td>
+<td class="rt">16</td>
+<td class="rt">34.78 </td>
+</tr><tr class="s3">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">23</td>
+<td class="rt">8</td>
+<td class="rt">34.78 </td>
+</tr><tr class="s3">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">23</td>
+<td class="rt">8</td>
+<td class="rt">34.78 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_n_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_s_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_w_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_e_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_l_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_change_order_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_to_cs_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>rr_priority_i_temp[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rr_priority_to_cs_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>temp[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>data_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_o_temp[4:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_36" >Go to Instance</a><hr>
+<a name="inst_tag_36_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod15.html#inst_tag_36" >arbiter_top.dut.sproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">9</td>
+<td class="rt">7</td>
+<td class="rt">77.78 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">43</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s7">
+<td>CASE</td>
+<td class="rt">49</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+43          if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+            <font color = "green">-1-</font>  
+44          	data_i_temp = 5'b11111;
+           <font color = "green"> 	==></font>
+45         // end else begin
+46         //	data_i_temp = data_o_temp;
+47          end
+            MISSING_ELSE
+           <font color = "green"> ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+49         		casex (rr_priority_i_temp)
+           		<font color = "red">-1-</font>  
+50         			5'b1xxxx:  begin 
+51         				rr_priority_to_cs_o_temp = 3'b000; 
+           <font color = "green">				==></font>
+52         				data_i_temp = 5'b10000;
+53         			end 
+54         
+55         			5'b01xxx:  begin 
+56         				rr_priority_to_cs_o_temp = 3'b001;
+           <font color = "red">				==></font>
+57         				data_i_temp = 5'b01000; 
+58         			end
+59         
+60                     5'b001xx:  begin 
+61         				rr_priority_to_cs_o_temp = 3'b010;
+           <font color = "green">				==></font>
+62         				data_i_temp = 5'b00100; 
+63         			end
+64         
+65          			5'b0001x:  begin 
+66         				rr_priority_to_cs_o_temp = 3'b011;
+           <font color = "green">				==></font>
+67         				data_i_temp = 5'b00010; 
+68         			end
+69         
+70         			5'b00001:  begin 
+71         				rr_priority_to_cs_o_temp = 3'b100;
+           <font color = "green">				==></font>
+72         				data_i_temp = 5'b00001;
+73         			end
+74         			
+75         			5'b00000:  begin 
+76         				rr_priority_to_cs_o_temp = 3'b111;
+           <font color = "green">				==></font>
+77         				data_i_temp = 5'b11111; 
+78         			end
+           			MISSING_DEFAULT
+           <font color = "red">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>5'b1xxxx </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'b01xxx </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b001xx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b0001x </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00001 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>MISSING_DEFAULT</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_36" >Go to Instance</a><hr>
+<a name="inst_tag_37"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_37" >arbiter_top.dut.wproc.priority_enc_to_mux</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 88.01</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_37_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_37_Toggle" > 93.94</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_37_Branch" > 77.78</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 88.61</td>
+<td class="s9 cl rt"> 92.59</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 77.78</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.30</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 88.89</td>
+<td><a href="mod15.html" >priorityencoder_to_mux</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 90.82</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 81.65</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod25.html#inst_tag_65" >wproc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod14.html#inst_tag_32" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_37_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_37" >arbiter_top.dut.wproc.priority_enc_to_mux</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>26<td>24<td>92.31
+<tr class="s9"><td class="lf">ALWAYS<td>30<td>26<td>24<td>92.31
+</table>
+<pre class="code"><br clear=all>
+29                      
+30         1/1           rr_priority_i_temp [4] = rr_priority_n_i;
+31         1/1           rr_priority_i_temp [3] = rr_priority_s_i; 
+32         1/1           rr_priority_i_temp [2] = rr_priority_w_i; 
+33         1/1           rr_priority_i_temp [1] = rr_priority_e_i;
+34         1/1           rr_priority_i_temp [0] = rr_priority_l_i;  
+35                       
+36         1/1          	temp[4] = rr_change_order_i;
+37         1/1          temp[3] = rr_change_order_i;
+38         1/1          temp[2] = rr_change_order_i;
+39         1/1          temp[1] = rr_change_order_i;
+40         1/1          temp[0] = rr_change_order_i;
+41                      
+42                      
+43         1/1           if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+44         1/1           	data_i_temp = 5'b11111;
+45                      // end else begin
+46                      //	data_i_temp = data_o_temp;
+47                       end
+                        MISSING_ELSE
+48         1/1           		rr_priority_i_temp = (rr_priority_i_temp &amp; data_o_temp);
+49         1/1          		casex (rr_priority_i_temp)
+50                      			5'b1xxxx:  begin 
+51         1/1          				rr_priority_to_cs_o_temp = 3'b000; 
+52         1/1          				data_i_temp = 5'b10000;
+53                      			end 
+54                      
+55                      			5'b01xxx:  begin 
+56         1/1          				rr_priority_to_cs_o_temp = 3'b001;
+57         1/1          				data_i_temp = 5'b01000; 
+58                      			end
+59                      
+60                                  5'b001xx:  begin 
+<font color = "red">61         0/1     ==>  				rr_priority_to_cs_o_temp = 3'b010;</font>
+<font color = "red">62         0/1     ==>  				data_i_temp = 5'b00100; </font>
+63                      			end
+64                      
+65                       			5'b0001x:  begin 
+66         1/1          				rr_priority_to_cs_o_temp = 3'b011;
+67         1/1          				data_i_temp = 5'b00010; 
+68                      			end
+69                      
+70                      			5'b00001:  begin 
+71         1/1          				rr_priority_to_cs_o_temp = 3'b100;
+72         1/1          				data_i_temp = 5'b00001;
+73                      			end
+74                      			
+75                      			5'b00000:  begin 
+76         1/1          				rr_priority_to_cs_o_temp = 3'b111;
+77         1/1          				data_i_temp = 5'b11111; 
+78                      			end
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+</pre>
+<br clear=all>
+<a href="mod15.html#inst_tag_37" >Go to Instance</a><hr>
+<a name="inst_tag_37_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_37" >arbiter_top.dut.wproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">13</td>
+<td class="rt">11</td>
+<td class="rt">84.62 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">66</td>
+<td class="rt">62</td>
+<td class="rt">93.94 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">31</td>
+<td class="rt">93.94 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">31</td>
+<td class="rt">93.94 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">20</td>
+<td class="rt">18</td>
+<td class="rt">90.00 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">9</td>
+<td class="rt">90.00 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">9</td>
+<td class="rt">90.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Signals</td>
+<td class="rt">5</td>
+<td class="rt">4</td>
+<td class="rt">80.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">46</td>
+<td class="rt">44</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_n_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_s_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_w_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_e_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_l_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_change_order_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_to_cs_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>rr_priority_i_temp[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rr_priority_i_temp[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rr_priority_i_temp[4:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rr_priority_to_cs_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_o_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_37" >Go to Instance</a><hr>
+<a name="inst_tag_37_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod15.html#inst_tag_37" >arbiter_top.dut.wproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">9</td>
+<td class="rt">7</td>
+<td class="rt">77.78 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">43</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s7">
+<td>CASE</td>
+<td class="rt">49</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+43          if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+            <font color = "green">-1-</font>  
+44          	data_i_temp = 5'b11111;
+           <font color = "green"> 	==></font>
+45         // end else begin
+46         //	data_i_temp = data_o_temp;
+47          end
+            MISSING_ELSE
+           <font color = "green"> ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+49         		casex (rr_priority_i_temp)
+           		<font color = "red">-1-</font>  
+50         			5'b1xxxx:  begin 
+51         				rr_priority_to_cs_o_temp = 3'b000; 
+           <font color = "green">				==></font>
+52         				data_i_temp = 5'b10000;
+53         			end 
+54         
+55         			5'b01xxx:  begin 
+56         				rr_priority_to_cs_o_temp = 3'b001;
+           <font color = "green">				==></font>
+57         				data_i_temp = 5'b01000; 
+58         			end
+59         
+60                     5'b001xx:  begin 
+61         				rr_priority_to_cs_o_temp = 3'b010;
+           <font color = "red">				==></font>
+62         				data_i_temp = 5'b00100; 
+63         			end
+64         
+65          			5'b0001x:  begin 
+66         				rr_priority_to_cs_o_temp = 3'b011;
+           <font color = "green">				==></font>
+67         				data_i_temp = 5'b00010; 
+68         			end
+69         
+70         			5'b00001:  begin 
+71         				rr_priority_to_cs_o_temp = 3'b100;
+           <font color = "green">				==></font>
+72         				data_i_temp = 5'b00001;
+73         			end
+74         			
+75         			5'b00000:  begin 
+76         				rr_priority_to_cs_o_temp = 3'b111;
+           <font color = "green">				==></font>
+77         				data_i_temp = 5'b11111; 
+78         			end
+           			MISSING_DEFAULT
+           <font color = "red">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>5'b1xxxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b01xxx </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'b001xx </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b0001x </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00001 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>MISSING_DEFAULT</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_37" >Go to Instance</a><hr>
+<a name="inst_tag_38"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_38" >arbiter_top.dut.eproc.priority_enc_to_mux</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 88.01</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_38_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_38_Toggle" > 93.94</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_38_Branch" > 77.78</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 88.61</td>
+<td class="s9 cl rt"> 92.59</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 77.78</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.30</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 88.89</td>
+<td><a href="mod15.html" >priorityencoder_to_mux</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 90.82</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 81.65</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod17.html#inst_tag_45" >eproc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod14.html#inst_tag_33" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_38_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_38" >arbiter_top.dut.eproc.priority_enc_to_mux</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>26<td>24<td>92.31
+<tr class="s9"><td class="lf">ALWAYS<td>30<td>26<td>24<td>92.31
+</table>
+<pre class="code"><br clear=all>
+29                      
+30         1/1           rr_priority_i_temp [4] = rr_priority_n_i;
+31         1/1           rr_priority_i_temp [3] = rr_priority_s_i; 
+32         1/1           rr_priority_i_temp [2] = rr_priority_w_i; 
+33         1/1           rr_priority_i_temp [1] = rr_priority_e_i;
+34         1/1           rr_priority_i_temp [0] = rr_priority_l_i;  
+35                       
+36         1/1          	temp[4] = rr_change_order_i;
+37         1/1          temp[3] = rr_change_order_i;
+38         1/1          temp[2] = rr_change_order_i;
+39         1/1          temp[1] = rr_change_order_i;
+40         1/1          temp[0] = rr_change_order_i;
+41                      
+42                      
+43         1/1           if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+44         1/1           	data_i_temp = 5'b11111;
+45                      // end else begin
+46                      //	data_i_temp = data_o_temp;
+47                       end
+                        MISSING_ELSE
+48         1/1           		rr_priority_i_temp = (rr_priority_i_temp &amp; data_o_temp);
+49         1/1          		casex (rr_priority_i_temp)
+50                      			5'b1xxxx:  begin 
+51         1/1          				rr_priority_to_cs_o_temp = 3'b000; 
+52         1/1          				data_i_temp = 5'b10000;
+53                      			end 
+54                      
+55                      			5'b01xxx:  begin 
+56         1/1          				rr_priority_to_cs_o_temp = 3'b001;
+57         1/1          				data_i_temp = 5'b01000; 
+58                      			end
+59                      
+60                                  5'b001xx:  begin 
+61         1/1          				rr_priority_to_cs_o_temp = 3'b010;
+62         1/1          				data_i_temp = 5'b00100; 
+63                      			end
+64                      
+65                       			5'b0001x:  begin 
+<font color = "red">66         0/1     ==>  				rr_priority_to_cs_o_temp = 3'b011;</font>
+<font color = "red">67         0/1     ==>  				data_i_temp = 5'b00010; </font>
+68                      			end
+69                      
+70                      			5'b00001:  begin 
+71         1/1          				rr_priority_to_cs_o_temp = 3'b100;
+72         1/1          				data_i_temp = 5'b00001;
+73                      			end
+74                      			
+75                      			5'b00000:  begin 
+76         1/1          				rr_priority_to_cs_o_temp = 3'b111;
+77         1/1          				data_i_temp = 5'b11111; 
+78                      			end
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+</pre>
+<br clear=all>
+<a href="mod15.html#inst_tag_38" >Go to Instance</a><hr>
+<a name="inst_tag_38_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_38" >arbiter_top.dut.eproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">13</td>
+<td class="rt">11</td>
+<td class="rt">84.62 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">66</td>
+<td class="rt">62</td>
+<td class="rt">93.94 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">31</td>
+<td class="rt">93.94 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">31</td>
+<td class="rt">93.94 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">20</td>
+<td class="rt">18</td>
+<td class="rt">90.00 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">9</td>
+<td class="rt">90.00 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">9</td>
+<td class="rt">90.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Signals</td>
+<td class="rt">5</td>
+<td class="rt">4</td>
+<td class="rt">80.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">46</td>
+<td class="rt">44</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_n_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_s_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_w_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_e_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_l_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_change_order_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_to_cs_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>rr_priority_i_temp[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rr_priority_i_temp[1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rr_priority_i_temp[4:2]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rr_priority_to_cs_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_o_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_38" >Go to Instance</a><hr>
+<a name="inst_tag_38_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod15.html#inst_tag_38" >arbiter_top.dut.eproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">9</td>
+<td class="rt">7</td>
+<td class="rt">77.78 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">43</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s7">
+<td>CASE</td>
+<td class="rt">49</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+43          if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+            <font color = "green">-1-</font>  
+44          	data_i_temp = 5'b11111;
+           <font color = "green"> 	==></font>
+45         // end else begin
+46         //	data_i_temp = data_o_temp;
+47          end
+            MISSING_ELSE
+           <font color = "green"> ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+49         		casex (rr_priority_i_temp)
+           		<font color = "red">-1-</font>  
+50         			5'b1xxxx:  begin 
+51         				rr_priority_to_cs_o_temp = 3'b000; 
+           <font color = "green">				==></font>
+52         				data_i_temp = 5'b10000;
+53         			end 
+54         
+55         			5'b01xxx:  begin 
+56         				rr_priority_to_cs_o_temp = 3'b001;
+           <font color = "green">				==></font>
+57         				data_i_temp = 5'b01000; 
+58         			end
+59         
+60                     5'b001xx:  begin 
+61         				rr_priority_to_cs_o_temp = 3'b010;
+           <font color = "green">				==></font>
+62         				data_i_temp = 5'b00100; 
+63         			end
+64         
+65          			5'b0001x:  begin 
+66         				rr_priority_to_cs_o_temp = 3'b011;
+           <font color = "red">				==></font>
+67         				data_i_temp = 5'b00010; 
+68         			end
+69         
+70         			5'b00001:  begin 
+71         				rr_priority_to_cs_o_temp = 3'b100;
+           <font color = "green">				==></font>
+72         				data_i_temp = 5'b00001;
+73         			end
+74         			
+75         			5'b00000:  begin 
+76         				rr_priority_to_cs_o_temp = 3'b111;
+           <font color = "green">				==></font>
+77         				data_i_temp = 5'b11111; 
+78         			end
+           			MISSING_DEFAULT
+           <font color = "red">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>5'b1xxxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b01xxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b001xx </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'b0001x </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00001 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>MISSING_DEFAULT</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_38" >Go to Instance</a><hr>
+<a name="inst_tag_39"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_39" >arbiter_top.dut.lproc.priority_enc_to_mux</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 88.01</td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_39_Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod15.html#inst_tag_39_Toggle" > 93.94</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod15.html#inst_tag_39_Branch" > 77.78</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 88.61</td>
+<td class="s9 cl rt"> 92.59</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 77.78</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.30</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 88.89</td>
+<td><a href="mod15.html" >priorityencoder_to_mux</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 96.52</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.04</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod1.html#inst_tag_5" >lproc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod14.html#inst_tag_34" >ff</a></td>
+</tr></table><br clear=all>
+</div>
+<hr>
+<a name="inst_tag_39_Line"></a>
+<b>Line Coverage for Instance : <a href="mod15.html#inst_tag_39" >arbiter_top.dut.lproc.priority_enc_to_mux</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>26<td>24<td>92.31
+<tr class="s9"><td class="lf">ALWAYS<td>30<td>26<td>24<td>92.31
+</table>
+<pre class="code"><br clear=all>
+29                      
+30         1/1           rr_priority_i_temp [4] = rr_priority_n_i;
+31         1/1           rr_priority_i_temp [3] = rr_priority_s_i; 
+32         1/1           rr_priority_i_temp [2] = rr_priority_w_i; 
+33         1/1           rr_priority_i_temp [1] = rr_priority_e_i;
+34         1/1           rr_priority_i_temp [0] = rr_priority_l_i;  
+35                       
+36         1/1          	temp[4] = rr_change_order_i;
+37         1/1          temp[3] = rr_change_order_i;
+38         1/1          temp[2] = rr_change_order_i;
+39         1/1          temp[1] = rr_change_order_i;
+40         1/1          temp[0] = rr_change_order_i;
+41                      
+42                      
+43         1/1           if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+44         1/1           	data_i_temp = 5'b11111;
+45                      // end else begin
+46                      //	data_i_temp = data_o_temp;
+47                       end
+                        MISSING_ELSE
+48         1/1           		rr_priority_i_temp = (rr_priority_i_temp &amp; data_o_temp);
+49         1/1          		casex (rr_priority_i_temp)
+50                      			5'b1xxxx:  begin 
+51         1/1          				rr_priority_to_cs_o_temp = 3'b000; 
+52         1/1          				data_i_temp = 5'b10000;
+53                      			end 
+54                      
+55                      			5'b01xxx:  begin 
+56         1/1          				rr_priority_to_cs_o_temp = 3'b001;
+57         1/1          				data_i_temp = 5'b01000; 
+58                      			end
+59                      
+60                                  5'b001xx:  begin 
+61         1/1          				rr_priority_to_cs_o_temp = 3'b010;
+62         1/1          				data_i_temp = 5'b00100; 
+63                      			end
+64                      
+65                       			5'b0001x:  begin 
+66         1/1          				rr_priority_to_cs_o_temp = 3'b011;
+67         1/1          				data_i_temp = 5'b00010; 
+68                      			end
+69                      
+70                      			5'b00001:  begin 
+<font color = "red">71         0/1     ==>  				rr_priority_to_cs_o_temp = 3'b100;</font>
+<font color = "red">72         0/1     ==>  				data_i_temp = 5'b00001;</font>
+73                      			end
+74                      			
+75                      			5'b00000:  begin 
+76         1/1          				rr_priority_to_cs_o_temp = 3'b111;
+77         1/1          				data_i_temp = 5'b11111; 
+78                      			end
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+</pre>
+<br clear=all>
+<a href="mod15.html#inst_tag_39" >Go to Instance</a><hr>
+<a name="inst_tag_39_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod15.html#inst_tag_39" >arbiter_top.dut.lproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">13</td>
+<td class="rt">11</td>
+<td class="rt">84.62 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">66</td>
+<td class="rt">62</td>
+<td class="rt">93.94 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">31</td>
+<td class="rt">93.94 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">31</td>
+<td class="rt">93.94 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">20</td>
+<td class="rt">18</td>
+<td class="rt">90.00 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">9</td>
+<td class="rt">90.00 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">9</td>
+<td class="rt">90.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Signals</td>
+<td class="rt">5</td>
+<td class="rt">4</td>
+<td class="rt">80.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">46</td>
+<td class="rt">44</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_n_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_s_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_w_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_e_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_l_i</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_change_order_i</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rr_priority_to_cs_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>rr_priority_i_temp[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rr_priority_i_temp[4:1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rr_priority_to_cs_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_i_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>data_o_temp[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_39" >Go to Instance</a><hr>
+<a name="inst_tag_39_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod15.html#inst_tag_39" >arbiter_top.dut.lproc.priority_enc_to_mux</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">9</td>
+<td class="rt">7</td>
+<td class="rt">77.78 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">43</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s7">
+<td>CASE</td>
+<td class="rt">49</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+43          if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
+            <font color = "green">-1-</font>  
+44          	data_i_temp = 5'b11111;
+           <font color = "green"> 	==></font>
+45         // end else begin
+46         //	data_i_temp = data_o_temp;
+47          end
+            MISSING_ELSE
+           <font color = "green"> ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+49         		casex (rr_priority_i_temp)
+           		<font color = "red">-1-</font>  
+50         			5'b1xxxx:  begin 
+51         				rr_priority_to_cs_o_temp = 3'b000; 
+           <font color = "green">				==></font>
+52         				data_i_temp = 5'b10000;
+53         			end 
+54         
+55         			5'b01xxx:  begin 
+56         				rr_priority_to_cs_o_temp = 3'b001;
+           <font color = "green">				==></font>
+57         				data_i_temp = 5'b01000; 
+58         			end
+59         
+60                     5'b001xx:  begin 
+61         				rr_priority_to_cs_o_temp = 3'b010;
+           <font color = "green">				==></font>
+62         				data_i_temp = 5'b00100; 
+63         			end
+64         
+65          			5'b0001x:  begin 
+66         				rr_priority_to_cs_o_temp = 3'b011;
+           <font color = "green">				==></font>
+67         				data_i_temp = 5'b00010; 
+68         			end
+69         
+70         			5'b00001:  begin 
+71         				rr_priority_to_cs_o_temp = 3'b100;
+           <font color = "red">				==></font>
+72         				data_i_temp = 5'b00001;
+73         			end
+74         			
+75         			5'b00000:  begin 
+76         				rr_priority_to_cs_o_temp = 3'b111;
+           <font color = "green">				==></font>
+77         				data_i_temp = 5'b11111; 
+78         			end
+           			MISSING_DEFAULT
+           <font color = "red">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>5'b1xxxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b01xxx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b001xx </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b0001x </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>5'b00001 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>5'b00000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>MISSING_DEFAULT</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod15.html#inst_tag_39" >Go to Instance</a><br clear=all>
+<hr>
+<center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<br clear=all>
+<br clear=all>
+<table align=center><tr><td class="s0 cl">0%
+<td class="s1 cl">10%
+<td class="s2 cl">20%
+<td class="s3 cl">30%
+<td class="s4 cl">40%
+<td class="s5 cl">50%
+<td class="s6 cl">60%
+<td class="s7 cl">70%
+<td class="s8 cl">80%
+<td class="s9 cl">90%
+<td class="s10 cl">100%</table></body>
+</html>

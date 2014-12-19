@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/home/jg3538/4340_FinalProject/Design/tb/input_buffer"  >
+    <ucapi_version  major_ver="12"  minor_ver="1"  patch_str="F-2011.12"  />
+      <fileinfo name="buffer_stats.sv"  id="10"  />
+      <fileinfo name="buffer_testbench.sv"  id="0"  />
+      <fileinfo name="../flit.sv"  id="9"  />
+      <fileinfo name="buffer_environment.sv"  id="11"  />
+      <fileinfo name="modules/ram.sv"  id="3"  />
+      <fileinfo name="modules/rw_pointer.sv"  id="7"  />
+      <fileinfo name="modules/decoder_ram.sv"  id="5"  />
+      <fileinfo name="modules/ff_ram.sv"  id="6"  />
+      <fileinfo name="input_buffer_class.sv"  id="12"  />
+      <fileinfo name="buffer_transaction.sv"  id="13"  />
+      <fileinfo name="modules/mux_ram.sv"  id="4"  />
+      <fileinfo name="modules/eff_pointer.sv"  id="8"  />
+      <fileinfo name="modules/buffer_top.sv"  id="14"  />
+      <fileinfo name="modules/buffer_interface.sv"  id="1"  />
+      <fileinfo name="modules/input_buffer_test.sv"  id="2"  />
+    </srcinfo>

@@ -1,0 +1,23 @@
+<session version="1.1" release="F-2011.12" timestp="2014-12-19 20:38:14 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="10098/18582" />
+    <metric name="Cond" value="0/640" />
+    <metric name="Toggle" value="6825/244048" />
+    <metric name="Branch" value="1984/8451" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+  </scope>
+  </old_coverage>
+</session>

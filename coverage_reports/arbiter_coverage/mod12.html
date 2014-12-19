@@ -1,0 +1,2253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: yx_processor</title>
+<link type="text/css" rel="stylesheet" href=".urg.css">
+<script type="text/javascript" src=".sortable.js"></script></head>
+<body><center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="modlist.html#tag_yx_processor" >yx_processor</a></span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="s10 cl rt"><a href="mod12.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"><a href="mod12.html#Toggle" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod12.html#Branch" > 85.71</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="file:///home/yss2117/4340_FinalProject/Design/tb/arbiter/../../NOC/arbiter/yx_processor/yx_processor.sv" >/home/yss2117/4340_FinalProject/Design/tb/arbiter/../../NOC/arbiter/yx_processor/yx_processor.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s5 cl rt"> 58.25</td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_28_Line" > 78.57</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_28_Toggle" > 53.33</a></td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod12.html#inst_tag_28_Branch" > 42.86</a></td>
+<td><a href="mod12.html#inst_tag_28" >arbiter_top.dut.yx_proc_l</a></td>
+</tr><tr>
+<td class="s7 cl rt"> 70.16</td>
+<td class="s8 cl rt"><a href="mod12.html#inst_tag_24_Line" > 85.71</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_24_Toggle" > 53.33</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_24_Branch" > 71.43</a></td>
+<td><a href="mod12.html#inst_tag_24" >arbiter_top.dut.yx_proc_n</a></td>
+</tr><tr>
+<td class="s7 cl rt"> 73.65</td>
+<td class="s9 cl rt"><a href="mod12.html#inst_tag_25_Line" > 92.86</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_25_Toggle" > 56.67</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_25_Branch" > 71.43</a></td>
+<td><a href="mod12.html#inst_tag_25" >arbiter_top.dut.yx_proc_s</a></td>
+</tr><tr>
+<td class="s7 cl rt"> 73.65</td>
+<td class="s9 cl rt"><a href="mod12.html#inst_tag_27_Line" > 92.86</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_27_Toggle" > 56.67</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_27_Branch" > 71.43</a></td>
+<td><a href="mod12.html#inst_tag_27" >arbiter_top.dut.yx_proc_e</a></td>
+</tr><tr>
+<td class="s7 cl rt"> 74.76</td>
+<td class="s9 cl rt"><a href="mod12.html#inst_tag_26_Line" > 92.86</a></td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"><a href="mod12.html#inst_tag_26_Toggle" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_26_Branch" > 71.43</a></td>
+<td><a href="mod12.html#inst_tag_26" >arbiter_top.dut.yx_proc_w</a></td>
+</tr></table></div>
+<br clear=all>
+<hr>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod12.html" >yx_processor</a><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>14<td>14<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>18<td>14<td>14<td>100.00
+</table>
+<pre class="code"><br clear=all>
+17                      
+18         1/1          	y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+19         1/1          	x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
+20                      
+21                      // If the MSB of y_addr_subtract is 0, then it should go 
+22                      
+23         1/1          	if (yx_addr_header_i == yx_addr_router_i) begin
+24                       
+25         1/1          		yx_addr_o_temp = 3'b100; // &quot;local&quot; output direction 
+26                      
+27         1/1          	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+28                      
+29         1/1          		if (~y_addr_subtract [3]) begin 
+30                      
+31         1/1          			yx_addr_o_temp = 3'b001; // &quot;south&quot; output direction 
+32                      
+33         1/1          		end else if (y_addr_subtract [3]) begin
+34                      
+35         1/1          			yx_addr_o_temp = 3'b000; // &quot;north&quot; output direction 
+36                      
+37                      		end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+38                      
+39         1/1          	end else if (~x_addr_subtract[3]) begin
+40                      
+41         1/1          		yx_addr_o_temp = 3'b011; // &quot;east&quot; output direction 
+42                      
+43         1/1          	end else if (x_addr_subtract[3]) begin
+44                      
+45         1/1          		yx_addr_o_temp = 3'b010; // &quot;west&quot; output direction 
+46                      
+47                      	end else begin 
+48         1/1          		yx_addr_o_temp = 3'b111; // testing
+</pre>
+<br clear=all>
+Go to <a href="mod12.html" >top</a>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod12.html" >yx_processor</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">6</td>
+<td class="rt">4</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>Total Bits</td>
+<td class="rt">60</td>
+<td class="rt">36</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">30</td>
+<td class="rt">18</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">30</td>
+<td class="rt">18</td>
+<td class="rt">60.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s3">
+<td>Ports</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s3">
+<td>Port Bits</td>
+<td class="rt">38</td>
+<td class="rt">14</td>
+<td class="rt">36.84 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">22</td>
+<td class="rt">22</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>yx_addr_header_i[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[3:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[5:4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_router_i[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>yx_addr_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>y_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod12.html" >top</a>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod12.html" >yx_processor</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Branches</td>
+<td></td>
+<td class="rt">7</td>
+<td class="rt">6</td>
+<td class="rt">85.71 </td>
+</tr><tr class="s8">
+<td>IF</td>
+<td class="rt">23</td>
+<td class="rt">7</td>
+<td class="rt">6</td>
+<td class="rt">85.71 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+23         	if (yx_addr_header_i == yx_addr_router_i) begin
+           	<font color = "green">-1-</font>  
+24          
+25         		yx_addr_o_temp = 3'b100; // "local" output direction 
+           <font color = "green">		==></font>
+26         
+27         	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+           	         <font color = "green">-2-</font>  
+28         
+29         		if (~y_addr_subtract [3]) begin 
+           		<font color = "green">-3-</font>  
+30         
+31         			yx_addr_o_temp = 3'b001; // "south" output direction 
+           <font color = "green">			==></font>
+32         
+33         		end else if (y_addr_subtract [3]) begin
+           		         <font color = "red">-4-</font>  
+34         
+35         			yx_addr_o_temp = 3'b000; // "north" output direction 
+           <font color = "green">			==></font>
+36         
+37         		end 
+           		MISSING_ELSE
+           <font color = "red">		==></font>
+38         
+39         	end else if (~x_addr_subtract[3]) begin
+           	         <font color = "green">-5-</font>  
+40         
+41         		yx_addr_o_temp = 3'b011; // "east" output direction 
+           <font color = "green">		==></font>
+42         
+43         	end else if (x_addr_subtract[3]) begin
+           	         <font color = "green">-6-</font>  
+44         
+45         		yx_addr_o_temp = 3'b010; // "west" output direction 
+           <font color = "green">		==></font>
+46         
+47         	end else begin 
+48         		yx_addr_o_temp = 3'b111; // testing
+           <font color = "green">		==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod12.html" >top</a>
+<hr>
+<a name="inst_tag_28"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_28" >arbiter_top.dut.yx_proc_l</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s5 cl rt"> 58.25</td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_28_Line" > 78.57</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_28_Toggle" > 53.33</a></td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod12.html#inst_tag_28_Branch" > 42.86</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s5 cl rt"> 58.25</td>
+<td class="s7 cl rt"> 78.57</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 53.33</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"> 42.86</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 85.71</td>
+<td><a href="mod12.html" >yx_processor</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 94.93</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.80</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod7.html#inst_tag_15" >dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_28_Line"></a>
+<b>Line Coverage for Instance : <a href="mod12.html#inst_tag_28" >arbiter_top.dut.yx_proc_l</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s7"><td class="lf">TOTAL<td><td>14<td>11<td>78.57
+<tr class="s7"><td class="lf">ALWAYS<td>18<td>14<td>11<td>78.57
+</table>
+<pre class="code"><br clear=all>
+17                      
+18         1/1          	y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+19         1/1          	x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
+20                      
+21                      // If the MSB of y_addr_subtract is 0, then it should go 
+22                      
+23         1/1          	if (yx_addr_header_i == yx_addr_router_i) begin
+24                       
+<font color = "red">25         0/1     ==>  		yx_addr_o_temp = 3'b100; // &quot;local&quot; output direction </font>
+26                      
+27         1/1          	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+28                      
+29         1/1          		if (~y_addr_subtract [3]) begin 
+30                      
+31         1/1          			yx_addr_o_temp = 3'b001; // &quot;south&quot; output direction 
+32                      
+33         1/1          		end else if (y_addr_subtract [3]) begin
+34                      
+35         1/1          			yx_addr_o_temp = 3'b000; // &quot;north&quot; output direction 
+36                      
+37                      		end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+38                      
+39         1/1          	end else if (~x_addr_subtract[3]) begin
+40                      
+<font color = "red">41         0/1     ==>  		yx_addr_o_temp = 3'b011; // &quot;east&quot; output direction </font>
+42                      
+43         1/1          	end else if (x_addr_subtract[3]) begin
+44                      
+<font color = "red">45         0/1     ==>  		yx_addr_o_temp = 3'b010; // &quot;west&quot; output direction </font>
+46                      
+47                      	end else begin 
+48         1/1          		yx_addr_o_temp = 3'b111; // testing
+</pre>
+<br clear=all>
+<a href="mod12.html#inst_tag_28" >Go to Instance</a><hr>
+<a name="inst_tag_28_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod12.html#inst_tag_28" >arbiter_top.dut.yx_proc_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s3">
+<td>Totals</td>
+<td class="rt">6</td>
+<td class="rt">2</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s5">
+<td>Total Bits</td>
+<td class="rt">60</td>
+<td class="rt">32</td>
+<td class="rt">53.33 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">30</td>
+<td class="rt">14</td>
+<td class="rt">46.67 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">30</td>
+<td class="rt">18</td>
+<td class="rt">60.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s0">
+<td>Ports</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">0.00  </td>
+</tr><tr class="s3">
+<td>Port Bits</td>
+<td class="rt">38</td>
+<td class="rt">12</td>
+<td class="rt">31.58 </td>
+</tr><tr class="s2">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">19</td>
+<td class="rt">5</td>
+<td class="rt">26.32 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">22</td>
+<td class="rt">20</td>
+<td class="rt">90.91 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">9</td>
+<td class="rt">81.82 </td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>yx_addr_header_i[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[3:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[5:4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_router_i[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_o[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>yx_addr_o[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>yx_addr_o_temp[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>yx_addr_o_temp[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>y_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_28" >Go to Instance</a><hr>
+<a name="inst_tag_28_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod12.html#inst_tag_28" >arbiter_top.dut.yx_proc_l</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s4">
+<td>Branches</td>
+<td></td>
+<td class="rt">7</td>
+<td class="rt">3</td>
+<td class="rt">42.86 </td>
+</tr><tr class="s4">
+<td>IF</td>
+<td class="rt">23</td>
+<td class="rt">7</td>
+<td class="rt">3</td>
+<td class="rt">42.86 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+23         	if (yx_addr_header_i == yx_addr_router_i) begin
+           	<font color = "red">-1-</font>  
+24          
+25         		yx_addr_o_temp = 3'b100; // "local" output direction 
+           <font color = "red">		==></font>
+26         
+27         	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+           	         <font color = "green">-2-</font>  
+28         
+29         		if (~y_addr_subtract [3]) begin 
+           		<font color = "green">-3-</font>  
+30         
+31         			yx_addr_o_temp = 3'b001; // "south" output direction 
+           <font color = "green">			==></font>
+32         
+33         		end else if (y_addr_subtract [3]) begin
+           		         <font color = "red">-4-</font>  
+34         
+35         			yx_addr_o_temp = 3'b000; // "north" output direction 
+           <font color = "green">			==></font>
+36         
+37         		end 
+           		MISSING_ELSE
+           <font color = "red">		==></font>
+38         
+39         	end else if (~x_addr_subtract[3]) begin
+           	         <font color = "red">-5-</font>  
+40         
+41         		yx_addr_o_temp = 3'b011; // "east" output direction 
+           <font color = "red">		==></font>
+42         
+43         	end else if (x_addr_subtract[3]) begin
+           	         <font color = "red">-6-</font>  
+44         
+45         		yx_addr_o_temp = 3'b010; // "west" output direction 
+           <font color = "red">		==></font>
+46         
+47         	end else begin 
+48         		yx_addr_o_temp = 3'b111; // testing
+           <font color = "green">		==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_28" >Go to Instance</a><hr>
+<a name="inst_tag_24"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_24" >arbiter_top.dut.yx_proc_n</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 70.16</td>
+<td class="s8 cl rt"><a href="mod12.html#inst_tag_24_Line" > 85.71</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_24_Toggle" > 53.33</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_24_Branch" > 71.43</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 70.16</td>
+<td class="s8 cl rt"> 85.71</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 53.33</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 71.43</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 85.71</td>
+<td><a href="mod12.html" >yx_processor</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 94.93</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.80</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod7.html#inst_tag_15" >dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_24_Line"></a>
+<b>Line Coverage for Instance : <a href="mod12.html#inst_tag_24" >arbiter_top.dut.yx_proc_n</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s8"><td class="lf">TOTAL<td><td>14<td>12<td>85.71
+<tr class="s8"><td class="lf">ALWAYS<td>18<td>14<td>12<td>85.71
+</table>
+<pre class="code"><br clear=all>
+17                      
+18         1/1          	y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+19         1/1          	x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
+20                      
+21                      // If the MSB of y_addr_subtract is 0, then it should go 
+22                      
+23         1/1          	if (yx_addr_header_i == yx_addr_router_i) begin
+24                       
+25         1/1          		yx_addr_o_temp = 3'b100; // &quot;local&quot; output direction 
+26                      
+27         1/1          	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+28                      
+29         1/1          		if (~y_addr_subtract [3]) begin 
+30                      
+31         1/1          			yx_addr_o_temp = 3'b001; // &quot;south&quot; output direction 
+32                      
+<font color = "red">33         0/1     ==>  		end else if (y_addr_subtract [3]) begin</font>
+34                      
+<font color = "red">35         0/1     ==>  			yx_addr_o_temp = 3'b000; // &quot;north&quot; output direction </font>
+36                      
+37                      		end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+38                      
+39         1/1          	end else if (~x_addr_subtract[3]) begin
+40                      
+41         1/1          		yx_addr_o_temp = 3'b011; // &quot;east&quot; output direction 
+42                      
+43         1/1          	end else if (x_addr_subtract[3]) begin
+44                      
+45         1/1          		yx_addr_o_temp = 3'b010; // &quot;west&quot; output direction 
+46                      
+47                      	end else begin 
+48         1/1          		yx_addr_o_temp = 3'b111; // testing
+</pre>
+<br clear=all>
+<a href="mod12.html#inst_tag_24" >Go to Instance</a><hr>
+<a name="inst_tag_24_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod12.html#inst_tag_24" >arbiter_top.dut.yx_proc_n</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">6</td>
+<td class="rt">3</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>Total Bits</td>
+<td class="rt">60</td>
+<td class="rt">32</td>
+<td class="rt">53.33 </td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">30</td>
+<td class="rt">16</td>
+<td class="rt">53.33 </td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">30</td>
+<td class="rt">16</td>
+<td class="rt">53.33 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s3">
+<td>Ports</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s3">
+<td>Port Bits</td>
+<td class="rt">38</td>
+<td class="rt">14</td>
+<td class="rt">36.84 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s8">
+<td>Signal Bits</td>
+<td class="rt">22</td>
+<td class="rt">18</td>
+<td class="rt">81.82 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">9</td>
+<td class="rt">81.82 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">9</td>
+<td class="rt">81.82 </td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>yx_addr_header_i[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[3:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[5:4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_router_i[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>yx_addr_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>y_addr_subtract[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>y_addr_subtract[3:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_24" >Go to Instance</a><hr>
+<a name="inst_tag_24_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod12.html#inst_tag_24" >arbiter_top.dut.yx_proc_n</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">23</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+23         	if (yx_addr_header_i == yx_addr_router_i) begin
+           	<font color = "green">-1-</font>  
+24          
+25         		yx_addr_o_temp = 3'b100; // "local" output direction 
+           <font color = "green">		==></font>
+26         
+27         	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+           	         <font color = "green">-2-</font>  
+28         
+29         		if (~y_addr_subtract [3]) begin 
+           		<font color = "red">-3-</font>  
+30         
+31         			yx_addr_o_temp = 3'b001; // "south" output direction 
+           <font color = "green">			==></font>
+32         
+33         		end else if (y_addr_subtract [3]) begin
+           		         <font color = "red">-4-</font>  
+34         
+35         			yx_addr_o_temp = 3'b000; // "north" output direction 
+           <font color = "red">			==></font>
+36         
+37         		end 
+           		MISSING_ELSE
+           <font color = "red">		==></font>
+38         
+39         	end else if (~x_addr_subtract[3]) begin
+           	         <font color = "green">-5-</font>  
+40         
+41         		yx_addr_o_temp = 3'b011; // "east" output direction 
+           <font color = "green">		==></font>
+42         
+43         	end else if (x_addr_subtract[3]) begin
+           	         <font color = "green">-6-</font>  
+44         
+45         		yx_addr_o_temp = 3'b010; // "west" output direction 
+           <font color = "green">		==></font>
+46         
+47         	end else begin 
+48         		yx_addr_o_temp = 3'b111; // testing
+           <font color = "green">		==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_24" >Go to Instance</a><hr>
+<a name="inst_tag_25"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_25" >arbiter_top.dut.yx_proc_s</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 73.65</td>
+<td class="s9 cl rt"><a href="mod12.html#inst_tag_25_Line" > 92.86</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_25_Toggle" > 56.67</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_25_Branch" > 71.43</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 73.65</td>
+<td class="s9 cl rt"> 92.86</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 56.67</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 71.43</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 85.71</td>
+<td><a href="mod12.html" >yx_processor</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 94.93</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.80</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod7.html#inst_tag_15" >dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_25_Line"></a>
+<b>Line Coverage for Instance : <a href="mod12.html#inst_tag_25" >arbiter_top.dut.yx_proc_s</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>14<td>13<td>92.86
+<tr class="s9"><td class="lf">ALWAYS<td>18<td>14<td>13<td>92.86
+</table>
+<pre class="code"><br clear=all>
+17                      
+18         1/1          	y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+19         1/1          	x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
+20                      
+21                      // If the MSB of y_addr_subtract is 0, then it should go 
+22                      
+23         1/1          	if (yx_addr_header_i == yx_addr_router_i) begin
+24                       
+25         1/1          		yx_addr_o_temp = 3'b100; // &quot;local&quot; output direction 
+26                      
+27         1/1          	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+28                      
+29         1/1          		if (~y_addr_subtract [3]) begin 
+30                      
+<font color = "red">31         0/1     ==>  			yx_addr_o_temp = 3'b001; // &quot;south&quot; output direction </font>
+32                      
+33         1/1          		end else if (y_addr_subtract [3]) begin
+34                      
+35         1/1          			yx_addr_o_temp = 3'b000; // &quot;north&quot; output direction 
+36                      
+37                      		end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+38                      
+39         1/1          	end else if (~x_addr_subtract[3]) begin
+40                      
+41         1/1          		yx_addr_o_temp = 3'b011; // &quot;east&quot; output direction 
+42                      
+43         1/1          	end else if (x_addr_subtract[3]) begin
+44                      
+45         1/1          		yx_addr_o_temp = 3'b010; // &quot;west&quot; output direction 
+46                      
+47                      	end else begin 
+48         1/1          		yx_addr_o_temp = 3'b111; // testing
+</pre>
+<br clear=all>
+<a href="mod12.html#inst_tag_25" >Go to Instance</a><hr>
+<a name="inst_tag_25_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod12.html#inst_tag_25" >arbiter_top.dut.yx_proc_s</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">6</td>
+<td class="rt">4</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s5">
+<td>Total Bits</td>
+<td class="rt">60</td>
+<td class="rt">34</td>
+<td class="rt">56.67 </td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">30</td>
+<td class="rt">17</td>
+<td class="rt">56.67 </td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">30</td>
+<td class="rt">17</td>
+<td class="rt">56.67 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s3">
+<td>Ports</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s3">
+<td>Port Bits</td>
+<td class="rt">38</td>
+<td class="rt">12</td>
+<td class="rt">31.58 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">19</td>
+<td class="rt">6</td>
+<td class="rt">31.58 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">19</td>
+<td class="rt">6</td>
+<td class="rt">31.58 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">22</td>
+<td class="rt">22</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>yx_addr_header_i[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[3:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[5:4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_router_i[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>yx_addr_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>y_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_25" >Go to Instance</a><hr>
+<a name="inst_tag_25_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod12.html#inst_tag_25" >arbiter_top.dut.yx_proc_s</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">23</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+23         	if (yx_addr_header_i == yx_addr_router_i) begin
+           	<font color = "green">-1-</font>  
+24          
+25         		yx_addr_o_temp = 3'b100; // "local" output direction 
+           <font color = "green">		==></font>
+26         
+27         	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+           	         <font color = "green">-2-</font>  
+28         
+29         		if (~y_addr_subtract [3]) begin 
+           		<font color = "red">-3-</font>  
+30         
+31         			yx_addr_o_temp = 3'b001; // "south" output direction 
+           <font color = "red">			==></font>
+32         
+33         		end else if (y_addr_subtract [3]) begin
+           		         <font color = "red">-4-</font>  
+34         
+35         			yx_addr_o_temp = 3'b000; // "north" output direction 
+           <font color = "green">			==></font>
+36         
+37         		end 
+           		MISSING_ELSE
+           <font color = "red">		==></font>
+38         
+39         	end else if (~x_addr_subtract[3]) begin
+           	         <font color = "green">-5-</font>  
+40         
+41         		yx_addr_o_temp = 3'b011; // "east" output direction 
+           <font color = "green">		==></font>
+42         
+43         	end else if (x_addr_subtract[3]) begin
+           	         <font color = "green">-6-</font>  
+44         
+45         		yx_addr_o_temp = 3'b010; // "west" output direction 
+           <font color = "green">		==></font>
+46         
+47         	end else begin 
+48         		yx_addr_o_temp = 3'b111; // testing
+           <font color = "green">		==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_25" >Go to Instance</a><hr>
+<a name="inst_tag_27"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_27" >arbiter_top.dut.yx_proc_e</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 73.65</td>
+<td class="s9 cl rt"><a href="mod12.html#inst_tag_27_Line" > 92.86</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod12.html#inst_tag_27_Toggle" > 56.67</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_27_Branch" > 71.43</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 73.65</td>
+<td class="s9 cl rt"> 92.86</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 56.67</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 71.43</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 85.71</td>
+<td><a href="mod12.html" >yx_processor</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 94.93</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.80</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod7.html#inst_tag_15" >dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_27_Line"></a>
+<b>Line Coverage for Instance : <a href="mod12.html#inst_tag_27" >arbiter_top.dut.yx_proc_e</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>14<td>13<td>92.86
+<tr class="s9"><td class="lf">ALWAYS<td>18<td>14<td>13<td>92.86
+</table>
+<pre class="code"><br clear=all>
+17                      
+18         1/1          	y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+19         1/1          	x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
+20                      
+21                      // If the MSB of y_addr_subtract is 0, then it should go 
+22                      
+23         1/1          	if (yx_addr_header_i == yx_addr_router_i) begin
+24                       
+25         1/1          		yx_addr_o_temp = 3'b100; // &quot;local&quot; output direction 
+26                      
+27         1/1          	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+28                      
+29         1/1          		if (~y_addr_subtract [3]) begin 
+30                      
+31         1/1          			yx_addr_o_temp = 3'b001; // &quot;south&quot; output direction 
+32                      
+33         1/1          		end else if (y_addr_subtract [3]) begin
+34                      
+35         1/1          			yx_addr_o_temp = 3'b000; // &quot;north&quot; output direction 
+36                      
+37                      		end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+38                      
+39         1/1          	end else if (~x_addr_subtract[3]) begin
+40                      
+<font color = "red">41         0/1     ==>  		yx_addr_o_temp = 3'b011; // &quot;east&quot; output direction </font>
+42                      
+43         1/1          	end else if (x_addr_subtract[3]) begin
+44                      
+45         1/1          		yx_addr_o_temp = 3'b010; // &quot;west&quot; output direction 
+46                      
+47                      	end else begin 
+48         1/1          		yx_addr_o_temp = 3'b111; // testing
+</pre>
+<br clear=all>
+<a href="mod12.html#inst_tag_27" >Go to Instance</a><hr>
+<a name="inst_tag_27_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod12.html#inst_tag_27" >arbiter_top.dut.yx_proc_e</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">6</td>
+<td class="rt">4</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s5">
+<td>Total Bits</td>
+<td class="rt">60</td>
+<td class="rt">34</td>
+<td class="rt">56.67 </td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">30</td>
+<td class="rt">17</td>
+<td class="rt">56.67 </td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">30</td>
+<td class="rt">17</td>
+<td class="rt">56.67 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s3">
+<td>Ports</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s3">
+<td>Port Bits</td>
+<td class="rt">38</td>
+<td class="rt">12</td>
+<td class="rt">31.58 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">19</td>
+<td class="rt">6</td>
+<td class="rt">31.58 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">19</td>
+<td class="rt">6</td>
+<td class="rt">31.58 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">22</td>
+<td class="rt">22</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>yx_addr_header_i[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[3:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[7:5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_router_i[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>yx_addr_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>y_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_27" >Go to Instance</a><hr>
+<a name="inst_tag_27_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod12.html#inst_tag_27" >arbiter_top.dut.yx_proc_e</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">23</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+23         	if (yx_addr_header_i == yx_addr_router_i) begin
+           	<font color = "green">-1-</font>  
+24          
+25         		yx_addr_o_temp = 3'b100; // "local" output direction 
+           <font color = "green">		==></font>
+26         
+27         	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+           	         <font color = "green">-2-</font>  
+28         
+29         		if (~y_addr_subtract [3]) begin 
+           		<font color = "green">-3-</font>  
+30         
+31         			yx_addr_o_temp = 3'b001; // "south" output direction 
+           <font color = "green">			==></font>
+32         
+33         		end else if (y_addr_subtract [3]) begin
+           		         <font color = "red">-4-</font>  
+34         
+35         			yx_addr_o_temp = 3'b000; // "north" output direction 
+           <font color = "green">			==></font>
+36         
+37         		end 
+           		MISSING_ELSE
+           <font color = "red">		==></font>
+38         
+39         	end else if (~x_addr_subtract[3]) begin
+           	         <font color = "red">-5-</font>  
+40         
+41         		yx_addr_o_temp = 3'b011; // "east" output direction 
+           <font color = "red">		==></font>
+42         
+43         	end else if (x_addr_subtract[3]) begin
+           	         <font color = "green">-6-</font>  
+44         
+45         		yx_addr_o_temp = 3'b010; // "west" output direction 
+           <font color = "green">		==></font>
+46         
+47         	end else begin 
+48         		yx_addr_o_temp = 3'b111; // testing
+           <font color = "green">		==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_27" >Go to Instance</a><hr>
+<a name="inst_tag_26"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_26" >arbiter_top.dut.yx_proc_w</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 74.76</td>
+<td class="s9 cl rt"><a href="mod12.html#inst_tag_26_Line" > 92.86</a></td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"><a href="mod12.html#inst_tag_26_Toggle" > 60.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod12.html#inst_tag_26_Branch" > 71.43</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s7 cl rt"> 74.76</td>
+<td class="s9 cl rt"> 92.86</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 71.43</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 85.71</td>
+<td><a href="mod12.html" >yx_processor</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 94.93</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.80</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod7.html#inst_tag_15" >dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_26_Line"></a>
+<b>Line Coverage for Instance : <a href="mod12.html#inst_tag_26" >arbiter_top.dut.yx_proc_w</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s9"><td class="lf">TOTAL<td><td>14<td>13<td>92.86
+<tr class="s9"><td class="lf">ALWAYS<td>18<td>14<td>13<td>92.86
+</table>
+<pre class="code"><br clear=all>
+17                      
+18         1/1          	y_addr_subtract = yx_addr_header_i [3:0] - yx_addr_router_i [3:0]; 
+19         1/1          	x_addr_subtract = yx_addr_header_i [7:4] - yx_addr_router_i [7:4]; 
+20                      
+21                      // If the MSB of y_addr_subtract is 0, then it should go 
+22                      
+23         1/1          	if (yx_addr_header_i == yx_addr_router_i) begin
+24                       
+25         1/1          		yx_addr_o_temp = 3'b100; // &quot;local&quot; output direction 
+26                      
+27         1/1          	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+28                      
+29         1/1          		if (~y_addr_subtract [3]) begin 
+30                      
+31         1/1          			yx_addr_o_temp = 3'b001; // &quot;south&quot; output direction 
+32                      
+33         1/1          		end else if (y_addr_subtract [3]) begin
+34                      
+35         1/1          			yx_addr_o_temp = 3'b000; // &quot;north&quot; output direction 
+36                      
+37                      		end 
+                   <font color = "red">==>  MISSING_ELSE</font>
+38                      
+39         1/1          	end else if (~x_addr_subtract[3]) begin
+40                      
+41         1/1          		yx_addr_o_temp = 3'b011; // &quot;east&quot; output direction 
+42                      
+43         1/1          	end else if (x_addr_subtract[3]) begin
+44                      
+<font color = "red">45         0/1     ==>  		yx_addr_o_temp = 3'b010; // &quot;west&quot; output direction </font>
+46                      
+47                      	end else begin 
+48         1/1          		yx_addr_o_temp = 3'b111; // testing
+</pre>
+<br clear=all>
+<a href="mod12.html#inst_tag_26" >Go to Instance</a><hr>
+<a name="inst_tag_26_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod12.html#inst_tag_26" >arbiter_top.dut.yx_proc_w</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">6</td>
+<td class="rt">4</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>Total Bits</td>
+<td class="rt">60</td>
+<td class="rt">36</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">30</td>
+<td class="rt">18</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">30</td>
+<td class="rt">18</td>
+<td class="rt">60.00 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s3">
+<td>Ports</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+<td class="rt">33.33 </td>
+</tr><tr class="s3">
+<td>Port Bits</td>
+<td class="rt">38</td>
+<td class="rt">14</td>
+<td class="rt">36.84 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr><tr class="s3">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">19</td>
+<td class="rt">7</td>
+<td class="rt">36.84 </td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">22</td>
+<td class="rt">22</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>yx_addr_header_i[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[3:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[5:4]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_header_i[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_router_i[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>yx_addr_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Signal Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th></tr><tr>
+<td>yx_addr_o_temp[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>y_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>x_addr_subtract[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_26" >Go to Instance</a><hr>
+<a name="inst_tag_26_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod12.html#inst_tag_26" >arbiter_top.dut.yx_proc_w</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Branches</td>
+<td></td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">23</td>
+<td class="rt">7</td>
+<td class="rt">5</td>
+<td class="rt">71.43 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+23         	if (yx_addr_header_i == yx_addr_router_i) begin
+           	<font color = "green">-1-</font>  
+24          
+25         		yx_addr_o_temp = 3'b100; // "local" output direction 
+           <font color = "green">		==></font>
+26         
+27         	end else if (~(yx_addr_header_i [3:0] == yx_addr_router_i [3:0]) ) begin 
+           	         <font color = "green">-2-</font>  
+28         
+29         		if (~y_addr_subtract [3]) begin 
+           		<font color = "green">-3-</font>  
+30         
+31         			yx_addr_o_temp = 3'b001; // "south" output direction 
+           <font color = "green">			==></font>
+32         
+33         		end else if (y_addr_subtract [3]) begin
+           		         <font color = "red">-4-</font>  
+34         
+35         			yx_addr_o_temp = 3'b000; // "north" output direction 
+           <font color = "green">			==></font>
+36         
+37         		end 
+           		MISSING_ELSE
+           <font color = "red">		==></font>
+38         
+39         	end else if (~x_addr_subtract[3]) begin
+           	         <font color = "green">-5-</font>  
+40         
+41         		yx_addr_o_temp = 3'b011; // "east" output direction 
+           <font color = "green">		==></font>
+42         
+43         	end else if (x_addr_subtract[3]) begin
+           	         <font color = "red">-6-</font>  
+44         
+45         		yx_addr_o_temp = 3'b010; // "west" output direction 
+           <font color = "red">		==></font>
+46         
+47         	end else begin 
+48         		yx_addr_o_temp = 3'b111; // testing
+           <font color = "green">		==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod12.html#inst_tag_26" >Go to Instance</a><br clear=all>
+<hr>
+<center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<br clear=all>
+<br clear=all>
+<table align=center><tr><td class="s0 cl">0%
+<td class="s1 cl">10%
+<td class="s2 cl">20%
+<td class="s3 cl">30%
+<td class="s4 cl">40%
+<td class="s5 cl">50%
+<td class="s6 cl">60%
+<td class="s7 cl">70%
+<td class="s8 cl">80%
+<td class="s9 cl">90%
+<td class="s10 cl">100%</table></body>
+</html>

@@ -1,0 +1,1283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: eff_pt</title>
+<link type="text/css" rel="stylesheet" href=".urg.css">
+<script type="text/javascript" src=".sortable.js"></script></head>
+<body><center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="modlist.html#tag_eff_pt" >eff_pt</a></span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#Branch" >100.00</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="file:///home/yss2117/4340_FinalProject/Design/tb/arbiter/../../NOC/arbiter/packet_tracker/eff_pt.sv" >/home/yss2117/4340_FinalProject/Design/tb/arbiter/../../NOC/arbiter/packet_tracker/eff_pt.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_87_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_87_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_87_Branch" >100.00</a></td>
+<td><a href="mod31.html#inst_tag_87" >arbiter_top.dut.pt_n.ff</a></td>
+</tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_88_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_88_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_88_Branch" >100.00</a></td>
+<td><a href="mod31.html#inst_tag_88" >arbiter_top.dut.pt_s.ff</a></td>
+</tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_89_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_89_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_89_Branch" >100.00</a></td>
+<td><a href="mod31.html#inst_tag_89" >arbiter_top.dut.pt_w.ff</a></td>
+</tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_90_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_90_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_90_Branch" >100.00</a></td>
+<td><a href="mod31.html#inst_tag_90" >arbiter_top.dut.pt_e.ff</a></td>
+</tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_91_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_91_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_91_Branch" >100.00</a></td>
+<td><a href="mod31.html#inst_tag_91" >arbiter_top.dut.pt_l.ff</a></td>
+</tr></table></div>
+<br clear=all>
+<hr>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod31.html" >eff_pt</a><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>3<td>3<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>11<td>3<td>3<td>100.00
+</table>
+<pre class="code"><br clear=all>
+10                          
+11         1/1          	if (reset) begin
+12                      	
+13         1/1          	data_o &lt;= '0;
+14                      	
+15                      	end else begin
+16                      			
+17         1/1          			data_o &lt;= data_i;
+</pre>
+<br clear=all>
+Go to <a href="mod31.html" >top</a>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod31.html" >eff_pt</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_i[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod31.html" >top</a>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod31.html" >eff_pt</a><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">11</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+11         	if (reset) begin
+           	<font color = "green">-1-</font>  
+12         	
+13         	data_o <= '0;
+           <font color = "green">	==></font>
+14         	
+15         	end else begin
+16         			
+17         			data_o <= data_i;
+           <font color = "green">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+Go to <a href="mod31.html" >top</a>
+<hr>
+<a name="inst_tag_87"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_87" >arbiter_top.dut.pt_n.ff</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_87_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_87_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_87_Branch" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod31.html" >eff_pt</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.48</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod18.html#inst_tag_46" >pt_n</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_87_Line"></a>
+<b>Line Coverage for Instance : <a href="mod31.html#inst_tag_87" >arbiter_top.dut.pt_n.ff</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>3<td>3<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>11<td>3<td>3<td>100.00
+</table>
+<pre class="code"><br clear=all>
+10                          
+11         1/1          	if (reset) begin
+12                      	
+13         1/1          	data_o &lt;= '0;
+14                      	
+15                      	end else begin
+16                      			
+17         1/1          			data_o &lt;= data_i;
+</pre>
+<br clear=all>
+<a href="mod31.html#inst_tag_87" >Go to Instance</a><hr>
+<a name="inst_tag_87_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod31.html#inst_tag_87" >arbiter_top.dut.pt_n.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_i[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_87" >Go to Instance</a><hr>
+<a name="inst_tag_87_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod31.html#inst_tag_87" >arbiter_top.dut.pt_n.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">11</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+11         	if (reset) begin
+           	<font color = "green">-1-</font>  
+12         	
+13         	data_o <= '0;
+           <font color = "green">	==></font>
+14         	
+15         	end else begin
+16         			
+17         			data_o <= data_i;
+           <font color = "green">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_87" >Go to Instance</a><hr>
+<a name="inst_tag_88"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_88" >arbiter_top.dut.pt_s.ff</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_88_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_88_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_88_Branch" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod31.html" >eff_pt</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.48</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod18.html#inst_tag_47" >pt_s</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_88_Line"></a>
+<b>Line Coverage for Instance : <a href="mod31.html#inst_tag_88" >arbiter_top.dut.pt_s.ff</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>3<td>3<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>11<td>3<td>3<td>100.00
+</table>
+<pre class="code"><br clear=all>
+10                          
+11         1/1          	if (reset) begin
+12                      	
+13         1/1          	data_o &lt;= '0;
+14                      	
+15                      	end else begin
+16                      			
+17         1/1          			data_o &lt;= data_i;
+</pre>
+<br clear=all>
+<a href="mod31.html#inst_tag_88" >Go to Instance</a><hr>
+<a name="inst_tag_88_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod31.html#inst_tag_88" >arbiter_top.dut.pt_s.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_i[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_88" >Go to Instance</a><hr>
+<a name="inst_tag_88_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod31.html#inst_tag_88" >arbiter_top.dut.pt_s.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">11</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+11         	if (reset) begin
+           	<font color = "green">-1-</font>  
+12         	
+13         	data_o <= '0;
+           <font color = "green">	==></font>
+14         	
+15         	end else begin
+16         			
+17         			data_o <= data_i;
+           <font color = "green">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_88" >Go to Instance</a><hr>
+<a name="inst_tag_89"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_89" >arbiter_top.dut.pt_w.ff</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_89_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_89_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_89_Branch" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod31.html" >eff_pt</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.48</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod18.html#inst_tag_48" >pt_w</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_89_Line"></a>
+<b>Line Coverage for Instance : <a href="mod31.html#inst_tag_89" >arbiter_top.dut.pt_w.ff</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>3<td>3<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>11<td>3<td>3<td>100.00
+</table>
+<pre class="code"><br clear=all>
+10                          
+11         1/1          	if (reset) begin
+12                      	
+13         1/1          	data_o &lt;= '0;
+14                      	
+15                      	end else begin
+16                      			
+17         1/1          			data_o &lt;= data_i;
+</pre>
+<br clear=all>
+<a href="mod31.html#inst_tag_89" >Go to Instance</a><hr>
+<a name="inst_tag_89_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod31.html#inst_tag_89" >arbiter_top.dut.pt_w.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_i[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_89" >Go to Instance</a><hr>
+<a name="inst_tag_89_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod31.html#inst_tag_89" >arbiter_top.dut.pt_w.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">11</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+11         	if (reset) begin
+           	<font color = "green">-1-</font>  
+12         	
+13         	data_o <= '0;
+           <font color = "green">	==></font>
+14         	
+15         	end else begin
+16         			
+17         			data_o <= data_i;
+           <font color = "green">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_89" >Go to Instance</a><hr>
+<a name="inst_tag_90"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_90" >arbiter_top.dut.pt_e.ff</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_90_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_90_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_90_Branch" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod31.html" >eff_pt</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.48</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod18.html#inst_tag_49" >pt_e</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_90_Line"></a>
+<b>Line Coverage for Instance : <a href="mod31.html#inst_tag_90" >arbiter_top.dut.pt_e.ff</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>3<td>3<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>11<td>3<td>3<td>100.00
+</table>
+<pre class="code"><br clear=all>
+10                          
+11         1/1          	if (reset) begin
+12                      	
+13         1/1          	data_o &lt;= '0;
+14                      	
+15                      	end else begin
+16                      			
+17         1/1          			data_o &lt;= data_i;
+</pre>
+<br clear=all>
+<a href="mod31.html#inst_tag_90" >Go to Instance</a><hr>
+<a name="inst_tag_90_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod31.html#inst_tag_90" >arbiter_top.dut.pt_e.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_i[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_90" >Go to Instance</a><hr>
+<a name="inst_tag_90_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod31.html#inst_tag_90" >arbiter_top.dut.pt_e.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">11</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+11         	if (reset) begin
+           	<font color = "green">-1-</font>  
+12         	
+13         	data_o <= '0;
+           <font color = "green">	==></font>
+14         	
+15         	end else begin
+16         			
+17         			data_o <= data_i;
+           <font color = "green">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_90" >Go to Instance</a><hr>
+<a name="inst_tag_91"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_91" >arbiter_top.dut.pt_l.ff</a></span>
+<br clear=all>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_91_Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod31.html#inst_tag_91_Toggle" > 93.75</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod31.html#inst_tag_91_Branch" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Module : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.92</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 93.75</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod31.html" >eff_pt</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left class="sml">
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.48</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 95.45</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod18.html#inst_tag_50" >pt_l</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<br clear=all>
+<span class=inst>no children</span>
+</div>
+<hr>
+<a name="inst_tag_91_Line"></a>
+<b>Line Coverage for Instance : <a href="mod31.html#inst_tag_91" >arbiter_top.dut.pt_l.ff</a></b><br clear=all>
+<table class="rt">
+<col width="122">
+<col span="4" width="82">
+<tr><th><th>Line No.<th>Total<th>Covered<th>Percent
+<tr class="s10"><td class="lf">TOTAL<td><td>3<td>3<td>100.00
+<tr class="s10"><td class="lf">ALWAYS<td>11<td>3<td>3<td>100.00
+</table>
+<pre class="code"><br clear=all>
+10                          
+11         1/1          	if (reset) begin
+12                      	
+13         1/1          	data_o &lt;= '0;
+14                      	
+15                      	end else begin
+16                      			
+17         1/1          			data_o &lt;= data_i;
+</pre>
+<br clear=all>
+<a href="mod31.html#inst_tag_91" >Go to Instance</a><hr>
+<a name="inst_tag_91_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod31.html#inst_tag_91" >arbiter_top.dut.pt_l.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">15</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left>
+<caption><b>Port Details</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Toggle</th><th nowrap width=80>Toggle 1->0</th><th nowrap width=80>Toggle 0->1</th><th nowrap width=80>Direction</th></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_i[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>data_o[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_91" >Go to Instance</a><hr>
+<a name="inst_tag_91_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod31.html#inst_tag_91" >arbiter_top.dut.pt_l.ff</a></b><br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">11</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+11         	if (reset) begin
+           	<font color = "green">-1-</font>  
+12         	
+13         	data_o <= '0;
+           <font color = "green">	==></font>
+14         	
+15         	end else begin
+16         			
+17         			data_o <= data_i;
+           <font color = "green">			==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left>
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a href="mod31.html#inst_tag_91" >Go to Instance</a><br clear=all>
+<hr>
+<center><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | asserts</center>
+<br>
+<br clear=all>
+<br clear=all>
+<table align=center><tr><td class="s0 cl">0%
+<td class="s1 cl">10%
+<td class="s2 cl">20%
+<td class="s3 cl">30%
+<td class="s4 cl">40%
+<td class="s5 cl">50%
+<td class="s6 cl">60%
+<td class="s7 cl">70%
+<td class="s8 cl">80%
+<td class="s9 cl">90%
+<td class="s10 cl">100%</table></body>
+</html>
