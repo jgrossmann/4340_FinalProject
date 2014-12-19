@@ -270,7 +270,7 @@ n_nexthop_register nexthop_n (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
-	   .ib_empty_i(ib_empty_n_i),
+	   .ib_empty_i(ifc.n_arb_empty_i),
 	   .pt_almost_done_i (n_pt_almost_done_o), 
        .nhr_address_i(yx_n_addr_o_temp),
        .nhr_write_i(nhr_n_write_i_temp),  
@@ -282,7 +282,7 @@ s_nexthop_register nexthop_s (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
-	   .ib_empty_i(ib_empty_s_i),
+	   .ib_empty_i(ifc.s_arb_empty_i),
 	   .pt_almost_done_i (s_pt_almost_done_o), 
        .nhr_address_i(yx_s_addr_o_temp),
        .nhr_write_i(nhr_s_write_i_temp),  
@@ -294,7 +294,7 @@ w_nexthop_register nexthop_w (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
-	   .ib_empty_i(ib_empty_w_i),
+	   .ib_empty_i(ifc.w_arb_empty_i),
 	   .pt_almost_done_i (w_pt_almost_done_o), 
        .nhr_address_i(yx_w_addr_o_temp),
        .nhr_write_i(nhr_w_write_i_temp),  
@@ -306,7 +306,7 @@ e_nexthop_register nexthop_e (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
-	   .ib_empty_i(ib_empty_e_i),
+	   .ib_empty_i(ifc.s_arb_empty_i),
 	   .pt_almost_done_i (e_pt_almost_done_o), 
        .nhr_address_i(yx_e_addr_o_temp),
        .nhr_write_i(nhr_e_write_i_temp),  
@@ -318,7 +318,7 @@ l_nexthop_register nexthop_l (
 
        .clk(ifc.clk), 
        .reset(ifc.reset),
-	   .ib_empty_i(ib_empty_l_i),
+	   .ib_empty_i(ifc.l_arb_empty_i),
 	   .pt_almost_done_i (l_pt_almost_done_o), 
        .nhr_address_i(yx_l_addr_o_temp),
        .nhr_write_i(nhr_l_write_i_temp),  
