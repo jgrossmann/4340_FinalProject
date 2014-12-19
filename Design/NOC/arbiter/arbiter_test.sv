@@ -517,7 +517,7 @@ rrp_w_priority_read_o_temp = (~ifc.w_arb_empty_i)&(rrp_n_priority_w_o_temp | rrp
 rrp_e_priority_read_o_temp = (~ifc.e_arb_empty_i)&(rrp_n_priority_e_o_temp | rrp_s_priority_e_o_temp | rrp_w_priority_e_o_temp | rrp_l_priority_e_o_temp) ;  
 rrp_l_priority_read_o_temp = (~ifc.l_arb_empty_i)&(rrp_n_priority_l_o_temp | rrp_s_priority_l_o_temp | rrp_w_priority_l_o_temp | rrp_e_priority_l_o_temp) ;  
 
-cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_l_o_temp;
+cc_credit_n_o_temp = rrp_n_priority_s_o_temp | rrp_n_priority_w_o_temp | rrp_n_priority_e_o_temp | rrp_n_priority_l_o_temp;
 cc_credit_s_o_temp = rrp_s_priority_n_o_temp | rrp_s_priority_w_o_temp | rrp_s_priority_e_o_temp | rrp_s_priority_l_o_temp;
 cc_credit_w_o_temp = rrp_w_priority_n_o_temp | rrp_w_priority_s_o_temp | rrp_w_priority_e_o_temp | rrp_w_priority_l_o_temp;
 cc_credit_e_o_temp = rrp_e_priority_n_o_temp | rrp_e_priority_s_o_temp | rrp_e_priority_w_o_temp | rrp_e_priority_l_o_temp;
