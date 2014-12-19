@@ -1,7 +1,7 @@
 
 module priorityencoder(
         
-		input rr_default_i, // 3-bit
+		input [2:0] rr_default_i, // 3-bit
 	    input rr_priority_n_i, 
         input rr_priority_s_i, 
         input rr_priority_w_i, 
