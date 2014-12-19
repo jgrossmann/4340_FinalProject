@@ -35,12 +35,12 @@ logic [4:0] data_o_temp;
 
  if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
  	data_i_temp = 5'b11111;
- end else begin
-	data_i_temp = data_o_temp;
+// end else begin
+//	data_i_temp = data_o_temp;
  end
  
  
- 		rr_priority_i_temp = rr_priority_i_temp & data_i_temp;
+ 		rr_priority_i_temp = rr_priority_i_temp & data_o_temp;
 		casex (rr_priority_i_temp)
 			5'b1xxxx:  begin 
 				rr_priority_to_cs_o_temp = 3'b000; 
