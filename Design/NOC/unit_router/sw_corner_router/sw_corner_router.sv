@@ -61,6 +61,7 @@ module sw_corner_router
 	input [15 : 0] n_data_i,
 	input [15 : 0] e_data_i,
 	input [15 : 0] l_data_i,
+	input [15:0] yx_addr_router_i,
 	input n_valid_i,
 	input e_valid_i,
 	input l_valid_i,

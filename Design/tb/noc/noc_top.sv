@@ -14,6 +14,7 @@
 `include "noc_class.sv"
 `include "noc_testbench.sv"
 `include "../../NOC/arbiter/arbiter.sv"
+`include "../../NOC/arbiter/rr_overall/eff_p_to_mux.sv"
 `include "../../NOC/arbiter/rr_overall/rr_comparator/n_rr_comparator.sv" 
 `include "../../NOC/arbiter/rr_overall/rr_comparator/s_rr_comparator.sv" 
 `include "../../NOC/arbiter/rr_overall/rr_comparator/w_rr_comparator.sv" 
