@@ -149,7 +149,7 @@ rr_register_1000 rrr_1000(
 
 priorityencoder priority_enc(
 		
-		.rr_default_i (3'b000)
+		.rr_default_i (3'b000),
 	    .rr_priority_n_i (1'b0), 
         .rr_priority_s_i (priority_mux_o[3]), 
         .rr_priority_w_i (priority_mux_o[2]), 
