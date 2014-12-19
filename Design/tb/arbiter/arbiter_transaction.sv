@@ -96,6 +96,11 @@ class arbiter_transaction;
 			packet_tracker[i] = 0;
 			valid[i] = 0;
 		end
+		n_arb_address_i.rand_mode(1);
+		s_arb_address_i.rand_mode(1);
+		w_arb_address_i.rand_mode(1);
+		e_arb_address_i.rand_mode(1);
+		l_arb_address_i.rand_mode(1);
 		x_pos = e.x_cor;
 		y_pos = e.y_cor;
 		yx_pos[3:0] = e.y_cor;
@@ -136,18 +141,23 @@ class arbiter_transaction;
 		end
 		if(valid[0] == 0 && n_arb_empty_i == 0) begin
 			valid[0] = 1;
+			n_arb_address_i.rand_mode(0);
 		end
 		if(valid[1] == 0 && s_arb_empty_i == 0) begin
 			valid[1] = 1;
+			s_arb_address_i.rand_mode(0);
 		end
 		if(valid[2] == 0 && w_arb_empty_i == 0) begin
 			valid[2] = 1;
+			w_arb_address_i.rand_mode(0);
 		end
 		if(valid[3] == 0 && e_arb_empty_i == 0) begin
 			valid[3] = 1;
+			e_arb_address_i.rand_mode(0);
 		end
 		if(valid[4] == 0 && l_arb_empty_i == 0) begin
 			valid[4] = 1;
+			l_arb_address_i.rand_mode(0);
 		end
 		reset = reset_rand < env.reset_density;
 		if(n_arb_credit_inc) begin
@@ -196,7 +206,13 @@ class arbiter_transaction;
 				credit_count[i] = 5;
 				packet_tracker[i] = 0;
 				valid[i] = 0;
+				
 			end
+			n_arb_address_i.rand_mode(1);
+			s_arb_address_i.rand_mode(1);
+			w_arb_address_i.rand_mode(1);
+			e_arb_address_i.rand_mode(1);
+			l_arb_address_i.rand_mode(1);
 		end
     endfunction
 
@@ -230,18 +246,23 @@ class arbiter_transaction;
 		
 		if(valid[0] == 0 && n_arb_empty_i == 0) begin
 			valid[0] = 1;
+			n_arb_address_i.rand_mode(0);
 		end
 		if(valid[1] == 0 && s_arb_empty_i == 0) begin
 			valid[1] = 1;
+			s_arb_address_i.rand_mode(0);
 		end
 		if(valid[2] == 0 && w_arb_empty_i == 0) begin
 			valid[2] = 1;
+			w_arb_address_i.rand_mode(0);
 		end
 		if(valid[3] == 0 && e_arb_empty_i == 0) begin
 			valid[3] = 1;
+			e_arb_address_i.rand_mode(0);
 		end
 		if(valid[4] == 0 && l_arb_empty_i == 0) begin
 			valid[4] = 1;
+			l_arb_address_i.rand_mode(0);
 		end
 	
 	
@@ -269,18 +290,23 @@ class arbiter_transaction;
 		
 		if(valid[0] == 0 && n_arb_empty_i == 0) begin
 			valid[0] = 1;
+			n_arb_address_i.rand_mode(0);
 		end
 		if(valid[1] == 0 && s_arb_empty_i == 0) begin
 			valid[1] = 1;
+			s_arb_address_i.rand_mode(0);
 		end
 		if(valid[2] == 0 && w_arb_empty_i == 0) begin
 			valid[2] = 1;
+			w_arb_address_i.rand_mode(0);
 		end
 		if(valid[3] == 0 && e_arb_empty_i == 0) begin
 			valid[3] = 1;
+			e_arb_address_i.rand_mode(0);
 		end
 		if(valid[4] == 0 && l_arb_empty_i == 0) begin
 			valid[4] = 1;
+			l_arb_address_i.rand_mode(0);
 		end
 	
 	
@@ -308,18 +334,23 @@ class arbiter_transaction;
 		
 		if(valid[0] == 0 && n_arb_empty_i == 0) begin
 			valid[0] = 1;
+			n_arb_address_i.rand_mode(0);
 		end
 		if(valid[1] == 0 && s_arb_empty_i == 0) begin
 			valid[1] = 1;
+			s_arb_address_i.rand_mode(0);
 		end
 		if(valid[2] == 0 && w_arb_empty_i == 0) begin
 			valid[2] = 1;
+			w_arb_address_i.rand_mode(0);
 		end
 		if(valid[3] == 0 && e_arb_empty_i == 0) begin
 			valid[3] = 1;
+			e_arb_address_i.rand_mode(0);
 		end
 		if(valid[4] == 0 && l_arb_empty_i == 0) begin
 			valid[4] = 1;
+			l_arb_address_i.rand_mode(0);
 		end
 	
 	
@@ -330,30 +361,35 @@ class arbiter_transaction;
 			packet_tracker[0] = (packet_tracker[0]+1)%5;
 			if(packet_tracker[0] == 0) begin
 				valid[0] = 0;
+				n_arb_address_i.rand_mode(1);
 			end
 		end
 		if(s == 1) begin
 			packet_tracker[1] = (packet_tracker[1]+1)%5;
 			if(packet_tracker[1] == 0) begin
 				valid[1] = 0;
+				s_arb_address_i.rand_mode(1);
 			end
 		end
 		if(w == 1) begin
 			packet_tracker[2] = (packet_tracker[2]+1)%5;
 			if(packet_tracker[2] == 0) begin
 				valid[2] = 0;
+				w_arb_address_i.rand_mode(1);
 			end
 		end
 		if(e == 1) begin
 			packet_tracker[3] = (packet_tracker[3]+1)%5;
 			if(packet_tracker[3] == 0) begin
 				valid[3] = 0;
+				e_arb_address_i.rand_mode(1);
 			end
 		end
 		if(l == 1) begin
 			packet_tracker[4] = (packet_tracker[4]+1)%5;
 			if(packet_tracker[4] == 0) begin
 				valid[4] = 0;
+				l_arb_address_i.rand_mode(1);
 			end
 		end
 
