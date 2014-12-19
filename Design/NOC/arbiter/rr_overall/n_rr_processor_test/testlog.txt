@@ -1,0 +1,1 @@
+bug - outputted a 1 for default sender even if it had nothing to send, causing the credit output to always be 1 (12/17)
