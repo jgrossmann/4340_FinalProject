@@ -13,6 +13,7 @@ module priorityencoder_to_mux(
 logic [4:0] rr_priority_i_temp; 
 
 logic [2:0] rr_priority_to_cs_o_temp; 
+logic [4:0] temp;
 
 logic [4:0] data_i_temp; 
 logic [4:0] data_o_temp; 
@@ -32,15 +33,19 @@ logic [4:0] data_o_temp;
  rr_priority_i_temp [1] = rr_priority_e_i;
  rr_priority_i_temp [0] = rr_priority_l_i;  
  
+	temp[4] = rr_change_order_i;
+temp[3] = rr_change_order_i;
+temp[2] = rr_change_order_i;
+temp[1] = rr_change_order_i;
+temp[0] = rr_change_order_i;
+
 
  if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
  	data_i_temp = 5'b11111;
 // end else begin
 //	data_i_temp = data_o_temp;
  end
- 
- 
- 		rr_priority_i_temp = rr_priority_i_temp & data_o_temp;
+ 		rr_priority_i_temp = (rr_priority_i_temp & data_o_temp);
 		casex (rr_priority_i_temp)
 			5'b1xxxx:  begin 
 				rr_priority_to_cs_o_temp = 3'b000; 
