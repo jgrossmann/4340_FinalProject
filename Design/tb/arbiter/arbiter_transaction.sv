@@ -124,26 +124,7 @@ class arbiter_transaction;
 		w_arb_empty_i = w_arb_empty_i_rand < env.empty_density;
 		e_arb_empty_i = e_arb_empty_i_rand < env.empty_density;
 		l_arb_empty_i = l_arb_empty_i_rand < env.empty_density;
-		if(valid[0] == 1) begin
-			n_arb_empty_i = 0;
-			n_arb_credit_i = 1;
-		end
-		if(valid[1] == 1) begin
-			s_arb_empty_i = 0;
-			s_arb_credit_i = 1;
-		end
-		if(valid[2] == 1) begin
-			w_arb_empty_i = 0;
-			w_arb_credit_i = 1;
-		end
-		if(valid[3] == 1) begin
-			e_arb_empty_i = 0;
-			e_arb_credit_i = 1;
-		end
-		if(valid[4] == 1) begin
-			l_arb_empty_i = 0;
-			l_arb_credit_i = 1;
-		end
+		
 		if(valid[0] == 0 && n_arb_empty_i == 0) begin
 			valid[0] = 1;
 			n_arb_address_i.rand_mode(0);
@@ -206,6 +187,28 @@ class arbiter_transaction;
 		end else begin
 			l_arb_credit_i = 1;
 		end
+		
+		if(valid[0] == 1) begin
+			n_arb_empty_i = 0;
+			n_arb_credit_i = 1;
+		end
+		if(valid[1] == 1) begin
+			s_arb_empty_i = 0;
+			s_arb_credit_i = 1;
+		end
+		if(valid[2] == 1) begin
+			w_arb_empty_i = 0;
+			w_arb_credit_i = 1;
+		end
+		if(valid[3] == 1) begin
+			e_arb_empty_i = 0;
+			e_arb_credit_i = 1;
+		end
+		if(valid[4] == 1) begin
+			l_arb_empty_i = 0;
+			l_arb_credit_i = 1;
+		end
+		
 		if(reset == 1) begin
 			foreach(credit_count[i]) begin
 				credit_count[i] = 5;
