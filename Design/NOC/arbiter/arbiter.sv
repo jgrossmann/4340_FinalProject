@@ -247,11 +247,11 @@ yx_processor yx_proc_l (
 
 always_comb begin 
 
-nhr_n_write_i_temp = (ib_empty_n_i * n_pt_almost_done_o);
-nhr_s_write_i_temp = (ib_empty_s_i * s_pt_almost_done_o);  
-nhr_w_write_i_temp = (ib_empty_w_i * w_pt_almost_done_o);  
-nhr_e_write_i_temp = (ib_empty_e_i * e_pt_almost_done_o);  
-nhr_l_write_i_temp = (ib_empty_l_i * l_pt_almost_done_o);  
+nhr_n_write_i_temp = (ib_empty_n_i & n_pt_almost_done_o);
+nhr_s_write_i_temp = (ib_empty_s_i & s_pt_almost_done_o);  
+nhr_w_write_i_temp = (ib_empty_w_i & w_pt_almost_done_o);  
+nhr_e_write_i_temp = (ib_empty_e_i & e_pt_almost_done_o);  
+nhr_l_write_i_temp = (ib_empty_l_i & l_pt_almost_done_o);  
 
 end 
 
