@@ -1,0 +1,648 @@
+
+Warning:  Site Information is not available ... Have you run install_site?
+
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+           Version F-2011.09-SP2 for amd64 -- Nov 24, 2011
+               Copyright (c) 1988-2011 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##################################################################
+# SPECIFY LIBRARIES
+##################################################################
+set SynopsysInstall [getenv "SYNOPSYS"]
+/sim/synopsys64/icc
+set designDB /sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ.db
+/sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ.db
+# set designDB /proj/arcade/synopsys/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_tt1p05v25c.db
+# This parameter is used to specify the synthesis tool all the paths that it should search when looking for a synthesis technology library for reference during synthesis.
+set search_path [list . [format "%s%s" $SynopsysInstall /dw/sim_ver]]
+. /sim/synopsys64/icc/dw/sim_ver
+# The parameter specifies the file that contains all the logic cells that should used for mapping during synthesis. In other words, the tool during synthesis maps a design to the logic cells present in this library.
+set target_library $designDB
+/sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ.db
+# Implementation for standard operators, such as +, *
+set synthetic_library [list dw_foundation.sldb]
+dw_foundation.sldb
+# This parameter points to the library that contains information on the logic gates in the synthesis technology library. The tool uses this library solely for reference but does not use the cells present in it for mapping as in the case of target_library.
+set link_library [concat [concat "*" $target_library] $synthetic_library]
+* /sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ.db dw_foundation.sldb
+# This parameter points to the library that contains the “visual” information on the logic cells in the synthesis technology library. All logic cells have a symbolic representation and information about the symbols is stored in this library.
+set symbol_library [list generic.sdb]
+generic.sdb
+set mw_ref_lib /sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/process/astro/gds-as/saed90nm_dv
+/sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/process/astro/gds-as/saed90nm_dv
+set astro_tf /sim/synopsys/SAED_EDK90nm/Technology_Kit/techfile/saed90nm_icc_1p9m.tf
+/sim/synopsys/SAED_EDK90nm/Technology_Kit/techfile/saed90nm_icc_1p9m.tf
+define_design_lib WORK -path ./WORK
+1
+##################################################################
+# COMPILATION PARAMETERS
+##################################################################
+set myFiles [glob ../NOC/*.sv]; # RTL source files
+../NOC/noc.sv ../NOC/eff_router_address.sv ../NOC/noc_syn.sv
+set fileFormat sverilog; # verilog or sverilog
+sverilog
+set basename noc_syn.sv; # Top-level module name
+noc_syn.sv
+# Clock information
+set CLK "clk"; # The name of your clock
+clk
+set virtual 0; # 1 if virtual clock, 0 if real clock
+0
+# Timing information
+set clkPeriodNS 2.5 ; # Desired clock period (in ns)
+2.5
+# Input delay tells DC how long after the clock before an input becomes valid.
+set inDelayNS [expr $clkPeriodNS*.1]; # Delay from clock to inputs valid
+0.25
+set outDelayNS [expr $clkPeriodNS*.1]; # Delay from clock to output valid
+0.25
+# Driving and loading information
+# We assume all inputs to the design are driven by a fanout 8 inverter
+set inputDrive INVX8
+INVX8
+##################################################################
+# SYNTHESIS SETTINGS
+##################################################################
+# Controls whether a warning message is issued if a latch is inferred from a design.
+set hdlin_check_no_latch true
+true
+# Compiler switches.
+set useUltra 0 ; # 1 for compile_ultra, 0 for compile
+0
+# mapEffort, useUngroup are for non-ultra compile.
+set mapEffort1 high; # First pass - low, medium, or high
+high
+set mapEffort2 high; # second pass - low, medium, or high
+high
+set useUngroup 0 ; # 0 if no flatten, 1 if flatten
+0
+# Control the writing of result files
+set stage synth; # Name appended to output files
+synth
+# The following control which output files you want. They should be set to 1 if you want the file, 0 if not
+set writeV 1; # Compiled structural Verilog file
+1
+set writeDDC 1; # Compiled file in ddc format (XG-mode)
+1
+set writeSDF 1; # sdf file for back-annotated timing sim
+1
+set writeSDC 1; # sdc constraint file for place and route
+1
+set reportTiming 1; # Timing estimate
+1
+set reportArea 1; # Area estimate
+1
+set reportPower 1; # Power estimate
+1
+set reportQuality 1; # Quality of results report
+1
+set reportGating 1; # Report clock gating
+1
+set reportReference 1; #
+1
+set reportDesign 1; #
+1
+set reportCell 1; #
+1
+set reportCompileOptions 1; #
+1
+set reportConstraint 1; #
+1
+##################################################################
+# READ DESIGN - the following shoudn't need modification
+##################################################################
+# Analyze and elaborate the files
+analyze -format $fileFormat -lib WORK $myFiles
+Running PRESTO HDLC
+Compiling source file ../NOC/noc.sv
+Warning:  ../NOC/noc.sv:356: the undeclared symbol 'clk' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/noc.sv:357: the undeclared symbol 'reset' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ../NOC/eff_router_address.sv
+Compiling source file ../NOC/noc_syn.sv
+Searching for ./arbiter/arbiter.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/arbiter.sv
+Searching for ../NOC/arbiter/arbiter.sv
+Opening include file ../NOC/arbiter/arbiter.sv
+Warning:  ../NOC/arbiter/arbiter.sv:438: the undeclared symbol 'n_arb_credit_i' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/arbiter/arbiter.sv:459: the undeclared symbol 's_arb_credit_i' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/arbiter/arbiter.sv:480: the undeclared symbol 'w_arb_credit_i' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/arbiter/arbiter.sv:501: the undeclared symbol 'e_arb_credit_i' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/arbiter/arbiter.sv:522: the undeclared symbol 'l_arb_credit_i' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./arbiter/rr_overall/rr_comparator/n_rr_comparator.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_comparator/n_rr_comparator.sv
+Searching for ../NOC/arbiter/rr_overall/rr_comparator/n_rr_comparator.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_comparator/n_rr_comparator.sv
+Searching for ./arbiter/rr_overall/rr_comparator/s_rr_comparator.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_comparator/s_rr_comparator.sv
+Searching for ../NOC/arbiter/rr_overall/rr_comparator/s_rr_comparator.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_comparator/s_rr_comparator.sv
+Searching for ./arbiter/rr_overall/rr_comparator/w_rr_comparator.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_comparator/w_rr_comparator.sv
+Searching for ../NOC/arbiter/rr_overall/rr_comparator/w_rr_comparator.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_comparator/w_rr_comparator.sv
+Searching for ./arbiter/rr_overall/rr_comparator/e_rr_comparator.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_comparator/e_rr_comparator.sv
+Searching for ../NOC/arbiter/rr_overall/rr_comparator/e_rr_comparator.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_comparator/e_rr_comparator.sv
+Searching for ./arbiter/rr_overall/rr_comparator/l_rr_comparator.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_comparator/l_rr_comparator.sv
+Searching for ../NOC/arbiter/rr_overall/rr_comparator/l_rr_comparator.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_comparator/l_rr_comparator.sv
+Searching for ./arbiter/rr_overall/priorityencoder.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/priorityencoder.sv
+Searching for ../NOC/arbiter/rr_overall/priorityencoder.sv
+Opening include file ../NOC/arbiter/rr_overall/priorityencoder.sv
+Searching for ./arbiter/rr_overall/priorityencoder_to_mux.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/priorityencoder_to_mux.sv
+Searching for ../NOC/arbiter/rr_overall/priorityencoder_to_mux.sv
+Opening include file ../NOC/arbiter/rr_overall/priorityencoder_to_mux.sv
+Searching for ./arbiter/rr_overall/mux_5to1.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/mux_5to1.sv
+Searching for ../NOC/arbiter/rr_overall/mux_5to1.sv
+Opening include file ../NOC/arbiter/rr_overall/mux_5to1.sv
+Searching for ./arbiter/rr_overall/mux_5to1_1bit.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/mux_5to1_1bit.sv
+Searching for ../NOC/arbiter/rr_overall/mux_5to1_1bit.sv
+Opening include file ../NOC/arbiter/rr_overall/mux_5to1_1bit.sv
+Searching for ./arbiter/rr_overall/eff_p_to_mux.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/eff_p_to_mux.sv
+Searching for ../NOC/arbiter/rr_overall/eff_p_to_mux.sv
+Opening include file ../NOC/arbiter/rr_overall/eff_p_to_mux.sv
+Searching for ./arbiter/rr_overall/rr_register/eff_rr_0001.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/eff_rr_0001.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/eff_rr_0001.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/eff_rr_0001.sv
+Searching for ./arbiter/rr_overall/rr_register/rr_register_0001.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/rr_register_0001.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/rr_register_0001.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/rr_register_0001.sv
+Searching for ./arbiter/rr_overall/rr_register/eff_rr_0010.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/eff_rr_0010.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/eff_rr_0010.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/eff_rr_0010.sv
+Searching for ./arbiter/rr_overall/rr_register/rr_register_0010.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/rr_register_0010.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/rr_register_0010.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/rr_register_0010.sv
+Searching for ./arbiter/rr_overall/rr_register/eff_rr_0100.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/eff_rr_0100.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/eff_rr_0100.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/eff_rr_0100.sv
+Searching for ./arbiter/rr_overall/rr_register/rr_register_0100.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/rr_register_0100.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/rr_register_0100.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/rr_register_0100.sv
+Searching for ./arbiter/rr_overall/rr_register/eff_rr_1000.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/eff_rr_1000.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/eff_rr_1000.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/eff_rr_1000.sv
+Searching for ./arbiter/rr_overall/rr_register/rr_register_1000.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/rr_register/rr_register_1000.sv
+Searching for ../NOC/arbiter/rr_overall/rr_register/rr_register_1000.sv
+Opening include file ../NOC/arbiter/rr_overall/rr_register/rr_register_1000.sv
+Searching for ./arbiter/rr_overall/n_rr_processor.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/n_rr_processor.sv
+Searching for ../NOC/arbiter/rr_overall/n_rr_processor.sv
+Opening include file ../NOC/arbiter/rr_overall/n_rr_processor.sv
+Searching for ./arbiter/rr_overall/s_rr_processor.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/s_rr_processor.sv
+Searching for ../NOC/arbiter/rr_overall/s_rr_processor.sv
+Opening include file ../NOC/arbiter/rr_overall/s_rr_processor.sv
+Searching for ./arbiter/rr_overall/w_rr_processor.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/w_rr_processor.sv
+Searching for ../NOC/arbiter/rr_overall/w_rr_processor.sv
+Opening include file ../NOC/arbiter/rr_overall/w_rr_processor.sv
+Searching for ./arbiter/rr_overall/e_rr_processor.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/e_rr_processor.sv
+Searching for ../NOC/arbiter/rr_overall/e_rr_processor.sv
+Opening include file ../NOC/arbiter/rr_overall/e_rr_processor.sv
+Searching for ./arbiter/rr_overall/l_rr_processor.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/rr_overall/l_rr_processor.sv
+Searching for ../NOC/arbiter/rr_overall/l_rr_processor.sv
+Opening include file ../NOC/arbiter/rr_overall/l_rr_processor.sv
+Searching for ./arbiter/nexthop_register/enable_eff_nr.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/nexthop_register/enable_eff_nr.sv
+Searching for ../NOC/arbiter/nexthop_register/enable_eff_nr.sv
+Opening include file ../NOC/arbiter/nexthop_register/enable_eff_nr.sv
+Searching for ./arbiter/nexthop_register/n_nexthop_register.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/nexthop_register/n_nexthop_register.sv
+Searching for ../NOC/arbiter/nexthop_register/n_nexthop_register.sv
+Opening include file ../NOC/arbiter/nexthop_register/n_nexthop_register.sv
+Searching for ./arbiter/nexthop_register/s_nexthop_register.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/nexthop_register/s_nexthop_register.sv
+Searching for ../NOC/arbiter/nexthop_register/s_nexthop_register.sv
+Opening include file ../NOC/arbiter/nexthop_register/s_nexthop_register.sv
+Searching for ./arbiter/nexthop_register/w_nexthop_register.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/nexthop_register/w_nexthop_register.sv
+Searching for ../NOC/arbiter/nexthop_register/w_nexthop_register.sv
+Opening include file ../NOC/arbiter/nexthop_register/w_nexthop_register.sv
+Searching for ./arbiter/nexthop_register/e_nexthop_register.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/nexthop_register/e_nexthop_register.sv
+Searching for ../NOC/arbiter/nexthop_register/e_nexthop_register.sv
+Opening include file ../NOC/arbiter/nexthop_register/e_nexthop_register.sv
+Searching for ./arbiter/nexthop_register/l_nexthop_register.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/nexthop_register/l_nexthop_register.sv
+Searching for ../NOC/arbiter/nexthop_register/l_nexthop_register.sv
+Opening include file ../NOC/arbiter/nexthop_register/l_nexthop_register.sv
+Searching for ./arbiter/yx_processor/yx_processor.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/yx_processor/yx_processor.sv
+Searching for ../NOC/arbiter/yx_processor/yx_processor.sv
+Opening include file ../NOC/arbiter/yx_processor/yx_processor.sv
+Searching for ./arbiter/packet_tracker/packet_tracker.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/packet_tracker/packet_tracker.sv
+Searching for ../NOC/arbiter/packet_tracker/packet_tracker.sv
+Opening include file ../NOC/arbiter/packet_tracker/packet_tracker.sv
+Searching for ./arbiter/packet_tracker/eff_pt.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/arbiter/packet_tracker/eff_pt.sv
+Searching for ../NOC/arbiter/packet_tracker/eff_pt.sv
+Opening include file ../NOC/arbiter/packet_tracker/eff_pt.sv
+Searching for ./input_buffer/ram.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/ram.sv
+Searching for ../NOC/input_buffer/ram.sv
+Opening include file ../NOC/input_buffer/ram.sv
+Searching for ./input_buffer/rw_pointer.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/rw_pointer.sv
+Searching for ../NOC/input_buffer/rw_pointer.sv
+Opening include file ../NOC/input_buffer/rw_pointer.sv
+Searching for ./input_buffer/input_buffer.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/input_buffer.sv
+Searching for ../NOC/input_buffer/input_buffer.sv
+Opening include file ../NOC/input_buffer/input_buffer.sv
+Searching for ./input_buffer/mux_ram.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/mux_ram.sv
+Searching for ../NOC/input_buffer/mux_ram.sv
+Opening include file ../NOC/input_buffer/mux_ram.sv
+Searching for ./input_buffer/decoder_ram.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/decoder_ram.sv
+Searching for ../NOC/input_buffer/decoder_ram.sv
+Opening include file ../NOC/input_buffer/decoder_ram.sv
+Searching for ./input_buffer/ff_ram.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/ff_ram.sv
+Searching for ../NOC/input_buffer/ff_ram.sv
+Opening include file ../NOC/input_buffer/ff_ram.sv
+Searching for ./input_buffer/eff_pointer.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/input_buffer/eff_pointer.sv
+Searching for ../NOC/input_buffer/eff_pointer.sv
+Opening include file ../NOC/input_buffer/eff_pointer.sv
+Searching for ./crossbar_switch/demux/cs_demux_1to5.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/crossbar_switch/demux/cs_demux_1to5.sv
+Searching for ../NOC/crossbar_switch/demux/cs_demux_1to5.sv
+Opening include file ../NOC/crossbar_switch/demux/cs_demux_1to5.sv
+Searching for ./crossbar_switch/mux/cs_mux_5to1.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/crossbar_switch/mux/cs_mux_5to1.sv
+Searching for ../NOC/crossbar_switch/mux/cs_mux_5to1.sv
+Opening include file ../NOC/crossbar_switch/mux/cs_mux_5to1.sv
+Searching for ./crossbar_switch/crossbar_switch_inner.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/crossbar_switch/crossbar_switch_inner.sv
+Searching for ../NOC/crossbar_switch/crossbar_switch_inner.sv
+Opening include file ../NOC/crossbar_switch/crossbar_switch_inner.sv
+Searching for ./credit_counter/eff_cc.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/credit_counter/eff_cc.sv
+Searching for ../NOC/credit_counter/eff_cc.sv
+Opening include file ../NOC/credit_counter/eff_cc.sv
+Searching for ./credit_counter/credit_counter.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/credit_counter/credit_counter.sv
+Searching for ../NOC/credit_counter/credit_counter.sv
+Opening include file ../NOC/credit_counter/credit_counter.sv
+Searching for ./unit_router/n_edge_router/n_edge_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/n_edge_router/n_edge_router.sv
+Searching for ../NOC/unit_router/n_edge_router/n_edge_router.sv
+Opening include file ../NOC/unit_router/n_edge_router/n_edge_router.sv
+Warning:  ../NOC/unit_router/n_edge_router/n_edge_router.sv:240: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/n_edge_router/n_edge_router.sv:250: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/n_edge_router/n_edge_router.sv:260: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/n_edge_router/n_edge_router.sv:270: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/n_edge_router/n_edge_router.sv:302: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/s_edge_router/s_edge_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/s_edge_router/s_edge_router.sv
+Searching for ../NOC/unit_router/s_edge_router/s_edge_router.sv
+Opening include file ../NOC/unit_router/s_edge_router/s_edge_router.sv
+Warning:  ../NOC/unit_router/s_edge_router/s_edge_router.sv:236: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/s_edge_router/s_edge_router.sv:246: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/s_edge_router/s_edge_router.sv:256: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/s_edge_router/s_edge_router.sv:266: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/s_edge_router/s_edge_router.sv:299: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/w_edge_router/w_edge_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/w_edge_router/w_edge_router.sv
+Searching for ../NOC/unit_router/w_edge_router/w_edge_router.sv
+Opening include file ../NOC/unit_router/w_edge_router/w_edge_router.sv
+Warning:  ../NOC/unit_router/w_edge_router/w_edge_router.sv:236: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/w_edge_router/w_edge_router.sv:246: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/w_edge_router/w_edge_router.sv:256: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/w_edge_router/w_edge_router.sv:266: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/w_edge_router/w_edge_router.sv:300: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/e_edge_router/e_edge_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/e_edge_router/e_edge_router.sv
+Searching for ../NOC/unit_router/e_edge_router/e_edge_router.sv
+Opening include file ../NOC/unit_router/e_edge_router/e_edge_router.sv
+Warning:  ../NOC/unit_router/e_edge_router/e_edge_router.sv:236: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/e_edge_router/e_edge_router.sv:246: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/e_edge_router/e_edge_router.sv:256: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/e_edge_router/e_edge_router.sv:266: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/e_edge_router/e_edge_router.sv:301: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/sw_corner_router/sw_corner_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/sw_corner_router/sw_corner_router.sv
+Searching for ../NOC/unit_router/sw_corner_router/sw_corner_router.sv
+Opening include file ../NOC/unit_router/sw_corner_router/sw_corner_router.sv
+Warning:  ../NOC/unit_router/sw_corner_router/sw_corner_router.sv:211: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/sw_corner_router/sw_corner_router.sv:221: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/sw_corner_router/sw_corner_router.sv:231: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/sw_corner_router/sw_corner_router.sv:264: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/sw_corner_router/sw_corner_router.sv:265: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/se_corner_router/se_corner_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/se_corner_router/se_corner_router.sv
+Searching for ../NOC/unit_router/se_corner_router/se_corner_router.sv
+Opening include file ../NOC/unit_router/se_corner_router/se_corner_router.sv
+Warning:  ../NOC/unit_router/se_corner_router/se_corner_router.sv:211: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/se_corner_router/se_corner_router.sv:221: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/se_corner_router/se_corner_router.sv:231: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/se_corner_router/se_corner_router.sv:264: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/se_corner_router/se_corner_router.sv:266: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/nw_corner_router/nw_corner_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/nw_corner_router/nw_corner_router.sv
+Searching for ../NOC/unit_router/nw_corner_router/nw_corner_router.sv
+Opening include file ../NOC/unit_router/nw_corner_router/nw_corner_router.sv
+Warning:  ../NOC/unit_router/nw_corner_router/nw_corner_router.sv:213: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/nw_corner_router/nw_corner_router.sv:223: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/nw_corner_router/nw_corner_router.sv:233: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/nw_corner_router/nw_corner_router.sv:265: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/nw_corner_router/nw_corner_router.sv:267: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/ne_corner_router/ne_corner_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/ne_corner_router/ne_corner_router.sv
+Searching for ../NOC/unit_router/ne_corner_router/ne_corner_router.sv
+Opening include file ../NOC/unit_router/ne_corner_router/ne_corner_router.sv
+Warning:  ../NOC/unit_router/ne_corner_router/ne_corner_router.sv:213: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/ne_corner_router/ne_corner_router.sv:223: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/ne_corner_router/ne_corner_router.sv:233: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/ne_corner_router/ne_corner_router.sv:265: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/ne_corner_router/ne_corner_router.sv:268: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./unit_router/inner_router/inner_router.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/unit_router/inner_router/inner_router.sv
+Searching for ../NOC/unit_router/inner_router/inner_router.sv
+Opening include file ../NOC/unit_router/inner_router/inner_router.sv
+Warning:  ../NOC/unit_router/inner_router/inner_router.sv:270: the undeclared symbol 'n_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/inner_router/inner_router.sv:280: the undeclared symbol 's_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/inner_router/inner_router.sv:290: the undeclared symbol 'w_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/inner_router/inner_router.sv:300: the undeclared symbol 'e_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ../NOC/unit_router/inner_router/inner_router.sv:310: the undeclared symbol 'l_cc_dec_temp' assumed to have the default net type, which is 'wire'. (VER-936)
+Searching for ./eff_router_address.sv
+Searching for /sim/synopsys64/icc/dw/sim_ver/eff_router_address.sv
+Searching for ../NOC/eff_router_address.sv
+Opening include file ../NOC/eff_router_address.sv
+Error:  ../NOC/eff_router_address.sv:3: Module 'eff_router_address' is redefined. (VER-25)
+Error:  Cannot recover from previous errors. (VER-518)
+*** Presto compilation terminated with 2 errors. ***
+Loading db file '/sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ.db'
+Loading db file '/sim/synopsys64/icc/libraries/syn/dw_foundation.sldb'
+0
+elaborate $basename -lib WORK -update
+Loading db file '/sim/synopsys64/icc/libraries/syn/gtech.db'
+Loading db file '/sim/synopsys64/icc/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Error: Cannot find the design 'noc_syn.sv' in the library 'WORK'. (LBR-0)
+0
+list_designs
+Warning: No designs to list. (UID-275)
+0
+current_design $basename
+Error: Can't find design 'noc_syn.sv'. (UID-109)
+Error: Current design is not defined. (UID-4)
+# The link command makes sure that all the required design parts are linked together.
+link
+Error: Current design is not defined. (UID-4)
+0
+# The uniquify command makes unique copies of replicated modules.
+# uniquify
+##################################################################
+# SET OPERATING CONDITIONS
+##################################################################
+set_operating_conditions TYPICAL
+Error: Current design is not defined. (UID-4)
+0
+# Define the load model for the wires
+set_wire_load_model -name ForQA
+Error: Current design is not defined. (UID-4)
+0
+# Set the driving cell for all inputs except the clock The clock has infinite drive by default. This is usually what you want for synthesis because you will use other tools (like SOC Encounter) to build the clock tree (or define it by hand).
+if { $virtual == 0 } {
+	set_driving_cell -lib_cell $inputDrive [all_inputs]
+} else {
+	set_driving_cell -lib_cell $inputDrive [remove_from_collection [all_inputs] $CLK]
+}
+Error: Current design is not defined. (UID-4)
+Error: Value for list 'port_list' must have 1 elements. (CMD-036)
+0
+# Set the load of the circuit outputs in terms of the load of the next cell that they will drive
+set_load 13 [all_outputs]
+Error: Current design is not defined. (UID-4)
+Error: Value for list 'objects' must have 1 elements. (CMD-036)
+0
+##################################################################
+# SET DESIGN CONSTRAINTS
+##################################################################
+# Now you can create clocks for the design and set other constraints
+if { $virtual == 0 } {
+	create_clock -period $clkPeriodNS $CLK
+} else {
+	create_clock -period $clkPeriodNS -name $CLK
+}
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'clk'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+# Sets input delay on pins or input ports relative to a clock signal.
+if { $virtual == 0 } {
+	set_input_delay $inDelayNS -clock $CLK [all_inputs] 
+} else {
+	set_input_delay $inDelayNS -clock $CLK [remove_from_collection [all_inputs] $CLK]
+}
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'clk'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+0
+# Sets output delay on pins or output ports relative to a clock signal.
+set_output_delay $outDelayNS -clock $CLK [all_outputs]
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'clk'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+0
+# Try to fix hold time issues
+set_fix_hold $CLK
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'clk'. (UID-109)
+Error: Value for list '<clock_list>' must have 1 elements. (CMD-036)
+0
+# Minimize area
+set_max_area 0
+Error: Current design is not defined. (UID-4)
+0
+# This command will fix the problem of having assign statements left in your structural file. But, it will insert pairs of inverters for feedthroughs!
+set_fix_multiple_port_nets -all -buffer_constants
+Error: Current design is not defined. (UID-4)
+0
+##################################################################
+# COMPILE & OPTIMIZE THE DESIGN
+##################################################################
+# Now compile the design with given mapping effort and do a second compile with incremental mapping or use the compile_ultra meta-command
+if { $useUltra == 1 } {
+	compile_ultra
+} else {
+	if { $useUngroup == 1 } {
+		compile -ungroup_all -map_effort $mapEffort1
+		compile -incremental_mapping -map_effort $mapEffort2
+	} else {
+		compile -map_effort $mapEffort1
+		compile -incremental_mapping -map_effort $mapEffort2
+	}
+}
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+0
+set MW_LIB_NAME [format "%s%s" $basename "_LIB"]
+noc_syn.sv_LIB
+create_mw_lib -technology $astro_tf -mw_reference_library $mw_ref_lib $MW_LIB_NAME
+Start to load technology file /sim/synopsys/SAED_EDK90nm/Technology_Kit/techfile/saed90nm_icc_1p9m.tf.
+Information: Non-metal layer 'DIFF_33' has the metal layer attribute 'endOfLineCornerKeepoutWidth'. (line 1577) (TFCHK-046)
+Warning: DesignRule attribute 'layer2' is assigned a non-physical layer 'DNW'. (line 1951) (TFCHK-079)
+Warning: DesignRule attribute 'layer2' is assigned a non-physical layer 'RPOLY'. (line 2154) (TFCHK-079)
+Warning: Layer 'M1' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.33. (TFCHK-049)
+Warning: Layer 'M2' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.36. (TFCHK-049)
+Warning: Layer 'M3' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.36. (TFCHK-049)
+Warning: Layer 'M4' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.36. (TFCHK-049)
+Warning: Layer 'M5' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.36. (TFCHK-049)
+Warning: Layer 'M6' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.36. (TFCHK-049)
+Warning: Layer 'M7' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.36. (TFCHK-049)
+Warning: Layer 'M8' has a pitch 0.32 that does not match the recommended wire-to-via pitch 0.465 or 0.5. (TFCHK-049)
+Warning: Layer 'M3' has a pitch 0.32 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Warning: Layer 'M4' has a pitch 0.32 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Warning: Layer 'M5' has a pitch 0.32 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Warning: Layer 'M6' has a pitch 0.32 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Warning: Layer 'M7' has a pitch 0.32 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Warning: Layer 'M8' has a pitch 0.32 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Warning: Layer 'M9' has a pitch 0.9 that does not match the doubled pitch 0.64 or tripled pitch 0.96. (TFCHK-050)
+Technology file /sim/synopsys/SAED_EDK90nm/Technology_Kit/techfile/saed90nm_icc_1p9m.tf has been loaded successfully.
+open_mw_lib $MW_LIB_NAME
+{noc_syn.sv_LIB}
+check_library
+No check done. Please specify valid options and libraries and/or use dc_shell-topo, de_shell or icc_shell
+0
+report_lib saed90nm_typ > report/report_lib.rpt
+##################################################################
+# ANALYZE AND RESOLVE DESIGN PROBLEMS
+##################################################################
+check_library
+No check done. Please specify valid options and libraries and/or use dc_shell-topo, de_shell or icc_shell
+0
+report_lib saed90nm_typ > report/report_lib.rpt
+report_synlib dw_foundation.sldb > report/report_synlib.rpt
+check_design > report/${basename}.check_design.rpt
+set filebase [format "%s%s" [format "%s%s" $basename "_"] $stage]
+noc_syn.sv_synth
+##################################################################
+# Check for design errors
+# Designer should examine log file, look for:
+# - inferred latches not in syn.lib
+# - fanout nets other than clk
+##################################################################
+if { $reportTiming == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".timing.rpt"]
+	redirect $filename { report_timing -max_paths 10 -input -net -path full -delay max }
+}
+if { $reportArea == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".area.rpt"]
+	redirect $filename { report_area }
+}
+if { $reportPower == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".power.rpt"]
+	redirect $filename { report_power }
+}
+if { $reportQuality == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".quality.rpt"]
+	redirect $filename { report_qor }
+}
+if { $reportGating == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".gating.rpt"]
+	redirect $filename { report_clock_gating -hier -gating_elements }
+}
+if { $reportReference == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".reference.rpt"]
+	redirect $filename { report_reference -nosplit -hierarchy }
+}
+if { $reportDesign == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".design.rpt"]
+	redirect $filename { report_design }
+}
+if { $reportCompileOptions == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".compile_options.rpt"]
+	redirect $filename { report_compile_options }
+}
+if { $reportConstraint == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".constraint.rpt"]
+	redirect $filename { report_constraints -max_delay -all_viol -verb }
+}
+if { $reportCell == 1 } {
+	set filename [format "%s%s%s" "report/" $filebase ".cell.rpt"]
+	redirect $filename { report_cell }
+}
+##################################################################
+# SAVE THE DESIGN DATABASE
+##################################################################
+# Structural (synthesized) file as verilog
+if { $writeV == 1 } {
+	set filename [format "%s%s" $filebase ".v"]
+	write -format verilog -hierarchy -output $filename
+}
+Error: No files or designs were specified. (UID-22)
+0
+# Write out the sdf file for back-annotated verilog sim
+# This file can be large!
+if { $writeSDF == 1 } {
+	set filename [format "%s%s" $filebase ".sdf"]
+	write_sdf -version 1.0 $filename
+}
+Error: Current design is not defined. (UID-4)
+0
+# This is the timing constraints file generated from the conditions above - used in the place and route program
+if { $writeSDC == 1 } {
+	set filename [format "%s%s" $filebase ".sdc"]
+	write_sdc $filename
+}
+Error: Current design is not defined. (UID-4)
+0
+# Synopsys database format in case you want to read this synthesized result back in to synopsys later in XG mode (ddc format)
+if { $writeDDC == 1 } {
+	set filename [format "%s%s" $filebase ".ddc"]
+	write -format ddc -hierarchy -o $filename
+	set mw_filename [format "%s%s" $filebase "_DCT"]
+	write_milkyway -overwrite -output $mw_filename
+}
+Error: No files or designs were specified. (UID-22)
+Error: No files or designs were specified. (UID-22)
+0
+quit
+
+Thank you...

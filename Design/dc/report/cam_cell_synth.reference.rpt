@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : reference
+Design : cam_cell
+Version: F-2011.09-SP2
+Date   : Fri Dec 19 13:14:02 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             saed90nm_typ     7.372800      33   243.302396 
+AND3X1             saed90nm_typ     8.294400       1     8.294400 
+NAND4X0            saed90nm_typ     8.294400       7    58.060802 
+NOR4X0             saed90nm_typ     9.216000       2    18.431999 
+OR4X1              saed90nm_typ    10.137600       1    10.137600 
+XNOR2X1            saed90nm_typ    13.824000      28   387.072010 
+XOR2X1             saed90nm_typ    13.824000       4    55.296001 
+eff_DATA_WIDTH32               1244.159980       1   1244.159980  h, n
+-----------------------------------------------------------------------------
+Total 8 references                                   2024.755188
+
+****************************************
+Design: eff_DATA_WIDTH32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AO21X1             saed90nm_typ    10.137600       1    10.137600 
+AO22X1             saed90nm_typ    11.980800      32   383.385590 
+DFFX1              saed90nm_typ    24.883200      33   821.145590 n
+INVX0              saed90nm_typ     5.529600       3    16.588800 
+NOR2X0             saed90nm_typ     5.529600       1     5.529600 
+OR2X1              saed90nm_typ     7.372800       1     7.372800 
+-----------------------------------------------------------------------------
+Total 6 references                                   1244.159980
+1

@@ -1,0 +1,528 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+Design : cam_cell
+Version: F-2011.09-SP2
+Date   : Fri Dec 19 13:14:01 2014
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U37/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U37/Q (AO22X1)                                       0.10       1.37 f
+  ff/n12 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[7]/D (DFFX1)                              0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[7]/CLK (DFFX1)                            0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U6/IN2 (AO22X1)                                      0.11       1.27 f
+  ff/U6/Q (AO22X1)                                        0.10       1.37 f
+  ff/n14 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[9]/D (DFFX1)                              0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[9]/CLK (DFFX1)                            0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U8/IN2 (AO22X1)                                      0.11       1.27 f
+  ff/U8/Q (AO22X1)                                        0.10       1.37 f
+  ff/n16 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[11]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[11]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U10/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U10/Q (AO22X1)                                       0.10       1.37 f
+  ff/n18 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[13]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[13]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U12/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U12/Q (AO22X1)                                       0.10       1.37 f
+  ff/n20 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[15]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[15]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[16]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U13/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U13/Q (AO22X1)                                       0.10       1.37 f
+  ff/n21 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[16]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[16]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[17]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U14/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U14/Q (AO22X1)                                       0.10       1.37 f
+  ff/n22 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[17]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[17]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[18]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U15/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U15/Q (AO22X1)                                       0.10       1.37 f
+  ff/n23 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[18]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[18]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U16/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U16/Q (AO22X1)                                       0.10       1.37 f
+  ff/n24 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[19]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[19]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: write_enable_i
+              (input port clocked by clk)
+  Endpoint: ff/data_o_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cam_cell           ForQA                 saed90nm_typ
+  eff_DATA_WIDTH32   8000                  saed90nm_typ
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.25       0.25 r
+  write_enable_i (in)                                     0.00       0.25 r
+  write_enable_i (net)                          1         0.00       0.25 r
+  ff/write_enable_i (eff_DATA_WIDTH32)                    0.00       0.25 r
+  ff/write_enable_i (net)                                 0.00       0.25 r
+  ff/U38/INP (INVX0)                                      0.04       0.29 r
+  ff/U38/ZN (INVX0)                                       0.02       0.30 f
+  ff/n1 (net)                                   1         0.00       0.30 f
+  ff/U4/IN1 (NOR2X0)                                      0.05       0.35 f
+  ff/U4/QN (NOR2X0)                                       0.25       0.60 r
+  ff/n3 (net)                                  34         0.00       0.60 r
+  ff/U39/IN2 (OR2X1)                                      0.27       0.88 r
+  ff/U39/Q (OR2X1)                                        0.14       1.02 r
+  ff/n2 (net)                                   2         0.00       1.02 r
+  ff/U3/INP (INVX0)                                       0.05       1.07 r
+  ff/U3/ZN (INVX0)                                        0.10       1.17 f
+  ff/n38 (net)                                 17         0.00       1.17 f
+  ff/U17/IN2 (AO22X1)                                     0.11       1.27 f
+  ff/U17/Q (AO22X1)                                       0.10       1.37 f
+  ff/n25 (net)                                  1         0.00       1.37 f
+  ff/data_o_reg[20]/D (DFFX1)                             0.04       1.41 f
+  data arrival time                                                  1.41
+
+  clock clk (rise edge)                                   2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  ff/data_o_reg[20]/CLK (DFFX1)                           0.00       2.50 r
+  library setup time                                     -0.04       2.46
+  data required time                                                 2.46
+  --------------------------------------------------------------------------
+  data required time                                                 2.46
+  data arrival time                                                 -1.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+1

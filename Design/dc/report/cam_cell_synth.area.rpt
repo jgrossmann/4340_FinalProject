@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : cam_cell
+Version: F-2011.09-SP2
+Date   : Fri Dec 19 13:14:01 2014
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /sim/synopsys/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ.db)
+
+Number of ports:                          103
+Number of nets:                           178
+Number of cells:                           77
+Number of combinational cells:             76
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       8
+
+Combinational area:       1203.609598
+Noncombinational area:     821.145590
+Net Interconnect area:      76.410443  
+
+Total cell area:          2024.755188
+Total area:               2101.165631
+1

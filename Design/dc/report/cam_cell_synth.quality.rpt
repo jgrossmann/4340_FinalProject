@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : qor
+Design : cam_cell
+Version: F-2011.09-SP2
+Date   : Fri Dec 19 13:14:02 2014
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:               5.00
+  Critical Path Length:          1.16
+  Critical Path Slack:           1.05
+  Critical Path Clk Period:      2.50
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          1
+  Hierarchical Port Count:         68
+  Leaf Cell Count:                147
+  Buf/Inv Cell Count:               3
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:       114
+  Sequential Cell Count:           33
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     1203.609598
+  Noncombinational Area:   821.145590
+  Net Area:                 76.410443
+  -----------------------------------
+  Cell Area:              2024.755188
+  Design Area:            2101.165631
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           216
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: dhaka
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.02
+  Mapping Optimization:                0.46
+  -----------------------------------------
+  Overall Compile Time:                1.20
+  Overall Compile Wall Clock Time:     3.94
+
+1
