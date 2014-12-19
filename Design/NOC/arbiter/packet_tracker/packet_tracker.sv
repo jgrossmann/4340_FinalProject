@@ -41,7 +41,7 @@ end else if (pt_inc_i) begin
    
 end else if(data_o_temp == 3'b000) begin
 
-	data_i_temp = 3'b000;
+data_i_temp = 3'b000;
 
 end 
 end

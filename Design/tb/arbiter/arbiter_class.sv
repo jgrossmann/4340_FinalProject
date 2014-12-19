@@ -316,7 +316,7 @@ class arbiter_class;
 			packet_tracker[i] = 0;
 			pti[i] = 0;
 			token[i] = 4;
-			empty[i] = 0;
+			empty[i] = 1;
 			valid[i] = -1;
 			//sending[i] = 0;
       end
