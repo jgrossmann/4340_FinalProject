@@ -457,7 +457,7 @@ mux_5to1_1bit mux_change_order_s (
 
 mux_5to1_1bit mux_change_order_w (
 	
- .sel_i(rrp_n_priority_to_cs_o_temp), 
+ .sel_i(rrp_w_priority_to_cs_o_temp), 
  .data_n_i(n_pt_almost_done_o), 
  .data_s_i(s_pt_almost_done_o),
  .data_w_i(1'b0),
@@ -469,7 +469,7 @@ mux_5to1_1bit mux_change_order_w (
 
 mux_5to1_1bit mux_change_order_e (
 	
- .sel_i(rrp_n_priority_to_cs_o_temp), 
+ .sel_i(rrp_e_priority_to_cs_o_temp), 
  .data_n_i(n_pt_almost_done_o), 
  .data_s_i(s_pt_almost_done_o),
  .data_w_i(w_pt_almost_done_o),
@@ -481,7 +481,7 @@ mux_5to1_1bit mux_change_order_e (
 
 mux_5to1_1bit mux_change_order_l (
 	
- .sel_i(rrp_n_priority_to_cs_o_temp), 
+ .sel_i(rrp_l_priority_to_cs_o_temp), 
  .data_n_i(n_pt_almost_done_o), 
  .data_s_i(s_pt_almost_done_o),
  .data_w_i(w_pt_almost_done_o),
