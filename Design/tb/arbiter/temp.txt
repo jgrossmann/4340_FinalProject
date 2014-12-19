@@ -1,0 +1,894 @@
+Chronologic VCS simulator copyright 1991-2011
+Contains Synopsys proprietary information.
+Compiler version F-2011.12_Full64; Runtime version F-2011.12_Full64;  Dec 18 19:07 2014
+VCD+ Writer F-2011.12_Full64 Copyright (c) 1991-2011 by Synopsys Inc.
+scan: RANDOM_SEED 7.000000
+scan: MAX_CYCLES 10000.000000
+scan: RESET_DENSITY 0.000000
+scan: EMPTY_DENSITY 0.300000
+scan: CREDIT_DENSITY 0.500000
+scan: AUTO_CONFIGURE 0.000000
+Results
+
+credit out north: dut = 0 bench =           0
+
+credit out south: dut = 0 bench =           0
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 0 bench =           0
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 0
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = xxx
+
+mux out south: dut = 000 bench = xxx
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 000 bench = xxx
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 000 bench = xxx
+
+demux out south: dut = 001 bench = xxx
+
+demux out west: dut = 010 bench = xxx
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+Results
+
+credit out north: dut = 0 bench =           0
+
+credit out south: dut = 0 bench =           0
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 0 bench =           0
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 0
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = xxx
+
+mux out south: dut = 000 bench = xxx
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 000 bench = xxx
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 000 bench = xxx
+
+demux out south: dut = 001 bench = xxx
+
+demux out west: dut = 010 bench = xxx
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+packet tracker =           0
+valid =           1
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 0 bench =           0
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 1 bench = 1
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 000 bench = 000
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 000 bench = xxx
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 000 bench = 000
+
+demux out west: dut = 010 bench = xxx
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+packet tracker =           0
+valid =           1
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 1 bench =           1
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 1 bench = 1
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 1 bench = 1
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 000 bench = 000
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 010 bench = 010
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 000 bench = 000
+
+demux out west: dut = 011 bench = 011
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+packet tracker =           1
+valid =           1
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 1 bench =           1
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 1 bench = 1
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 1 bench = 1
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 000 bench = 000
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 010 bench = 010
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 000 bench = 000
+
+demux out west: dut = 011 bench = 011
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+packet tracker =           2
+valid =           1
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 1 bench =           1
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 1 bench = 1
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 1 bench = 1
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 000 bench = 000
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 010 bench = 010
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 000 bench = 000
+
+demux out west: dut = 011 bench = 011
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+packet tracker =           3
+valid =           1
+Results
+
+credit out north: dut = 1 bench =           1
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 1 bench =           1
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 1 bench = 1
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 1 bench = 1
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 000 bench = 000
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 010 bench = 010
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 000 bench = 000
+
+demux out west: dut = 011 bench = 011
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+Inputs:
+
+Tokens before inputs
+north token:
+west
+south token:
+south
+west token:
+north
+east token:
+east
+local token:
+north
+Randomization
+packet tracker =           4
+valid =           1
+              105000
+
+x location =           1
+
+y location =           1
+
+reset 0
+
+north input empty 0
+
+south input empty 0
+
+west input empty 0
+
+east input empty 0
+
+local input empty 0
+
+north output credit 1
+
+south output credit 0
+
+west output credit 1
+
+east output credit 1
+
+local output credit 1
+
+north address 0111001000010011
+north next hop: 
+south
+
+
+south address 0110110000100001
+south next hop: 
+east
+
+
+east address 1111100100010010
+east next hop: 
+south
+
+
+local address 0011011100100010
+local next hop: 
+south
+
+
+Token after inputs
+north token:
+south
+south token:
+north
+west token:
+local
+east token:
+west
+local token:
+local
+Results
+
+credit out north: dut = 0 bench =           0
+
+credit out south: dut = 0 bench =           0
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 1 bench =           1
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 0 bench = 0
+
+read out west: dut = 1 bench = 1
+
+read out east: dut = 0 bench = 0
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 000 bench = 000
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 010 bench = 010
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 000 bench = 001
+
+demux out south: dut = 001 bench = 000
+
+demux out west: dut = 011 bench = 011
+
+demux out east: dut = 011 bench = xxx
+
+demux out local: dut = 100 bench = xxx
+
+Inputs:
+
+Tokens before inputs
+north token:
+west
+south token:
+south
+west token:
+north
+east token:
+east
+local token:
+north
+Randomization
+packet tracker =           0
+valid =           1
+              115000
+
+x location =           1
+
+y location =           1
+
+reset 0
+
+north input empty 0
+
+south input empty 0
+
+west input empty 0
+
+east input empty 0
+
+local input empty 0
+
+north output credit 1
+
+south output credit 1
+
+west output credit 1
+
+east output credit 1
+
+local output credit 1
+
+north address 0111011100100001
+north next hop: 
+south
+
+
+south address 1010100100000000
+south next hop: 
+east
+
+
+west address 0010111000100011
+west next hop: 
+south
+
+
+east address 0111110000010010
+east next hop: 
+south
+
+
+local address 1000111000100010
+local next hop: 
+south
+
+
+Token after inputs
+north token:
+south
+south token:
+east
+west token:
+local
+east token:
+south
+local token:
+local
+Results
+
+credit out north: dut = 0 bench =           0
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 1 bench =           1
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 1 bench = 1
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 011 bench = 011
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 001 bench = 001
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 011 bench = 011
+
+demux out west: dut = 010 bench = 011
+
+demux out east: dut = 001 bench = 001
+
+demux out local: dut = 001 bench = xxx
+
+Inputs:
+
+Tokens before inputs
+north token:
+west
+south token:
+local
+west token:
+north
+east token:
+west
+local token:
+north
+Randomization
+packet tracker =           0
+valid =           1
+              125000
+
+x location =           1
+
+y location =           1
+
+reset 0
+
+north input empty 0
+
+south input empty 0
+
+west input empty 0
+
+east input empty 0
+
+local input empty 0
+
+north output credit 1
+
+south output credit 1
+
+west output credit 1
+
+east output credit 0
+
+local output credit 1
+
+north address 1010101100010001
+north next hop: 
+south
+
+
+west address 0010101100110000
+west next hop: 
+south
+
+
+local address 0101000100100010
+local next hop: 
+south
+
+
+Token after inputs
+north token:
+south
+south token:
+east
+west token:
+local
+east token:
+south
+local token:
+local
+Results
+
+credit out north: dut = 1 bench =           0
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 0 bench =           0
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 1 bench = 0
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 1 bench = 1
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 011 bench = 011
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 000 bench = 001
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 011 bench = 001
+
+demux out south: dut = 000 bench = 011
+
+demux out west: dut = 001 bench = 011
+
+demux out east: dut = 001 bench = 001
+
+demux out local: dut = 001 bench = xxx
+
+Inputs:
+
+Tokens before inputs
+north token:
+west
+south token:
+local
+west token:
+north
+east token:
+west
+local token:
+north
+Randomization
+packet tracker =           0
+valid =           1
+              135000
+
+x location =           1
+
+y location =           1
+
+reset 0
+
+north input empty 0
+
+south input empty 0
+
+west input empty 0
+
+east input empty 0
+
+local input empty 0
+
+north output credit 1
+
+south output credit 1
+
+west output credit 1
+
+east output credit 1
+
+local output credit 1
+
+north address 0000000100010011
+north next hop: 
+south
+
+
+west address 0000010100110010
+west next hop: 
+south
+
+
+local address 1110011000110010
+local next hop: 
+south
+
+
+Token after inputs
+north token:
+south
+south token:
+east
+west token:
+local
+east token:
+south
+local token:
+local
+Results
+
+credit out north: dut = 1 bench =           0
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 0 bench =           1
+
+credit out local: dut = 1 bench =           0
+
+read out north: dut = 1 bench = 0
+
+read out south: dut = 1 bench = 1
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 1 bench = 1
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 011 bench = 011
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 000 bench = 001
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 100 bench = 001
+
+demux out south: dut = 000 bench = 011
+
+demux out west: dut = 000 bench = 011
+
+demux out east: dut = 001 bench = 001
+
+demux out local: dut = 001 bench = xxx
+
+Inputs:
+
+Tokens before inputs
+north token:
+west
+south token:
+local
+west token:
+north
+east token:
+west
+local token:
+north
+Randomization
+packet tracker =           0
+valid =           1
+              145000
+
+x location =           1
+
+y location =           1
+
+reset 0
+
+north input empty 0
+
+south input empty 0
+
+west input empty 0
+
+east input empty 0
+
+local input empty 0
+
+north output credit 1
+
+south output credit 1
+
+west output credit 1
+
+east output credit 0
+
+local output credit 1
+
+north address 0001110000110011
+north next hop: 
+south
+
+
+west address 0001110000110010
+west next hop: 
+south
+
+
+local address 0010111100100000
+local next hop: 
+south
+
+
+Token after inputs
+north token:
+south
+south token:
+east
+west token:
+local
+east token:
+south
+local token:
+local
+Results
+
+credit out north: dut = 1 bench =           0
+
+credit out south: dut = 1 bench =           1
+
+credit out west: dut = 0 bench =           0
+
+credit out east: dut = 0 bench =           0
+
+credit out local: dut = 0 bench =           0
+
+read out north: dut = 0 bench = 0
+
+read out south: dut = 1 bench = 0
+
+read out west: dut = 0 bench = 0
+
+read out east: dut = 1 bench = 1
+
+read out local: dut = 0 bench = 0
+
+mux out north: dut = 001 bench = 001
+
+mux out south: dut = 011 bench = 011
+
+mux out west: dut = 000 bench = xxx
+
+mux out east: dut = 000 bench = 001
+
+mux out local: dut = 000 bench = xxx
+
+demux out north: dut = 001 bench = 001
+
+demux out south: dut = 000 bench = 011
+
+demux out west: dut = 001 bench = 011
+
+demux out east: dut = 001 bench = 001
+
+demux out local: dut = 001 bench = xxx
+
+$finish at simulation time               145000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 145000 ps
+CPU Time:      0.400 seconds;       Data structure size:   0.1Mb
+Thu Dec 18 19:07:24 2014
