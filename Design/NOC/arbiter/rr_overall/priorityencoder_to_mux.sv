@@ -28,7 +28,8 @@ logic [4:0] rr_priority_i_temp;
  rr_priority_i_temp [2] = rr_priority_w_i; 
  rr_priority_i_temp [1] = rr_priority_e_i;
  rr_priority_i_temp [0] = rr_priority_l_i;  
- if(rr_change_order_i | (rr_priority_i_temp == 5'b00000) begin
+ 
+ if(rr_change_order_i | (rr_priority_i_temp == 5'b00000)) begin
  	data_i = 3'b111;
  end
  		rr_priority_i_temp = rr_priority_i_temp & data_o;
