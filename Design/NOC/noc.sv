@@ -3,7 +3,7 @@
 // Including files from sub-blocks 
 
 // Files for arbiter 
-`include "arbiter/arbiter.sv"
+/*`include "arbiter/arbiter.sv"
 `include "arbiter/rr_overall/rr_comparator/n_rr_comparator.sv" 
 `include "arbiter/rr_overall/rr_comparator/s_rr_comparator.sv" 
 `include "arbiter/rr_overall/rr_comparator/w_rr_comparator.sv" 
@@ -67,7 +67,7 @@
 `include "unit_router/ne_corner_router/ne_corner_router.sv"
 `include "unit_router/inner_router/inner_router.sv"
 
-`include "eff_router_address.sv"
+`include "eff_router_address.sv"*/
 
 module noc (ifc.dut ifc);
 
