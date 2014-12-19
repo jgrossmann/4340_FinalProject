@@ -95,7 +95,7 @@ class router_class;
 		if(pack.l_valid_i) begin
 			buffers[4].updateWrite(1, pack.l_f_i);
 		end
-		arb_pack.randomize();
+		//arb_pack.randomize();
 		arb_pack.reset = pack.reset;
 		arb_pack.n_arb_empty_i = buffers[0].check_empty();
 		arb_pack.s_arb_empty_i = buffers[1].check_empty();
@@ -107,19 +107,19 @@ class router_class;
 		arb_pack.w_arb_credit_i = (cc[2] != 0);
 		arb_pack.e_arb_credit_i = (cc[3] != 0);
 		arb_pack.l_arb_credit_i = (cc[4] != 0);
-		if(~(buffers[0].check_empty())) begin
+		if(~(buffers[0].check_empty() == 1)) begin
 			arb_pack.n_arb_address_i = buffers[0].peek().data;
 		end
-		if(~(buffers[1].check_empty())) begin
+		if(~(buffers[1].check_empty() == 1)) begin
 			arb_pack.s_arb_address_i = buffers[1].peek().data;
 		end
-		if(~(buffers[2].check_empty())) begin
+		if(~(buffers[2].check_empty() == 1)) begin
 			arb_pack.w_arb_address_i = buffers[2].peek().data;
 		end
-		if(~(buffers[3].check_empty())) begin
+		if(~(buffers[3].check_empty() == 1)) begin
 			arb_pack.e_arb_address_i = buffers[3].peek().data;
 		end
-		if(~(buffers[4].check_empty())) begin
+		if(~(buffers[4].check_empty() == 1)) begin
 			arb_pack.l_arb_address_i = buffers[4].peek().data;
 		end
 		arbiter.update_model(arb_pack);
