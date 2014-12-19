@@ -118,7 +118,7 @@ program noc_testbench (ifc.bench ds);
 			printResults();
 		end
 			
-        repeat(10000) begin
+        repeat(5) begin
 			$display("%t\n",$realtime);
 			trans.randomize();
 			//trans.reset = 1;
