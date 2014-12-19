@@ -19,7 +19,7 @@ indent:
 	rm *~
 
 bench: 
-	vcs -full64 -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice "buffer_testbench.sv" "modules/buffer_top.sv" -o testbench.exe
+	vcs -full64 -cm line+tgl+cond+fsm+branch+assert -debug_pp -PP -sverilog +define+SV +define+VPD +lint=all,noVCDE -notice "buffer_testbench.sv" "modules/buffer_top.sv" -o testbench.exe
 
 view:	
 	./testbench.exe
