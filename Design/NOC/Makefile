@@ -13,7 +13,7 @@ test:
 	./$(BENCH)
 
 dut:    
-	vcs -full64 -sverilog -PP +define+VPD "noc.sv"
+	vcs -full64 -sverilog -PP +define+VPD "noc_syn.sv"
 view:
 	vpd2vcd vcdplus.vpd vcdplus.vcd &
 	gtkwave vcdplus.vcd &

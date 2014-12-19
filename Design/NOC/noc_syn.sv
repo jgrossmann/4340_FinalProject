@@ -2,9 +2,7 @@
 
 // Including files from sub-blocks 
 
-
 // Files for arbiter 
-/*
 `include "arbiter/arbiter.sv"
 `include "arbiter/rr_overall/rr_comparator/n_rr_comparator.sv" 
 `include "arbiter/rr_overall/rr_comparator/s_rr_comparator.sv" 
@@ -32,7 +30,11 @@
 `include "arbiter/rr_overall/l_rr_processor.sv" 
 
 `include "arbiter/nexthop_register/enable_eff_nr.sv"
-`include "arbiter/nexthop_register/nexthop_register.sv" 
+`include "arbiter/nexthop_register/n_nexthop_register.sv"
+`include "arbiter/nexthop_register/s_nexthop_register.sv"
+`include "arbiter/nexthop_register/w_nexthop_register.sv"
+`include "arbiter/nexthop_register/e_nexthop_register.sv"
+`include "arbiter/nexthop_register/l_nexthop_register.sv"
 `include "arbiter/yx_processor/yx_processor.sv" 
 
 `include "arbiter/packet_tracker/packet_tracker.sv" 
@@ -71,9 +73,8 @@
 
 `include "eff_router_address.sv"
 `include "../interface.sv"
-*/
 
-module noc (interface ifc);
+module noc ();
 
 // Connection for UP-DOWN direction 
 // Data Interconnection for horizontal connection 
