@@ -1,0 +1,3 @@
+Bug in all of the rr_processor modules. The priority was outputting 1 for each input buffer to go out the associated
+output buffer every time regardless of the priority. We found the issue to be an '==' comparison instead of an '&', and
+a '+' instead of a '|'. Fixed. -(12/17, John)

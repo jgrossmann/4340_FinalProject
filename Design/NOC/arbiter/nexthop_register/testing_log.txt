@@ -1,0 +1,9 @@
+Bug:
+On reset, the nexthop register woulld output 000. This doesn't work because 000 corresponds to the north direction
+but want it to be no direction. (12/18 - John, Jeff).
+
+Fix:
+We changed the reset functionality to change the output direction to the same direction as the corresponding input buffer. 
+So the south input buffer would reset to a south nexthop. We did this because our implementation makes it impossible to
+send anything in the same direction that it came from. We also OR the reset signal with the buffer empty signal so the
+nexthop register will reset to no direction when appropriate. (12/18 - John, Jeff).
